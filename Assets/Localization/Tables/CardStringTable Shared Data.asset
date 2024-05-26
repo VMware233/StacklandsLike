@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: CardStringTable
   m_TableCollectionNameGuidString: 7aa78ad44ac25b54e89b7f5d0924edff
-  m_Entries: []
+  m_Entries:
+  - m_Id: 43833076330496
+    m_Key: TestCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

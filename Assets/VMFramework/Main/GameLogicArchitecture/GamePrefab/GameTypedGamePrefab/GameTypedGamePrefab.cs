@@ -14,7 +14,7 @@ namespace VMFramework.GameLogicArchitecture
 
 #if UNITY_EDITOR
         [LabelText("Game Types"),
-         TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY, SdfIconType.Info, TextColor = "blue")]
+         TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY, SdfIconType.Info, TextColor = "blue")]
         [OnCollectionChanged(nameof(OnInitialGameTypesIDChangedGUI))]
         [PropertyOrder(-6000)]
         [GameTypeID]

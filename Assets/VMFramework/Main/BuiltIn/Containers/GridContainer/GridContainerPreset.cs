@@ -8,7 +8,7 @@ namespace VMFramework.Containers
     {
         public override Type gameItemType => typeof(GridContainer);
 
-        [LabelText("大小"), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText("大小"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [MinValue(1)]
         [JsonProperty]
         public int size = 9;

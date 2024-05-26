@@ -7,21 +7,21 @@ namespace VMFramework.GameLogicArchitecture
 {
     public partial class DescribedGamePrefab : LocalizedGameTypedGamePrefab, IDescribedGamePrefab
     {
-        [LabelText(SdfIconType.Bootstrap), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText(SdfIconType.Bootstrap), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public TextTagFormat nameFormat = new();
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool hasDescription = false;
 
-        [LabelText(SdfIconType.BlockquoteLeft), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText(SdfIconType.BlockquoteLeft), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [Indent]
         [ShowIf(nameof(hasDescription))]
         [JsonProperty]
         public LocalizedStringReference description = new();
 
-        [LabelText(SdfIconType.Bootstrap), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText(SdfIconType.Bootstrap), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [Indent]
         [ShowIf(nameof(hasDescription))]
         [JsonProperty]

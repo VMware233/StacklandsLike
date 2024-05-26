@@ -13,52 +13,52 @@ namespace VMFramework.UI
     {
         protected override string idSuffix => "ui";
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [ShowInInspector]
         public virtual Type controllerType => typeof(UIPanelController);
 
         [SuffixLabel("UI With larger Sorting Order will cover smaller ones")]
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public int sortingOrder = 0;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool isUnique = true;
         
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [HideIf(nameof(isUnique))]
         [MinValue(0)]
         [JsonProperty]
         public int prewarmCount = 0;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool autoOpenOnCreation = false;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [GamePrefabID(typeof(IGameEventConfig))]
         [ListDrawerSettings(ShowFoldout = false)]
         [DisallowDuplicateElements]
         [JsonProperty]
         public List<string> gameEventDisabledOnOpen = new();
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool enableUICloseGameEvent = false;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [GamePrefabID(typeof(IGameEventConfig))]
         [IsNotNullOrEmpty]
         [ShowIf(nameof(enableUICloseGameEvent))]
         [JsonProperty]
         public string uiCloseGameEventID;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool enableUIGameEvent = false;
 
-        [TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [GamePrefabID(typeof(IGameEventConfig))]
         [IsNotNullOrEmpty]
         [ShowIf(nameof(enableUIGameEvent))]

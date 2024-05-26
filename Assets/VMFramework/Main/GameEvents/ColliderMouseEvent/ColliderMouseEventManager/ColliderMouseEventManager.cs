@@ -2,6 +2,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using EnumsNET;
+using VMFramework.Core;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
 
@@ -345,7 +346,6 @@ namespace VMFramework.GameEvents
         {
             if (dimensionsDetectPriority == ObjectDimensions.TWO_D)
             {
-
                 ColliderMouseEventTrigger detected2D = Detect2DTrigger();
                 if (detected2D != null)
                 {
@@ -366,7 +366,14 @@ namespace VMFramework.GameEvents
 
         private static ColliderMouseEventTrigger Detect3DTrigger()
         {
-            var ray = bindCamera.ScreenPointToRay(Input.mousePosition);
+            Vector3 mousePos = Input.mousePosition;
+            
+            if (mousePos.IsInfinity())
+            {
+                return default;
+            }
+            
+            var ray = bindCamera.ScreenPointToRay(mousePos);
 
             Debug.DrawRay(ray.origin, ray.direction, Color.green);
 
@@ -382,9 +389,16 @@ namespace VMFramework.GameEvents
 
         private static ColliderMouseEventTrigger Detect2DTrigger()
         {
+            Vector3 mousePos = Input.mousePosition;
+            
+            if (mousePos.IsInfinity())
+            {
+                return default;
+            }
+            
             RaycastHit2D hit2D = default;
 
-            Ray ray = bindCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = bindCamera.ScreenPointToRay(mousePos);
 
             float distance = -1;
 

@@ -7,7 +7,7 @@ namespace VMFramework.Core.Pool
         public static void OnGet<TComponent>(TComponent component)
             where TComponent : Component
         {
-            component.gameObject.SetActive(false);
+            component.gameObject.SetActive(true);
         }
         
         public static void OnReturn<TComponent>(TComponent component)

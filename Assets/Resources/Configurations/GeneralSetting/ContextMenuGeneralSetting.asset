@@ -44,4 +44,4 @@ MonoBehaviour:
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: 
-  defaultContextMenuID: 
+  defaultContextMenuID: universal_ui_toolkit_context_menu_ui

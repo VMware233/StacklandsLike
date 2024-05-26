@@ -1,0 +1,4 @@
+VisualElement {
+    -unity-font-definition: resource('Fonts/VonwaonBitmap-12px');
+    font-size: 30px;
+}

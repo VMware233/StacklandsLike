@@ -10,7 +10,7 @@ namespace VMFramework.UI
     {
         protected override string idSuffix => "debug_entry";
 
-        [LabelText("位置"), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText("位置"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [EnumToggleButtons]
         [SerializeField, JsonProperty]
         protected LeftRightDirection position = LeftRightDirection.Right;

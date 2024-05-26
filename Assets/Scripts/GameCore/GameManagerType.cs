@@ -2,6 +2,8 @@
 {
     public enum GameManagerType
     {
-        
+        GameCore,
+        Card,
+        UI
     }
 }

@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 using VMFramework.Core;
+using VMFramework.Core.Editor;
 
 namespace VMFramework.Editor
 {
@@ -61,6 +62,8 @@ namespace VMFramework.Editor
                     textColor = ColorDefinitions.white,
                     backgroundColor = ColorDefinitions.red
                 });
+                
+                this.EnforceSave();
             }
         }
     }

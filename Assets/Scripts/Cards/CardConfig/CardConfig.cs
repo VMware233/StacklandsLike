@@ -5,12 +5,13 @@ using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.Cards
 {
-    public partial class CardConfig : DescribedGamePrefab
+    public partial class CardConfig : DescribedGamePrefab, ICardConfig
     {
         public override Type gameItemType => typeof(Card);
 
         protected override string idSuffix => "card";
 
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [PreviewField(50, ObjectFieldAlignment.Center)]
         [Required]
         public Sprite icon;

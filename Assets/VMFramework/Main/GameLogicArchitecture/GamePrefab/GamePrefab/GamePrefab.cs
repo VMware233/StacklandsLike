@@ -18,7 +18,7 @@ namespace VMFramework.GameLogicArchitecture
 
         protected const string TAB_GROUP_NAME = "TabGroup";
 
-        protected const string BASIC_SETTING_CATEGORY = "Basic";
+        protected const string BASIC_CATEGORY = "Basic";
 
         protected const string TOOLS_CATEGORY = "Tools";
 

@@ -1,4 +1,5 @@
 ﻿using StackLandsLike.Cards;
+using StackLandsLike.UI;
 using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.GameCore
@@ -8,5 +9,7 @@ namespace StackLandsLike.GameCore
         public static GameSettingFile gameSettingFile => (GameSettingFile)gameCoreSettingsFile;
         
         public static CardGeneralSetting cardGeneralSetting => gameSettingFile.cardGeneralSetting;
+        
+        public static CardViewGeneralSetting cardViewGeneralSetting => gameSettingFile.cardViewGeneralSetting;
     }
 }

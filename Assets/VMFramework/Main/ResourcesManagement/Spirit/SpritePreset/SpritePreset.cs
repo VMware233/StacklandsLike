@@ -9,9 +9,9 @@ namespace VMFramework.ResourcesManagement
     public partial class SpritePreset : GameTypedGamePrefab
     {
         protected const string SPRITE_PREVIEW_GROUP =
-            TAB_GROUP_NAME + "/" + BASIC_SETTING_CATEGORY + "/Sprite Preview Group";
+            TAB_GROUP_NAME + "/" + BASIC_CATEGORY + "/Sprite Preview Group";
 
-        protected const string FLIP_GROUP = TAB_GROUP_NAME + "/" + BASIC_SETTING_CATEGORY + "/Flip Group";
+        protected const string FLIP_GROUP = TAB_GROUP_NAME + "/" + BASIC_CATEGORY + "/Flip Group";
 
         [HideLabel, HorizontalGroup(SPRITE_PREVIEW_GROUP)]
         [PreviewField(40, ObjectFieldAlignment.Center)]

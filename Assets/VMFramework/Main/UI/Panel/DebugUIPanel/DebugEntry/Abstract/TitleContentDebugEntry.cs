@@ -7,11 +7,11 @@ namespace VMFramework.UI
 {
     public abstract partial class TitleContentDebugEntry : DebugEntry
     {
-        [LabelText("显示标题"), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText("显示标题"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [JsonProperty]
         public bool displayTitle = true;
 
-        [LabelText("标题格式"), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText("标题格式"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [ShowIf(nameof(displayTitle))]
         [SerializeField, JsonProperty]
         protected TextTagFormat titleFormat = new()
@@ -20,7 +20,7 @@ namespace VMFramework.UI
             fontColor = Color.white
         };
 
-        [LabelText("内容格式"), TabGroup(TAB_GROUP_NAME, BASIC_SETTING_CATEGORY)]
+        [LabelText("内容格式"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [SerializeField, JsonProperty]
         protected TextTagFormat contentFormat = new()
         {
