@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebbfd3004cc454b880ddfefa4a58668, type: 3}
+  m_Name: GameEventGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <keyCodeTranslations>k__BackingField
+      Entry: 7
+      Data: 0|VMFramework.Configuration.DictionaryConfigs`2[[UnityEngine.KeyCode,
+        UnityEngine.CoreModule],[VMFramework.GameEvents.KeyCodeTranslation, Assembly-CSharp]],
+        Assembly-CSharp
+    - Name: configs
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[VMFramework.GameEvents.KeyCodeTranslation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 2|VMFramework.GameEvents.KeyCodeTranslation, Assembly-CSharp
+    - Name: <keyCode>k__BackingField
+      Entry: 3
+      Data: 323
+    - Name: <translation>k__BackingField
+      Entry: 7
+      Data: 3|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: LeftMouseName
+    - Name: defaultValue
+      Entry: 1
+      Data: Left Mouse
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|VMFramework.GameEvents.KeyCodeTranslation, Assembly-CSharp
+    - Name: <keyCode>k__BackingField
+      Entry: 3
+      Data: 324
+    - Name: <translation>k__BackingField
+      Entry: 7
+      Data: 5|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: RightMouseName
+    - Name: defaultValue
+      Entry: 1
+      Data: Right Mouse
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|VMFramework.GameEvents.KeyCodeTranslation, Assembly-CSharp
+    - Name: <keyCode>k__BackingField
+      Entry: 3
+      Data: 325
+    - Name: <translation>k__BackingField
+      Entry: 7
+      Data: 7|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: MiddleMouseName
+    - Name: defaultValue
+      Entry: 1
+      Data: Middle Mouse
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  <defaultLocalizationTableName>k__BackingField: 
+  initialGamePrefabWrappers:
+  - {fileID: 11400000, guid: 0a3465a05300df240a70ec94cd3e6aa7, type: 2}
+  <defaultGameType>k__BackingField: 

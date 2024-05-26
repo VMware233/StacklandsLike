@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: VMFrameworkEditor
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: e94215c47cf2034418e592797d964091, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: c1c3ad50580061d48bb30be700da7d30, type: 2}
+  - {fileID: 11400000, guid: 7e105d87e7abfc84eb1a417a29a398b5, type: 2}
+  m_Extensions:
+  - rid: 8175729436566749211
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds:
+    - rid: 8175729436566749211
+      type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
+      data:
+        m_Collection: {fileID: 11400000}
+        m_ColumnsList:
+        - rid: 8175729436566749212
+        - rid: 8175729436566749213
+        - rid: 8175729436566749214
+        m_ConnectedFile: Assets/VMFramework/Resources/Localization/VMFrameworkEditor.csv
+    - rid: 8175729436566749212
+      type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_IncludeId: 0
+        m_IncludeSharedComments: 0
+        m_KeyFieldName: Key
+        m_IdFieldName: Id
+        m_CommentFieldName: Shared Comments
+    - rid: 8175729436566749213
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: en-US
+        m_FieldName: English (United States)(en-US)
+        m_CommentFieldName: English (United States)(en-US) Comments
+        m_IncludeComments: 0
+    - rid: 8175729436566749214
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: zh-CN
+        m_FieldName: Chinese (Simplified)(zh-CN)
+        m_CommentFieldName: Chinese (Simplified)(zh-CN) Comments
+        m_IncludeComments: 0

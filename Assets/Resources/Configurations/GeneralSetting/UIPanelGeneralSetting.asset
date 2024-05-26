@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6518af2b4f3081e40a23184daa418733, type: 3}
+  m_Name: UIPanelGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: -4733365628477956816, guid: 68fdaa8726996104681eda85b1e6e9da, type: 3}
+    - {fileID: -4733365628477956816, guid: e473be1ed4f52694684a6b6c3332a349, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: languageConfigs
+      Entry: 7
+      Data: 0|VMFramework.Configuration.DictionaryConfigs`2[[System.String, mscorlib],[VMFramework.UI.UIPanelLanguageConfig,
+        Assembly-CSharp]], Assembly-CSharp
+    - Name: configs
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[VMFramework.UI.UIPanelLanguageConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 2|VMFramework.UI.UIPanelLanguageConfig, Assembly-CSharp
+    - Name: localeCode
+      Entry: 1
+      Data: zh-CN
+    - Name: styleSheet
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|VMFramework.UI.UIPanelLanguageConfig, Assembly-CSharp
+    - Name: localeCode
+      Entry: 1
+      Data: en-US
+    - Name: styleSheet
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  <defaultLocalizationTableName>k__BackingField: 
+  initialGamePrefabWrappers:
+  - {fileID: 11400000, guid: 9db51f9cc47baf045ae11ce603bb3492, type: 2}
+  - {fileID: 11400000, guid: 72105471f141fd04f86bb6af73f8482a, type: 2}
+  - {fileID: 11400000, guid: 44b6687fc6159794191e611c8724b468, type: 2}
+  <defaultGameType>k__BackingField: 
+  container:
+    containerID: $UI
+    container: {fileID: 0}
+  defaultTheme: {fileID: 0}
+  defaultScreenMatchMode: 0
+  defaultMatch: 0.5
+  defaultReferenceResolution: {x: 1920, y: 1080}
+  enableLanguageConfigs: 1

@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: VMFrameworkEditor Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: VMFrameworkEditor
+  m_TableCollectionNameGuidString: e94215c47cf2034418e592797d964091
+  m_Entries:
+  - m_Id: 18902790144
+    m_Key: GameEditorName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857909026816
+    m_Key: slate_gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61100895875072
+    m_Key: black
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857909026817
+    m_Key: light_black
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221120
+    m_Key: dark_slate_gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221121
+    m_Key: dark_grey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221122
+    m_Key: dim_gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221123
+    m_Key: gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221124
+    m_Key: light_gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221125
+    m_Key: ghost_white
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221126
+    m_Key: white
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221127
+    m_Key: spring_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221128
+    m_Key: light_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221129
+    m_Key: green_yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221130
+    m_Key: sea_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221131
+    m_Key: olive_drab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221132
+    m_Key: dark_olive_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221133
+    m_Key: dark_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221134
+    m_Key: green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221135
+    m_Key: brown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221136
+    m_Key: firebrick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221137
+    m_Key: indian_red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221138
+    m_Key: maroon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221139
+    m_Key: dark_red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221140
+    m_Key: red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221141
+    m_Key: turquoise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221142
+    m_Key: midnight_blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221143
+    m_Key: blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221144
+    m_Key: gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221145
+    m_Key: yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221146
+    m_Key: light_sea_green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221147
+    m_Key: dodger_blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221148
+    m_Key: deep_sky_blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221149
+    m_Key: sky_blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221150
+    m_Key: azure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221151
+    m_Key: aqua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221152
+    m_Key: medium_orchid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221153
+    m_Key: violet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221154
+    m_Key: plum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221155
+    m_Key: slate_blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221156
+    m_Key: medium_purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221157
+    m_Key: purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221158
+    m_Key: dark_magenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221159
+    m_Key: magenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221160
+    m_Key: tomato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221161
+    m_Key: coral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221162
+    m_Key: orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221163
+    m_Key: hot_pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221164
+    m_Key: thistle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221165
+    m_Key: pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221166
+    m_Key: wheat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4244532123250688
+    m_Key: AuxiliaryToolsCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4244690948960256
+    m_Key: GeneralSettingsCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247235134074880
+    m_Key: EditorCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247310094675968
+    m_Key: CoreCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247344349556736
+    m_Key: BuiltInCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247382475780096
+    m_Key: ResourcesManagementCategoryName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11488716261535744
+    m_Key: GeneralSaveName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11488820183805952
+    m_Key: GeneralOpenScriptName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12586154460295168
+    m_Key: BatchProcessorName
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8175729436566749188
+  references:
+    version: 2
+    RefIds:
+    - rid: 8175729436566749188
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1711711651704

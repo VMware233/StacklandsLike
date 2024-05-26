@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd4d7e1368540589044312719cd4fef, type: 3}
+  m_Name: GameSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  gameTypeGeneralSetting: {fileID: 11400000, guid: 93a3bbe40bbe30f4196446f16e160409, type: 2}
+  gameEventGeneralSetting: {fileID: 11400000, guid: d680659ca659cfa4c94b5f803920495e, type: 2}
+  colliderMouseEventGeneralSetting: {fileID: 11400000, guid: cc50f2380fec90f4ca3b237666b9bbb9, type: 2}
+  particleGeneralSetting: {fileID: 11400000, guid: c6f97ac085874e642b1a7ef14727c0c0, type: 2}
+  trailGeneralSetting: {fileID: 11400000, guid: 3a0704acd9b65e14791bb451067450a3, type: 2}
+  audioGeneralSetting: {fileID: 11400000, guid: e3add33e83f08d5469275ab2bc61ba89, type: 2}
+  modelGeneralSetting: {fileID: 11400000, guid: e6820853f5e98ca4da349220ce9c3d06, type: 2}
+  spriteGeneralSetting: {fileID: 11400000, guid: 2a0903b7c0510f94eb5e57d189d52027, type: 2}
+  propertyGeneralSetting: {fileID: 11400000, guid: fa90968b6f6a1ee42a938069f412c85c, type: 2}
+  tooltipPropertyGeneralSetting: {fileID: 11400000, guid: 2cd13f1588f6e8d408d68ded64f2b568, type: 2}
+  cameraGeneralSetting: {fileID: 11400000, guid: e95e1473574f60b439006652bdaee4ad, type: 2}
+  containerGeneralSetting: {fileID: 11400000, guid: fe7d339a2bce1ac4aa3211be56665c85, type: 2}
+  recipeGeneralSetting: {fileID: 11400000, guid: a7e31816402c85746acc2a7d43b8679b, type: 2}
+  uiPanelGeneralSetting: {fileID: 11400000, guid: ab21175ed284ce64fb783fa91b67f803, type: 2}
+  uiPanelProcedureGeneralSetting: {fileID: 11400000, guid: 3a190b70967f9cc4da364739ff943554, type: 2}
+  debugUIPanelGeneralSetting: {fileID: 11400000, guid: 4914aa174897c684481f4ee4706b9127, type: 2}
+  tooltipGeneralSetting: {fileID: 11400000, guid: a4ed03bbda2e60845a6716c1afa903a8, type: 2}
+  contextMenuGeneralSetting: {fileID: 11400000, guid: c676e85c78af8304f8f0c952326f6b5f, type: 2}
+  gameEditorGeneralSetting: {fileID: 11400000, guid: 6649a6e28f4f3104bac1baf0f7742356, type: 2}
+  colorfulHierarchyGeneralSetting: {fileID: 11400000, guid: 460b8e03df7e1e849acc4b7b920e20e3, type: 2}
+  hierarchyComponentIconGeneralSetting: {fileID: 11400000, guid: f6a621a3f8e6b004dbfb00e048bb9c0a, type: 2}
+  textureImporterGeneralSetting: {fileID: 11400000, guid: 89b592b78f0e78245bdff89a3f2574b3, type: 2}
+  gamePrefabWrapperGeneralSetting: {fileID: 11400000, guid: b324512877186d342afcff52cb8825f1, type: 2}
+  mapCoreGeneralSetting: {fileID: 11400000, guid: 1b5234565f4601b47ac811283737200b, type: 2}
+  extendedRuleTileGeneralSetting: {fileID: 11400000, guid: 94cd8054c842aa144b35164e2c2c38f9, type: 2}
+  cardGeneralSetting: {fileID: 11400000, guid: ab3daf46c5f2aae439b27bac80650c5b, type: 2}

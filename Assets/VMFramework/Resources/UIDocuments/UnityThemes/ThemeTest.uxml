@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/VMFramework/Resources/UIDocuments/UnityThemes/Chinese/DefaultChineseTextStyle.uss?fileID=7433441132597879392&amp;guid=d9ddf5d79e9f31148aebace3c0fd11ed&amp;type=3#DefaultChineseTextStyle" />
+    <Style src="project://database/Assets/VMFramework/Resources/UIDocuments/UnityThemes/English/DefaultEnglishTextStyle.uss?fileID=7433441132597879392&amp;guid=892456daa41407948bfa9e8a498a138e&amp;type=3#DefaultEnglishTextStyle" />
+    <engine:Label text="Label" />
+</engine:UXML>

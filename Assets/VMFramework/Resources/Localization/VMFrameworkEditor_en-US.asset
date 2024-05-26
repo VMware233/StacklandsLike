@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: VMFrameworkEditor_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: e94215c47cf2034418e592797d964091, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18902790144
+    m_Localized: Game Editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61100895875072
+    m_Localized: Black
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857909026816
+    m_Localized: Slate Gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857909026817
+    m_Localized: Light Black
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221120
+    m_Localized: Dark Slate Gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221121
+    m_Localized: Dark Grey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221122
+    m_Localized: Dim Gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221123
+    m_Localized: Gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221124
+    m_Localized: Light Gray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221125
+    m_Localized: Ghost White
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221126
+    m_Localized: White
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221127
+    m_Localized: Spring Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221128
+    m_Localized: Light Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221129
+    m_Localized: Green Yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221130
+    m_Localized: Sea Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221131
+    m_Localized: Olive Drab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221132
+    m_Localized: Dark Olive Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221133
+    m_Localized: Dark Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221134
+    m_Localized: Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221135
+    m_Localized: Brown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221136
+    m_Localized: Firebrick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221137
+    m_Localized: Indian Red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221138
+    m_Localized: Maroon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221139
+    m_Localized: Dark Red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221140
+    m_Localized: Red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221141
+    m_Localized: Turquoise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221142
+    m_Localized: Midnight Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221143
+    m_Localized: Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221144
+    m_Localized: Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221145
+    m_Localized: Yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221146
+    m_Localized: Light Sea Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221147
+    m_Localized: Dodger Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221148
+    m_Localized: Deep Sky Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221149
+    m_Localized: Sky Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221150
+    m_Localized: Azure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221151
+    m_Localized: Aqua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221152
+    m_Localized: Medium Orchid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221153
+    m_Localized: Violet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221154
+    m_Localized: Plum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221155
+    m_Localized: Slate Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221156
+    m_Localized: Medium Purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221157
+    m_Localized: Purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221158
+    m_Localized: Dark Magenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221159
+    m_Localized: Magenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221160
+    m_Localized: Tomato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221161
+    m_Localized: Coral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221162
+    m_Localized: Orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221163
+    m_Localized: Hot Pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221164
+    m_Localized: Thistle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221165
+    m_Localized: Pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61857913221166
+    m_Localized: Wheat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4244532123250688
+    m_Localized: Auxiliary Tools
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4244690948960256
+    m_Localized: General Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247235134074880
+    m_Localized: Editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247310094675968
+    m_Localized: Core
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247344349556736
+    m_Localized: Built-In
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4247382475780096
+    m_Localized: Resources Management
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11488716261535744
+    m_Localized: Save{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11488820183805952
+    m_Localized: Open{0}Script
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12586154460295168
+    m_Localized: Batch Processor
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/VMFramework/Resources/UIDocuments/Debug%20Screen%20UI/DebugScreenStyle.uss?fileID=7433441132597879392&amp;guid=e23e63fbad1d3594e8a10375f93df781&amp;type=3#DebugScreenStyle" />
+    <ui:VisualElement name="LeftGroup" picking-mode="Ignore" class="leftRightGroup" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; -unity-background-image-tint-color: rgba(255, 255, 255, 0);" />
+    <ui:VisualElement name="RightGroup" picking-mode="Ignore" class="leftRightGroup" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; align-items: flex-end; -unity-background-image-tint-color: rgba(255, 255, 255, 0);" />
+</ui:UXML>

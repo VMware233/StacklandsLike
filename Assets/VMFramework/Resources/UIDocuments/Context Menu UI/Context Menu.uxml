@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Library/Resources/UIDocuments/Context%20Menu%20UI/Context%20Menu%20Style.uss?fileID=7433441132597879392&amp;guid=af732f1493caaec4cbeca9a155919666&amp;type=3#Context Menu Style" />
+    <ui:VisualElement name="ContextMenu" style="position: absolute; top: 356px; left: 588px; min-width: 327px; background-image: resource(&apos;Images/UI/Context Menu/Background&apos;);">
+        <ui:VisualElement name="EntryContainer" style="padding-top: 30px; padding-right: 40px; padding-bottom: 30px; padding-left: 40px;">
+            <VMFramework.UI.IconLabelVisualElement />
+            <VMFramework.UI.IconLabelVisualElement />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

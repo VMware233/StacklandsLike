@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/VMFramework/Resources/UIDocuments/Tooltip%20UI/Tracing%20Tooltip%20Style.uss?fileID=7433441132597879392&amp;guid=4aed20b7f8bcaad4f9e2ac2545249754&amp;type=3#Tracing Tooltip Style" />
+    <Style src="project://database/Assets/VMFramework/Resources/UIDocuments/Default%20Styles/DefaultIconLabelStyle.uss?fileID=7433441132597879392&amp;guid=1abce97aa9eaa1545b5689e94c091a9c&amp;type=3#DefaultIconLabelStyle" />
+    <ui:VisualElement name="Tooltip" picking-mode="Ignore" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-self: flex-start; flex-shrink: 0; background-image: resource(&apos;Images/UI/Tooltip Background&apos;); padding-left: 25px; padding-right: 25px; padding-top: 18px; padding-bottom: 18px; position: absolute; bottom: 134px; max-width: 800px; transform-origin: left bottom; left: 260px;">
+        <ui:Label text="Title" name="Title" display-tooltip-when-elided="true" picking-mode="Ignore" style="white-space: normal; color: rgb(255, 255, 255);" />
+        <ui:VisualElement name="PropertyContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; color: rgb(255, 255, 255);">
+            <VMFramework.UI.GroupVisualElement>
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+            </VMFramework.UI.GroupVisualElement>
+            <VMFramework.UI.IconLabelVisualElement />
+            <VMFramework.UI.GroupVisualElement>
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+                <VMFramework.UI.IconLabelVisualElement />
+            </VMFramework.UI.GroupVisualElement>
+        </ui:VisualElement>
+        <ui:Label text="Description:23333333333333333333333" display-tooltip-when-elided="true" name="Description" picking-mode="Ignore" style="white-space: normal; text-overflow: clip; -unity-paragraph-spacing: 20px; color: rgb(66, 190, 255);" />
+    </ui:VisualElement>
+</ui:UXML>
