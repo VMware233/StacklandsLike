@@ -10,8 +10,10 @@ namespace VMFramework.Containers
         public int maxStackCount { get; }
 
         public int count { get; set; }
+        
+        public delegate void CountChangedEventHandler(IContainerItem containerItem, int oldCount, int newCount);
 
-        public event Action<int, int> OnCountChangedEvent;
+        public event Action<IContainerItem, int, int> OnCountChangedEvent;
 
         public bool IsMergeableWith(IContainerItem other)
         {

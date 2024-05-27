@@ -1,5 +1,6 @@
 ﻿using System;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Property;
 
@@ -15,7 +16,7 @@ namespace VMFramework.Containers
 
         [LabelText("数量")]
         [ShowInInspector]
-        public BaseIntProperty count;
+        public BaseIntProperty<IContainerItem> count;
         
         [LabelText("最大堆叠数量")]
         [ShowInInspector]
@@ -37,12 +38,19 @@ namespace VMFramework.Containers
             set => count.value = value;
         }
 
-        event Action<int, int> IContainerItem.OnCountChangedEvent
+        public event Action<IContainerItem, int, int> OnCountChangedEvent
         {
             add => count.OnValueChanged += value;
             remove => count.OnValueChanged -= value;
         }
 
         #endregion
+
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+
+            count = new(this, 1);
+        }
     }
 }

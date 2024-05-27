@@ -6,9 +6,13 @@ namespace VMFramework.Containers
 {
     public partial interface IContainer : IGameItem
     {
+        public IContainerOwner owner { get; }
+        
         public bool isOpen { get; }
 
         public int size { get; }
+        
+        public int totalItemCount { get; }
 
         public int validItemsSize { get; }
         

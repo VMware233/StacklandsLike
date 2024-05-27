@@ -26,6 +26,9 @@ MonoBehaviour:
   <defaultLocalizationTableName>k__BackingField: CardStringTable
   initialGamePrefabWrappers:
   - {fileID: 11400000, guid: ff0e49415934d544d8c5f3ca221654fc, type: 2}
+  - {fileID: 11400000, guid: 6cd02b06d233b1a468f28e3802d38a15, type: 2}
+  - {fileID: 11400000, guid: 743dbc96a175c384eace37b1a3629713, type: 2}
+  - {fileID: 11400000, guid: 250f812e45427fe4097c99d8f7a4b673, type: 2}
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}
-  cardViewSize: {x: 0, y: 0}
+  cardViewSize: {x: 1, y: 1}

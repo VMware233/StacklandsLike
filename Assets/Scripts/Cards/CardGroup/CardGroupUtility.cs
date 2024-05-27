@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using VMFramework.Containers;
 
 namespace StackLandsLike.Cards
 {
@@ -14,7 +15,7 @@ namespace StackLandsLike.Cards
                 return;
             }
 
-            if (group.CanAddCard(card) == false)
+            if (group.cardContainer.CanAddCard(card) == false)
             {
                 return;
             }
@@ -22,14 +23,21 @@ namespace StackLandsLike.Cards
             var oldGroup = card.group;
             if (oldGroup != null)
             {
-                oldGroup.RemoveCard(card);
-                if (oldGroup.count == 0)
+                if (oldGroup.cardContainer.TryPopItemTo(card, group.cardContainer) == false)
+                {
+                    Debug.LogError("Failed to move card from old group to new group");
+                    return;
+                }
+                
+                if (oldGroup.cardContainer.totalItemCount == 0)
                 {
                     CardGroupManager.DestroyCardGroup(oldGroup);
                 }
             }
-            
-            group.AddCard(card);
+            else
+            {
+                group.cardContainer.TryAddItem(card);
+            }
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -47,7 +55,11 @@ namespace StackLandsLike.Cards
                 return null;
             }
             
-            group.RemoveCard(card);
+            if (group.cardContainer.TryRemoveItem(card) == false)
+            {
+                Debug.LogError($"Failed to remove {card} from group {group.name}");
+                return null;
+            }
 
             var newGroup = CardGroupManager.CreateCardGroup(card, position);
             

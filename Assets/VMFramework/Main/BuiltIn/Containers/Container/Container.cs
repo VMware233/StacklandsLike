@@ -17,6 +17,8 @@ namespace VMFramework.Containers
         public bool isOpen { get; private set; } = false;
 
         public abstract int size { get; }
+        
+        public abstract int totalItemCount { get; }
 
         public int validItemsSize
         {
@@ -40,7 +42,7 @@ namespace VMFramework.Containers
         public event Action<IContainer> OnOpenEvent;
         public event Action<IContainer> OnCloseEvent;
 
-        private readonly Dictionary<int, Action<int, int>> itemCountChangedActions = new();
+        private readonly Dictionary<int, Action<IContainerItem, int, int>> itemCountChangedActions = new();
         
         public event IContainer.ItemCountChangedHandler OnItemCountChangedEvent;
 
@@ -131,35 +133,35 @@ namespace VMFramework.Containers
         protected void OnItemAdded(int slotIndex, IContainerItem item)
         {
             item.sourceContainer = this;
-
-            OnItemAddedEvent?.Invoke(this, slotIndex, item);
-
+            
+            validSlotIndices.Add(slotIndex);
+            
             itemCountChangedActions[slotIndex] = ItemChangedAction;
 
             item.OnCountChangedEvent += ItemChangedAction;
 
-            validSlotIndices.Add(slotIndex);
+            OnItemAddedEvent?.Invoke(this, slotIndex, item);
 
             item.OnAddToContainer(this);
 
             return;
 
-            void ItemChangedAction(int previousCount, int currentCount)
+            void ItemChangedAction(IContainerItem item, int previousCount, int currentCount)
             {
-                OnItemCountChangedEvent?.Invoke(this, slotIndex, item, previousCount,
-                    currentCount);
-
                 if (currentCount <= 0)
                 {
                     SetItem(slotIndex, null);
+                }
+                else
+                {
+                    OnItemCountChangedEvent?.Invoke(this, slotIndex, item, previousCount,
+                        currentCount);
                 }
             }
         }
 
         protected void OnItemRemoved(int slotIndex, IContainerItem item)
         {
-            OnItemRemovedEvent?.Invoke(this, slotIndex, item);
-
             item.OnCountChangedEvent -= itemCountChangedActions[slotIndex];
 
             validSlotIndices.Remove(slotIndex);
@@ -168,6 +170,8 @@ namespace VMFramework.Containers
             {
                 item.sourceContainer = null;
             }
+            
+            OnItemRemovedEvent?.Invoke(this, slotIndex, item);
 
             item.OnRemoveFromContainer(this);
         }

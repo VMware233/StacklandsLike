@@ -7,6 +7,22 @@ namespace VMFramework.Containers
 {
     public partial class ContainerUtility
     {
+        #region Try Pop Item
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool TryPopItemTo(this IContainer container, IContainerItem item,
+            IContainer targetContainer)
+        {
+            if (container.TryGetSlotIndex(item, out var slotIndex) == false)
+            {
+                return false;
+            }
+
+            return container.TryPopItemBySlotIndexTo(slotIndex, targetContainer);
+        }
+
+        #endregion
+        
         #region Try Pop Item By Slot Index
 
         /// <summary>

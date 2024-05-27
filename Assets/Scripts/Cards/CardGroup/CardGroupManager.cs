@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using StackLandsLike.GameCore;
 using UnityEngine;
+using VMFramework.Containers;
 using VMFramework.Core;
 using VMFramework.Core.Pool;
 using VMFramework.GameLogicArchitecture;
@@ -19,6 +20,7 @@ namespace StackLandsLike.Cards
         {
             var cardGroupObject = Instantiate(GameSetting.cardGeneralSetting.cardGroupPrefab);
             var cardGroup = cardGroupObject.GetComponent<CardGroup>();
+            cardGroup.Init();
             return cardGroup;
         }, onGetCallback: cardGroup =>
         {
@@ -61,7 +63,7 @@ namespace StackLandsLike.Cards
             
             var cardGroup = cache.Get();
 
-            if (cardGroup.TryAddCard(card) == false)
+            if (cardGroup.cardContainer.TryAddItem(card) == false)
             {
                 throw new InvalidOperationException("Failed to add card to card group.");
             }
@@ -86,7 +88,11 @@ namespace StackLandsLike.Cards
             
             foreach (var card in cardGroup.cards.ToList())
             {
-                cardGroup.RemoveCard(card);
+                if (cardGroup.cardContainer.TryRemoveItem(card) == false)
+                {
+                    throw new InvalidOperationException(
+                        $"Failed to remove {card} from card group :{cardGroup.name}.");
+                }
                 
                 IGameItem.Destroy(card);
             }

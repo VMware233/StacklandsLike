@@ -48,3 +48,4 @@ MonoBehaviour:
   extendedRuleTileGeneralSetting: {fileID: 11400000, guid: 94cd8054c842aa144b35164e2c2c38f9, type: 2}
   cardGeneralSetting: {fileID: 11400000, guid: ab3daf46c5f2aae439b27bac80650c5b, type: 2}
   cardViewGeneralSetting: {fileID: 11400000, guid: a8d69afa978797b4380b1322c142ea37, type: 2}
+  cardRecipeGeneralSetting: {fileID: 11400000, guid: 24c20dff83b63744cb732859b1b51618, type: 2}

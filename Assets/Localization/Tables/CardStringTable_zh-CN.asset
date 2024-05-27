@@ -22,6 +22,18 @@ MonoBehaviour:
     m_Localized: Test Card
     m_Metadata:
       m_Items: []
+  - m_Id: 172430000762880
+    m_Localized: Test 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192141602172928
+    m_Localized: Person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192513964093440
+    m_Localized: Test 3
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

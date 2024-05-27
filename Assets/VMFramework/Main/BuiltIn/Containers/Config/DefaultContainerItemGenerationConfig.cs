@@ -16,11 +16,13 @@ namespace VMFramework.Configuration
 #endif
         public string itemID;
 
-        [LabelText("数量")]
         [Minimum(0)]
         public IVectorChooserConfig<int> count = new SingleVectorChooserConfig<int>(1);
 
-        public abstract TItem GenerateItem();
+        public virtual TItem GenerateItem()
+        {
+            return IGameItem.Create<TItem>(itemID);
+        }
 
         public override void CheckSettings()
         {

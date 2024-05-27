@@ -15,8 +15,8 @@ MonoBehaviour:
   enableUIToolkitSupport: 1
   useOldUnityObjectField: 0
   useOldUnityPreviewField: 0
-  useOldTypeSelector: 0
-  useNewObjectSelector: 1
+  useOldTypeSelector: 1
+  useNewObjectSelector: 0
   showNoneItem: 1
   showCategoriesByDefault: 0
   preferNamespacesOverAssemblyCategories: 1

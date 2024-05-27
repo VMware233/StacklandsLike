@@ -1,9 +1,10 @@
 ﻿using System;
+using VMFramework.Containers;
 using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.Cards
 {
-    public interface ICard : IVisualGameItem
+    public interface ICard : IVisualGameItem, IContainerItem
     {
         public CardGroup group { get; }
         

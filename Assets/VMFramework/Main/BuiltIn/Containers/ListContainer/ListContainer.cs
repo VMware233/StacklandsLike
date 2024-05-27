@@ -21,7 +21,7 @@ namespace VMFramework.Containers
 
         public override bool isEmpty => validItemsSize == 0;
 
-        public int totalItemCount
+        public override int totalItemCount
         {
             get
             {
@@ -30,7 +30,7 @@ namespace VMFramework.Containers
                     return 0;
                 }
 
-                return items.Sum(item => item.count);
+                return items.Sum(item => item?.count ?? 0);
             }
         }
 
@@ -210,8 +210,6 @@ namespace VMFramework.Containers
                     items.Add(null);
 
                     OnSizeChanged();
-                    
-                    // Debug.LogWarning($"添加物品 {item} 到{this}的{items.Count - 1} 位置");
 
                     SetItem(items.Count - 1, item);
 
@@ -230,8 +228,9 @@ namespace VMFramework.Containers
 
                 addTimes++;
 
-                if (addTimes >= 50)
+                if (addTimes >= 1000)
                 {
+                    Debug.LogError($"添加物品 {item} 失败，超出最大添加次数: {1000}");
                     break;
                 }
             }

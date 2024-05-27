@@ -17,7 +17,6 @@ namespace VMFramework.Configuration
 #endif
         public string itemID;
 
-        [LabelText("数量")]
         [MinValue(0)]
         public int count = 1;
 

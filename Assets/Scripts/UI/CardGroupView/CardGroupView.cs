@@ -1,8 +1,10 @@
 using System;
+using System.Linq;
 using Sirenix.OdinInspector;
 using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
 using UnityEngine;
+using VMFramework.Containers;
 using VMFramework.Core;
 
 namespace StackLandsLike.UI
@@ -17,7 +19,7 @@ namespace StackLandsLike.UI
             cardGroup = GetComponentInParent<CardGroup>();
             
             cardGroup.OnPositionChanged += OnPositionChanged;
-            cardGroup.OnCardRemoved += OnCardRemoved;
+            cardGroup.cardContainer.OnItemRemovedEvent += OnCardRemoved;
         }
 
         private void OnPositionChanged(CardGroup cardGroup)
@@ -25,11 +27,16 @@ namespace StackLandsLike.UI
             RearrangeCardViews(true);
         }
         
-        private void OnCardRemoved(CardGroup cardGroup, ICard card)
+        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
         {
+            if (item is not ICard card)
+            {
+                return;
+            }
+            
             if (cardGroup.count == 1)
             {
-                var existingCard = cardGroup.cards[0];
+                var existingCard = cardGroup.cardContainer.GetAllItems<ICard>().First();
                 var cardView = CardViewManager.GetCardView(existingCard);
                 cardGroup.SetPosition(cardView.transform.position.XY());
             }
@@ -46,6 +53,8 @@ namespace StackLandsLike.UI
             
             var width = cardGroup.count.Sqrt().Ceiling();
             var height = (cardGroup.count.F() / width).Ceiling();
+            
+            var cards = cardGroup.cards.ToArray();
 
             Vector2 cardSize = GameSetting.cardGeneralSetting.cardViewSize;
             Vector2 startPoint = cardGroup.transform.position.XY();
@@ -54,12 +63,12 @@ namespace StackLandsLike.UI
             {
                 for (int y = 0; y < height; y++, index++)
                 {
-                    if (index >= cardGroup.count)
+                    if (index >= cards.Length)
                     {
                         break;
                     }
                     
-                    var card = cardGroup.cards[index];
+                    var card = cards[index];
 
                     var cardView = CardViewManager.GetCardView(card);
 

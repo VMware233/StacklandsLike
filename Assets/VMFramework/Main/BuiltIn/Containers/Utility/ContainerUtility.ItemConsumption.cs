@@ -8,27 +8,26 @@ namespace VMFramework.Containers
     {
         #region Contains Enough Items
 
-        public static bool ContainsEnoughItems(this Container container,
+        public static bool ContainsEnoughItems(this IContainer container,
             IItemConsumption consumption)
         {
-            return container.HasItemCount(consumption.itemID,
-                consumption.count);
+            return container.HasItemCount(consumption.itemID, consumption.count);
         }
 
-        public static bool ContainsEnoughItems(this IEnumerable<Container> containers,
+        public static bool ContainsEnoughItems(this IEnumerable<IContainer> containers,
             IItemConsumption consumption)
         {
             return containers.HasItemCount(consumption.itemID,
                 consumption.count);
         }
 
-        public static bool ContainsEnoughItems(this Container container,
+        public static bool ContainsEnoughItems(this IContainer container,
             IEnumerable<IItemConsumption> consumptions)
         {
             return consumptions.All(container.ContainsEnoughItems);
         }
 
-        public static bool ContainsEnoughItems(this IEnumerable<Container> containers,
+        public static bool ContainsEnoughItems(this IEnumerable<IContainer> containers,
             IEnumerable<IItemConsumption> consumptions)
         {
             return consumptions.All(containers.ContainsEnoughItems);

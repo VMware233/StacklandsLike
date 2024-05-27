@@ -19,6 +19,18 @@ MonoBehaviour:
     m_Key: TestCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 172430000762880
+    m_Key: Test2CardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192141602172928
+    m_Key: PersonCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192513964093440
+    m_Key: Test3CardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

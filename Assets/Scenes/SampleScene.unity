@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 59325171}
   - component: {fileID: 59325173}
   - component: {fileID: 59325172}
+  - component: {fileID: 59325174}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -177,6 +178,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardGroupCacheContainer: {fileID: 1457530804}
+--- !u!114 &59325174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59325170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ef1729167b43fc94e3f4e42187f660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &83941055
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +286,8 @@ GameObject:
   - component: {fileID: 196951514}
   - component: {fileID: 196951515}
   - component: {fileID: 196951516}
+  - component: {fileID: 196951518}
+  - component: {fileID: 196951517}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -320,7 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ed0d42c2da45aba9fed687197f800c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <camera>k__BackingField: {fileID: 519420031}
 --- !u!114 &196951516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +348,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardTablePlane: {fileID: 790678652}
+--- !u!114 &196951517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196951512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe76b2b9b184459908985e49ce65d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &196951518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196951512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d45a8beeae14a2ebe2604bcdbf35e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <camera>k__BackingField: {fileID: 519420031}
 --- !u!1 &199909956
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
 using UnityEngine;
@@ -13,145 +11,92 @@ namespace StackLandsLike.UI
     [ManagerCreationProvider(nameof(GameManagerType.UI))]
     public sealed class CardViewDragManager : ManagerBehaviour<CardViewDragManager>, IManagerBehaviour
     {
-        [field: SerializeField]
-        public new Camera camera { get; private set; }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void SetCamera(Camera camera)
-        {
-            this.camera = camera;
-        }
-        
-        private CardView draggingCardView;
+        public static CardView draggingCardView { get; private set; }
 
         void IInitializer.OnInitComplete(Action onDone)
         {
-            ColliderMouseEventManager.AddCallback(MouseEventType.DragBegin, e =>
-            {
-                var owner = e.trigger.owner;
-                if (owner.TryGetComponent(out CardView cardView) == false)
-                {
-                    return;
-                }
-                
-                draggingCardView = cardView;
-            });
+            ColliderMouseEventManager.AddCallback(MouseEventType.DragBegin, OnDragBegin);
             
-            ColliderMouseEventManager.AddCallback(MouseEventType.DragStay, e =>
-            {
-                if (TryGetMousePositionInCardTable(out var position) == false)
-                {
-                    return;
-                }
-                
-                var owner = e.trigger.owner;
-                if (owner.TryGetComponent(out CardView cardView) == false)
-                {
-                    return;
-                }
-                
-                cardView.SetPosition(position);
-            });
+            ColliderMouseEventManager.AddCallback(MouseEventType.DragStay, OnDragStay);
             
-            ColliderMouseEventManager.AddCallback(MouseEventType.DragEnd, e =>
-            {
-                var owner = e.trigger.owner;
-                if (owner.TryGetComponent(out CardView cardView) == false)
-                {
-                    return;
-                }
-                
-                draggingCardView = null;
-
-                if (TryGetMouseCardView(out var selectedCardViews) == false)
-                {
-                    return;
-                }
-
-                if (selectedCardViews.Count == 1 && selectedCardViews[0] == cardView)
-                {
-                    Vector2 position = cardView.transform.position.XY();
-                    if (cardView.card.group.count > 1)
-                    {
-                        cardView.card.MoveOutOfGroup(position);
-                    }
-                    else
-                    {
-                        cardView.card.group.SetPosition(position);
-                    }
-                    
-                    return;
-                }
-
-                foreach (var selectedCardView in selectedCardViews)
-                {
-                    if (selectedCardView == cardView)
-                    {
-                        continue;
-                    }
-
-                    if (cardView.card.group != selectedCardView.card.group)
-                    {
-                        cardView.card.MoveToGroup(selectedCardView.card.group);
-                    }
-                    
-                    selectedCardView.card.group.RearrangeCardViews(false);
-                }
-            });
+            ColliderMouseEventManager.AddCallback(MouseEventType.DragEnd, OnDragEnd);
             
             onDone();
         }
 
-        /// <summary>
-        /// 获取鼠标指向的卡卓的位置
-        /// </summary>
-        /// <returns></returns>
-        public static bool TryGetMousePositionInCardTable(out Vector2 position)
+        private static void OnDragBegin(ColliderMouseEvent e)
         {
-            var ray = instance.camera.ScreenPointToRay(Input.mousePosition);
-
-            Debug.DrawRay(ray.origin, ray.direction * 100, Color.blue);
-
-            LayerMask layerMask = GameSetting.cardViewGeneralSetting.cardTableLayer.ToLayerMask();
-            
-            if (Physics.Raycast(ray, out var hitInfo, 1000f, layerMask))
+            var owner = e.trigger.owner;
+            if (owner.TryGetComponent(out CardView cardView) == false)
             {
-                position = hitInfo.point;
-                return true;
+                return;
             }
-
-            position = Vector3.zero;
-            return false;
+                
+            draggingCardView = cardView;
         }
 
-        /// <summary>
-        /// 获取鼠标指向的卡片
-        /// </summary>
-        /// <returns></returns>
-        public static bool TryGetMouseCardView(out List<CardView> cardViews)
+        private static void OnDragStay(ColliderMouseEvent e)
         {
-            var ray = instance.camera.ScreenPointToRay(Input.mousePosition);
-
-            LayerMask layerMask = GameSetting.cardViewGeneralSetting.cardViewLayer.ToLayerMask();
-
-            var hitInfos = Physics.RaycastAll(ray, 1000f, layerMask);
-
-            cardViews = new();
-
-            foreach (var hitInfo in hitInfos)
+            if (CardViewMouseHoverManager.TryGetMousePositionInCardTable(out var position) == false)
             {
-                if (hitInfo.collider == null)
+                return;
+            }
+                
+            var owner = e.trigger.owner;
+            if (owner.TryGetComponent(out CardView cardView) == false)
+            {
+                return;
+            }
+                
+            cardView.SetPosition(position);
+        }
+
+        private static void OnDragEnd(ColliderMouseEvent e)
+        {
+            var owner = e.trigger.owner;
+            if (owner.TryGetComponent(out CardView cardView) == false)
+            {
+                return;
+            }
+                
+            draggingCardView = null;
+
+            if (CardViewMouseHoverManager.TryGetMouseCardView(out var selectedCardViews) == false)
+            {
+                return;
+            }
+
+            if (selectedCardViews.Count == 1 && selectedCardViews[0] == cardView)
+            {
+                Vector2 position = cardView.transform.position.XY();
+                if (cardView.card.group.count > 1)
+                {
+                    cardView.card.MoveOutOfGroup(position);
+                }
+                else
+                {
+                    cardView.card.group.SetPosition(position);
+                }
+                    
+                return;
+            }
+
+            foreach (var selectedCardView in selectedCardViews)
+            {
+                if (selectedCardView == cardView)
                 {
                     continue;
                 }
 
-                if (hitInfo.collider.TryGetComponent(out CardView cardView))
+                if (cardView.card.group != selectedCardView.card.group)
                 {
-                    cardViews.Add(cardView);
+                    cardView.card.MoveToGroup(selectedCardView.card.group);
                 }
+                    
+                selectedCardView.card.group.RearrangeCardViews(false);
+
+                break;
             }
-            
-            return cardViews.Count > 0;
         }
     }
 }

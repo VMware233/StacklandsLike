@@ -1,99 +1,65 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Sirenix.OdinInspector;
+using StackLandsLike.Containers;
 using UnityEngine;
+using VMFramework.Containers;
+using VMFramework.Core;
+using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.Cards
 {
-    public sealed class CardGroup : MonoBehaviour
+    public sealed class CardGroup : MonoBehaviour, IContainerOwner
     {
-        private readonly List<ICard> _cards = new();
+        [ShowInInspector]
+        public CardGroupContainer cardContainer { get; private set; }
         
-        public IReadOnlyList<ICard> cards => _cards;
+        public IEnumerable<ICard> cards => cardContainer.GetAllValidItems<ICard>();
         
-        public int count => _cards.Count;
-
-        public event Action<CardGroup, ICard> OnCardAdded; 
-        public event Action<CardGroup, ICard> OnCardRemoved;
+        public int count => cardContainer.size;
+        
         public event Action<CardGroup> OnPositionChanged;
 
-        public bool CanAddCard(ICard card)
+        public void Init()
         {
-            if (card == null)
-            {
-                return false;
-            }
-            
-            if (_cards.Contains(card))
-            {
-                Debug.LogWarning($"{card} already exists in Group: {name}");
-                return false;
-            }
-            
-            if (_cards.Count > 0)
-            {
-                foreach (var existedCard in _cards)
-                {
-                    if (existedCard.CanStackWith(card) == false)
-                    {
-                        return false;
-                    }
-
-                    if (card.CanStackWith(existedCard) == false)
-                    {
-                        return false;
-                    }
-                }
-            }
-            
-            return true;
+            cardContainer = IGameItem.Create<CardGroupContainer>(CardGroupContainerPreset.ID);
+            cardContainer.SetOwner(this);
+            cardContainer.OnItemAddedEvent += OnCardAdded;
+            cardContainer.OnItemRemovedEvent += OnCardRemoved;
         }
 
-        public void AddCard(ICard card)
+        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
         {
-            _cards.Add(card);
-            
-            card.SetGroup(this);
+            if (item is not ICard card)
+            {
+                return;
+            }
 
-            if (_cards.Count == 1)
+            if (card.group == this)
+            {
+                card.SetGroup(null);
+            }
+
+            if (cardContainer.validItemsSize == 0)
+            {
+                name = "Empty Card Group";
+            }
+        }
+
+        private void OnCardAdded(IContainer container, int index, IContainerItem item)
+        {
+            if (item is not ICard card)
+            {
+                return;
+            }
+
+            if (container.validItemsSize == 1)
             {
                 name = card.name;
             }
             
-            OnCardAdded?.Invoke(this, card);
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool TryAddCard(ICard card)
-        {
-            if (CanAddCard(card) == false)
-            {
-                return false;
-            }
-            
-            if (card.group != null)
-            {
-                Debug.LogWarning($"{card} already belongs to Group: {card.group.name}");
-                return false;
-            }
-            
-            AddCard(card);
-            
-            return true;
-        }
-        
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void RemoveCard(ICard card)
-        {
-            if (_cards.Remove(card) == false)
-            {
-                Debug.LogWarning($"{card} does not exist in Group: {name}");
-                return;
-            }
-            
-            card.SetGroup(null);
-            
-            OnCardRemoved?.Invoke(this, card);
+            card.SetGroup(this);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -101,6 +67,17 @@ namespace StackLandsLike.Cards
         {
             transform.position = position;
             OnPositionChanged?.Invoke(this);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Vector2 GetPosition()
+        {
+            return transform.position.XY();
+        }
+
+        public IEnumerable<IContainer> GetContainers()
+        {
+            yield return cardContainer;
         }
     }
 }

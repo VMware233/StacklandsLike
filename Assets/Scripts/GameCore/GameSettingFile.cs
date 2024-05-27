@@ -8,5 +8,6 @@ namespace StackLandsLike.GameCore
     {
         public CardGeneralSetting cardGeneralSetting;
         public CardViewGeneralSetting cardViewGeneralSetting;
+        public CardRecipeGeneralSetting cardRecipeGeneralSetting;
     }
 }

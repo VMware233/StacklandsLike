@@ -23,6 +23,19 @@ namespace VMFramework.Containers
             get => items?.Length ?? 0;
         }
 
+        public override int totalItemCount
+        {
+            get
+            {
+                if (items.Length == 0)
+                {
+                    return 0;
+                }
+
+                return items.Sum(item => item?.count ?? 0);
+            }
+        }
+
         public override bool isFull
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -332,6 +332,18 @@ namespace VMFramework.Containers
         #region By Item
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool TryRemoveItem(this IContainer container, IContainerItem item)
+        {
+            if (container.TryGetSlotIndex(item, out var slotIndex) == false)
+            {
+                return false;
+            }
+            
+            container.SetItem(slotIndex, null);
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool TryRemoveItem(this IContainer container, IContainerItem item, int preferredCount)
         {
             return container.TryRemoveItem(item, preferredCount, out _, out _);

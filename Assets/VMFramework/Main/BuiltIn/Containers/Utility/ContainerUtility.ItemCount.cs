@@ -195,7 +195,7 @@ namespace VMFramework.Containers
         #region Get Item Count
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static int GetItemCount(this IEnumerable<Container> containers, string itemID)
+        public static int GetItemCount(this IEnumerable<IContainer> containers, string itemID)
         {
             var count = 0;
 
@@ -208,7 +208,7 @@ namespace VMFramework.Containers
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Dictionary<string, int> GetItemsCount(this IEnumerable<Container> containers,
+        public static Dictionary<string, int> GetItemsCount(this IEnumerable<IContainer> containers,
             IEnumerable<string> itemsID)
         {
             var itemsCount = new Dictionary<string, int>();
@@ -226,7 +226,7 @@ namespace VMFramework.Containers
         #region Has Item Count
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool HasItemCount(this IEnumerable<Container> containers, string itemID, int count)
+        public static bool HasItemCount(this IEnumerable<IContainer> containers, string itemID, int count)
         {
             var existedCount = 0;
 
@@ -244,7 +244,7 @@ namespace VMFramework.Containers
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool HasItemsCount(this IEnumerable<Container> containers,
+        public static bool HasItemsCount(this IEnumerable<IContainer> containers,
             IReadOnlyDictionary<string, int> itemDictionary)
         {
             return itemDictionary.All(kvp => HasItemCount(containers, kvp.Key, kvp.Value));
@@ -255,28 +255,28 @@ namespace VMFramework.Containers
         #region Query Item Count
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static IEnumerable<Container> QueryContainersWithEnoughItems(
-            this IEnumerable<Container> containers, string itemID, int count)
+        public static IEnumerable<IContainer> QueryContainersWithEnoughItems(
+            this IEnumerable<IContainer> containers, string itemID, int count)
         {
             return containers.Where(container => container.HasItemCount(itemID, count));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static IEnumerable<Container> QueryContainersWithEnoughItems(
-            this IEnumerable<Container> containers, IReadOnlyDictionary<string, int> itemDictionary)
+        public static IEnumerable<IContainer> QueryContainersWithEnoughItems(
+            this IEnumerable<IContainer> containers, IReadOnlyDictionary<string, int> itemDictionary)
         {
             return containers.Where(container => container.HasItemsCount(itemDictionary));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Container QueryContainerWithEnoughItems(this IEnumerable<Container> containers,
+        public static IContainer QueryContainerWithEnoughItems(this IEnumerable<IContainer> containers,
             string itemID, int count)
         {
             return containers.FirstOrDefault(container => container.HasItemCount(itemID, count));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Container QueryContainerWithEnoughItems(this IEnumerable<Container> containers,
+        public static IContainer QueryContainerWithEnoughItems(this IEnumerable<IContainer> containers,
             IReadOnlyDictionary<string, int> itemDictionary)
         {
             return containers.FirstOrDefault(container => container.HasItemsCount(itemDictionary));

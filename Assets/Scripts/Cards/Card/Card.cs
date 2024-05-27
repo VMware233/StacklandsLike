@@ -1,13 +1,16 @@
 ﻿using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using VMFramework.Containers;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Property;
 
 namespace StackLandsLike.Cards
 {
-    public partial class Card : VisualGameItem, ICard
+    public partial class Card : ContainerItem, ICard
     {
+        public override int maxStackCount => int.MaxValue;
+        
         [ShowInInspector]
         public CardGroup group { get; private set; }
 

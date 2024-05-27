@@ -27,5 +27,4 @@ MonoBehaviour:
   cardViewPrefab: {fileID: 3410040908957789644, guid: 0f482db8c4c338c4692a22c9233dbca8, type: 3}
   cardTableLayer: 9
   cardViewLayer: 11
-  cardViewMovingTime: 0.5
-  cardViewSize: {x: 1, y: 1}
+  cardViewMovingTime: 0.45

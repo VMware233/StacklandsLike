@@ -1,4 +1,5 @@
 using System;
+using StackLandsLike.GameCore;
 using VMFramework.Core.Linq;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
@@ -13,11 +14,15 @@ namespace StackLandsLike.Cards
     {
         void IInitializer.OnInitComplete(Action onDone)
         {
-            5.Repeat(() =>
+            10.Repeat(() =>
             {
                 var cardID = GamePrefabManager.GetRandomGamePrefab<ICardConfig>().id;
                 CardGroupManager.CreateCardGroup(cardID);
             });
+            
+            GameStateManager.StartGame();
+            
+            onDone();
         }
     }
 }

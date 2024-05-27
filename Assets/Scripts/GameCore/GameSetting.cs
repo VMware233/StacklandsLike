@@ -11,5 +11,7 @@ namespace StackLandsLike.GameCore
         public static CardGeneralSetting cardGeneralSetting => gameSettingFile.cardGeneralSetting;
         
         public static CardViewGeneralSetting cardViewGeneralSetting => gameSettingFile.cardViewGeneralSetting;
+        
+        public static CardRecipeGeneralSetting cardRecipeGeneralSetting => gameSettingFile.cardRecipeGeneralSetting;
     }
 }

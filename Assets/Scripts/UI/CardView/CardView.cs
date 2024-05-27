@@ -3,23 +3,66 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
+using TMPro;
 using UnityEngine;
+using VMFramework.Containers;
 using VMFramework.Core;
 
 namespace StackLandsLike.UI
 {
     public sealed class CardView : MonoBehaviour
     {
+        [Required]
+        [SerializeField]
+        private TextMeshProUGUI title;
+        
         [ShowInInspector]
         public ICard card { get; private set; }
         
         public void SetCard(ICard card)
         {
-            this.card = card;
+            if (this.card != null)
+            {
+                this.card.OnCountChangedEvent -= OnCountChanged;
+            }
             
-            transform.SetParent(card.group.transform);
+            this.card = card;
+
+            if (this.card != null)
+            {
+                this.card.OnCountChangedEvent += OnCountChanged;
+
+                if (card.group == null)
+                {
+                    Debug.LogError($"{card} has no group!");
+                }
+                else
+                {
+                    transform.SetParent(this.card.group.transform);
+                }
+                
+                title.text = card.name;
+            }
         }
 
+        private void OnCountChanged(IContainerItem item, int oldCount, int newCount)
+        {
+            if (item is not ICard)
+            {
+                return;
+            }
+
+            if (newCount <= 0)
+            {
+                CardViewManager.ReturnCardView(card);
+            }
+        }
+
+        /// <summary>
+        /// 设置卡牌视图的位置，只需要提供XY坐标，z坐标由<see cref="CardTableManager"/>决定。
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="isInstant"></param>
         public void SetPosition(Vector2 position, bool isInstant = true)
         {
             transform.DOKill();
@@ -32,7 +75,6 @@ namespace StackLandsLike.UI
                 transform.DOMove(position.InsertAsZ(CardTableManager.zPosition),
                     GameSetting.cardViewGeneralSetting.cardViewMovingTime);
             }
-            
         }
     }
 }
