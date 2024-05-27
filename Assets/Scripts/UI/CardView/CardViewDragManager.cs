@@ -111,7 +111,7 @@ namespace StackLandsLike.UI
                     cardView.card.MoveToGroup(selectedCardView.card.group);
                 }
                     
-                selectedCardView.card.group.RearrangeCardViews(false);
+                // selectedCardView.card.group.RearrangeCardViews(false);
 
                 break;
             }

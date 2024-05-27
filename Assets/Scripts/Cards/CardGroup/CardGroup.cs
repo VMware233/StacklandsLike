@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using StackLandsLike.Containers;
@@ -29,42 +30,37 @@ namespace StackLandsLike.Cards
             cardContainer = IGameItem.Create<CardGroupContainer>(CardGroupContainerPreset.ID);
             cardContainer.SetOwner(this);
             cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.SUPER);
-            cardContainer.OnItemRemovedEvent += OnCardRemoved;
+            cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.TINY);
             OnInitialized?.Invoke();
         }
-
-        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
+        
+        private void OnCardAdded(ContainerItemAddedEvent e)
         {
-            if (item is not ICard card)
-            {
-                return;
-            }
+            var card = (ICard)e.item;
+
+            name = e.container.GetAllValidItems().Select(item => item.name).Join(",");
+            
+            card.SetGroup(this);
+        }
+
+        private void OnCardRemoved(ContainerItemRemovedEvent e)
+        {
+            var card = (ICard)e.item;
 
             if (card.group == this)
             {
                 card.SetGroup(null);
             }
 
-            if (cardContainer.validItemsSize == 0)
+            if (e.container.validItemsSize == 0)
             {
                 name = "Empty Card Group";
                 CardGroupManager.DestroyCardGroup(this);
             }
-        }
-
-        private void OnCardAdded(ContainerItemAddedEvent e)
-        {
-            if (e.item is not ICard card)
+            else
             {
-                return;
+                name = e.container.GetAllValidItems().Select(item => item.name).Join(",");
             }
-
-            if (e.container.validItemsSize == 1)
-            {
-                name = card.name;
-            }
-            
-            card.SetGroup(this);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -7,6 +7,7 @@ using StackLandsLike.UI;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.GameEvents;
 
 namespace StackLandsLike.Cards
 {
@@ -38,11 +39,11 @@ namespace StackLandsLike.Cards
         {
             GenerateColliders();
             
-            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded);
-            cardGroup.cardContainer.OnItemRemovedEvent += OnCardRemoved;
+            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.HIGH);
+            cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.LOW);
         }
 
-        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
+        private void OnCardRemoved(ContainerItemRemovedEvent e)
         {
             GenerateColliders();
         }

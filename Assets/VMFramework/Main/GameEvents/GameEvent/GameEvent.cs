@@ -68,7 +68,7 @@ namespace VMFramework.GameEvents
             
             if (callbacks.TryGetValue(priority, out var set))
             {
-                if (set.Add(callback) == false)
+                if (set.Add(callback))
                 {
                     callbacksLookup.Add(callback, priority);
                     return;

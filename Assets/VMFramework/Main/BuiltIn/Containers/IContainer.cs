@@ -29,7 +29,6 @@ namespace VMFramework.Containers
 
         public event ItemChangedHandler OnBeforeItemChangedEvent;
         public event ItemChangedHandler OnAfterItemChangedEvent;
-        public event ItemChangedHandler OnItemRemovedEvent;
         public event ItemCountChangedHandler OnItemCountChangedEvent;
         public event SizeChangedHandler OnSizeChangedEvent;
         

@@ -15,7 +15,7 @@ namespace VMFramework.GameEvents
         
         public void Disable();
         
-        public void AddCallback(Delegate callback, int priority = GameEventPriority.TINY);
+        public void AddCallback(Delegate callback, int priority);
         
         public void RemoveCallback(Delegate callback);
     }
@@ -30,7 +30,7 @@ namespace VMFramework.GameEvents
     public interface IReadOnlyGameEvent<out TGameEvent> : IReadOnlyGameEvent
         where TGameEvent : IReadOnlyGameEvent<TGameEvent>
     {
-        public void AddCallback(Action<TGameEvent> callback, int priority = GameEventPriority.TINY);
+        public void AddCallback(Action<TGameEvent> callback, int priority);
         
         public void RemoveCallback(Action<TGameEvent> callback);
 

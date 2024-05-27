@@ -50,7 +50,7 @@ namespace VMFramework.UI
             {
                 foreach (var gameEventID in contextMenuUIPreset.gameEventIDsToClose)
                 {
-                    GameEventManager.AddCallback(gameEventID, Close);
+                    GameEventManager.AddCallback(gameEventID, Close, GameEventPriority.TINY);
                 }
             }
         }

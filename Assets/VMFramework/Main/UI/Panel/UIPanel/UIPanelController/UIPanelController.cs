@@ -36,12 +36,12 @@ namespace VMFramework.UI
 
             if (preset.enableUICloseGameEvent)
             {
-                GameEventManager.AddCallback(preset.uiCloseGameEventID, Close);
+                GameEventManager.AddCallback(preset.uiCloseGameEventID, Close, GameEventPriority.TINY);
             }
 
             if (preset.enableUIGameEvent)
             {
-                GameEventManager.AddCallback(preset.uiToggleGameEventID, Toggle);
+                GameEventManager.AddCallback(preset.uiToggleGameEventID, Toggle, GameEventPriority.TINY);
             }
         }
 

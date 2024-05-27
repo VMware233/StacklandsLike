@@ -36,15 +36,16 @@ namespace VMFramework.Containers
 
         public event IContainer.ItemChangedHandler OnBeforeItemChangedEvent;
         public event IContainer.ItemChangedHandler OnAfterItemChangedEvent;
-        public event IContainer.ItemChangedHandler OnItemRemovedEvent;
 
         public IReadOnlyContainerItemChangedEvent<ContainerItemAddedEvent> ItemAddedEvent => itemAddedEvent;
 
         public IReadOnlyContainerItemChangedEvent<ContainerItemRemovedEvent> ItemRemovedEvent =>
             itemRemovedEvent;
         
+        [ShowInInspector]
         private ContainerItemAddedEvent itemAddedEvent;
 
+        [ShowInInspector]
         private ContainerItemRemovedEvent itemRemovedEvent;
 
         public event Action<IContainer> OnOpenEvent;
@@ -69,6 +70,7 @@ namespace VMFramework.Containers
             base.OnCreate();
 
             itemAddedEvent = IGameItem.Create<ContainerItemAddedEvent>(ContainerItemAddedEventConfig.ID);
+            itemRemovedEvent = IGameItem.Create<ContainerItemRemovedEvent>(ContainerItemRemovedEventConfig.ID);
 
             using var containerCreateEvent = ContainerCreateEvent.Get();
             containerCreateEvent.SetContainer(this);
@@ -184,7 +186,8 @@ namespace VMFramework.Containers
                 item.sourceContainer = null;
             }
             
-            OnItemRemovedEvent?.Invoke(this, slotIndex, item);
+            itemRemovedEvent.SetParameters(this, slotIndex, item);
+            itemRemovedEvent.Propagate();
 
             item.OnRemoveFromContainer(this);
         }

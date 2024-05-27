@@ -11,6 +11,9 @@ namespace StackLandsLike.UI
         [SerializeField]
         [Required]
         private Transform cardTablePlane;
+
+        [SerializeField]
+        private float zOffset = 0;
         
         [ShowInInspector]
         public static float zPosition { get; private set; }
@@ -21,7 +24,7 @@ namespace StackLandsLike.UI
 
             if (cardTablePlane != null)
             {
-                zPosition = cardTablePlane.position.z;
+                zPosition = cardTablePlane.position.z + zOffset;
             }
         }
     }

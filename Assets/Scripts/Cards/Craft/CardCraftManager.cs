@@ -5,6 +5,7 @@ using StackLandsLike.GameCore;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.GameEvents;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
 using VMFramework.Timers;
@@ -30,15 +31,15 @@ namespace StackLandsLike.Cards
 
         private void OnCardGroupCreated(CardGroup cardGroup)
         {
-            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded);
-            cardGroup.cardContainer.OnItemRemovedEvent += OnCardRemoved;
+            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.TINY);
+            cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.SUPER);
             cardGroup.cardContainer.OnItemCountChangedEvent += OnCardCountChanged;
         }
 
         private void OnCardGroupDestroyed(CardGroup cardGroup)
         {
             cardGroup.cardContainer.ItemAddedEvent.RemoveCallback(OnCardAdded);
-            cardGroup.cardContainer.OnItemRemovedEvent -= OnCardRemoved;
+            cardGroup.cardContainer.ItemRemovedEvent.RemoveCallback(OnCardRemoved);
             cardGroup.cardContainer.OnItemCountChangedEvent -= OnCardCountChanged;
         }
 
@@ -61,9 +62,9 @@ namespace StackLandsLike.Cards
             CheckSatisfied(e.container);
         }
         
-        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
+        private void OnCardRemoved(ContainerItemRemovedEvent e)
         {
-            var cardGroup = (CardGroup)container.owner;
+            var cardGroup = (CardGroup)e.container.owner;
 
             CheckGroup(cardGroup);
         }

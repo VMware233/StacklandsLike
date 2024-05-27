@@ -6,6 +6,7 @@ using StackLandsLike.GameCore;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.GameEvents;
 
 namespace StackLandsLike.UI
 {
@@ -20,7 +21,8 @@ namespace StackLandsLike.UI
             cardGroup = GetComponentInParent<CardGroup>();
             
             cardGroup.OnPositionChanged += OnPositionChanged;
-            cardGroup.cardContainer.OnItemRemovedEvent += OnCardRemoved;
+            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.TINY);
+            cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.SUPER);
         }
 
         private void OnPositionChanged(CardGroup cardGroup)
@@ -28,13 +30,13 @@ namespace StackLandsLike.UI
             RearrangeCardViews(true);
         }
         
-        private void OnCardRemoved(IContainer container, int index, IContainerItem item)
+        private void OnCardAdded(ContainerItemAddedEvent e)
         {
-            if (item is not ICard card)
-            {
-                return;
-            }
-            
+            RearrangeCardViews(false);
+        }
+        
+        private void OnCardRemoved(ContainerItemRemovedEvent e)
+        {
             if (cardGroup.count == 1)
             {
                 var existingCard = cardGroup.cardContainer.GetAllItems<ICard>().First();
