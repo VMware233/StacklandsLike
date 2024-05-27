@@ -40,9 +40,12 @@ namespace StackLandsLike.UI
                 else
                 {
                     transform.SetParent(this.card.group.transform);
+                    transform.localPosition = Vector3.zero;
                 }
                 
                 title.text = card.name;
+
+                name = $"{card.name} Card View";
             }
         }
 

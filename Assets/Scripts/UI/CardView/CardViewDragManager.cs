@@ -68,6 +68,11 @@ namespace StackLandsLike.UI
                 return;
             }
 
+            if (cardView.card == null)
+            {
+                return;
+            }
+
             if (cardView.card.group == null)
             {
                 Debug.LogError($"{cardView.card} has no group");
@@ -79,21 +84,24 @@ namespace StackLandsLike.UI
                 Vector2 targetPosition = cardView.transform.position.XY();
                 int count = cardView.card.group.count;
                 CardGroup oldGroup = cardView.card.group;
-                if (count > 1)
-                {
-                    cardView.card.MoveOutOfGroup(targetPosition);
 
-                    if (count == 2)
-                    {
-                        var originalCard = oldGroup.cardContainer.GetAllValidItems<ICard>().First();
-                        var originalCardView = CardViewManager.GetCardView(originalCard);
-                        
-                        oldGroup.SetPosition(originalCardView.GetPosition());
-                    }
-                }
-                else
+                switch (count)
                 {
-                    oldGroup.SetPosition(targetPosition);
+                    case 1:
+                        oldGroup.SetPosition(targetPosition);
+                        break;
+                    case > 1:
+                        Debug.LogError(cardView.card.name);
+                        cardView.card.MoveOutOfGroup(targetPosition);
+
+                        // if (count == 2)
+                        // {
+                        //     var originalCard = oldGroup.cardContainer.GetAllValidItems<ICard>().First();
+                        //     var originalCardView = CardViewManager.GetCardView(originalCard);
+                        //     
+                        //     oldGroup.SetPosition(originalCardView.GetPosition());
+                        // }
+                        break;
                 }
                     
                 return;
@@ -110,8 +118,10 @@ namespace StackLandsLike.UI
                 {
                     cardView.card.MoveToGroup(selectedCardView.card.group);
                 }
-                    
-                // selectedCardView.card.group.RearrangeCardViews(false);
+                else
+                {
+                    cardView.card.group.RearrangeCardViews(false);
+                }
 
                 break;
             }

@@ -20,7 +20,7 @@ namespace StackLandsLike.Cards
         
         public IEnumerable<ICard> cards => cardContainer.GetAllValidItems<ICard>();
         
-        public int count => cardContainer.size;
+        public int count => cardContainer.validItemsSize;
         
         public event Action<CardGroup> OnPositionChanged;
         public event Action OnInitialized;
@@ -30,7 +30,7 @@ namespace StackLandsLike.Cards
             cardContainer = IGameItem.Create<CardGroupContainer>(CardGroupContainerPreset.ID);
             cardContainer.SetOwner(this);
             cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.SUPER);
-            cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.TINY);
+            cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.SUPER);
             OnInitialized?.Invoke();
         }
         

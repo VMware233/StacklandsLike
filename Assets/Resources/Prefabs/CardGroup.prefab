@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2519778128004379143}
   - component: {fileID: 1457067358261872903}
   - component: {fileID: 541991280978699627}
+  - component: {fileID: 5784573914993653099}
   - component: {fileID: 4465416784706562714}
   - component: {fileID: 1920196961529523230}
   - component: {fileID: 8840799283189098107}
@@ -61,6 +62,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardGroup: {fileID: 0}
+--- !u!114 &5784573914993653099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874285788674166637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc1d60956543309f21bb9615d670ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &4465416784706562714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,9 +158,23 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 4465416784706562714}
+    m_ColliderPaths:
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 0.4999707, y: -0.5}
+      - {x: 0.4999707, y: 0.5}
+      - {x: -0.5, y: 0.4999707}
+      - {x: -0.4999707, y: -0.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0

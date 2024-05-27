@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using Sirenix.OdinInspector;
 using StackLandsLike.Cards;
-using StackLandsLike.GameCore;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.Core.Linq;
 using VMFramework.GameEvents;
 
 namespace StackLandsLike.UI
@@ -21,8 +21,8 @@ namespace StackLandsLike.UI
             cardGroup = GetComponentInParent<CardGroup>();
             
             cardGroup.OnPositionChanged += OnPositionChanged;
-            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.TINY);
-            cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.SUPER);
+            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.LOW);
+            cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.LOW);
         }
 
         private void OnPositionChanged(CardGroup cardGroup)
@@ -41,7 +41,9 @@ namespace StackLandsLike.UI
             {
                 var existingCard = cardGroup.cardContainer.GetAllItems<ICard>().First();
                 var cardView = CardViewManager.GetCardView(existingCard);
-                cardGroup.SetPosition(cardView.transform.position.XY());
+                var position = cardView.transform.position.XY();
+                Debug.LogError($"{cardGroup.name} : {cardGroup.transform.position.XY()}, {cardView.name} : {position}");
+                cardGroup.SetPosition(position);
             }
             else
             {
@@ -52,38 +54,33 @@ namespace StackLandsLike.UI
         [Button]
         public void RearrangeCardViews(bool isInstant)
         {
+            Debug.LogError($"Rearrange {name} : {cardGroup.count}");
+            
             if (cardGroup.count == 0) return;
-            
-            var width = cardGroup.count.Sqrt().Ceiling();
-            var height = (cardGroup.count.F() / width).Ceiling();
-            
+
+            var cardGroupCollider = cardGroup.GetComponent<CardGroupCollider>();
+
             var cards = cardGroup.cards.ToArray();
-
-            Vector2 cardSize = GameSetting.cardGeneralSetting.cardViewSize;
             Vector2 startPoint = cardGroup.transform.position.XY();
-            int index = 0;
-            for (int x = 0; x < width; x++)
+            
+            foreach (var (index, pivot) in cardGroupCollider.colliderPivots.Enumerate())
             {
-                for (int y = 0; y < height; y++, index++)
+                if (index >= cards.Length)
                 {
-                    if (index >= cards.Length)
-                    {
-                        break;
-                    }
-                    
-                    var card = cards[index];
-
-                    var cardView = CardViewManager.GetCardView(card);
-
-                    if (cardGroup == null)
-                    {
-                        continue;
-                    }
-
-                    var position = startPoint + cardSize.Multiply(new Vector2(x, y));
-                    
-                    cardView.SetPosition(position, isInstant);
+                    Debug.LogWarning(
+                        $"CardGroup {cardGroup.name} has " +
+                        $"more collider pivots {cardGroupCollider.colliderPivots.Count} " +
+                        $"than cards {cards.Length}.");
+                    break;
                 }
+                
+                var card = cards[index];
+
+                var cardView = CardViewManager.GetCardView(card);
+                
+                var position = startPoint + pivot;
+                    
+                cardView.SetPosition(position, isInstant);
             }
         }
     }

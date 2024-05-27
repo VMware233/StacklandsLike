@@ -27,7 +27,7 @@ namespace VMFramework.GameEvents
 
             if (isDebugging)
             {
-                AddCallback(gameEvent => Debug.LogWarning($"{gameEvent} was triggered."));
+                AddCallback(gameEvent => Debug.LogWarning($"{gameEvent} was triggered."), GameEventPriority.SUPER);
             }
         }
 
@@ -58,7 +58,7 @@ namespace VMFramework.GameEvents
             }
         }
         
-        public void AddCallback(Action<TGameEvent> callback, int priority = GameEventPriority.TINY)
+        public void AddCallback(Action<TGameEvent> callback, int priority)
         {
             if (callback == null)
             {

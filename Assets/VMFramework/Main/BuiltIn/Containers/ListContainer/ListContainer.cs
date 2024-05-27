@@ -89,14 +89,14 @@ namespace VMFramework.Containers
 
             var oldItem = items[index];
 
+            items[index] = targetItem;
+            
             if (oldItem != null)
             {
                 OnItemRemoved(index, oldItem);
             }
 
             OnBeforeItemChanged(index, oldItem);
-
-            items[index] = targetItem;
 
             if (targetItem != null)
             {
