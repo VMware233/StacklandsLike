@@ -29,10 +29,13 @@ namespace VMFramework.Containers
 
         public event ItemChangedHandler OnBeforeItemChangedEvent;
         public event ItemChangedHandler OnAfterItemChangedEvent;
-        public event ItemChangedHandler OnItemAddedEvent;
         public event ItemChangedHandler OnItemRemovedEvent;
         public event ItemCountChangedHandler OnItemCountChangedEvent;
         public event SizeChangedHandler OnSizeChangedEvent;
+        
+        public IReadOnlyContainerItemChangedEvent<ContainerItemAddedEvent> ItemAddedEvent { get; }
+        
+        public IReadOnlyContainerItemChangedEvent<ContainerItemRemovedEvent> ItemRemovedEvent { get; }
         
         public event Action<IContainer> OnOpenEvent;
         public event Action<IContainer> OnCloseEvent;

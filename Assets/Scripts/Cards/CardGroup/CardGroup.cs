@@ -6,10 +6,12 @@ using StackLandsLike.Containers;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.GameEvents;
 using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.Cards
 {
+    [DisallowMultipleComponent]
     public sealed class CardGroup : MonoBehaviour, IContainerOwner
     {
         [ShowInInspector]
@@ -20,13 +22,15 @@ namespace StackLandsLike.Cards
         public int count => cardContainer.size;
         
         public event Action<CardGroup> OnPositionChanged;
+        public event Action OnInitialized;
 
         public void Init()
         {
             cardContainer = IGameItem.Create<CardGroupContainer>(CardGroupContainerPreset.ID);
             cardContainer.SetOwner(this);
-            cardContainer.OnItemAddedEvent += OnCardAdded;
+            cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.SUPER);
             cardContainer.OnItemRemovedEvent += OnCardRemoved;
+            OnInitialized?.Invoke();
         }
 
         private void OnCardRemoved(IContainer container, int index, IContainerItem item)
@@ -44,17 +48,18 @@ namespace StackLandsLike.Cards
             if (cardContainer.validItemsSize == 0)
             {
                 name = "Empty Card Group";
+                CardGroupManager.DestroyCardGroup(this);
             }
         }
 
-        private void OnCardAdded(IContainer container, int index, IContainerItem item)
+        private void OnCardAdded(ContainerItemAddedEvent e)
         {
-            if (item is not ICard card)
+            if (e.item is not ICard card)
             {
                 return;
             }
 
-            if (container.validItemsSize == 1)
+            if (e.container.validItemsSize == 1)
             {
                 name = card.name;
             }

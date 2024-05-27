@@ -30,14 +30,14 @@ namespace StackLandsLike.Cards
 
         private void OnCardGroupCreated(CardGroup cardGroup)
         {
-            cardGroup.cardContainer.OnItemAddedEvent += OnCardAdded;
+            cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded);
             cardGroup.cardContainer.OnItemRemovedEvent += OnCardRemoved;
             cardGroup.cardContainer.OnItemCountChangedEvent += OnCardCountChanged;
         }
 
         private void OnCardGroupDestroyed(CardGroup cardGroup)
         {
-            cardGroup.cardContainer.OnItemAddedEvent -= OnCardAdded;
+            cardGroup.cardContainer.ItemAddedEvent.RemoveCallback(OnCardAdded);
             cardGroup.cardContainer.OnItemRemovedEvent -= OnCardRemoved;
             cardGroup.cardContainer.OnItemCountChangedEvent -= OnCardCountChanged;
         }
@@ -56,9 +56,9 @@ namespace StackLandsLike.Cards
             CheckSatisfied(container);
         }
 
-        private void OnCardAdded(IContainer container, int index, IContainerItem item)
+        private void OnCardAdded(ContainerItemAddedEvent e)
         {
-            CheckSatisfied(container);
+            CheckSatisfied(e.container);
         }
         
         private void OnCardRemoved(IContainer container, int index, IContainerItem item)

@@ -9,6 +9,7 @@ using VMFramework.Core;
 
 namespace StackLandsLike.UI
 {
+    [DisallowMultipleComponent]
     public sealed class CardGroupView : MonoBehaviour
     {
         [ShowInInspector]

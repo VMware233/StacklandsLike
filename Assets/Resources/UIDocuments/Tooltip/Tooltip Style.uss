@@ -1,0 +1,16 @@
+.propertyEntry {
+}
+
+.propertyEntryIcon {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+}
+
+.content {
+}
+
+.group {
+    flex-direction: row;
+    flex-wrap: wrap;
+}

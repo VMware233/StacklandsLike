@@ -28,11 +28,6 @@ namespace StackLandsLike.Cards
                     Debug.LogError("Failed to move card from old group to new group");
                     return;
                 }
-                
-                if (oldGroup.cardContainer.totalItemCount == 0)
-                {
-                    CardGroupManager.DestroyCardGroup(oldGroup);
-                }
             }
             else
             {

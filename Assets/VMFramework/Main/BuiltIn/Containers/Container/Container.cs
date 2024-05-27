@@ -36,9 +36,17 @@ namespace VMFramework.Containers
 
         public event IContainer.ItemChangedHandler OnBeforeItemChangedEvent;
         public event IContainer.ItemChangedHandler OnAfterItemChangedEvent;
-        public event IContainer.ItemChangedHandler OnItemAddedEvent;
         public event IContainer.ItemChangedHandler OnItemRemovedEvent;
+
+        public IReadOnlyContainerItemChangedEvent<ContainerItemAddedEvent> ItemAddedEvent => itemAddedEvent;
+
+        public IReadOnlyContainerItemChangedEvent<ContainerItemRemovedEvent> ItemRemovedEvent =>
+            itemRemovedEvent;
         
+        private ContainerItemAddedEvent itemAddedEvent;
+
+        private ContainerItemRemovedEvent itemRemovedEvent;
+
         public event Action<IContainer> OnOpenEvent;
         public event Action<IContainer> OnCloseEvent;
 
@@ -59,6 +67,8 @@ namespace VMFramework.Containers
         protected override void OnCreate()
         {
             base.OnCreate();
+
+            itemAddedEvent = IGameItem.Create<ContainerItemAddedEvent>(ContainerItemAddedEventConfig.ID);
 
             using var containerCreateEvent = ContainerCreateEvent.Get();
             containerCreateEvent.SetContainer(this);
@@ -140,7 +150,8 @@ namespace VMFramework.Containers
 
             item.OnCountChangedEvent += ItemChangedAction;
 
-            OnItemAddedEvent?.Invoke(this, slotIndex, item);
+            itemAddedEvent.SetParameters(this, slotIndex, item);
+            itemAddedEvent.Propagate();
 
             item.OnAddToContainer(this);
 
@@ -151,6 +162,8 @@ namespace VMFramework.Containers
                 if (currentCount <= 0)
                 {
                     SetItem(slotIndex, null);
+                    
+                    IGameItem.Destroy(item);
                 }
                 else
                 {

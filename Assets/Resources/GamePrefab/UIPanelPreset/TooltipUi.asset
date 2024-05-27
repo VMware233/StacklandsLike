@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
+  m_Name: TooltipUi
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 9197481963319205126, guid: 82fad12cb566b5f4d93d308d37f44b89, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: gamePrefab
+      Entry: 7
+      Data: 0|VMFramework.UI.UIToolkitTracingTooltipPreset, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: tooltip_ui
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 7
+      Data: 1|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 6
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: TooltipUiName
+    - Name: defaultValue
+      Entry: 1
+      Data: Tooltip
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: sortingOrder
+      Entry: 3
+      Data: 90
+    - Name: isUnique
+      Entry: 5
+      Data: true
+    - Name: prewarmCount
+      Entry: 3
+      Data: 0
+    - Name: autoOpenOnCreation
+      Entry: 5
+      Data: false
+    - Name: gameEventDisabledOnOpen
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: enableUICloseGameEvent
+      Entry: 5
+      Data: false
+    - Name: uiCloseGameEventID
+      Entry: 6
+      Data: 
+    - Name: enableUIGameEvent
+      Entry: 5
+      Data: false
+    - Name: uiToggleGameEventID
+      Entry: 6
+      Data: 
+    - Name: visualTree
+      Entry: 10
+      Data: 0
+    - Name: useDefaultPanelSettings
+      Entry: 5
+      Data: true
+    - Name: customPanelSettings
+      Entry: 6
+      Data: 
+    - Name: ignoreMouseEvents
+      Entry: 5
+      Data: false
+    - Name: closeUIButtonName
+      Entry: 6
+      Data: 
+    - Name: defaultPivot
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: enableOverflow
+      Entry: 5
+      Data: false
+    - Name: autoPivotCorrection
+      Entry: 5
+      Data: true
+    - Name: enableAutoMouseTracing
+      Entry: 5
+      Data: false
+    - Name: persistentTracing
+      Entry: 5
+      Data: true
+    - Name: useRightPosition
+      Entry: 5
+      Data: false
+    - Name: useTopPosition
+      Entry: 5
+      Data: false
+    - Name: containerVisualElementName
+      Entry: 1
+      Data: Tooltip
+    - Name: titleLabelName
+      Entry: 1
+      Data: Title
+    - Name: descriptionLabelName
+      Entry: 1
+      Data: Description
+    - Name: propertyContainerName
+      Entry: 1
+      Data: PropertyContainer
+    - Name: 
+      Entry: 8
+      Data: 

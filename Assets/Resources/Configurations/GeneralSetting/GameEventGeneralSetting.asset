@@ -119,4 +119,6 @@ MonoBehaviour:
   <defaultLocalizationTableName>k__BackingField: 
   initialGamePrefabWrappers:
   - {fileID: 11400000, guid: 0a3465a05300df240a70ec94cd3e6aa7, type: 2}
+  - {fileID: 11400000, guid: 952f208fd4c04f947b8677996ad34b7f, type: 2}
+  - {fileID: 11400000, guid: eedbc261f40cbdd40ac5acd61dacc53b, type: 2}
   <defaultGameType>k__BackingField: 

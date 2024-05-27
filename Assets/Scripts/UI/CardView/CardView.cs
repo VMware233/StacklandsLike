@@ -10,6 +10,7 @@ using VMFramework.Core;
 
 namespace StackLandsLike.UI
 {
+    [DisallowMultipleComponent]
     public sealed class CardView : MonoBehaviour
     {
         [Required]
@@ -75,6 +76,11 @@ namespace StackLandsLike.UI
                 transform.DOMove(position.InsertAsZ(CardTableManager.zPosition),
                     GameSetting.cardViewGeneralSetting.cardViewMovingTime);
             }
+        }
+        
+        public Vector2 GetPosition()
+        {
+            return transform.position.XY();
         }
     }
 }

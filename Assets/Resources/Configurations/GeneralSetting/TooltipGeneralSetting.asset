@@ -51,7 +51,19 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|VMFramework.UI.TooltipPriorityPreset, Assembly-CSharp
+    - Name: presetID
+      Entry: 1
+      Data: UI
+    - Name: priority
+      Entry: 3
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -63,11 +75,11 @@ MonoBehaviour:
       Data: 
     - Name: tooltipPriorityBindConfigs
       Entry: 7
-      Data: 4|VMFramework.Configuration.GameTypeBasedConfigs`1[[VMFramework.UI.TooltipPriorityBindConfig,
+      Data: 5|VMFramework.Configuration.GameTypeBasedConfigs`1[[VMFramework.UI.TooltipPriorityBindConfig,
         Assembly-CSharp]], Assembly-CSharp
     - Name: configs
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[VMFramework.UI.TooltipPriorityBindConfig,
+      Data: 6|System.Collections.Generic.List`1[[VMFramework.UI.TooltipPriorityBindConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -88,8 +100,8 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: presetID
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: UI
     - Name: priority
       Entry: 3
       Data: 0
@@ -99,4 +111,4 @@ MonoBehaviour:
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: 
-  defaultTooltipID: universal_ui_toolkit_tooltip_ui
+  defaultTooltipID: tooltip_ui

@@ -6,9 +6,9 @@ namespace VMFramework.GameEvents
     public partial class GameEvent<TGameEvent>
     {
         private bool isPropagationStopped = false;
-        
-        private bool isPropagating = false;
-        
+
+        public bool isPropagating { get; private set; } = false;
+
         public void StopPropagation()
         {
             isPropagationStopped = true;

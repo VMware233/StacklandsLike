@@ -3,7 +3,7 @@ using VMFramework.GameLogicArchitecture;
 
 namespace VMFramework.GameEvents
 {
-    public interface IGameEvent : IGameItem
+    public interface IReadOnlyGameEvent : IGameItem
     {
         public bool isEnabled { get; }
         
@@ -18,27 +18,36 @@ namespace VMFramework.GameEvents
         public void AddCallback(Delegate callback, int priority = GameEventPriority.TINY);
         
         public void RemoveCallback(Delegate callback);
-
+    }
+    
+    public interface IGameEvent : IReadOnlyGameEvent
+    {
         public void Propagate();
         
         public void StopPropagation();
     }
 
-    public interface IGameEvent<out TGameEvent> : IGameEvent
-        where TGameEvent : IGameEvent<TGameEvent>
+    public interface IReadOnlyGameEvent<out TGameEvent> : IReadOnlyGameEvent
+        where TGameEvent : IReadOnlyGameEvent<TGameEvent>
     {
         public void AddCallback(Action<TGameEvent> callback, int priority = GameEventPriority.TINY);
         
         public void RemoveCallback(Action<TGameEvent> callback);
 
-        void IGameEvent.AddCallback(Delegate callback, int priority)
+        void IReadOnlyGameEvent.AddCallback(Delegate callback, int priority)
         {
             AddCallback((Action<TGameEvent>)callback, priority);
         }
 
-        void IGameEvent.RemoveCallback(Delegate callback)
+        void IReadOnlyGameEvent.RemoveCallback(Delegate callback)
         {
             RemoveCallback((Action<TGameEvent>)callback);
         }
+    }
+
+    public interface IGameEvent<out TGameEvent> : IGameEvent, IReadOnlyGameEvent<TGameEvent>
+        where TGameEvent : IGameEvent<TGameEvent>
+    {
+        
     }
 }

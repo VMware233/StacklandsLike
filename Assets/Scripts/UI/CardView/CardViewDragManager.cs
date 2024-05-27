@@ -1,7 +1,9 @@
 using System;
+using System.Linq;
 using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
 using UnityEngine;
+using VMFramework.Containers;
 using VMFramework.Core;
 using VMFramework.GameEvents;
 using VMFramework.Procedure;
@@ -66,16 +68,32 @@ namespace StackLandsLike.UI
                 return;
             }
 
+            if (cardView.card.group == null)
+            {
+                Debug.LogError($"{cardView.card} has no group");
+                return;
+            }
+
             if (selectedCardViews.Count == 1 && selectedCardViews[0] == cardView)
             {
-                Vector2 position = cardView.transform.position.XY();
-                if (cardView.card.group.count > 1)
+                Vector2 targetPosition = cardView.transform.position.XY();
+                int count = cardView.card.group.count;
+                CardGroup oldGroup = cardView.card.group;
+                if (count > 1)
                 {
-                    cardView.card.MoveOutOfGroup(position);
+                    cardView.card.MoveOutOfGroup(targetPosition);
+
+                    if (count == 2)
+                    {
+                        var originalCard = oldGroup.cardContainer.GetAllValidItems<ICard>().First();
+                        var originalCardView = CardViewManager.GetCardView(originalCard);
+                        
+                        oldGroup.SetPosition(originalCardView.GetPosition());
+                    }
                 }
                 else
                 {
-                    cardView.card.group.SetPosition(position);
+                    oldGroup.SetPosition(targetPosition);
                 }
                     
                 return;

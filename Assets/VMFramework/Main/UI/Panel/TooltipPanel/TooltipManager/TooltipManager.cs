@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using VMFramework.Configuration;
 using VMFramework.GameLogicArchitecture;
@@ -74,6 +75,12 @@ namespace VMFramework.UI
             {
                 tooltip.Close(tooltipProvider);
             }
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IEnumerable<ITooltip> GetTooltips()
+        {
+            return UIPanelPool.GetUniquePanels<ITooltip>();
         }
     }
 }
