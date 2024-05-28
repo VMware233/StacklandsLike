@@ -23,6 +23,22 @@ MonoBehaviour:
     m_Key: BerryBushRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 617622499602432
+    m_Key: TreeChoppingRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 617920953692160
+    m_Key: RockQuarryingRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619001746141184
+    m_Key: TreePlantingRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619482136555520
+    m_Key: BushBerryPlantingRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

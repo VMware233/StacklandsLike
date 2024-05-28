@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using VMFramework.Core;
@@ -42,6 +43,10 @@ namespace VMFramework.Configuration
 
         protected virtual string ValueToString(T value)
         {
+            if (value is IEnumerable<object> enumerable)
+            {
+                return $"[{enumerable.Join(";")}]";
+            }
             return value?.ToString();
         }
     }

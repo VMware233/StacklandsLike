@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: BerryBushCard
+  m_Name: TreePlantingRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.ProducerCardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: berry_bush_card
+      Data: tree_planting_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -38,10 +38,7 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: default_card_type
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -53,13 +50,13 @@ MonoBehaviour:
       Data: 2|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardStringTable
+      Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: BerryBushCardName
+      Data: TreePlantingRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Berry Bush
+      Data: Tree Planting
     - Name: 
       Entry: 8
       Data: 
@@ -110,10 +107,10 @@ MonoBehaviour:
       Data: 4|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardStringTable
+      Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: BerryBushCardDescription
+      Data: TreePlantingRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -159,164 +156,72 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: icon
-      Entry: 6
-      Data: 
-    - Name: productionTimes
+    - Name: totalTicks
       Entry: 3
-      Data: 2
-    - Name: productionRecoveryTicks
-      Entry: 3
-      Data: 300
-    - Name: productionRecoveryAmount
-      Entry: 3
-      Data: 1
-    - Name: generationConfigs
+      Data: 200
+    - Name: consumptionConfigs
       Entry: 7
-      Data: 6|VMFramework.Configuration.WeightedSelectChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: items
-      Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 8|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 10|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_card
+      Data: soil_card
     - Name: count
-      Entry: 7
-      Data: 11|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
+    - Name: isConsumable
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_card
+      Data: tree_seed_card
     - Name: count
-      Entry: 7
-      Data: 13|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ratio
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 14|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 16|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: berry_card
-    - Name: count
-      Entry: 7
-      Data: 17|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ratio
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: hasLastGenerationConfig
+    - Name: isConsumable
       Entry: 5
       Data: true
-    - Name: lastGenerationConfigs
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: generationConfigs
       Entry: 7
-      Data: 18|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 7
-      Data: 19|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib
+      Data: 9|System.Collections.Generic.List`1[[VMFramework.Configuration.IChooserConfig`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 20|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 10|VMFramework.Configuration.SingleValueChooserConfig`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: log_card
+      Data: tree_card
     - Name: count
       Entry: 7
-      Data: 21|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
@@ -328,10 +233,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 13
+      Entry: 8
       Data: 
     - Name: 
-      Entry: 8
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8

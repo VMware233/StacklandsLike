@@ -18,7 +18,7 @@ namespace StackLandsLike.UI
             _camera = GetComponent<Camera>();
         }
         
-        private void FixedUpdate()
+        private void Update()
         {
             if (Input.GetMouseButton(1) || Input.GetMouseButton(2))
             {

@@ -23,7 +23,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 595327970291712
-    m_Localized: Berry Bush
+    m_Localized: Berry Bush Collecting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 617622499602432
+    m_Localized: Tree Chopping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 617920953692160
+    m_Localized: Rock Quarrying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619001746141184
+    m_Localized: Tree Planting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619482136555520
+    m_Localized: Bush Berry Planting
     m_Metadata:
       m_Items: []
   references:

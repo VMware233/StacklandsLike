@@ -39,6 +39,30 @@ MonoBehaviour:
     m_Key: BerryBushCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 802902359781376
+    m_Key: LogCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 805777806831616
+    m_Key: RockCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 805839005921280
+    m_Key: StoneCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 806950370652160
+    m_Key: TreeCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 807005429280768
+    m_Key: TreeSeedCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 809254490583040
+    m_Key: SoilCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

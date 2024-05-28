@@ -42,6 +42,30 @@ MonoBehaviour:
     m_Localized: Berry Bush
     m_Metadata:
       m_Items: []
+  - m_Id: 802902359781376
+    m_Localized: Log
+    m_Metadata:
+      m_Items: []
+  - m_Id: 805777806831616
+    m_Localized: Rock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 805839005921280
+    m_Localized: Stone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 806950370652160
+    m_Localized: Tree
+    m_Metadata:
+      m_Items: []
+  - m_Id: 807005429280768
+    m_Localized: Tree Seed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 809254490583040
+    m_Localized: Soil
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
