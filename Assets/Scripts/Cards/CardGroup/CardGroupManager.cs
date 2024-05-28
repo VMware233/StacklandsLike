@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
@@ -31,6 +32,8 @@ namespace StackLandsLike.Cards
             cardGroup.SetActive(false);
             cardGroup.transform.SetParent(instance.cardGroupCacheContainer);
         });
+        
+        private static readonly HashSet<CardGroup> activeCardGroups = new();
 
         public static event Action<CardGroup> OnCardGroupCreated;
         public static event Action<CardGroup> OnCardGroupDestroyed;
@@ -67,6 +70,8 @@ namespace StackLandsLike.Cards
             {
                 throw new InvalidOperationException("Failed to add card to card group.");
             }
+            
+            activeCardGroups.Add(cardGroup);
 
             cardGroup.SetPosition(position);
             
@@ -98,6 +103,14 @@ namespace StackLandsLike.Cards
             }
             
             cache.Return(cardGroup);
+            
+            activeCardGroups.Remove(cardGroup);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IReadOnlyCollection<CardGroup> GetActiveCardGroups()
+        {
+            return activeCardGroups;
         }
     }
 }

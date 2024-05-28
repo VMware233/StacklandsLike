@@ -182,6 +182,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: defaultDefense
+      Entry: 6
+      Data: 
+    - Name: nutritionRequired
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

@@ -4,6 +4,7 @@
     {
         GameCore,
         Card,
-        UI
+        UI,
+        Time
     }
 }

@@ -1,9 +1,12 @@
 using System;
+using VMFramework.Configuration;
 
 namespace StackLandsLike.Cards
 {
-    public class PersonCardConfig : CreatureCardConfig
+    public partial class PersonCardConfig : CreatureCardConfig
     {
         public override Type gameItemType => typeof(PersonCard);
+
+        public IVectorChooserConfig<int> nutritionRequired;
     }
 }
