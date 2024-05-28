@@ -89,6 +89,13 @@ namespace StackLandsLike.Cards
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DestroyCardGroup(CardGroup cardGroup)
         {
+            if (activeCardGroups.Contains(cardGroup) == false)
+            {
+                return;
+            }
+            
+            activeCardGroups.Remove(cardGroup);
+            
             OnCardGroupDestroyed?.Invoke(cardGroup);
             
             foreach (var card in cardGroup.cards.ToList())
@@ -103,8 +110,6 @@ namespace StackLandsLike.Cards
             }
             
             cache.Return(cardGroup);
-            
-            activeCardGroups.Remove(cardGroup);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

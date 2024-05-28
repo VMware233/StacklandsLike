@@ -12,7 +12,7 @@ namespace VMFramework.GameEvents
         [ShowInInspector]
         private readonly SortedDictionary<int, HashSet<Action<TGameEvent>>> callbacks = new();
         [ShowInInspector]
-        private readonly Dictionary<Delegate, int> callbacksLookup = new();
+        private readonly Dictionary<Action<TGameEvent>, int> callbacksLookup = new();
 
         [ShowInInspector]
         private int disabledCount = 0;
