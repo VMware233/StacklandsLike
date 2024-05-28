@@ -152,6 +152,34 @@ namespace VMFramework.Core
         {
             return obj.GetComponent(componentType) != null;
         }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool HasComponent(this Component c, Type[] componentTypes)
+        {
+            foreach (var t in componentTypes)
+            {
+                if (c.GetComponent(t) != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool HasComponent(this GameObject obj, Type[] componentTypes)
+        {
+            foreach (var t in componentTypes)
+            {
+                if (obj.GetComponent(t) != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool HasComponent<T>(this Component c) where T : Component

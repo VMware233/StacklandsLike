@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace VMFramework.UI
 {
-    public class UGUIPanelPreset : UIPanelPreset
+    public class UGUIPanelPreset : UIPanelPreset, IUGUIPanelPreset
     {
         protected const string UGUI_PANEL_CATEGORY = "UGUI";
 
@@ -19,41 +19,13 @@ namespace VMFramework.UI
         [Required]
         public GameObject prefab;
 
+        GameObject IUGUIPanelPreset.prefab => prefab;
+
         public override void CheckSettings()
         {
             base.CheckSettings();
 
             prefab.AssertIsNotNull(nameof(prefab));
-        }
-
-        protected IEnumerable GetPrefabChildrenNames()
-        {
-            if (prefab == null)
-            {
-                return null;
-            }
-
-            return prefab.transform.GetAllChildrenNames(false);
-        }
-
-        protected IEnumerable GetPrefabChildrenNamesOfTextMeshProUGUI()
-        {
-            if (prefab == null)
-            {
-                return null;
-            }
-
-            return prefab.transform.GetAllChildrenNames<TextMeshProUGUI>(false);
-        }
-
-        protected IEnumerable GetPrefabChildrenNamesOfImage()
-        {
-            if (prefab == null)
-            {
-                return null;
-            }
-
-            return prefab.transform.GetAllChildrenNames<Image>(false);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace VMFramework.UI
         public override Type controllerType => typeof(UGUIPopupProgressController);
 
         [LabelText("进度条名称"), TabGroup(TAB_GROUP_NAME, POPUP_SETTING_CATEGORY)]
-        [ValueDropdown(nameof(GetPrefabChildrenNames))]
+        [UGUIName]
         [IsNotNullOrEmpty]
         public string progressName;
     }

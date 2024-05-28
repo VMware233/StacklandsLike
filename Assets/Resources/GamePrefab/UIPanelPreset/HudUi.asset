@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
+  m_Name: HudUi
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 4584591609615169559, guid: f981fd706e025d74c9d5da9acb9dc759, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: gamePrefab
+      Entry: 7
+      Data: 0|StackLandsLike.UI.HUDPreset, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: hud_ui
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 7
+      Data: 1|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 6
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: HudUiName
+    - Name: defaultValue
+      Entry: 1
+      Data: Hud
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: sortingOrder
+      Entry: 3
+      Data: 0
+    - Name: isUnique
+      Entry: 5
+      Data: true
+    - Name: prewarmCount
+      Entry: 3
+      Data: 0
+    - Name: autoOpenOnCreation
+      Entry: 5
+      Data: false
+    - Name: gameEventDisabledOnOpen
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: enableUICloseGameEvent
+      Entry: 5
+      Data: false
+    - Name: uiCloseGameEventID
+      Entry: 6
+      Data: 
+    - Name: enableUIGameEvent
+      Entry: 5
+      Data: false
+    - Name: uiToggleGameEventID
+      Entry: 6
+      Data: 
+    - Name: prefab
+      Entry: 10
+      Data: 0
+    - Name: tickInDayLabel
+      Entry: 1
+      Data: TickInDay
+    - Name: 
+      Entry: 8
+      Data: 

@@ -1,6 +1,7 @@
 ﻿using System;
 using Sirenix.OdinInspector;
 using VMFramework.Configuration.Animation;
+using VMFramework.OdinExtensions;
 
 namespace VMFramework.UI
 {
@@ -11,7 +12,7 @@ namespace VMFramework.UI
         public override Type controllerType => typeof(UGUIPopupController);
 
         [TabGroup(TAB_GROUP_NAME, POPUP_SETTING_CATEGORY)]
-        [ValueDropdown(nameof(GetPrefabChildrenNames))]
+        [UGUIName]
         public string popupContainerName;
 
         [TabGroup(TAB_GROUP_NAME, POPUP_SETTING_CATEGORY)]

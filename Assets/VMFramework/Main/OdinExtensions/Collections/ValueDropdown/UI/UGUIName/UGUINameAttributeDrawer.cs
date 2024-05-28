@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR && ODIN_INSPECTOR
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -8,8 +8,7 @@ using VMFramework.UI;
 
 namespace VMFramework.OdinExtensions
 {
-    public class VisualElementNameAttributeDrawer : 
-        GeneralValueDropdownAttributeDrawer<VisualElementNameAttribute>
+    public sealed class UGUINameAttributeDrawer : GeneralValueDropdownAttributeDrawer<UGUINameAttribute>
     {
         protected override void Validate()
         {
@@ -19,14 +18,14 @@ namespace VMFramework.OdinExtensions
             {
                 var value = parent?.ValueEntry?.WeakSmartValue;
 
-                if (value is IUIToolkitUIPanelPreset preset)
+                if (value is IUGUIPanelPreset preset)
                 {
                     return;
                 }
             }
 
             SirenixEditorGUI.ErrorMessageBox(
-                $"The property {Property.Name} is not a child of a {nameof(IUIToolkitUIPanelPreset)}.");
+                $"The property {Property.Name} is not a child of a {nameof(IUGUIPanelPreset)}.");
         }
 
         protected override IEnumerable<ValueDropdownItem> GetValues()
@@ -35,9 +34,9 @@ namespace VMFramework.OdinExtensions
             {
                 var value = parent?.ValueEntry?.WeakSmartValue;
 
-                if (value is IUIToolkitUIPanelPreset preset)
+                if (value is IUGUIPanelPreset preset)
                 {
-                    return preset.visualTree.GetAllNamesByTypes(Attribute.VisualElementTypes)
+                    return preset.prefab.transform.GetAllChildrenNames(Attribute.UGUITypes, true)
                         .ToValueDropdownItems();
                 }
             }

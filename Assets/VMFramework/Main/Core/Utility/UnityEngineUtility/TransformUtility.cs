@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 namespace VMFramework.Core
@@ -26,15 +28,28 @@ namespace VMFramework.Core
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static IEnumerable GetAllChildrenNames(this Transform t, bool includingSelf)
+        public static IEnumerable<string> GetAllChildrenNames(this Transform t, bool includingSelf)
         {
             return GetAllChildren(t, includingSelf).Select(transform => transform.name);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static IEnumerable GetAllChildrenNames<T>(this Transform t, bool includingSelf) where T : Component
+        public static IEnumerable<string> GetAllChildrenNames<T>(this Transform t, bool includingSelf) where T : Component
         {
-            return GetAllChildren(t, includingSelf).Where(transform => transform.GetComponent<T>() != null).
+            return GetAllChildren(t, includingSelf).Where(transform => transform.HasComponent<T>()).
+                Select(transform => transform.name);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IEnumerable<string> GetAllChildrenNames(this Transform t,Type type, bool includingSelf)
+        {
+            return GetAllChildren(t, includingSelf).Where(transform => transform.HasComponent(type)).
+                Select(transform => transform.name);
+        }
+        
+        public static IEnumerable<string> GetAllChildrenNames(this Transform t,Type[] types, bool includingSelf)
+        {
+            return GetAllChildren(t, includingSelf).Where(transform => transform.HasComponent(types)).
                 Select(transform => transform.name);
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if ODIN_INSPECTOR
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 using VMFramework.Core;
@@ -35,3 +36,4 @@ namespace VMFramework.OdinExtensions
         }
     }
 }
+#endif

@@ -1,5 +1,7 @@
 ﻿using System;
 using Sirenix.OdinInspector;
+using TMPro;
+using VMFramework.OdinExtensions;
 
 namespace VMFramework.UI
 {
@@ -8,7 +10,7 @@ namespace VMFramework.UI
         public override Type controllerType => typeof(UGUIPopupTextController);
 
         [TabGroup(TAB_GROUP_NAME, POPUP_SETTING_CATEGORY)]
-        [ValueDropdown(nameof(GetPrefabChildrenNamesOfTextMeshProUGUI))]
+        [UGUIName(typeof(TextMeshProUGUI))]
         public string textName;
     }
 }
