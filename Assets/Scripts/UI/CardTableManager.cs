@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using StackLandsLike.GameCore;
 using UnityEngine;
@@ -26,6 +27,12 @@ namespace StackLandsLike.UI
             {
                 zPosition = cardTablePlane.position.z + zOffset;
             }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 GetPositionInTable(Vector2 position)
+        {
+            return new Vector3(position.x, position.y, zPosition);
         }
     }
 }

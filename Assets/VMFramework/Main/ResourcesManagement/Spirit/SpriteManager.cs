@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using VMFramework.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,7 +10,7 @@ using VMFramework.Procedure;
 namespace VMFramework.ResourcesManagement
 {
     [ManagerCreationProvider(ManagerType.ResourcesCore)]
-    public class SpriteManager : SerializedMonoBehaviour
+    public sealed class SpriteManager : ManagerBehaviour<SpriteManager>
     {
         [LabelText("Sprite缓存")]
         [ShowInInspector]

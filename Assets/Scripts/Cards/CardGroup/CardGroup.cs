@@ -23,7 +23,6 @@ namespace StackLandsLike.Cards
         public int count => cardContainer.validItemsSize;
         
         public event Action<CardGroup> OnPositionChanged;
-        public event Action OnInitialized;
 
         public void Init()
         {
@@ -31,7 +30,8 @@ namespace StackLandsLike.Cards
             cardContainer.SetOwner(this);
             cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.SUPER);
             cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.SUPER);
-            OnInitialized?.Invoke();
+            
+            GetComponent<CardGroupCollider>().Init();
         }
         
         private void OnCardAdded(ContainerItemAddedEvent e)

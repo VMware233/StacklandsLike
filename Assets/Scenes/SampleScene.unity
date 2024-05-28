@@ -1701,15 +1701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9002c7201e486d9469c59b0e7c173d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
 --- !u!114 &1511500270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,9 +2211,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1095484591}
-  - {fileID: 519420032}
   - {fileID: 871597810}
   - {fileID: 1457530804}
   - {fileID: 83941056}
   - {fileID: 1125648993}
   - {fileID: 208821719}
+  - {fileID: 519420032}

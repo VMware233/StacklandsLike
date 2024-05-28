@@ -23,24 +23,12 @@ namespace StackLandsLike.Cards
         private readonly List<BoxCollider2D> colliders = new();
         
         public IReadOnlyList<Vector2> colliderPivots => _colliderPivots;
-        
-        private void Start()
+
+        public void Init()
         {
             cardGroup = GetComponent<CardGroup>();
             colliders.AddRange(GetComponents<BoxCollider2D>());
-
-            if (cardGroup.cardContainer == null)
-            {
-                cardGroup.OnInitialized += Init;
-            }
-            else
-            {
-                Init();
-            }
-        }
-
-        private void Init()
-        {
+            
             GenerateColliders();
             
             cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.HIGH);

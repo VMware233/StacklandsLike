@@ -23,6 +23,8 @@ namespace StackLandsLike.UI
             cardGroup.OnPositionChanged += OnPositionChanged;
             cardGroup.cardContainer.ItemAddedEvent.AddCallback(OnCardAdded, GameEventPriority.LOW);
             cardGroup.cardContainer.ItemRemovedEvent.AddCallback(OnCardRemoved, GameEventPriority.LOW);
+            
+            RearrangeCardViews(true);
         }
 
         private void OnPositionChanged(CardGroup cardGroup)
@@ -42,7 +44,7 @@ namespace StackLandsLike.UI
                 var existingCard = cardGroup.cardContainer.GetAllItems<ICard>().First();
                 var cardView = CardViewManager.GetCardView(existingCard);
                 var position = cardView.transform.position.XY();
-                Debug.LogError($"{cardGroup.name} : {cardGroup.transform.position.XY()}, {cardView.name} : {position}");
+                // Debug.LogError($"{cardGroup.name} : {cardGroup.transform.position.XY()}, {cardView.name} : {position}");
                 cardGroup.SetPosition(position);
             }
             else
@@ -54,14 +56,13 @@ namespace StackLandsLike.UI
         [Button]
         public void RearrangeCardViews(bool isInstant)
         {
-            Debug.LogError($"Rearrange {name} : {cardGroup.count}");
+            // Debug.LogError($"Rearrange {name} : {cardGroup.count}");
             
             if (cardGroup.count == 0) return;
 
             var cardGroupCollider = cardGroup.GetComponent<CardGroupCollider>();
 
             var cards = cardGroup.cards.ToArray();
-            Vector2 startPoint = cardGroup.transform.position.XY();
             
             foreach (var (index, pivot) in cardGroupCollider.colliderPivots.Enumerate())
             {
@@ -78,9 +79,9 @@ namespace StackLandsLike.UI
 
                 var cardView = CardViewManager.GetCardView(card);
                 
-                var position = startPoint + pivot;
+                var position = pivot;
                     
-                cardView.SetPosition(position, isInstant);
+                cardView.SetLocalPosition(position, isInstant);
             }
         }
     }

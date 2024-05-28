@@ -67,17 +67,36 @@ namespace StackLandsLike.UI
         /// </summary>
         /// <param name="position"></param>
         /// <param name="isInstant"></param>
-        public void SetPosition(Vector2 position, bool isInstant = true)
+        public void SetLocalPosition(Vector2 position, bool isInstant = true)
         {
             transform.DOKill();
+            Vector3 positionInTable = CardTableManager.GetPositionInTable(position);
             if (isInstant)
             {
-                transform.position = position.InsertAsZ(CardTableManager.zPosition);
+                transform.localPosition = positionInTable;
             }
             else
             {
-                transform.DOMove(position.InsertAsZ(CardTableManager.zPosition),
-                    GameSetting.cardViewGeneralSetting.cardViewMovingTime);
+                transform.DOLocalMove(positionInTable, GameSetting.cardViewGeneralSetting.cardViewMovingTime);
+            }
+        }
+
+        /// <summary>
+        /// 设置卡牌视图的位置，只需要提供XY坐标，z坐标由<see cref="CardTableManager"/>决定。
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="isInstant"></param>
+        public void SetPosition(Vector2 position, bool isInstant = true)
+        {
+            transform.DOKill();
+            Vector3 positionInTable = CardTableManager.GetPositionInTable(position);
+            if (isInstant)
+            {
+                transform.position = positionInTable;
+            }
+            else
+            {
+                transform.DOMove(positionInTable, GameSetting.cardViewGeneralSetting.cardViewMovingTime);
             }
         }
         

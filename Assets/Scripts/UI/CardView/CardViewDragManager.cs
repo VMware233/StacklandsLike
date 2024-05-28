@@ -91,16 +91,7 @@ namespace StackLandsLike.UI
                         oldGroup.SetPosition(targetPosition);
                         break;
                     case > 1:
-                        Debug.LogError(cardView.card.name);
                         cardView.card.MoveOutOfGroup(targetPosition);
-
-                        // if (count == 2)
-                        // {
-                        //     var originalCard = oldGroup.cardContainer.GetAllValidItems<ICard>().First();
-                        //     var originalCardView = CardViewManager.GetCardView(originalCard);
-                        //     
-                        //     oldGroup.SetPosition(originalCardView.GetPosition());
-                        // }
                         break;
                 }
                     
