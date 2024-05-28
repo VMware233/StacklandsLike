@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: BerryCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 784723390607360
+    m_Key: BerryBushCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

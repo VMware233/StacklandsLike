@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: Berry
     m_Metadata:
       m_Items: []
+  - m_Id: 784723390607360
+    m_Localized: Berry Bush
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

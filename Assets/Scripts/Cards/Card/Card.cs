@@ -2,12 +2,13 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VMFramework.Containers;
+using VMFramework.Core;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Property;
 
 namespace StackLandsLike.Cards
 {
-    public partial class Card : ContainerItem, ICard
+    public partial class Card : ContainerItem, ICard, ICraftConsumableCard
     {
         public override int maxStackCount => int.MaxValue;
         
@@ -40,6 +41,12 @@ namespace StackLandsLike.Cards
             this.group = group;
             
             OnGroupChangedEvent?.Invoke(this, group);
+        }
+
+        void ICraftConsumableCard.CraftConsume(int countAmount, out int actualConsumedCount)
+        {
+            actualConsumedCount = countAmount.Min(count);
+            count.value -= actualConsumedCount;
         }
     }
 }

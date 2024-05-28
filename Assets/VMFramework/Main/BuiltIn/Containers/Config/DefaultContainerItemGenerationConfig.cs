@@ -21,8 +21,15 @@ namespace VMFramework.Configuration
 
         public virtual TItem GenerateItem()
         {
+            int count = this.count.GetValue();
+
+            if (count <= 0)
+            {
+                return default;
+            }
+            
             var item = IGameItem.Create<TItem>(itemID);
-            item.count = count.GetValue();
+            item.count = count;
             return item;
         }
 

@@ -26,4 +26,5 @@ MonoBehaviour:
   <defaultLocalizationTableName>k__BackingField: CardRecipeStringTable
   initialGamePrefabWrappers:
   - {fileID: 11400000, guid: 6a92773febfad3740bd8c64469da366a, type: 2}
+  - {fileID: 11400000, guid: 56d75b334e197d14f935cab3925d5325, type: 2}
   <defaultGameType>k__BackingField: 

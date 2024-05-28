@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Test Recipe
     m_Metadata:
       m_Items: []
+  - m_Id: 595327970291712
+    m_Localized: Berry Bush
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

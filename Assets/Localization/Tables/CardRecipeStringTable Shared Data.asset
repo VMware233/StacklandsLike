@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: TestRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 595327970291712
+    m_Key: BerryBushRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

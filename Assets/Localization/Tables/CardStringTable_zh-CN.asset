@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 192141602172928
-    m_Localized: Person
+    m_Localized: "\u4EBA"
     m_Metadata:
       m_Items: []
   - m_Id: 192513964093440
@@ -35,7 +35,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 741970585694208
-    m_Localized: Berry
+    m_Localized: "\u6D46\u679C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 784723390607360
+    m_Localized: "\u6D46\u679C\u4E1B"
     m_Metadata:
       m_Items: []
   references:

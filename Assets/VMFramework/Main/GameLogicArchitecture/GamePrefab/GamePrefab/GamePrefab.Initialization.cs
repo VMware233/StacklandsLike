@@ -44,13 +44,10 @@ namespace VMFramework.GameLogicArchitecture
 
         public virtual void CheckSettings()
         {
-            if (gameItemType != null)
+            if (gameItemType is { IsAbstract: true })
             {
-                if (gameItemType.IsAbstract)
-                {
-                    Debug.LogError($"{nameof(gameItemType)} is abstract. " +
-                                   $"Please override with a concrete type instead of {gameItemType}");
-                }
+                Debug.LogError($"{nameof(gameItemType)} is abstract. " +
+                               $"Please override with a concrete type instead of {gameItemType}");
             }
         }
 

@@ -125,9 +125,9 @@ namespace StackLandsLike.Cards
                         int consumedCount = consumptionConfig.count;
                         foreach (var item in cardGroup.cardContainer.GetItems(consumptionConfig.itemID))
                         {
-                            var reducedCount = item.count.Min(consumedCount);
-                            consumedCount -= reducedCount;
-                            item.count -= reducedCount;
+                            var consumableCard = (ICraftConsumableCard)item;
+                            consumableCard.CraftConsume(consumedCount, out var actualConsumedCount);
+                            consumedCount -= actualConsumedCount;
                         }
 
                         if (consumedCount > 0)
@@ -141,11 +141,22 @@ namespace StackLandsLike.Cards
                     foreach (var generationConfig in info.recipe.generationConfigs)
                     {
                         var card = generationConfig.GenerateItem();
+
+                        if (card == null)
+                        {
+                            continue;
+                        }
+                        
                         CardGroupManager.CreateCardGroup(card, cardGroup.GetPosition());
                     }
                 }
                     
                 StopCraft(cardGroup);
+                
+                if (info.recipe.SatisfyConsumptionRequirements(cardGroup.cardContainer))
+                {
+                    StartCraft(cardGroup, info.recipe);
+                }
             }
             
             craftDone.Clear();
@@ -168,7 +179,5 @@ namespace StackLandsLike.Cards
         {
             craftingRecipes.Remove(cardGroup);
         }
-        
-        
     }
 }

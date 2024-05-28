@@ -23,7 +23,7 @@ namespace VMFramework.Property
         [Required]
         public Sprite icon;
 
-        public virtual string GetValueString(object target) => string.Empty;
+        public abstract string GetValueString(object target);
 
         public override void CheckSettings()
         {
