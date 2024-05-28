@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: Test3CardName
     m_Metadata:
       m_Items: []
+  - m_Id: 741970585694208
+    m_Key: BerryCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

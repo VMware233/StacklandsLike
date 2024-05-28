@@ -34,6 +34,10 @@ MonoBehaviour:
     m_Localized: Test 3
     m_Metadata:
       m_Items: []
+  - m_Id: 741970585694208
+    m_Localized: Berry
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

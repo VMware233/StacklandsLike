@@ -1,6 +1,6 @@
 using System;
-using VMFramework.Core.Linq;
-using VMFramework.GameLogicArchitecture;
+using StackLandsLike.GameCore;
+using UnityEngine.Scripting;
 using VMFramework.Procedure;
 
 namespace StackLandsLike.Cards
@@ -9,15 +9,16 @@ namespace StackLandsLike.Cards
     /// 临时的加载器，卡牌测试用的
     /// </summary>
     [GameInitializerRegister(typeof(ServerLoadingProcedure))]
+    [Preserve]
     public sealed class CardTestInitializer : IGameInitializer
     {
         void IInitializer.OnInit(Action onDone)
         {
-            10.Repeat(() =>
+            foreach (var config in GameSetting.cardGeneralSetting.initialCards)
             {
-                var cardID = GamePrefabManager.GetRandomGamePrefab<ICardConfig>().id;
-                CardGroupManager.CreateCardGroup(cardID);
-            });
+                var card = config.GenerateItem();
+                CardGroupManager.CreateCardGroup(card);
+            }
             
             onDone();
         }

@@ -1,4 +1,9 @@
+using System.Collections.Generic;
 using StackLandsLike.GameCore;
+using UnityEngine;
+using VMFramework.Containers;
+using VMFramework.Core;
+using VMFramework.Core.Linq;
 using VMFramework.Procedure;
 
 namespace StackLandsLike.Cards
@@ -15,10 +20,55 @@ namespace StackLandsLike.Cards
 
         private void OnDayChanged(int day)
         {
+            int nutritionRequired = 0;
+            
             foreach (var cardGroup in CardGroupManager.GetActiveCardGroups())
             {
-                
+                foreach (var item in cardGroup.cardContainer.GetAllValidItems())
+                {
+                    if (item is INutritionRequiredCard nutritionRequiredCard)
+                    {
+                        nutritionRequired += nutritionRequiredCard.nutritionRequired;
+                    }
+                }
             }
+
+            if (nutritionRequired <= 0)
+            {
+                return;
+            }
+
+            List<IFoodCard> foodCards = new List<IFoodCard>();
+            foreach (var cardGroup in CardGroupManager.GetActiveCardGroups())
+            {
+                foreach (var item in cardGroup.cardContainer.GetAllValidItems())
+                {
+                    if (item is IFoodCard foodCard)
+                    {
+                        foodCards.Add(foodCard);
+                    }
+                }
+            }
+            
+            foodCards.Sort(food => food.nutrition);
+
+            foreach (var foodCard in foodCards)
+            {
+                if (foodCard.nutrition <= 0)
+                {
+                    continue;
+                }
+                
+                foodCard.ConsumeNutrition(nutritionRequired, out var actualConsumedAmount);
+                nutritionRequired -= actualConsumedAmount;
+
+                if (nutritionRequired <= 0)
+                {
+                    return;
+                }
+            }
+
+            Debug.LogError($"You are out of nutrition!");
         }
     }
 }

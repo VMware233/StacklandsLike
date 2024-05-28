@@ -21,7 +21,9 @@ namespace VMFramework.Configuration
 
         public virtual TItem GenerateItem()
         {
-            return IGameItem.Create<TItem>(itemID);
+            var item = IGameItem.Create<TItem>(itemID);
+            item.count = count.GetValue();
+            return item;
         }
 
         public override void CheckSettings()

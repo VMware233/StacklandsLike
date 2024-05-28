@@ -1,14 +1,15 @@
 #if UNITY_EDITOR
-using VMFramework.Configuration;
+
 
 namespace StackLandsLike.Cards
 {
-    public partial class FoodCardConfig
+    public partial class CardGeneralSetting
     {
         protected override void OnInspectorInit()
         {
             base.OnInspectorInit();
 
+            initialCards ??= new();
         }
     }
 }

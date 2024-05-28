@@ -1,3 +1,4 @@
+using VMFramework.Core.Generic;
 using VMFramework.Property;
 
 namespace StackLandsLike.Cards
@@ -5,21 +6,16 @@ namespace StackLandsLike.Cards
     public class FoodCard : Card, IFoodCard
     {
         protected FoodCardConfig foodCardConfig => (FoodCardConfig)gamePrefab;
+
+        public int nutrition => foodCardConfig.nutrition * count;
         
-        public BaseIntProperty nutrition;
-
-        protected override void OnCreate()
+        public void ConsumeNutrition(int nutritionAmount, out int actualConsumedAmount)
         {
-            base.OnCreate();
-
-            nutrition = new(foodCardConfig.nutrition.GetValue());
-        }
-
-        int IFoodCard.nutrition => nutrition;
-        
-        public void ConsumeNutrition(int amount)
-        {
-            nutrition.value -= amount;
+            var countRequired = (nutritionAmount / foodCardConfig.nutrition).Ceiling();
+            countRequired = countRequired.ClampMax(count);
+            
+            count.value -= countRequired;
+            actualConsumedAmount = countRequired * foodCardConfig.nutrition;
         }
     }
 }

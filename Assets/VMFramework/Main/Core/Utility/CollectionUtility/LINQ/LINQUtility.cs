@@ -221,10 +221,10 @@ namespace VMFramework.Core.Linq
         #region Sort
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Sort<T>(this List<T> list, Func<T, int> weightGetter)
+        public static void Sort<T, TComparable>(this List<T> list, Func<T, TComparable> weightGetter)
+            where TComparable : IComparable<TComparable>
         {
-            list.Sort((item1, item2) =>
-                weightGetter(item1).CompareTo(weightGetter(item2)));
+            list.Sort((item1, item2) => weightGetter(item1).CompareTo(weightGetter(item2)));
         }
 
         #endregion

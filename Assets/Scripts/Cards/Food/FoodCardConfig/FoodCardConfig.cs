@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using VMFramework.Configuration;
 
 namespace StackLandsLike.Cards
@@ -7,20 +8,7 @@ namespace StackLandsLike.Cards
     {
         public override Type gameItemType => typeof(FoodCard);
 
-        public IVectorChooserConfig<int> nutrition;
-
-        public override void CheckSettings()
-        {
-            base.CheckSettings();
-            
-            nutrition.CheckSettings();
-        }
-
-        protected override void OnInit()
-        {
-            base.OnInit();
-            
-            nutrition.Init();
-        }
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        public int nutrition = 1;
     }
 }

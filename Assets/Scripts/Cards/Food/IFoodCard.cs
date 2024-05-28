@@ -4,6 +4,6 @@ namespace StackLandsLike.Cards
     {
         public int nutrition { get; }
 
-        public void ConsumeNutrition(int amount);
+        public void ConsumeNutrition(int nutritionAmount, out int actualConsumedAmount);
     }
 }

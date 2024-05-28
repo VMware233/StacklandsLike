@@ -43,7 +43,7 @@ namespace StackLandsLike.UI
                     transform.localPosition = Vector3.zero;
                 }
                 
-                title.text = card.name;
+                title.text = $"{card.name}x{card.count}";
 
                 name = $"{card.name} Card View";
             }
@@ -59,7 +59,12 @@ namespace StackLandsLike.UI
             if (newCount <= 0)
             {
                 CardViewManager.ReturnCardView(card);
+                return;
             }
+            
+            name = $"{card.name}x{newCount} Card View";
+            
+            title.text = $"{card.name}x{newCount}";
         }
 
         /// <summary>
