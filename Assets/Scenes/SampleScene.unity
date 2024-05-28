@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 59325173}
   - component: {fileID: 59325172}
   - component: {fileID: 59325174}
+  - component: {fileID: 59325175}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -188,6 +189,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2ef1729167b43fc94e3f4e42187f660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &59325175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59325170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6d89bb885d477ea8cba3256309b8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &83941055
@@ -1248,6 +1261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053450376}
   - component: {fileID: 1053450377}
+  - component: {fileID: 1053450378}
   m_Layer: 0
   m_Name: GameCore
   m_TagString: Untagged
@@ -1280,6 +1294,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80c6198606264022977ac027ff70f0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1053450378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053450375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f384b720e94f4fa68a65853211d4d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1095484590

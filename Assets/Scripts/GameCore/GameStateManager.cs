@@ -10,7 +10,14 @@ namespace StackLandsLike.GameCore
         [Button]
         public static void StartGame()
         {
-            LogicTickManager.StartTick();
+            GameTimeManager.Init(new GameTimeInitInfo()
+            {
+                day = 0,
+                tickInDay = 0,
+                ticksPerDay = GameSetting.gameTimeGeneralSetting.totalTicksPerDay
+            });
+            
+            ProcedureManager.AddToSwitchQueue(MainMenuProcedure.ID, ServerLoadingProcedure.ID);
         }
     }
 }

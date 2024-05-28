@@ -183,10 +183,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: defaultDefense
-      Entry: 6
+      Entry: 7
+      Data: 8|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
       Data: 
     - Name: nutritionRequired
-      Entry: 6
+      Entry: 7
+      Data: 9|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8

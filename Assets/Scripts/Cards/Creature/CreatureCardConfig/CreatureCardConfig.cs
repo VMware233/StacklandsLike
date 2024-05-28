@@ -23,6 +23,7 @@ namespace StackLandsLike.Cards
             
             defaultMaxHealth.CheckSettings();
             defaultAttack.CheckSettings();
+            defaultDefense.CheckSettings();
         }
 
         protected override void OnInit()
@@ -31,6 +32,7 @@ namespace StackLandsLike.Cards
             
             defaultMaxHealth.Init();
             defaultAttack.Init();
+            defaultDefense.Init();
         }
     }
 }

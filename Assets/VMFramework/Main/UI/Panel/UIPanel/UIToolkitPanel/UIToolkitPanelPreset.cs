@@ -48,7 +48,7 @@ namespace VMFramework.UI
         public bool ignoreMouseEvents;
 
         [TabGroup(TAB_GROUP_NAME, UI_TOOLKIT_PANEL_CATEGORY)]
-        [VisualElementName(typeof(Button), typeof(BasicButton))]
+        [VisualElementName(typeof(Button))]
         [JsonProperty]
         public string closeUIButtonName;
 
