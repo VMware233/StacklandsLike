@@ -59,12 +59,12 @@ namespace VMFramework.Containers
             return clone;
         }
 
-        public void OnAddToContainer(Container container)
+        public void OnAddToContainer(IContainer container)
         {
 
         }
 
-        public void OnRemoveFromContainer(Container container)
+        public void OnRemoveFromContainer(IContainer container)
         {
 
         }

@@ -6,6 +6,8 @@ namespace StackLandsLike.Cards
 {
     public interface ICardRecipe : IDescribedGamePrefab
     {
+        bool autoCheck { get; }
+        
         int totalTicks { get; }
         
         IEnumerable<CardConsumptionConfig> consumptionConfigs { get; }

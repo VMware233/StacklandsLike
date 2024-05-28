@@ -8,11 +8,7 @@ namespace VMFramework.Property
 {
     public partial class TooltipPropertyGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "提示框属性" },
-            { "en-US", "Property Tooltip" }
-        };
+        string INameOwner.name => "Property Tooltip";
 
         string IGameEditorMenuTreeNode.folderPath =>
             (GameCoreSetting.propertyGeneralSetting as IGameEditorMenuTreeNode)?.nodePath;

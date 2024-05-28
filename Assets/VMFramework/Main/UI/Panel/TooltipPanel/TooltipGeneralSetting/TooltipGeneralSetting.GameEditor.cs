@@ -9,11 +9,7 @@ namespace VMFramework.UI
 {
     public partial class TooltipGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "提示框" },
-            { "en-US", "Tooltip" }
-        };
+        string INameOwner.name => "Tooltip";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.CardHeading;
 

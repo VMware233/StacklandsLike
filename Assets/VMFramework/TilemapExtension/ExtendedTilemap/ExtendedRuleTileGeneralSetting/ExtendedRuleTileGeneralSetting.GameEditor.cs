@@ -9,11 +9,7 @@ namespace VMFramework.ExtendedTilemap
 {
     public partial class ExtendedRuleTileGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "拓展瓦片" },
-            { "en-US", "Extended Rule Tile" }
-        };
+        string INameOwner.name => "Ext Rule Tile";
 
         public Icon icon => SdfIconType.Grid3x3;
 

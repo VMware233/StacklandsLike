@@ -86,6 +86,11 @@ namespace StackLandsLike.Cards
         {
             foreach (var recipe in GamePrefabManager.GetAllGamePrefabs<ICardRecipe>())
             {
+                if (recipe.autoCheck == false)
+                {
+                    continue;
+                } 
+                
                 if (recipe.SatisfyConsumptionRequirements(container))
                 {
                     StartCraft((CardGroup)container.owner, recipe);
@@ -125,7 +130,7 @@ namespace StackLandsLike.Cards
                         int consumedCount = consumptionConfig.count;
                         foreach (var item in cardGroup.cardContainer.GetItems(consumptionConfig.itemID))
                         {
-                            var consumableCard = (ICraftConsumableCard)item;
+                            var consumableCard = (ICraftableCard)item;
                             consumableCard.CraftConsume(consumedCount, out var actualConsumedCount);
                             consumedCount -= actualConsumedCount;
                         }
@@ -157,6 +162,11 @@ namespace StackLandsLike.Cards
                 {
                     StartCraft(cardGroup, info.recipe);
                 }
+
+                foreach (var craftableCard in cardGroup.cardContainer.GetAllItems<ICraftableCard>())
+                {
+                    craftableCard.OnCraftStopped(info.recipe);
+                }
             }
             
             craftDone.Clear();
@@ -167,6 +177,13 @@ namespace StackLandsLike.Cards
         {
             if (craftingRecipes.ContainsKey(cardGroup))
             {
+                return;
+            }
+
+            if (recipe.SatisfyConsumptionRequirements(cardGroup.cardContainer) == false)
+            {
+                Debug.LogError($"Failed to start crafting {recipe.name} for {cardGroup.name}." + 
+                               $"It does not satisfy the consumption requirements");
                 return;
             }
             

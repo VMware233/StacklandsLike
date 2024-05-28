@@ -9,11 +9,7 @@ namespace VMFramework.GameEvents
 {
     public partial class ColliderMouseEventGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "鼠标事件" },
-            { "en-US", "MouseEvent" }
-        };
+        string INameOwner.name => "Mouse Event";
 
         Icon IGameEditorMenuTreeNode.icon => new(SdfIconType.Mouse2);
 

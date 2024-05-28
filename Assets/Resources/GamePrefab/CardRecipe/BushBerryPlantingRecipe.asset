@@ -156,6 +156,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: autoCheck
+      Entry: 5
+      Data: true
     - Name: totalTicks
       Entry: 3
       Data: 240
@@ -204,16 +207,16 @@ MonoBehaviour:
       Data: 
     - Name: generationConfigs
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[VMFramework.Configuration.IChooserConfig`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 10|VMFramework.Configuration.SingleValueChooserConfig`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], Assembly-CSharp
-    - Name: value
       Entry: 7
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
@@ -233,10 +236,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 8
+      Entry: 13
       Data: 
     - Name: 
-      Entry: 13
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8

@@ -8,11 +8,7 @@ namespace VMFramework.UI
 {
     public partial class UIPanelProcedureGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "UI面板流程" },
-            { "en-US", "UI Panel Procedure" }
-        };
+        string INameOwner.name => "UI Procedure";
 
         string IGameEditorMenuTreeNode.folderPath =>
             (GameCoreSetting.uiPanelGeneralSetting as IGameEditorMenuTreeNode)?.nodePath;

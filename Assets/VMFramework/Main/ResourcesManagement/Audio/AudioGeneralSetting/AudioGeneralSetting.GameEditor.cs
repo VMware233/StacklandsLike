@@ -9,11 +9,7 @@ namespace VMFramework.ResourcesManagement
 {
     public partial class AudioGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "音效" },
-            { "en-US", "Audio" }
-        };
+        string INameOwner.name => "Audio";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.MusicNoteBeamed;
 

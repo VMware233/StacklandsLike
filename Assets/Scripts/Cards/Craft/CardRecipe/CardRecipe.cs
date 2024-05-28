@@ -13,13 +13,16 @@ namespace StackLandsLike.Cards
         protected override string idSuffix => "recipe";
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        public bool autoCheck;
+
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public int totalTicks;
         
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public List<CardConsumptionConfig> consumptionConfigs = new();
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
-        public List<IChooserConfig<CardGenerationConfig>> generationConfigs = new();
+        public IChooserConfig<List<CardGenerationConfig>> generationConfigs;
 
         public override void CheckSettings()
         {
@@ -31,11 +34,11 @@ namespace StackLandsLike.Cards
             {
                 var gameItemType = IGameItem.GetGameItemType(consumptionConfig.itemID);
 
-                if (gameItemType.IsDerivedFrom<ICraftConsumableCard>(true) == false)
+                if (gameItemType.IsDerivedFrom<ICraftableCard>(true) == false)
                 {
                     Debug.LogWarning(
                         $"{this} has a consumption config with an invalid item type: {gameItemType}." +
-                        $"It should be derived from {nameof(ICraftConsumableCard)}.");
+                        $"It should be derived from {nameof(ICraftableCard)}.");
                 }
             }
             
@@ -55,10 +58,12 @@ namespace StackLandsLike.Cards
             return container.ContainsEnoughItems(consumptionConfigs);
         }
 
+        bool ICardRecipe.autoCheck => autoCheck;
+
         int ICardRecipe.totalTicks => totalTicks;
         
         IEnumerable<CardConsumptionConfig> ICardRecipe.consumptionConfigs => consumptionConfigs;
         
-        IEnumerable<CardGenerationConfig> ICardRecipe.generationConfigs => generationConfigs.GetValues();
+        IEnumerable<CardGenerationConfig> ICardRecipe.generationConfigs => generationConfigs.GetValue();
     }
 }

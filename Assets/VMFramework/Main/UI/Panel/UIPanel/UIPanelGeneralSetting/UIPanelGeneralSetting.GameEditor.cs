@@ -9,11 +9,7 @@ namespace VMFramework.UI
 {
     public partial class UIPanelGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "UI面板" },
-            { "en-US", "UI Panel" }
-        };
+        string INameOwner.name => "UI Panel";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.LayoutWtf;
     }

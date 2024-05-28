@@ -9,11 +9,7 @@ namespace VMFramework.ResourcesManagement
 {
     public partial class ModelGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "模型预制体" },
-            { "en-US", "Model Prefab" }
-        };
+        string INameOwner.name => "Model Prefab";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.BoxSeam;
 

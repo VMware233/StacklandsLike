@@ -8,7 +8,7 @@ using VMFramework.Property;
 
 namespace StackLandsLike.Cards
 {
-    public partial class Card : ContainerItem, ICard, ICraftConsumableCard
+    public partial class Card : ContainerItem, ICard, ICraftableCard
     {
         public override int maxStackCount => int.MaxValue;
         
@@ -43,7 +43,7 @@ namespace StackLandsLike.Cards
             OnGroupChangedEvent?.Invoke(this, group);
         }
 
-        void ICraftConsumableCard.CraftConsume(int countAmount, out int actualConsumedCount)
+        void ICraftableCard.CraftConsume(int countAmount, out int actualConsumedCount)
         {
             actualConsumedCount = countAmount.Min(count);
             count.value -= actualConsumedCount;

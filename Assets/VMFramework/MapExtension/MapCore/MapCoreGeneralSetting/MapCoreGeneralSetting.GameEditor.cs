@@ -9,11 +9,7 @@ namespace VMFramework.Map
 {
     public partial class MapCoreGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "en-US", "MapCore" },
-            { "zh-CN", "地图核心" }
-        };
+        string INameOwner.name => "Map Core";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.PinMap;
 

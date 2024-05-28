@@ -8,11 +8,7 @@ namespace VMFramework.ResourcesManagement
 {
     public partial class TrailGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "拖尾生成器" },
-            { "en-US", "Trail Spawner" }
-        };
+        string INameOwner.name => "Trail Preset";
 
         string IGameEditorMenuTreeNode.folderPath => GameEditorNames.resourcesManagementCategoryName;
     }

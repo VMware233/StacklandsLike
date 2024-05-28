@@ -9,11 +9,7 @@ namespace VMFramework.UI
 {
     public partial class DebugUIPanelGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "Debug UI面板" },
-            { "en-US", "Debug UI Panel" }
-        };
+        string INameOwner.name => "Debug Entry";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.Bug;
 

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using VMFramework.Configuration;
+
 #if UNITY_EDITOR
 namespace StackLandsLike.Cards
 {
@@ -8,7 +11,7 @@ namespace StackLandsLike.Cards
             base.OnInspectorInit();
 
             consumptionConfigs ??= new();
-            generationConfigs ??= new();
+            generationConfigs ??= new SingleValueChooserConfig<List<CardGenerationConfig>>();
         }
     }
 }

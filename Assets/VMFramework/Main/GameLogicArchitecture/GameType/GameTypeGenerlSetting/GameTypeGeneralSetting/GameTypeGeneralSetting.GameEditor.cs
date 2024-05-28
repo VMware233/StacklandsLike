@@ -7,12 +7,8 @@ using VMFramework.Localization;
 namespace VMFramework.GameLogicArchitecture
 {
     public partial class GameTypeGeneralSetting : IGameEditorMenuTreeNode
-    { 
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "游戏种类" },
-            { "en-US", "Game Type" }
-        };
+    {
+        string INameOwner.name => "Game Type";
 
         Icon IGameEditorMenuTreeNode.icon => new(SdfIconType.Collection);
 

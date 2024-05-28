@@ -8,11 +8,7 @@ namespace VMFramework.Editor
 {
     public partial class HierarchyComponentIconGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "层级组件图标" },
-            { "en-US", "Hierarchy" }
-        };
+        string INameOwner.name => "Hierarchy";
 
         string IGameEditorMenuTreeNode.folderPath => GameEditorNames.editorCategoryName;
 
