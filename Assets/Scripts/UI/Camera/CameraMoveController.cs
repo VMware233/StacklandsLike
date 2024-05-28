@@ -9,7 +9,7 @@ namespace StackLandsLike.UI
     {
         [MinValue(0)]
         [SerializeField]
-        private float speed = 0.03f;
+        private float speed = 0.1f;
         
         private Camera _camera;
 
@@ -18,23 +18,15 @@ namespace StackLandsLike.UI
             _camera = GetComponent<Camera>();
         }
         
-        private Vector3 lastMousePosition;
-
         private void FixedUpdate()
         {
-            if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
-            {
-                lastMousePosition = Input.mousePosition;
-            }
-            
             if (Input.GetMouseButton(1) || Input.GetMouseButton(2))
             {
-                var delta = Input.mousePosition - lastMousePosition;
-                lastMousePosition = Input.mousePosition;
+                var delta = Input.mousePositionDelta;
                 
                 delta *= speed;
                 
-                _camera.transform.position += new Vector3(delta.x, delta.y, 0);
+                _camera.transform.position -= new Vector3(delta.x, delta.y, 0);
             }
         }
     }

@@ -16,6 +16,9 @@ namespace StackLandsLike.Cards
         
         [ShowInInspector]
         public BaseBoostIntProperty attack;
+        
+        [ShowInInspector]
+        public BaseIntProperty defense;
 
         protected override void OnCreate()
         {
@@ -24,6 +27,19 @@ namespace StackLandsLike.Cards
             maxHealth = new(creatureCardConfig.defaultMaxHealth.GetValue());
             health = new(maxHealth);
             attack = new(creatureCardConfig.defaultAttack.GetValue());
+            defense = new(creatureCardConfig.defaultDefense.GetValue());
         }
+
+        #region Interface Implementation
+        
+        int ICreatureCard.health => health;
+
+        int ICreatureCard.maxHealth => maxHealth;
+
+        int ICreatureCard.attack => attack;
+
+        int ICreatureCard.defense => defense;
+
+        #endregion
     }
 }

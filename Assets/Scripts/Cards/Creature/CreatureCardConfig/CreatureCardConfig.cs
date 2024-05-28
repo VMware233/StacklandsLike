@@ -13,6 +13,9 @@ namespace StackLandsLike.Cards
         
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public IVectorChooserConfig<int> defaultAttack;
+        
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        public IVectorChooserConfig<int> defaultDefense;
 
         public override void CheckSettings()
         {

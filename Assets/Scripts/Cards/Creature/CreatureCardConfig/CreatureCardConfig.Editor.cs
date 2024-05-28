@@ -11,6 +11,7 @@ namespace StackLandsLike.Cards
 
             defaultMaxHealth ??= new SingleVectorChooserConfig<int>(10);
             defaultAttack ??= new SingleVectorChooserConfig<int>(1);
+            defaultDefense ??= new SingleVectorChooserConfig<int>(0);
         }
     }
 }
