@@ -5,6 +5,7 @@
         GameCore,
         Card,
         UI,
-        Time
+        Time,
+        Quest
     }
 }

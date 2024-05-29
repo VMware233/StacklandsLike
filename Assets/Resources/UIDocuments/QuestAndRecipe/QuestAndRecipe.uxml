@@ -1,11 +1,11 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Resources/UIDocuments/TaskAndRecipe/TaskAndRecipeStyle.uss?fileID=7433441132597879392&amp;guid=3fcdcc4c2e6e50b4a98e77fd8094a262&amp;type=3#TaskAndRecipeStyle" />
+    <Style src="project://database/Assets/Resources/UIDocuments/QuestAndRecipe/QuestAndRecipeStyle.uss?fileID=7433441132597879392&amp;guid=3fcdcc4c2e6e50b4a98e77fd8094a262&amp;type=3#QuestAndRecipeStyle" />
     <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
         <engine:VisualElement style="flex-grow: 1; left: 44px; top: 55px; position: absolute; height: 686px; width: 444px;">
             <engine:TabView>
                 <engine:Tab label="任务">
-                    <engine:ScrollView name="TaskContainer">
-                        <engine:Toggle focusable="false" value="true" text="2332333333333333" />
+                    <engine:ScrollView name="QuestContainer">
+                        <engine:Toggle focusable="false" value="true" text="2332333333333333" style="display: none;" />
                     </engine:ScrollView>
                 </engine:Tab>
                 <engine:Tab label="主意">

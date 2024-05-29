@@ -189,7 +189,7 @@ MonoBehaviour:
       Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: tree_seed_card
+      Data: sapling_card
     - Name: count
       Entry: 3
       Data: 1

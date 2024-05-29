@@ -7,15 +7,15 @@ using VMFramework.UI;
 namespace StackLandsLike.UI
 {
     [GamePrefabTypeAutoRegister(ID)]
-    public sealed class TaskAndRecipeUIPreset : UIToolkitPanelPreset
+    public sealed class QuestAndRecipeUIPreset : UIToolkitPanelPreset
     {
-        public const string ID = "task_and_recipe_ui";
+        public const string ID = "quest_and_recipe_ui";
 
-        public override Type controllerType => typeof(TaskAndRecipeUIController);
+        public override Type controllerType => typeof(QuestAndRecipeUIController);
 
         [VisualElementName]
         [IsNotNullOrEmpty]
-        public string taskContainerName;
+        public string questContainerName;
         
         [VisualElementName]
         [IsNotNullOrEmpty]

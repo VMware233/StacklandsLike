@@ -42,10 +42,11 @@ MonoBehaviour:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 30007eb1ba5e13044b518bd561777cdb
-    m_Address: TaskStringTable_en-US
+    m_Address: QuestStringTable_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6fe6687e942a13b48b06a4c87273807f, type: 2}

@@ -10,14 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: TaskStringTable_en-US
+  m_Name: QuestStringTable_zh-CN
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: en-US
+    m_Code: zh-CN
   m_SharedData: {fileID: 11400000, guid: a94dcac389375e84991d0ab0cfb69484, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 33908375793664
+    m_Localized: "\u6536\u96C6\u6811\u82D7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49365589798912
+    m_Localized: "\u5206\u79BB\u4E00\u4E2A\u5361\u724C"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

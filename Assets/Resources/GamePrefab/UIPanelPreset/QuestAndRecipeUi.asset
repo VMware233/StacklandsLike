@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: TaskAndRecipeUi
+  m_Name: QuestAndRecipeUi
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -24,10 +24,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.UI.TaskAndRecipeUIPreset, Assembly-CSharp
+      Data: 0|StackLandsLike.UI.QuestAndRecipeUIPreset, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: task_and_recipe_ui
+      Data: quest_and_recipe_ui
     - Name: isActive
       Entry: 5
       Data: true
@@ -42,10 +42,10 @@ MonoBehaviour:
       Data: 
     - Name: key
       Entry: 1
-      Data: TaskAndRecipeUiName
+      Data: QuestAndRecipeUiName
     - Name: defaultValue
       Entry: 1
-      Data: Task And Recipe
+      Data: Quest And Recipe
     - Name: 
       Entry: 8
       Data: 
@@ -100,9 +100,9 @@ MonoBehaviour:
     - Name: closeUIButtonName
       Entry: 6
       Data: 
-    - Name: taskContainerName
+    - Name: questContainerName
       Entry: 1
-      Data: TaskContainer
+      Data: QuestContainer
     - Name: recipeContainerName
       Entry: 1
       Data: RecipeContainer

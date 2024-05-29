@@ -78,8 +78,16 @@ namespace VMFramework.GameLogicArchitecture
 
         #region ID Prefix and Suffix
 
+        /// <summary>
+        /// The prefix of the ID.
+        /// This id should start with this prefix.
+        /// </summary>
         protected virtual string idPrefix => null;
         
+        /// <summary>
+        /// The suffix of the ID.
+        /// This id should end with this suffix.
+        /// </summary>
         protected virtual string idSuffix => null;
 
         public bool isIDStartsWithPrefix

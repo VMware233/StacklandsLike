@@ -112,7 +112,7 @@ MonoBehaviour:
       Data: hud_ui
     - Name: 
       Entry: 1
-      Data: task_and_recipe_ui
+      Data: quest_and_recipe_ui
     - Name: 
       Entry: 13
       Data: 
@@ -157,7 +157,7 @@ MonoBehaviour:
       Data: hud_ui
     - Name: 
       Entry: 1
-      Data: task_and_recipe_ui
+      Data: quest_and_recipe_ui
     - Name: 
       Entry: 13
       Data: 

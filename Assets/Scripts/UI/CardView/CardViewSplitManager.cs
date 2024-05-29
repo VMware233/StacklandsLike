@@ -10,6 +10,10 @@ namespace StackLandsLike.UI
     [ManagerCreationProvider(nameof(GameManagerType.UI))]
     public sealed class CardViewSplitManager : ManagerBehaviour<CardViewSplitManager>, IManagerBehaviour
     {
+        public delegate void CardSplitEventHandler(ICard card, int oldCount, int newCount);
+        
+        public static event CardSplitEventHandler OnSplitCard; 
+        
         void IInitializer.OnInitComplete(Action onDone)
         {
             ColliderMouseEventManager.AddCallback(MouseEventType.RightMouseButtonClick, OnRightMouseButtonClick);
@@ -44,6 +48,8 @@ namespace StackLandsLike.UI
             cardView.card.count -= splitCount;
 
             CardGroupManager.CreateCardGroup(newCard, cardView.GetGroupPosition());
+            
+            OnSplitCard?.Invoke(cardView.card, cardCount, cardView.card.count);
         }
     }
 }
