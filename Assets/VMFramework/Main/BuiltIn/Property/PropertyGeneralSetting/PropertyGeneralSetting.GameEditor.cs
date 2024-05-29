@@ -17,7 +17,7 @@ namespace VMFramework.Property
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.JournalText;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.builtInCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.BUILT_IN_CATEGORY;
     }
 }
 #endif

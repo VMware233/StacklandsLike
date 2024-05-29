@@ -27,7 +27,7 @@ namespace VMFramework.Editor.GameEditor
             var window = CreateWindow<GameEditor>(editorName);
             window.position = GUIHelper.GetEditorWindowRect().AlignCenter(800, 600);
         }
-        
+
         protected override OdinMenuTree BuildMenuTree()
         {
             if (GameCoreSetting.gameCoreSettingsFile == null)
@@ -38,34 +38,18 @@ namespace VMFramework.Editor.GameEditor
             GameCoreSetting.gameCoreSettingsFile.AutoFindSetting();
 
             var gameEditorSetting = GameCoreSetting.gameEditorGeneralSetting;
-
-            var auxiliaryToolsCategoryName = GameEditorNames.auxiliaryToolsCategoryName;
-            var generalSettingsCategoryName = GameEditorNames.generalSettingsCategoryName;
-
+            
             OdinMenuTree tree = new(true)
             {
-                { auxiliaryToolsCategoryName, auxiliaryTools, EditorIcons.HamburgerMenu },
+                { GameEditorNames.AUXILIARY_TOOLS_CATEGORY, auxiliaryTools, EditorIcons.HamburgerMenu },
                 {
-                    generalSettingsCategoryName, GameCoreSetting.gameCoreSettingsFile,
+                    GameEditorNames.GENERAL_SETTINGS_CATEGORY, GameCoreSetting.gameCoreSettingsFile,
                     SdfIconType.GearFill
                 },
-                {
-                    $"{generalSettingsCategoryName}/{GameEditorNames.editorCategoryName}", null,
-                    EditorIcons.UnityLogo
-                },
-                {
-                    $"{generalSettingsCategoryName}/{GameEditorNames.coreCategoryName}", null,
-                    EditorIcons.StarPointer
-                },
-                {
-                    $"{generalSettingsCategoryName}/{GameEditorNames.resourcesManagementCategoryName}", null,
-                    SdfIconType.Boxes
-                },
-                {
-                    $"{generalSettingsCategoryName}/{GameEditorNames.builtInCategoryName}", null,
-                    SdfIconType.Inboxes
-                },
-                { "具体设置", null, SdfIconType.GearFill }
+                { GameEditorNames.EDITOR_CATEGORY, null, EditorIcons.UnityLogo },
+                { GameEditorNames.CORE_CATEGORY, null, EditorIcons.StarPointer },
+                { GameEditorNames.RESOURCES_MANAGEMENT_CATEGORY, null, SdfIconType.Boxes },
+                { GameEditorNames.BUILT_IN_CATEGORY, null, SdfIconType.Inboxes },
             };
 
             tree.DefaultMenuStyle.IconSize = 24.00f;
@@ -84,15 +68,15 @@ namespace VMFramework.Editor.GameEditor
                 folderPath = folderPath.Replace("\\", "/");
                 folderPath = folderPath.Trim('/');
 
-                var totalPath = generalSettingsCategoryName;
+                var totalPath = string.Empty;
 
                 if (folderPath.IsNullOrEmptyAfterTrim() == false)
                 {
-                    totalPath += $"/{folderPath}";
+                    totalPath += folderPath;
                 }
 
                 totalPath += $"/{generalSettingNode.name}";
-                
+
                 tree.Add(totalPath, generalSetting, generalSettingNode.icon);
 
                 generalSettingsPathDict.Add(generalSetting, totalPath);
@@ -108,7 +92,7 @@ namespace VMFramework.Editor.GameEditor
                     var path = totalPath;
 
                     var allNodes = menuTreeNodeProvider.GetAllMenuTreeNodes()?.ToList();
-                    
+
                     if (allNodes == null)
                     {
                         Debug.LogWarning($"{menuTreeNodeProvider}获取的节点列表为Null");
@@ -145,11 +129,11 @@ namespace VMFramework.Editor.GameEditor
         {
             menuItem.OnDrawItem += menuItem =>
             {
-                if (menuItem.Value is not IGameEditorContextMenuProvider contextMenuProvider )
+                if (menuItem.Value is not IGameEditorContextMenuProvider contextMenuProvider)
                 {
                     return;
                 }
-                
+
                 if (Event.current.type == EventType.MouseDown && Event.current.button == 1 &&
                     menuItem.Rect.Contains(Event.current.mousePosition))
                 {

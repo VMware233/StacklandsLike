@@ -50,3 +50,4 @@ MonoBehaviour:
   cardViewGeneralSetting: {fileID: 11400000, guid: a8d69afa978797b4380b1322c142ea37, type: 2}
   cardRecipeGeneralSetting: {fileID: 11400000, guid: 24c20dff83b63744cb732859b1b51618, type: 2}
   gameTimeGeneralSetting: {fileID: 11400000, guid: 7d5be037dfa21b541b2505ff428c09fa, type: 2}
+  taskGeneralSetting: {fileID: 11400000, guid: 40d9499a61ebf5c41926250946b5e54a, type: 2}

@@ -10,7 +10,7 @@ namespace VMFramework.ResourcesManagement
     {
         string INameOwner.name => "Trail Preset";
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.resourcesManagementCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.RESOURCES_MANAGEMENT_CATEGORY;
     }
 }
 #endif

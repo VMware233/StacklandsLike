@@ -1,0 +1,3 @@
+.unity-toggle__text {
+    white-space: normal;
+}

@@ -13,7 +13,7 @@ namespace VMFramework
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.Camera;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.builtInCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.BUILT_IN_CATEGORY;
     }
 }
 #endif

@@ -12,7 +12,7 @@ namespace VMFramework.GameLogicArchitecture
 
         Icon IGameEditorMenuTreeNode.icon => new(SdfIconType.Collection);
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.coreCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.CORE_CATEGORY;
     }
 }
 #endif

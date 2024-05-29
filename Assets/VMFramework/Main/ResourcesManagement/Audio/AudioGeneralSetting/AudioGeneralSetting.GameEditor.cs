@@ -13,7 +13,7 @@ namespace VMFramework.ResourcesManagement
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.MusicNoteBeamed;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.resourcesManagementCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.RESOURCES_MANAGEMENT_CATEGORY;
     }
 }
 #endif

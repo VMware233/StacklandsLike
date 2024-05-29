@@ -13,7 +13,7 @@ namespace VMFramework.Containers
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.Archive;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.builtInCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.BUILT_IN_CATEGORY;
     }
 }
 #endif

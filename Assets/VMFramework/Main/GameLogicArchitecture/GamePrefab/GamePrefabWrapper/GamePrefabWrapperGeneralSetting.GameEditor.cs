@@ -8,7 +8,7 @@ namespace VMFramework.GameLogicArchitecture.Editor
     {
         string INameOwner.name => "Game Prefab Wrapper";
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.coreCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.CORE_CATEGORY;
     }
 }
 #endif

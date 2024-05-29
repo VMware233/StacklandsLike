@@ -10,7 +10,7 @@ namespace VMFramework.Editor
     {
         string INameOwner.name => "Hierarchy";
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.editorCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.EDITOR_CATEGORY;
 
         Icon IGameEditorMenuTreeNode.icon => new(SdfIconType.BarChartSteps);
     }

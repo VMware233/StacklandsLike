@@ -1,5 +1,6 @@
 ﻿using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
+using StackLandsLike.Tasks;
 using StackLandsLike.UI;
 using VMFramework.GameLogicArchitecture;
 
@@ -16,5 +17,7 @@ namespace StackLandsLike.GameCore
         public static CardRecipeGeneralSetting cardRecipeGeneralSetting => gameSettingFile.cardRecipeGeneralSetting;
         
         public static GameTimeGeneralSetting gameTimeGeneralSetting => gameSettingFile.gameTimeGeneralSetting;
+        
+        public static TaskGeneralSetting taskGeneralSetting => gameSettingFile.taskGeneralSetting;
     }
 }

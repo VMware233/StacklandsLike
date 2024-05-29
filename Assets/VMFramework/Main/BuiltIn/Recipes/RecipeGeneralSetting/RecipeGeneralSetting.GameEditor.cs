@@ -13,7 +13,7 @@ namespace VMFramework.Recipe
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.Grid3x3GapFill;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.builtInCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.BUILT_IN_CATEGORY;
     }
 }
 #endif

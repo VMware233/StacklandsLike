@@ -196,5 +196,48 @@ namespace StackLandsLike.Cards
         {
             craftingRecipes.Remove(cardGroup);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool IsCrafting(CardGroup cardGroup)
+        {
+            return craftingRecipes.ContainsKey(cardGroup);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool TryGetCraftingRecipe(CardGroup cardGroup, out ICardRecipe recipe)
+        {
+            if (craftingRecipes.TryGetValue(cardGroup, out var info))
+            {
+                recipe = info.recipe;
+                return true;
+            }
+
+            recipe = null;
+            return false;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static int GetCraftingTicks(CardGroup cardGroup)
+        {
+            if (craftingRecipes.TryGetValue(cardGroup, out var info))
+            {
+                return info.tick;
+            }
+
+            Debug.LogWarning($"Failed to get crafting ticks for {cardGroup.name}, it is not crafting");
+            return -1;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void SpeedUpCrafting(CardGroup cardGroup, int ticks)
+        {
+            if (craftingRecipes.TryGetValue(cardGroup, out var info) == false)
+            {
+                Debug.LogWarning($"Failed to speed up crafting for {cardGroup.name}, it is not crafting");
+                return;
+            }
+            
+            info.tick += ticks;
+        }
     }
 }

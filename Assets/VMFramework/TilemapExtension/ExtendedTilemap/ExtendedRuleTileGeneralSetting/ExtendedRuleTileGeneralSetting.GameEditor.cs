@@ -13,7 +13,7 @@ namespace VMFramework.ExtendedTilemap
 
         public Icon icon => SdfIconType.Grid3x3;
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.builtInCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.BUILT_IN_CATEGORY;
     }
 }
 #endif

@@ -9,7 +9,7 @@ namespace VMFramework.Editor
     {
         string INameOwner.name => "Texture Importer";
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.editorCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.EDITOR_CATEGORY;
     }
 }
 #endif

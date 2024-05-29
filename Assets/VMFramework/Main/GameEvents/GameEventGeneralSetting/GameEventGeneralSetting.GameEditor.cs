@@ -13,7 +13,7 @@ namespace VMFramework.GameEvents
 
         Icon IGameEditorMenuTreeNode.icon => new(SdfIconType.Dpad);
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.coreCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.CORE_CATEGORY;
     }
 }
 #endif

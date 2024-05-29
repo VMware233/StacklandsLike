@@ -8,7 +8,7 @@ namespace VMFramework.Editor.GameEditor
     {
         string INameOwner.name => "Game Editor";
 
-        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.editorCategoryName;
+        string IGameEditorMenuTreeNode.folderPath => GameEditorNames.EDITOR_CATEGORY;
     }
 }
 #endif
