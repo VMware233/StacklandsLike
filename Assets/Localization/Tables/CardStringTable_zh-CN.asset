@@ -82,6 +82,30 @@ MonoBehaviour:
     m_Localized: "\u706B\u5806"
     m_Metadata:
       m_Items: []
+  - m_Id: 1456702615564288
+    m_Localized: "\u6728\u677F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456806135181312
+    m_Localized: "\u5927House"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456935189721088
+    m_Localized: "\u94C1\u77FF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1457068308541440
+    m_Localized: "\u94C1\u952D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459667216740352
+    m_Localized: "\u7194\u7089"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464031264223232
+    m_Localized: Stick
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

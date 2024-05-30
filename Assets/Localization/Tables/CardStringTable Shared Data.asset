@@ -79,6 +79,30 @@ MonoBehaviour:
     m_Key: CampfireCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 1456702615564288
+    m_Key: PlankCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456806135181312
+    m_Key: HouseCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456935189721088
+    m_Key: IronOreCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1457068308541440
+    m_Key: IronIngotCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459667216740352
+    m_Key: FurnaceCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464031264223232
+    m_Key: StickCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

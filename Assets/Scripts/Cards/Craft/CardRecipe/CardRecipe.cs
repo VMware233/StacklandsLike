@@ -16,6 +16,7 @@ namespace StackLandsLike.Cards
         public bool autoCheck;
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [ShowIf(nameof(autoCheck))]
         public int priority;
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]

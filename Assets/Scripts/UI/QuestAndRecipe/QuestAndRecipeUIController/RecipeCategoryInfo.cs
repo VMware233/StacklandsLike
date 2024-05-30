@@ -7,5 +7,7 @@ namespace StackLandsLike.UI
         public string categoryID;
         
         public Foldout foldout;
+        
+        public int priority;
     }
 }

@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
+  m_Name: EndGameStateEvent
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: gamePrefab
+      Entry: 7
+      Data: 0|VMFramework.GameEvents.BoolInputGameEventConfig, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: end_game_state_event
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 2|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 6
+      Data: 
+    - Name: key
+      Entry: 1
+      Data: EndGameStateEventName
+    - Name: defaultValue
+      Entry: 1
+      Data: End Game State
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: false
+    - Name: actionGroups
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[VMFramework.GameEvents.InputActionGroup,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|VMFramework.GameEvents.InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[VMFramework.GameEvents.InputAction,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: VMFramework.GameEvents.InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 27
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0.3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

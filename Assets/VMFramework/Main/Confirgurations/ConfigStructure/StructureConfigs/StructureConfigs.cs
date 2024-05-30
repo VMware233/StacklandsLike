@@ -11,7 +11,6 @@ namespace VMFramework.Configuration
     public abstract partial class StructureConfigs<TConfig> : BaseConfig, IStructureConfigs<TConfig>
         where TConfig : IConfig
     {
-        [LabelText("设置")]
         [ListDrawerSettings(ShowFoldout = false)]
         [SerializeField]
         protected List<TConfig> configs = new();

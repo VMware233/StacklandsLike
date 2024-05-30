@@ -38,6 +38,14 @@ MonoBehaviour:
     m_Localized: Building Card Recipe
     m_Metadata:
       m_Items: []
+  - m_Id: 1455623693774848
+    m_Localized: Planting Card Recipe Type
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1461151069220864
+    m_Localized: Cooked Crad Recipe Type
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

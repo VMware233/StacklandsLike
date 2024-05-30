@@ -108,7 +108,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 6
     - Name: 
       Entry: 7
       Data: 8|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+LocalizedGameTypeInfo,
@@ -238,7 +238,7 @@ MonoBehaviour:
         Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: building_card_recipe_type
+      Data: planting_card_recipe_type
     - Name: subtypes
       Entry: 7
       Data: 18|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
@@ -263,10 +263,92 @@ MonoBehaviour:
       Data: GameTypeStringTable
     - Name: key
       Entry: 1
+      Data: PlantingCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Planting Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+LocalizedGameTypeInfo,
+        Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: building_card_recipe_type
+    - Name: subtypes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 1
+      Data: card_recipe_type
+    - Name: name
+      Entry: 7
+      Data: 22|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: GameTypeStringTable
+    - Name: key
+      Entry: 1
       Data: BuildingCardRecipeTypeName
     - Name: defaultValue
       Entry: 1
       Data: Building Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+LocalizedGameTypeInfo,
+        Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: cooked_crad_recipe_type
+    - Name: subtypes
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 1
+      Data: card_recipe_type
+    - Name: name
+      Entry: 7
+      Data: 25|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: GameTypeStringTable
+    - Name: key
+      Entry: 1
+      Data: CookedCradRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Cooked Crad Recipe Type
     - Name: 
       Entry: 8
       Data: 
@@ -287,28 +369,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+      Data: 26|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
         Assembly-CSharp
     - Name: id
       Entry: 1
       Data: ui_related_type
     - Name: subtypes
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+      Data: 27|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 22|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+      Data: 28|VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
         Assembly-CSharp
     - Name: id
       Entry: 1
       Data: recipe_display_type
     - Name: subtypes
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
+      Data: 29|System.Collections.Generic.List`1[[VMFramework.GameLogicArchitecture.GameTypeGeneralSetting+GameTypeInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12

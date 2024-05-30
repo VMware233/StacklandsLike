@@ -87,18 +87,33 @@ namespace StackLandsLike.Cards
 
         private static void CheckSatisfied(IContainer container)
         {
+            ICardRecipe currentRecipe = null;
+            
             foreach (var recipe in GamePrefabManager.GetAllGamePrefabs<ICardRecipe>())
             {
                 if (recipe.autoCheck == false)
                 {
                     continue;
-                } 
-                
-                if (recipe.SatisfyConsumptionRequirements(container))
-                {
-                    StartCraft((CardGroup)container.owner, recipe);
-                    break;
                 }
+                
+                if (recipe.SatisfyConsumptionRequirements(container) == false)
+                {
+                    continue;
+                }
+                
+                if (currentRecipe == null)
+                {
+                    currentRecipe = recipe;
+                }
+                else if (recipe.priority > currentRecipe.priority)
+                {
+                    currentRecipe = recipe;
+                }
+            }
+
+            if (currentRecipe != null)
+            {
+                StartCraft((CardGroup)container.owner, currentRecipe);
             }
         }
 

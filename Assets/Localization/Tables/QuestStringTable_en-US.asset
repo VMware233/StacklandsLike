@@ -26,6 +26,14 @@ MonoBehaviour:
     m_Localized: Split a Card
     m_Metadata:
       m_Items: []
+  - m_Id: 228639361839104
+    m_Localized: Craft a Iron Ingot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228818894827520
+    m_Localized: Grill a Fish
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

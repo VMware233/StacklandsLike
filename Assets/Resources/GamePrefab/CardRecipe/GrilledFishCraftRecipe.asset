@@ -38,10 +38,13 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 1
-      Data: default_card_recipe_type
+      Data: cooked_crad_recipe_type
+    - Name: 
+      Entry: 1
+      Data: recipe_display_type
     - Name: 
       Entry: 13
       Data: 

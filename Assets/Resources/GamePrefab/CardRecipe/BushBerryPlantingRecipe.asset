@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 1
-      Data: resources_card_recipe_type
+      Data: planting_card_recipe_type
     - Name: 
       Entry: 1
       Data: recipe_display_type

@@ -13,5 +13,7 @@ namespace StackLandsLike.GameCore
         public CardRecipeGeneralSetting cardRecipeGeneralSetting;
         public GameTimeGeneralSetting gameTimeGeneralSetting;
         public QuestGeneralSetting questGeneralSetting;
+        public GameStateGeneralSetting gameStateGeneralSetting;
+        public QuestAndRecipeUIGeneralSetting questAndRecipeUIGeneralSetting;
     }
 }

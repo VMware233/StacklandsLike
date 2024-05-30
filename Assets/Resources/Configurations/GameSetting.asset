@@ -51,3 +51,5 @@ MonoBehaviour:
   cardRecipeGeneralSetting: {fileID: 11400000, guid: 24c20dff83b63744cb732859b1b51618, type: 2}
   gameTimeGeneralSetting: {fileID: 11400000, guid: 7d5be037dfa21b541b2505ff428c09fa, type: 2}
   questGeneralSetting: {fileID: 11400000, guid: 40d9499a61ebf5c41926250946b5e54a, type: 2}
+  gameStateGeneralSetting: {fileID: 11400000, guid: d56202fc52e780e47978f1c99795ab4b, type: 2}
+  questAndRecipeUIGeneralSetting: {fileID: 11400000, guid: 4c9dd178693a65b4fa18e7d920bff1bc, type: 2}

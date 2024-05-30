@@ -58,6 +58,26 @@ MonoBehaviour:
     m_Localized: Grilled Fish Craft
     m_Metadata:
       m_Items: []
+  - m_Id: 1266790683488256
+    m_Localized: Plank Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1267329823518720
+    m_Localized: House Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1267785731780608
+    m_Localized: Person Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269392330567680
+    m_Localized: Furnace Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269701794705408
+    m_Localized: Iron Ingot Craft
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 10
+      Data: 11
     - Name: 
       Entry: 7
       Data: 1|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
@@ -52,14 +52,14 @@ MonoBehaviour:
       Data: 3|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: rock_card
+      Data: person_card
     - Name: count
       Entry: 7
       Data: 4|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -71,14 +71,14 @@ MonoBehaviour:
       Data: 5|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: tree_card
+      Data: rock_card
     - Name: count
       Entry: 7
       Data: 6|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -109,7 +109,7 @@ MonoBehaviour:
       Data: 9|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: soil_card
+      Data: tree_card
     - Name: count
       Entry: 7
       Data: 10|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
@@ -128,7 +128,7 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: fish_pond_card
+      Data: soil_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
@@ -147,14 +147,14 @@ MonoBehaviour:
       Data: 13|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_card
+      Data: fish_pond_card
     - Name: count
       Entry: 7
       Data: 14|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -173,7 +173,7 @@ MonoBehaviour:
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 12
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -185,14 +185,14 @@ MonoBehaviour:
       Data: 17|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_bush_card
+      Data: berry_card
     - Name: count
       Entry: 7
       Data: 18|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 1
+      Data: 12
     - Name: 
       Entry: 8
       Data: 
@@ -208,6 +208,25 @@ MonoBehaviour:
     - Name: count
       Entry: 7
       Data: 20|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: berry_bush_card
+    - Name: count
+      Entry: 7
+      Data: 22|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
@@ -241,6 +260,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c7874b672150389488114c959acb8b8d, type: 2}
   - {fileID: 11400000, guid: 25f473f29ed4d4d449787465c85c70da, type: 2}
   - {fileID: 11400000, guid: 78e7c4aab22b1114ea1ac8ebd7ef6437, type: 2}
+  - {fileID: 11400000, guid: 5f0c559a38f7e574e8ef8d54156eb5c9, type: 2}
+  - {fileID: 11400000, guid: d1bb925533ae1ed4c97577c3df662dff, type: 2}
+  - {fileID: 11400000, guid: 957c732cef1565740a10ae20b690f14d, type: 2}
+  - {fileID: 11400000, guid: c6b0c370744a17545aca464f0ee646fc, type: 2}
+  - {fileID: 11400000, guid: 10986885c1346ce478455bb6cb4993f0, type: 2}
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}
   cardViewSize: {x: 1, y: 1}

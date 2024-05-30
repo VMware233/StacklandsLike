@@ -35,6 +35,14 @@ MonoBehaviour:
     m_Key: BuildingCardRecipeTypeName
     m_Metadata:
       m_Items: []
+  - m_Id: 1455623693774848
+    m_Key: PlantingCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1461151069220864
+    m_Key: CookedCradRecipeTypeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

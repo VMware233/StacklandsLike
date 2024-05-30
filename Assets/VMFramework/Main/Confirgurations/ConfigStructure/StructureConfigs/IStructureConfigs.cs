@@ -2,7 +2,7 @@
 
 namespace VMFramework.Configuration
 {
-    public interface IStructureConfigs<TConfig> : IConfig where TConfig : IConfig
+    public partial interface IStructureConfigs<TConfig> : IConfig where TConfig : IConfig
     {
         public bool TryAddConfigEditor(TConfig config);
 

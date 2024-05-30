@@ -1,8 +1,12 @@
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using StackLandsLike.Cards;
+using StackLandsLike.GameCore;
 using UnityEngine;
 using UnityEngine.UIElements;
+using VMFramework.Configuration;
+using VMFramework.Core;
 using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.UI
@@ -31,7 +35,8 @@ namespace StackLandsLike.UI
 
         private void CloseRecipePanel()
         {
-            
+            recipeCategories.Clear();
+            recipeEntries.Clear();
         }
 
         private RecipeCategoryInfo GetOrCreateRecipeCategory(string categoryID)
@@ -40,20 +45,39 @@ namespace StackLandsLike.UI
             {
                 return categoryInfo;
             }
+            
+            var foldoutText = GameType.GetGameTypeName(categoryID);
+            var priority = 0;
+
+            if (GameSetting.questAndRecipeUIGeneralSetting.recipeCategoryConfigs.TryGetConfigRuntime(
+                    categoryID, out var categoryConfig))
+            {
+                foldoutText = categoryConfig.categoryName;
+                priority = categoryConfig.priority;
+            }
 
             var foldout = new Foldout()
             {
-                text = GameType.GetGameTypeName(categoryID)
+                text = foldoutText,
+                value = true
             };
 
             categoryInfo = new RecipeCategoryInfo()
             {
                 categoryID = categoryID,
-                foldout = foldout
+                foldout = foldout,
+                priority = priority
             };
             
             recipeCategories.Add(categoryID, categoryInfo);
             recipeContainer.Add(foldout);
+            
+            var sortedInfos = recipeCategories.Values.OrderBy(info => info.priority);
+
+            foreach (var info in sortedInfos)
+            {
+                info.foldout.SetAsFirstSibling();
+            }
             
             return categoryInfo;
         }

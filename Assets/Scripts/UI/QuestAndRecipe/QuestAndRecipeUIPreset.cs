@@ -1,4 +1,5 @@
 using System;
+using VMFramework.Configuration;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.OdinExtensions;
 using VMFramework.UI;
@@ -6,7 +7,7 @@ using VMFramework.UI;
 namespace StackLandsLike.UI
 {
     [GamePrefabTypeAutoRegister(ID)]
-    public sealed class QuestAndRecipeUIPreset : UIToolkitPanelPreset
+    public sealed partial class QuestAndRecipeUIPreset : UIToolkitPanelPreset
     {
         public const string ID = "quest_and_recipe_ui";
 

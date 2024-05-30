@@ -35,11 +35,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 619001746141184
-    m_Localized: Tree Planting
+    m_Localized: "\u6811\u6728\u79CD\u690D"
     m_Metadata:
       m_Items: []
   - m_Id: 619482136555520
-    m_Localized: Bush Berry Planting
+    m_Localized: "\u6D46\u679C\u4E1B\u79CD\u690D"
     m_Metadata:
       m_Items: []
   - m_Id: 725463201853440
@@ -51,11 +51,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1112574522404864
-    m_Localized: Campfire Craft
+    m_Localized: "\u7BDD\u706B"
     m_Metadata:
       m_Items: []
   - m_Id: 1112894732349440
-    m_Localized: Grilled Fish Craft
+    m_Localized: "\u70E4\u9C7C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1266790683488256
+    m_Localized: "\u6A21\u677F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1267329823518720
+    m_Localized: "\u5927House"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1267785731780608
+    m_Localized: "\u540E\u4EE3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269392330567680
+    m_Localized: "\u7194\u7089"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1269701794705408
+    m_Localized: "\u953B\u9020\u94C1\u952D"
     m_Metadata:
       m_Items: []
   references:

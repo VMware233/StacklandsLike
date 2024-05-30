@@ -82,6 +82,30 @@ MonoBehaviour:
     m_Localized: Campfire
     m_Metadata:
       m_Items: []
+  - m_Id: 1456702615564288
+    m_Localized: Plank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456806135181312
+    m_Localized: House
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1456935189721088
+    m_Localized: Iron Ore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1457068308541440
+    m_Localized: Iron Ingot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459667216740352
+    m_Localized: Furnace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464031264223232
+    m_Localized: Stick
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

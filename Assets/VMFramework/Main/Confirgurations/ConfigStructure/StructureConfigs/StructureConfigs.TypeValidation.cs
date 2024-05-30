@@ -14,14 +14,14 @@ namespace VMFramework.Configuration
             
             if (configs.Count == 0)
             {
-                yield return new($"{labelName}缺少配置", ValidateType.Info);
+                yield return new($"{labelName} is lacking any configuration", ValidateType.Info);
             }
             
             foreach (var config in configs)
             {
                 if (config == null)
                 {
-                    yield return new($"{labelName}配置中存在Null", ValidateType.Error);
+                    yield return new($"{labelName} configs contain null", ValidateType.Error);
                 }
             }
         }

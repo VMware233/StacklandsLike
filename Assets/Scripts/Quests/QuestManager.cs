@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using StackLandsLike.GameCore;
@@ -32,6 +33,15 @@ namespace StackLandsLike.Quests
             _currentQuests.Remove(quest);
             OnQuestStopped?.Invoke(quest);
             quest.OnQuestStopped();
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void StopAllQuests()
+        {
+            foreach (var quest in _currentQuests.ToList())
+            {
+                StopQuest(quest);
+            }
         }
     }
 }

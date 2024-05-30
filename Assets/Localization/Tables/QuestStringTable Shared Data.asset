@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: CardSplitQuestName
     m_Metadata:
       m_Items: []
+  - m_Id: 228639361839104
+    m_Key: IronIngotCraftQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228818894827520
+    m_Key: GrilledFishCraftQuestName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29328dabba898e4c857e0026e68422f, type: 3}
+  m_Name: QuestAndRecipeUIGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: recipeCategoryConfigs
+      Entry: 7
+      Data: 0|VMFramework.Configuration.DictionaryConfigs`2[[System.String, mscorlib],[StackLandsLike.UI.RecipeCategoryConfig,
+        Assembly-CSharp]], Assembly-CSharp
+    - Name: configs
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[StackLandsLike.UI.RecipeCategoryConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 2|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: basic_card_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 100
+    - Name: categoryName
+      Entry: 7
+      Data: 3|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: BasicCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Basic Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: building_card_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 50
+    - Name: categoryName
+      Entry: 7
+      Data: 5|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: BuildingCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Building Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: resources_card_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 0
+    - Name: categoryName
+      Entry: 7
+      Data: 7|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: ResourcesCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Resources Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: planting_card_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 0
+    - Name: categoryName
+      Entry: 7
+      Data: 9|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: PlantingCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Planting Card Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: cooked_crad_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 0
+    - Name: categoryName
+      Entry: 7
+      Data: 11|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: CookedCradRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Cooked Crad Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  <defaultLocalizationTableName>k__BackingField: QuestAndRecipeUIStringTable

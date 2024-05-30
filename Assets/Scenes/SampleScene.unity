@@ -1117,6 +1117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765c2fe3cbd54a11975dff8b0dc529a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 10
   minScroll: -10
   maxScroll: 10
@@ -1306,6 +1315,7 @@ GameObject:
   - component: {fileID: 1053450376}
   - component: {fileID: 1053450377}
   - component: {fileID: 1053450378}
+  - component: {fileID: 1053450379}
   m_Layer: 0
   m_Name: GameCore
   m_TagString: Untagged
@@ -1350,6 +1360,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f384b720e94f4fa68a65853211d4d942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1053450379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053450375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174e3cbaef0d44bca6db97039ad20c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1095484590
