@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.024
 --- !u!114 &-6228307481965546897
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -148,19 +148,19 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    m_Value: {r: 0.38058892, g: 0.3962264, b: 0.26240653, a: 1}
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.331
+    m_Value: 0.42
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.175
+    m_Value: 0.129
   rounded:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &-5094025250041424895
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -198,13 +198,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 0.30019385, g: 0.3660378, b: 0.29766467, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 0.6376842, g: 0.6528301, b: 0.54074043, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: 0
@@ -226,10 +226,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 0.83
   intensity:
     m_OverrideState: 1
-    m_Value: 0.99
+    m_Value: 0.91
   scatter:
     m_OverrideState: 1
     m_Value: 0.7
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.4343823, g: 0.78119946, b: 0.93207544, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 0
@@ -414,16 +414,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   type:
     m_OverrideState: 1
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.08
   response:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 0.13
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
