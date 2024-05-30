@@ -3,13 +3,13 @@ using Sirenix.OdinInspector;
 
 namespace VMFramework.Editor
 {
-    public class AppendOrPrependStringToAssetNameUnit : DoubleButtonRenameAssetUnit
+    public sealed class AppendOrPrependStringToAssetNameUnit : DoubleButtonRenameAssetUnit
     {
-        protected override string processButtonOneName => "追加字符串";
+        protected override string processButtonOneName => "Append String";
 
-        protected override string processButtonTwoName => "前置字符串";
+        protected override string processButtonTwoName => "Prepend String";
 
-        [LabelText("追加或前置的字符串"), HorizontalGroup]
+        [HorizontalGroup]
         public string appendOrPrependString;
 
         protected override string ProcessAssetNameOne(string oldName)

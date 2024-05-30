@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace VMFramework.Editor
 {
-    public class QueryAllInterfacesUnit : SingleButtonBatchProcessorUnit
+    public sealed class QueryAllInterfacesUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "获取所有接口";
+        protected override string processButtonName => "Get All Interfaces";
 
         public override bool IsValid(IList<object> selectedObjects)
         {

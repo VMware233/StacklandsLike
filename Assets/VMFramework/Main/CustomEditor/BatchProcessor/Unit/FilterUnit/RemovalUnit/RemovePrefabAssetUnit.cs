@@ -6,9 +6,9 @@ using VMFramework.Core;
 
 namespace VMFramework.Editor
 {
-    public class RemovePrefabAssetUnit : SingleButtonBatchProcessorUnit
+    public sealed class RemovePrefabAssetUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "移除预制体资源";
+        protected override string processButtonName => "Remove Prefab Asset";
 
         public override bool IsValid(IList<object> selectedObjects)
         {

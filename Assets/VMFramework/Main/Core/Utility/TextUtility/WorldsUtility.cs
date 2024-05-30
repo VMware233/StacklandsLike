@@ -103,6 +103,12 @@ namespace VMFramework.Core
         {
             return input.GetWords().Select(LetterUtility.CapitalizeFirstLetter).ToString(step);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string ToCamelCase(this string input, string step = "")
+        {
+            return ToCamelCase(input.GetWords(), step);
+        }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string ToSnakeCase(this IEnumerable<string> words)
@@ -114,6 +120,28 @@ namespace VMFramework.Core
         public static string ToPascalCase(this IEnumerable<string> words, string step = "")
         {
             return words.Select(LetterUtility.CapitalizeFirstLetter).ToString(step);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string ToCamelCase(this IEnumerable<string> words, string step = "")
+        {
+            string result = string.Empty;
+
+            bool isFirst = true;
+            foreach (var word in words)
+            {
+                if (isFirst)
+                {
+                    result += word.ToLower();
+                    isFirst = false;
+                    
+                    continue;
+                }
+                
+                result += step + word.CapitalizeFirstLetter();
+            }
+            
+            return result;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

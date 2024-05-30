@@ -8,11 +8,10 @@ using VMFramework.OdinExtensions;
 
 namespace VMFramework.Editor
 {
-    public class AddComponentUnit : SingleButtonBatchProcessorUnit
+    public sealed class AddComponentUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "添加组件";
+        protected override string processButtonName => "Add Component";
 
-        [LabelText("组件类型")]
         [SerializeField]
         [TypeValueDropdown(typeof(Component), IncludingSelf = false, IncludingAbstract = false,
             IncludingGeneric = false, IncludingInterfaces = false)]

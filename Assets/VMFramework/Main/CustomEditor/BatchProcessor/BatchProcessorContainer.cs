@@ -10,15 +10,16 @@ namespace VMFramework.Editor
     {
         private List<BatchProcessorUnit> allUnits = new();
 
-        [LabelText("选择的对象"), HorizontalGroup]
-        [ListDrawerSettings(DefaultExpandedState = true)]
+        [HorizontalGroup]
+        [ListDrawerSettings(ShowFoldout = false)]
         [Searchable]
         [SerializeField]
         private List<object> selectedObjects = new();
 
-        [LabelText("处理单元"), HorizontalGroup]
-        [ListDrawerSettings(DefaultExpandedState = true, HideAddButton = true,
-            HideRemoveButton = true, DraggableItems = false)]
+        [HorizontalGroup]
+        [ListDrawerSettings(ShowFoldout = false, HideAddButton = true, HideRemoveButton = true,
+            DraggableItems = false)]
+        [Searchable]
         [OnCollectionChanged(nameof(UpdateValidUnits))]
         [SerializeField]
         private readonly List<BatchProcessorUnit> validUnits = new();

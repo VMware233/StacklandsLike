@@ -7,26 +7,26 @@ using UnityEngine;
 
 namespace VMFramework.Editor
 {
-    public class AddOrReplaceFromSelectionUnit : BatchProcessorUnit
+    public sealed class AddOrReplaceFromSelectionUnit : BatchProcessorUnit
     {
         public override bool IsValid(IList<object> selectedObjects)
         {
             return Selection.objects.Length != 0;
         }
 
-        [Button("从选择中添加"), ResponsiveButtonGroup]
+        [ResponsiveButtonGroup]
         private void AddFromSelection()
         {
             container.AddSelectedObjects(Selection.objects);
         }
 
-        [Button("从选择中替换"), ResponsiveButtonGroup]
+        [ResponsiveButtonGroup]
         private void ReplaceFromSelection()
         {
             container.SetSelectedObjects(Selection.objects);
         }
 
-        [Button("从选择中添加(不重复)"), ResponsiveButtonGroup]
+        [ResponsiveButtonGroup]
         private void AddFromSelectionWithoutDuplicate()
         {
             var selectedObjects = Selection.objects;
@@ -43,7 +43,7 @@ namespace VMFramework.Editor
             container.AddSelectedObjects(newSelectedObjects);
         }
 
-        [Button("从选择中替换(不重复)"), ResponsiveButtonGroup]
+        [ResponsiveButtonGroup]
         private void ReplaceFromSelectionWithoutDuplicate()
         {
             container.SetSelectedObjects(Selection.objects.Distinct());

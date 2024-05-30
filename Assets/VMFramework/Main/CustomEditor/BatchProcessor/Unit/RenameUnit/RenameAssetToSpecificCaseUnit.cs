@@ -3,11 +3,11 @@ using VMFramework.Core;
 
 namespace VMFramework.Editor
 {
-    public class RenameAssetToSpecificCaseUnit : DoubleButtonRenameAssetUnit
+    public sealed class RenameAssetToSpecificCaseUnit : DoubleButtonRenameAssetUnit
     {
-        protected override string processButtonOneName => "下划线命名法重命名";
+        protected override string processButtonOneName => "Rename To Snake Case";
 
-        protected override string processButtonTwoName => "帕斯卡命名法重命名";
+        protected override string processButtonTwoName => "Rename To Pascal Case";
 
         protected override string ProcessAssetNameOne(string oldName)
         {

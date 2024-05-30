@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cubeland-18_0: 3800345014517092755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

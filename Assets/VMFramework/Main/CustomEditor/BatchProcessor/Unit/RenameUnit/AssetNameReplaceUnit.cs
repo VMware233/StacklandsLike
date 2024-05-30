@@ -3,14 +3,14 @@ using Sirenix.OdinInspector;
 
 namespace VMFramework.Editor
 {
-    public class AssetNameReplaceUnit : SingleButtonRenameAssetUnit
+    public sealed class AssetNameReplaceUnit : SingleButtonRenameAssetUnit
     {
-        protected override string processButtonName => "替换字符串";
+        protected override string processButtonName => "Replace String";
 
-        [LabelText("旧字符串"), HorizontalGroup]
+        [HorizontalGroup]
         public string oldString;
 
-        [LabelText("新字符串"), HorizontalGroup]
+        [HorizontalGroup]
         public string newString;
 
         protected override string ProcessAssetName(string oldName)

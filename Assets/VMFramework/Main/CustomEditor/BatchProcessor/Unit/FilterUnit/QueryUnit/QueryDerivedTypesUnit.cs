@@ -9,29 +9,29 @@ using VMFramework.Core.Linq;
 
 namespace VMFramework.Editor
 {
-    public class QueryDerivedTypesUnit : SingleButtonBatchProcessorUnit
+    public sealed class QueryDerivedTypesUnit : SingleButtonBatchProcessorUnit
     {
         private const float LABEL_WIDTH = 100;
         
-        protected override string processButtonName => "查询派生类型";
+        protected override string processButtonName => "Query Derived Types";
 
-        [LabelText("包括自身"), LabelWidth(LABEL_WIDTH), HorizontalGroup("1")]
+        [LabelWidth(LABEL_WIDTH), HorizontalGroup("1")]
         [SerializeField]
         private bool includingSelf;
         
-        [LabelText("包括抽象"), LabelWidth(LABEL_WIDTH), HorizontalGroup("1")]
+        [LabelWidth(LABEL_WIDTH), HorizontalGroup("1")]
         [SerializeField]
         private bool includingAbstract;
         
-        [LabelText("包括泛型定义"), LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
+        [LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
         [SerializeField]
         private bool includingGenericDefinitions;
         
-        [LabelText("包括接口"), LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
+        [LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
         [SerializeField]
         private bool includingInterface;
         
-        [LabelText("仅叶节点类型"), LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
+        [LabelWidth(LABEL_WIDTH), HorizontalGroup("2")]
         [SerializeField]
         private bool leafTypesOnly = true;
 

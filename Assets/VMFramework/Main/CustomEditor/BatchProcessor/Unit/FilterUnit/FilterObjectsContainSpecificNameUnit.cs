@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using VMFramework.Core;
 
 namespace VMFramework.Editor
 {
-    public class FilterObjectsContainSpecificNameUnit : DoubleButtonBatchProcessorUnit
+    public sealed class FilterObjectsContainSpecificNameUnit : DoubleButtonBatchProcessorUnit
     {
-        protected override string processButtonOneName => "移除包含的对象";
+        protected override string processButtonOneName => "Remove Containing Specific Name";
 
-        protected override string processButtonTwoName => "仅保留包含的对象";
+        protected override string processButtonTwoName => "Keep Containing Specific Name";
 
-        [LabelText("特定名称")]
         public string specificName;
 
         public override bool IsValid(IList<object> selectedObjects)
@@ -24,6 +24,11 @@ namespace VMFramework.Editor
         protected override IEnumerable<object> OnProcessOne(
             IEnumerable<object> selectedObjects)
         {
+            if (specificName.IsNullOrEmpty())
+            {
+                return selectedObjects;
+            }
+            
             return selectedObjects.Where(o =>
                 o is Object obj && obj.name.Contains(specificName) == false);
         }
@@ -31,6 +36,11 @@ namespace VMFramework.Editor
         protected override IEnumerable<object> OnProcessTwo(
             IEnumerable<object> selectedObjects)
         {
+            if (specificName.IsNullOrEmpty())
+            {
+                return selectedObjects;
+            }
+            
             return selectedObjects.Where(o =>
                 o is Object obj && obj.name.Contains(specificName));
         }

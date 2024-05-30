@@ -8,11 +8,10 @@ using VMFramework.OdinExtensions;
 
 namespace VMFramework.Editor
 {
-    public class QueryUnityObjectsByComponentUnit : SingleButtonBatchProcessorUnit
+    public sealed class QueryUnityObjectsByComponentUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "通过组件查询";
+        protected override string processButtonName => "Query By Component";
 
-        [LabelText("组件类型")]
         [SerializeField]
         [TypeValueDropdown(typeof(Component), IncludingSelf = false, IncludingAbstract = true,
             IncludingGeneric = false, IncludingInterfaces = false)]

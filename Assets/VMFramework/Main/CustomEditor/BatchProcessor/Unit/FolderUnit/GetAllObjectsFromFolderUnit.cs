@@ -6,9 +6,9 @@ using VMFramework.Core.Editor;
 
 namespace VMFramework.Editor
 {
-    public class GetAllObjectsFromFolderUnit : SingleButtonBatchProcessorUnit
+    public sealed class GetAllObjectsFromFolderUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "获取文件夹下所有对象";
+        protected override string processButtonName => "Get All Objects from Folder";
         
         public override bool IsValid(IList<object> selectedObjects)
         {

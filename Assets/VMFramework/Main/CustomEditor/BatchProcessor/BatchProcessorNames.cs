@@ -7,11 +7,7 @@ namespace VMFramework.Editor
     {
         #region Batch Processor Name
 
-        public const string BATCH_PROCESSOR_DEFAULT_NAME = "Batch Processor";
-        public const string BATCH_PROCESSOR_NAME_KEY = "BatchProcessorName";
-
-        public static string batchProcessorName => LocalizationEditorManager.GetStringOfEditorTable(BATCH_PROCESSOR_NAME_KEY,
-            BATCH_PROCESSOR_DEFAULT_NAME);
+        public const string BATCH_PROCESSOR_NAME = "Batch Processor";
 
         #endregion
     }

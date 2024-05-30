@@ -24,6 +24,7 @@ namespace UnityToolbarExtender.Examples
 			EditorApplication.playModeStateChanged += OnPlayModeChanged;
 			EditorApplication.pauseStateChanged += OnPauseChanged;
 
+			// UnityEditor.Toolbar
 			ToolbarExtender.RightToolbarGUI.Add(OnToolbarGUI);
 		}
 

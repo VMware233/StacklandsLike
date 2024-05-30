@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace VMFramework.Editor
 {
-    public class RemoveDuplicateUnit : SingleButtonBatchProcessorUnit
+    public sealed class RemoveDuplicateUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "移除重复对象";
+        protected override string processButtonName => "Remove Duplicate";
 
         public override bool IsValid(IList<object> selectedObjects)
         {

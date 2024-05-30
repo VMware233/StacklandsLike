@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace VMFramework.Editor
 {
-    public class RemoveNullUnit : SingleButtonBatchProcessorUnit
+    public sealed class RemoveNullUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "移除空对象";
+        protected override string processButtonName => "Remove Null";
 
         public override bool IsValid(IList<object> selectedObjects)
         {

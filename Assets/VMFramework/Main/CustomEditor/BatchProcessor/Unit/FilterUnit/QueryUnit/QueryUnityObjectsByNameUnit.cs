@@ -1,16 +1,14 @@
 ﻿#if UNITY_EDITOR
 using System.Collections.Generic;
 using System.Linq;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace VMFramework.Editor
 {
-    public class QueryUnityObjectsByNameUnit : SingleButtonBatchProcessorUnit
+    public sealed class QueryUnityObjectsByNameUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "通过名称查询";
+        protected override string processButtonName => "Query By Name";
 
-        [LabelText("查询内容")]
         [SerializeField]
         private string queryContent;
 

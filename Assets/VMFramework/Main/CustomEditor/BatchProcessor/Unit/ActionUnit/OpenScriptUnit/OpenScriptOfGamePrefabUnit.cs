@@ -6,9 +6,9 @@ using VMFramework.GameLogicArchitecture;
 
 namespace VMFramework.Editor
 {
-    public class OpenScriptOfGamePrefabUnit : SingleButtonBatchProcessorUnit
+    public sealed class OpenScriptOfGamePrefabUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "打开GamePrefab脚本";
+        protected override string processButtonName => "Open GamePrefab Script";
 
         public override bool IsValid(IList<object> selectedObjects)
         {

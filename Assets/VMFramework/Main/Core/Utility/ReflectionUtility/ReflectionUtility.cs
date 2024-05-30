@@ -229,6 +229,18 @@ namespace VMFramework.Core
             return type.Namespace == "System" ||
                    type.Namespace.StartsWith("System.");
         }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool IsUnityType(this Type type)
+        {
+            if (type == null)
+            {
+                return false;
+            }
+
+            return type.Namespace == "UnityEngine" ||
+                   type.Namespace.StartsWith("UnityEngine.");
+        }
 
         #endregion
     }

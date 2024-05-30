@@ -29,6 +29,10 @@ namespace VMFramework.OdinExtensions
             {
                 return;
             }
+            else if (typeOfValue.IsUnityType())
+            {
+                return;
+            }
             
             genericMenu.AddSeparator("");
 

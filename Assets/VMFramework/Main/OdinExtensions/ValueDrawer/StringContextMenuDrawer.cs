@@ -1,9 +1,11 @@
 ﻿#if UNITY_EDITOR && ODIN_INSPECTOR
+using System;
 using VMFramework.Core;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
+using VMFramework.Core.Editor;
 
 namespace VMFramework.OdinExtensions
 {
@@ -32,24 +34,41 @@ namespace VMFramework.OdinExtensions
             {
                 return;
             }
-
-            genericMenu.AddSeparator("");
-
-            genericMenu.AddItem(new GUIContent("Pascal Case"), false, () =>
+            
+            if (property.Info.IsEditable)
             {
-                property.ValueEntry.WeakSmartValue = str.ToPascalCase(" ");
-            });
+                genericMenu.AddSeparator("");
 
-            genericMenu.AddItem(new GUIContent("Snake Case"), false, () =>
-            {
-                property.ValueEntry.WeakSmartValue = str.ToSnakeCase();
-            });
-
-            if (str.Contains(' '))
-            {
-                genericMenu.AddItem(new GUIContent("Remove Spaces"), false, () =>
+                genericMenu.AddItem(new GUIContent("Pascal Case"), false, () =>
                 {
-                    property.ValueEntry.WeakSmartValue = str.Replace(" ", "");
+                    property.ValueEntry.WeakSmartValue = str.ToPascalCase(" ");
+                });
+
+                genericMenu.AddItem(new GUIContent("Snake Case"), false, () =>
+                {
+                    property.ValueEntry.WeakSmartValue = str.ToSnakeCase();
+                });
+            
+                genericMenu.AddItem(new GUIContent("Camel Case"), false, () =>
+                {
+                    property.ValueEntry.WeakSmartValue = str.ToCamelCase();
+                });
+
+                if (str.Contains(' '))
+                {
+                    genericMenu.AddItem(new GUIContent("Remove Spaces"), false, () =>
+                    {
+                        property.ValueEntry.WeakSmartValue = str.Replace(" ", "");
+                    });
+                }
+            }
+
+            var type = Type.GetType(str);
+            if (type != null)
+            {
+                genericMenu.AddItem(new GUIContent("Open Script"), false, () =>
+                {
+                    type.OpenScriptOfType();
                 });
             }
         }

@@ -15,7 +15,7 @@ public sealed class BatchProcessorWindow : OdinEditorWindow
     private static BatchProcessorWindow GetWindow()
     {
         bool hasOpenedWindow = HasOpenInstances<BatchProcessorWindow>();
-        var window = GetWindow<BatchProcessorWindow>(BatchProcessorNames.batchProcessorName);
+        var window = GetWindow<BatchProcessorWindow>(BatchProcessorNames.BATCH_PROCESSOR_NAME);
 
         if (hasOpenedWindow == false)
         {
@@ -25,7 +25,7 @@ public sealed class BatchProcessorWindow : OdinEditorWindow
         return window;
     }
 
-    [MenuItem("Tools/" + BatchProcessorNames.BATCH_PROCESSOR_DEFAULT_NAME)]
+    [MenuItem("Tools/" + BatchProcessorNames.BATCH_PROCESSOR_NAME)]
     public static void OpenWindow()
     {
         GetWindow();
@@ -41,8 +41,8 @@ public sealed class BatchProcessorWindow : OdinEditorWindow
         GetWindow().container.AddSelectedObjects(additionalObjects);
     }
 
-    [MenuItem("Assets/" + BatchProcessorNames.BATCH_PROCESSOR_DEFAULT_NAME)]
-    [MenuItem("GameObject/" + BatchProcessorNames.BATCH_PROCESSOR_DEFAULT_NAME)]
+    [MenuItem("Assets/" + BatchProcessorNames.BATCH_PROCESSOR_NAME)]
+    [MenuItem("GameObject/" + BatchProcessorNames.BATCH_PROCESSOR_NAME)]
     public static void OpenWindowFromContextMenu()
     {
         var selectedObjects = Selection.objects;

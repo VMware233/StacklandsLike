@@ -6,9 +6,9 @@ using VMFramework.Core.Editor;
 
 namespace VMFramework.Editor
 {
-    public class OpenScriptOfTypeUnit : SingleButtonBatchProcessorUnit
+    public sealed class OpenScriptOfTypeUnit : SingleButtonBatchProcessorUnit
     {
-        protected override string processButtonName => "打开脚本";
+        protected override string processButtonName => "Open Script";
 
         public override bool IsValid(IList<object> selectedObjects)
         {
