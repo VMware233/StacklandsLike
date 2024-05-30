@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
@@ -19,6 +20,8 @@ namespace StackLandsLike.Cards
         private static readonly Dictionary<CardGroup, CardCraftInfo> craftingRecipes = new();
         
         private static readonly List<(CardGroup cardGroup, CardCraftInfo info)> craftDone = new();
+
+        public static event Action<CardGroup, ICardRecipe> OnRecipeCompleted; 
 
         protected override void OnBeforeInit()
         {
@@ -157,6 +160,8 @@ namespace StackLandsLike.Cards
                 }
                     
                 StopCraft(cardGroup);
+                
+                OnRecipeCompleted?.Invoke(cardGroup, info.recipe);
                 
                 if (info.recipe.SatisfyConsumptionRequirements(cardGroup.cardContainer))
                 {

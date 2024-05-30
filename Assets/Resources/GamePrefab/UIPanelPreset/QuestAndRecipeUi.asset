@@ -106,6 +106,9 @@ MonoBehaviour:
     - Name: recipeContainerName
       Entry: 1
       Data: RecipeContainer
+    - Name: recipeGameTypeID
+      Entry: 1
+      Data: recipe_display_type
     - Name: 
       Entry: 8
       Data: 

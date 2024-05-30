@@ -141,7 +141,6 @@ namespace VMFramework.UI
             if (panelOnMouseHover != panelController)
             {
                 return;
-                
             }
             
             panelOnMouseHover = null;

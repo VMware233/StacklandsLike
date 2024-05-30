@@ -7,6 +7,8 @@ namespace VMFramework.GameLogicArchitecture
 {
     public abstract partial class GamePrefabGeneralSetting : GeneralSetting, IInitialGamePrefabProvider
     {
+        public const string UNDEFINED_GAME_ITEM_NAME = "Undefined Game Item Name";
+        
         #region Categories
 
         protected const string INITIAL_GAME_PREFABS_CATEGORY = "Initial GamePrefabs";
@@ -23,7 +25,7 @@ namespace VMFramework.GameLogicArchitecture
 
         [TabGroup(TAB_GROUP_NAME, METADATA_CATEGORY)]
         [ShowInInspector]
-        public virtual string gameItemName { get; } = "Undefined Game Item Name";
+        public virtual string gameItemName { get; } = UNDEFINED_GAME_ITEM_NAME;
 
         [TabGroup(TAB_GROUP_NAME, METADATA_CATEGORY)]
         [ShowInInspector]

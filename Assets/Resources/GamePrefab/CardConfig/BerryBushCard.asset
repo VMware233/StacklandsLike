@@ -173,7 +173,7 @@ MonoBehaviour:
       Data: 1
     - Name: productionRecipeID
       Entry: 1
-      Data: berry_bush_collecting_recipe
+      Data: berry_bush_collection_recipe
     - Name: hasLastGenerationConfig
       Entry: 5
       Data: true

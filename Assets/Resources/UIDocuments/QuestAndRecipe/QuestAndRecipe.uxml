@@ -4,12 +4,20 @@
         <engine:VisualElement style="flex-grow: 1; left: 44px; top: 55px; position: absolute; height: 686px; width: 444px;">
             <engine:TabView>
                 <engine:Tab label="任务">
-                    <engine:ScrollView name="QuestContainer">
+                    <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000">
                         <engine:Toggle focusable="false" value="true" text="2332333333333333" style="display: none;" />
                     </engine:ScrollView>
                 </engine:Tab>
                 <engine:Tab label="主意">
-                    <engine:ScrollView name="RecipeContainer" />
+                    <engine:ScrollView name="RecipeContainer" mouse-wheel-scroll-size="1000">
+                        <engine:Foldout text="Foldout" style="display: none;">
+                            <engine:Foldout text="Foldout">
+                                <engine:Label text="Label" />
+                                <engine:Label text="Label" />
+                                <engine:Label text="Label" />
+                            </engine:Foldout>
+                        </engine:Foldout>
+                    </engine:ScrollView>
                 </engine:Tab>
             </engine:TabView>
         </engine:VisualElement>

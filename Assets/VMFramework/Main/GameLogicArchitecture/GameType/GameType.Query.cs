@@ -69,5 +69,11 @@ namespace VMFramework.GameLogicArchitecture
         {
             return allTypesDict.ContainsKey(typeID);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string GetGameTypeName(string typeID)
+        {
+            return GetGameType(typeID)?.name;
+        }
     }
 }

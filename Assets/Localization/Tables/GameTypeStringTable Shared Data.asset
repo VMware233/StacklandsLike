@@ -19,6 +19,22 @@ MonoBehaviour:
     m_Key: DefaultCardTypeName
     m_Metadata:
       m_Items: []
+  - m_Id: 1439919967940608
+    m_Key: DefaultCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1440669917884416
+    m_Key: BasicCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1441711921410048
+    m_Key: ResourcesCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1441724688871424
+    m_Key: BuildingCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

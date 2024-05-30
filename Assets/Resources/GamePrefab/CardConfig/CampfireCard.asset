@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: TestRecipe
+  m_Name: CampfireCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.CardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: test_recipe
+      Data: campfire_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -38,7 +38,10 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_card_type
     - Name: 
       Entry: 13
       Data: 
@@ -50,13 +53,13 @@ MonoBehaviour:
       Data: 2|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardRecipeStringTable
+      Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: TestRecipeName
+      Data: CampfireCardName
     - Name: defaultValue
       Entry: 1
-      Data: Test Recipe
+      Data: Campfire
     - Name: 
       Entry: 8
       Data: 
@@ -107,10 +110,10 @@ MonoBehaviour:
       Data: 4|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardRecipeStringTable
+      Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: TestRecipeDescription
+      Data: CampfireCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -156,74 +159,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: autoCheck
-      Entry: 5
-      Data: true
-    - Name: totalTicks
-      Entry: 3
-      Data: 120
-    - Name: consumptionConfigs
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: test2_card
-    - Name: count
-      Entry: 3
-      Data: 1
-    - Name: isConsumable
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: person_card
-    - Name: count
-      Entry: 3
-      Data: 1
-    - Name: isConsumable
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: generationConfigs
-      Entry: 7
-      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: icon
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8

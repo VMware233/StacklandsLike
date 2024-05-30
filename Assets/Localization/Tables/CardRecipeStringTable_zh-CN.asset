@@ -18,12 +18,12 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 235156910080
-    m_Localized: Test Recipe
+  - m_Id: 1111309172191232
+    m_Localized: Fish Pond Collection
     m_Metadata:
       m_Items: []
   - m_Id: 595327970291712
-    m_Localized: Berry Bush Collecting
+    m_Localized: Berry Bush Collection
     m_Metadata:
       m_Items: []
   - m_Id: 617622499602432
@@ -48,6 +48,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 737054299369472
     m_Localized: Tree Destruction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1112574522404864
+    m_Localized: Campfire Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1112894732349440
+    m_Localized: Grilled Fish Craft
     m_Metadata:
       m_Items: []
   references:

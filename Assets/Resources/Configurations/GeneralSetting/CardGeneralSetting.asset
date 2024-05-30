@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 9
+      Data: 10
     - Name: 
       Entry: 7
       Data: 1|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
@@ -90,7 +90,7 @@ MonoBehaviour:
       Data: 7|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: soil_card
+      Data: tree_card
     - Name: count
       Entry: 7
       Data: 8|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
@@ -109,7 +109,7 @@ MonoBehaviour:
       Data: 9|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_card
+      Data: soil_card
     - Name: count
       Entry: 7
       Data: 10|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
@@ -128,14 +128,14 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_card
+      Data: fish_pond_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -154,7 +154,7 @@ MonoBehaviour:
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 12
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -166,14 +166,14 @@ MonoBehaviour:
       Data: 15|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: berry_bush_card
+      Data: berry_card
     - Name: count
       Entry: 7
       Data: 16|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 1
+      Data: 12
     - Name: 
       Entry: 8
       Data: 
@@ -200,6 +200,25 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 19|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: berry_bush_card
+    - Name: count
+      Entry: 7
+      Data: 20|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -209,11 +228,7 @@ MonoBehaviour:
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: CardStringTable
   initialGamePrefabWrappers:
-  - {fileID: 11400000, guid: ff0e49415934d544d8c5f3ca221654fc, type: 2}
-  - {fileID: 11400000, guid: 6cd02b06d233b1a468f28e3802d38a15, type: 2}
   - {fileID: 11400000, guid: 743dbc96a175c384eace37b1a3629713, type: 2}
-  - {fileID: 11400000, guid: 250f812e45427fe4097c99d8f7a4b673, type: 2}
-  - {fileID: 11400000, guid: 78e7c4aab22b1114ea1ac8ebd7ef6437, type: 2}
   - {fileID: 11400000, guid: 2024a2a3ed3ab254da7810ebf7c36eb3, type: 2}
   - {fileID: 11400000, guid: b4129572f6e334e4ea496314fab5f780, type: 2}
   - {fileID: 11400000, guid: f451b0495fbd37041bf93afdeac4f3bc, type: 2}
@@ -221,6 +236,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2929ba69d42d3c54099bc7e6f9a9be9a, type: 2}
   - {fileID: 11400000, guid: 4a226124c4869664581750b8e4e5e751, type: 2}
   - {fileID: 11400000, guid: b83e3fb40e7abad4fb0c742186252a1f, type: 2}
+  - {fileID: 11400000, guid: 7070bf70cb99a8f459db2950eae65393, type: 2}
+  - {fileID: 11400000, guid: dbea2e11b76298b4b8b710f3c512965c, type: 2}
+  - {fileID: 11400000, guid: c7874b672150389488114c959acb8b8d, type: 2}
+  - {fileID: 11400000, guid: 25f473f29ed4d4d449787465c85c70da, type: 2}
+  - {fileID: 11400000, guid: 78e7c4aab22b1114ea1ac8ebd7ef6437, type: 2}
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}
   cardViewSize: {x: 1, y: 1}

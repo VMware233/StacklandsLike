@@ -1,5 +1,4 @@
 using System;
-using UnityEngine.UIElements;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.OdinExtensions;
 using VMFramework.UI;
@@ -20,5 +19,8 @@ namespace StackLandsLike.UI
         [VisualElementName]
         [IsNotNullOrEmpty]
         public string recipeContainerName;
+
+        [GameTypeID]
+        public string recipeGameTypeID;
     }
 }

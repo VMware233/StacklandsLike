@@ -63,6 +63,22 @@ MonoBehaviour:
     m_Key: SoilCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 1300436949774336
+    m_Key: FishPondCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1300499721728000
+    m_Key: FishCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1300734254624768
+    m_Key: GrilledFishCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1302676934602752
+    m_Key: CampfireCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

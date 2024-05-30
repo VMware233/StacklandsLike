@@ -16,6 +16,9 @@ namespace StackLandsLike.Cards
         public bool autoCheck;
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        public int priority;
+
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public int totalTicks;
         
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
@@ -59,6 +62,8 @@ namespace StackLandsLike.Cards
         }
 
         bool ICardRecipe.autoCheck => autoCheck;
+
+        int ICardRecipe.priority => priority;
 
         int ICardRecipe.totalTicks => totalTicks;
         

@@ -22,6 +22,22 @@ MonoBehaviour:
     m_Localized: Default Card Type
     m_Metadata:
       m_Items: []
+  - m_Id: 1439919967940608
+    m_Localized: "\u9ED8\u8BA4\u5361\u724C\u914D\u65B9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1440669917884416
+    m_Localized: "\u57FA\u7840\u5361\u724C\u914D\u65B9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1441711921410048
+    m_Localized: "\u8D44\u6E90\u5361\u724C\u914D\u65B9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1441724688871424
+    m_Localized: "\u5EFA\u9020\u5361\u724C\u914D\u65B9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

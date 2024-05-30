@@ -28,7 +28,7 @@ namespace VMFramework.GameLogicArchitecture
         {
             var name = gamePrefabGeneralSetting.gameItemName;
 
-            if (name.IsNullOrEmpty())
+            if (name.IsNullOrEmpty() || name == GamePrefabGeneralSetting.UNDEFINED_GAME_ITEM_NAME)
             {
                 name = gamePrefabGeneralSetting.gamePrefabName;
             }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: TestCard
+  m_Name: FishCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.CardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.FoodCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: test_card
+      Data: fish_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -56,10 +56,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: TestCardName
+      Data: FishCardName
     - Name: defaultValue
       Entry: 1
-      Data: Test Card
+      Data: Fish
     - Name: 
       Entry: 8
       Data: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: TestCardDescription
+      Data: FishCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -162,6 +162,9 @@ MonoBehaviour:
     - Name: icon
       Entry: 6
       Data: 
+    - Name: nutrition
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

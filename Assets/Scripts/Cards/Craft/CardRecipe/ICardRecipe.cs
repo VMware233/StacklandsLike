@@ -4,9 +4,11 @@ using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.Cards
 {
-    public interface ICardRecipe : IDescribedGamePrefab
+    public interface ICardRecipe : IDescribedGamePrefab, IGameTypedGamePrefab
     {
         bool autoCheck { get; }
+        
+        int priority { get; }
         
         int totalTicks { get; }
         

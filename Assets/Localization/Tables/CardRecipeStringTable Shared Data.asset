@@ -15,24 +15,8 @@ MonoBehaviour:
   m_TableCollectionName: CardRecipeStringTable
   m_TableCollectionNameGuidString: 6c7be91f697629e489913408129f4319
   m_Entries:
-  - m_Id: 235156910080
-    m_Key: TestRecipeName
-    m_Metadata:
-      m_Items: []
   - m_Id: 595327970291712
-    m_Key: BerryBushRecipeName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 617622499602432
-    m_Key: TreeChoppingRecipeName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 617920953692160
-    m_Key: RockQuarryingRecipeName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 619001746141184
-    m_Key: TreePlantingRecipeName
+    m_Key: BerryBushCollectionRecipeName
     m_Metadata:
       m_Items: []
   - m_Id: 619482136555520
@@ -43,8 +27,32 @@ MonoBehaviour:
     m_Key: BurryBushDestructionRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 617622499602432
+    m_Key: TreeChoppingRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619001746141184
+    m_Key: TreePlantingRecipeName
+    m_Metadata:
+      m_Items: []
   - m_Id: 737054299369472
     m_Key: TreeDestructionRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 617920953692160
+    m_Key: RockQuarryingRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111309172191232
+    m_Key: FishPondCollectionRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1112574522404864
+    m_Key: CampfireCraftRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1112894732349440
+    m_Key: GrilledFishCraftRecipeName
     m_Metadata:
       m_Items: []
   m_Metadata:

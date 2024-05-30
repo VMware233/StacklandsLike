@@ -5,7 +5,8 @@ using VMFramework.Core;
 namespace StackLandsLike.UI
 {
     [RequireComponent(typeof(Camera))]
-    public class CameraScaleController : MonoBehaviour
+    [DisallowMultipleComponent]
+    public class CameraScaleController : UniqueMonoBehaviour<CameraScaleController>
     {
         [MinValue(0)]
         [SerializeField]
@@ -23,6 +24,8 @@ namespace StackLandsLike.UI
         private float currentScroll = 0;
         
         private Camera _camera;
+        
+        private static int disableCount = 0;
 
         private void Start()
         {
@@ -31,6 +34,11 @@ namespace StackLandsLike.UI
 
         private void Update()
         {
+            if (disableCount > 0)
+            {
+                return;
+            }
+            
             if (Input.mousePosition.x < 0 || Input.mousePosition.x > Screen.width ||
                 Input.mousePosition.y < 0 || Input.mousePosition.y > Screen.height)
             {
@@ -48,6 +56,16 @@ namespace StackLandsLike.UI
                 
                 _camera.transform.Translate(0, 0, actualScroll);
             }
+        }
+
+        public static void Disable()
+        {
+            disableCount++;
+        }
+        
+        public static void Enable()
+        {
+            disableCount--;
         }
     }
 }

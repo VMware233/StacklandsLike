@@ -38,7 +38,13 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 2
+    - Name: 
+      Entry: 1
+      Data: resources_card_recipe_type
+    - Name: 
+      Entry: 1
+      Data: recipe_display_type
     - Name: 
       Entry: 13
       Data: 
@@ -159,6 +165,9 @@ MonoBehaviour:
     - Name: autoCheck
       Entry: 5
       Data: true
+    - Name: priority
+      Entry: 3
+      Data: 0
     - Name: totalTicks
       Entry: 3
       Data: 200

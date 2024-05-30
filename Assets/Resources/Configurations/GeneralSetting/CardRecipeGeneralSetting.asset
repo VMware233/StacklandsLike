@@ -25,7 +25,6 @@ MonoBehaviour:
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: CardRecipeStringTable
   initialGamePrefabWrappers:
-  - {fileID: 11400000, guid: 6a92773febfad3740bd8c64469da366a, type: 2}
   - {fileID: 11400000, guid: 56d75b334e197d14f935cab3925d5325, type: 2}
   - {fileID: 11400000, guid: 6732791099062cb4da61b50c4bafeab4, type: 2}
   - {fileID: 11400000, guid: 1b49a9945f190b449ac03943ea62cea0, type: 2}
@@ -33,4 +32,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2bd4360d33bda8409f2fff6950096f9, type: 2}
   - {fileID: 11400000, guid: e2f3c66d1a07f494cbba6c49936a8e8f, type: 2}
   - {fileID: 11400000, guid: cef312f8b40c36d48b31b35b36ef1b83, type: 2}
-  <defaultGameType>k__BackingField: 
+  - {fileID: 11400000, guid: 746bde740c246154dba76c9d6972da9a, type: 2}
+  - {fileID: 11400000, guid: 079240e690210a746ab0750510eb21cb, type: 2}
+  - {fileID: 11400000, guid: d7b844c9577a16c46b596ad26c1280f5, type: 2}
+  <defaultGameType>k__BackingField: default_card_recipe_type
