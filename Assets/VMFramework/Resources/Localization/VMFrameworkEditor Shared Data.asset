@@ -15,10 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: VMFrameworkEditor
   m_TableCollectionNameGuidString: e94215c47cf2034418e592797d964091
   m_Entries:
-  - m_Id: 18902790144
-    m_Key: GameEditorName
-    m_Metadata:
-      m_Items: []
   - m_Id: 61857909026816
     m_Key: slate_gray
     m_Metadata:
@@ -217,38 +213,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61857913221166
     m_Key: wheat
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4244532123250688
-    m_Key: AuxiliaryToolsCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4244690948960256
-    m_Key: GeneralSettingsCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247235134074880
-    m_Key: EditorCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247310094675968
-    m_Key: CoreCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247344349556736
-    m_Key: BuiltInCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247382475780096
-    m_Key: ResourcesManagementCategoryName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 11488716261535744
-    m_Key: GeneralSaveName
-    m_Metadata:
-      m_Items: []
-  - m_Id: 11488820183805952
-    m_Key: GeneralOpenScriptName
     m_Metadata:
       m_Items: []
   - m_Id: 12586154460295168

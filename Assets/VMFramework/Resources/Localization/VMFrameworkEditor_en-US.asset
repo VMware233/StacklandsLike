@@ -18,10 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 18902790144
-    m_Localized: Game Editor
-    m_Metadata:
-      m_Items: []
   - m_Id: 61100895875072
     m_Localized: Black
     m_Metadata:
@@ -220,38 +216,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61857913221166
     m_Localized: Wheat
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4244532123250688
-    m_Localized: Auxiliary Tools
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4244690948960256
-    m_Localized: General Settings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247235134074880
-    m_Localized: Editor
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247310094675968
-    m_Localized: Core
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247344349556736
-    m_Localized: Built-In
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4247382475780096
-    m_Localized: Resources Management
-    m_Metadata:
-      m_Items: []
-  - m_Id: 11488716261535744
-    m_Localized: Save{0}
-    m_Metadata:
-      m_Items: []
-  - m_Id: 11488820183805952
-    m_Localized: Open{0}Script
     m_Metadata:
       m_Items: []
   - m_Id: 12586154460295168

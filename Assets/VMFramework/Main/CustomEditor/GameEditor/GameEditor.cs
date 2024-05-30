@@ -17,14 +17,13 @@ namespace VMFramework.Editor.GameEditor
     {
         private readonly AuxiliaryTools auxiliaryTools = new();
 
-        [MenuItem("Tools/" + GameEditorNames.GAME_EDITOR_DEFAULT_NAME + " #G")]
-        [Shortcut("Open Game Editor", KeyCode.G, ShortcutModifiers.Shift)]
+        [MenuItem("Tools/" + GameEditorNames.GAME_EDITOR_NAME + " #G")]
+        [Shortcut("Open " + GameEditorNames.GAME_EDITOR_NAME, KeyCode.G, ShortcutModifiers.Shift)]
         private static void OpenWindow()
         {
             GameCoreSettingFile.CheckGlobal();
 
-            var editorName = GameEditorNames.gameEditorName;
-            var window = CreateWindow<GameEditor>(editorName);
+            var window = CreateWindow<GameEditor>(GameEditorNames.GAME_EDITOR_NAME);
             window.position = GUIHelper.GetEditorWindowRect().AlignCenter(800, 600);
         }
 
@@ -163,24 +162,54 @@ namespace VMFramework.Editor.GameEditor
             var toolbarHeight = MenuTree.Config.SearchToolbarHeight;
 
             SirenixEditorGUI.BeginHorizontalToolbar(toolbarHeight);
+            
+            if (selected is not { Value: not null })
             {
-                if (selected is { Value: not null })
-                {
-                    GUILayout.Label(selected.Name);
+                SirenixEditorGUI.EndHorizontalToolbar();
+                return;
+            }
+            
+            GUILayout.Label(selected.Name);
 
-                    if (selected.Value is IGameEditorToolBarProvider toolBarProvider)
+            if (selected.Value is not IGameEditorToolBarProvider toolBarProvider)
+            {
+                SirenixEditorGUI.EndHorizontalToolbar();
+                return;
+            }
+            
+            var tree = new StringPathTree<IGameEditorToolBarProvider.ToolbarButtonConfig>();
+                        
+            foreach (var buttonConfig in toolBarProvider.GetToolbarButtons())
+            {
+                tree.Add(buttonConfig.path, buttonConfig);
+            }
+
+            foreach (var buttonNode in tree.root.children.Values)
+            {
+                if (SirenixEditorGUI.ToolbarButton(new GUIContent(buttonNode.pathPart,
+                        buttonNode.data.tooltip)))
+                {
+                    if (buttonNode.children.Count <= 0)
                     {
-                        foreach (var buttonConfig in toolBarProvider.GetToolbarButtons())
+                        buttonNode.data.onClick?.Invoke();
+                    }
+                    else
+                    {
+                        GenericMenu menu = new GenericMenu();
+
+                        foreach (var leaf in buttonNode.GetAllLeaves(true))
                         {
-                            if (SirenixEditorGUI.ToolbarButton(new GUIContent(buttonConfig.name,
-                                    buttonConfig.tooltip)))
+                            menu.AddItem(new GUIContent(leaf.pathPart, leaf.data.tooltip), false, () =>
                             {
-                                buttonConfig.onClick?.Invoke();
-                            }
+                                leaf.data.onClick?.Invoke();
+                            });
                         }
+                        
+                        menu.ShowAsContext();
                     }
                 }
             }
+            
             SirenixEditorGUI.EndHorizontalToolbar();
         }
     }

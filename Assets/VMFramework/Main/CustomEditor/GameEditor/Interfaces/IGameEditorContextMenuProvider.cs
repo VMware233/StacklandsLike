@@ -32,7 +32,7 @@ namespace VMFramework.Editor.GameEditor
             {
                 foreach (var config in toolBarProvider.GetToolbarButtons())
                 {
-                    yield return new(config.name, config.tooltip, config.onClick);
+                    yield return new(config.path, config.tooltip, config.onClick);
                 }
             }
         }

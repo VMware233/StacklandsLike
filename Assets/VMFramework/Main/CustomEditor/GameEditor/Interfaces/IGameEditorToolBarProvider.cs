@@ -8,20 +8,20 @@ namespace VMFramework.Editor.GameEditor
     {
         public struct ToolbarButtonConfig
         {
-            public string name;
+            public string path;
             public string tooltip;
             public Action onClick;
             
-            public ToolbarButtonConfig(string name, Action onClick)
+            public ToolbarButtonConfig(string path, Action onClick)
             {
-                this.name = name;
-                this.tooltip = name;
+                this.path = path;
+                this.tooltip = path;
                 this.onClick = onClick;
             }
             
-            public ToolbarButtonConfig(string name, string tooltip, Action onClick)
+            public ToolbarButtonConfig(string path, string tooltip, Action onClick)
             {
-                this.name = name;
+                this.path = path;
                 this.tooltip = tooltip;
                 this.onClick = onClick;
             }

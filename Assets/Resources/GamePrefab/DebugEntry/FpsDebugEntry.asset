@@ -37,8 +37,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: DebugEntryStringTable
     - Name: key
       Entry: 1
       Data: FpsDebugEntryName

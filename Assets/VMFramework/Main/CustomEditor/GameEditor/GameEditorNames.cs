@@ -5,15 +5,7 @@ namespace VMFramework.Editor.GameEditor
 {
     public static class GameEditorNames
     {
-        #region Game Editor Name
-
-        public const string GAME_EDITOR_DEFAULT_NAME = "Game Editor";
-        public const string GAME_EDITOR_NAME_KEY = "GameEditorName";
-
-        public static string gameEditorName => LocalizationEditorManager.GetStringOfEditorTable(GAME_EDITOR_NAME_KEY,
-            GAME_EDITOR_DEFAULT_NAME);
-
-        #endregion
+        public const string GAME_EDITOR_NAME = "Game Editor";
 
         #region Category Names
 

@@ -31,9 +31,9 @@ namespace VMFramework.GameLogicArchitecture
                 }
             }
             
-            yield return new(EditorNames.openGamePrefabScriptButtonName, OpenScriptOfGamePrefab);
+            yield return new(EditorNames.OPEN_GAME_PREFAB_SCRIPT_BUTTON_PATH, OpenScriptOfGamePrefab);
 
-            yield return new(EditorNames.openGameItemScriptButtonName, OpenScriptOfGameItem);
+            yield return new(EditorNames.OPEN_GAME_ITEM_SCRIPT_BUTTON_PATH, OpenScriptOfGameItem);
             
             foreach (var config in base.GetToolbarButtons())
             {
