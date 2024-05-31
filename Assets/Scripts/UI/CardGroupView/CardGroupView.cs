@@ -64,13 +64,13 @@ namespace StackLandsLike.UI
 
             var cards = cardGroup.cards.ToArray();
             
-            foreach (var (index, pivot) in cardGroupCollider.colliderPivots.Enumerate())
+            foreach (var (index, rect) in cardGroupCollider.colliderRectangles.Enumerate())
             {
                 if (index >= cards.Length)
                 {
                     Debug.LogWarning(
                         $"CardGroup {cardGroup.name} has " +
-                        $"more collider pivots {cardGroupCollider.colliderPivots.Count} " +
+                        $"more collider pivots {cardGroupCollider.colliderRectangles.Count} " +
                         $"than cards {cards.Length}.");
                     break;
                 }
@@ -78,10 +78,8 @@ namespace StackLandsLike.UI
                 var card = cards[index];
 
                 var cardView = CardViewManager.GetCardView(card);
-                
-                var position = pivot;
                     
-                cardView.SetLocalPosition(position, isInstant);
+                cardView.SetLocalPosition(rect.pivot, isInstant);
             }
         }
     }

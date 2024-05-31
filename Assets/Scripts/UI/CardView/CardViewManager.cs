@@ -15,21 +15,12 @@ namespace StackLandsLike.UI
     [ManagerCreationProvider(nameof(GameManagerType.UI))]
     public sealed class CardViewManager : ManagerBehaviour<CardViewManager>, IManagerBehaviour
     {
-        private static readonly StackComponentPool<CardView> cache = new(() =>
-        {
-            var cardViewObject = Instantiate(GameSetting.cardViewGeneralSetting.cardViewPrefab);
-            var cardView = cardViewObject.GetComponent<CardView>();
-            cardView.transform.position = cardView.transform.position.ReplaceZ(CardTableManager.zPosition);
-            return cardView;
-        }, onReturnCallback: cardView =>
-        {
-            cardView.gameObject.SetActive(false);
-            cardView.transform.SetParent(instance.cardViewCacheContainer);
-        });
-        
         [SerializeField]
         private Transform cardViewCacheContainer;
 
+        [ShowInInspector]
+        private static readonly Dictionary<string, StackComponentPool<CardView>> allCaches = new();
+        
         [ShowInInspector]
         private static Dictionary<ICard, CardView> allCardViews = new();
 
@@ -55,6 +46,30 @@ namespace StackLandsLike.UI
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static StackComponentPool<CardView> GetCache(string cardID)
+        {
+            if (allCaches.TryGetValue(cardID, out var cache))
+            {
+                return cache;
+            }
+            
+            cache = new(() =>
+            {
+                var cardViewObject = Instantiate(GameSetting.cardViewGeneralSetting.cardViewPrefab);
+                var cardView = cardViewObject.GetComponent<CardView>();
+                cardView.transform.position = cardView.transform.position.ReplaceZ(CardTableManager.zPosition);
+                return cardView;
+            }, onReturnCallback: cardView =>
+            {
+                cardView.gameObject.SetActive(false);
+                cardView.transform.SetParent(instance.cardViewCacheContainer);
+            });
+            
+            allCaches.Add(cardID, cache);
+            return cache;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         [return: NotNull]
         public static CardView GetCardView(ICard card)
         {
@@ -63,6 +78,7 @@ namespace StackLandsLike.UI
                 return cardView;
             }
             
+            var cache = GetCache(card.id);
             cardView = cache.Get();
             cardView.SetCard(card);
             allCardViews.Add(card, cardView);
@@ -77,6 +93,7 @@ namespace StackLandsLike.UI
             if (allCardViews.Remove(card, out var cardView))
             {
                 cardView.SetCard(null);
+                var cache = GetCache(card.id);
                 cache.Return(cardView);
                 card.OnGroupChangedEvent -= OnCardGroupChanged;
             }

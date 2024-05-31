@@ -73,8 +73,6 @@ namespace VMFramework.GameLogicArchitecture
             }
         }
 
-        SdfIconType IGameEditorMenuTreeNode.sdfIcon => iconGamePrefab?.sdfIcon ?? SdfIconType.None;
-
         #endregion
     }
 }

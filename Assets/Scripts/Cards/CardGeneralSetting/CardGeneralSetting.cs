@@ -17,9 +17,6 @@ namespace StackLandsLike.Cards
         [Required]
         [RequiredComponent(typeof(CardGroup))]
         public GameObject cardGroupPrefab;
-        
-        [MinValue(0)]
-        public Vector2 cardViewSize;
 
         [IsNotNullOrEmpty]
         public List<CardGenerationConfig> initialCards = new();

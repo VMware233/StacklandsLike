@@ -15,6 +15,18 @@ namespace VMFramework.Editor
             return selectedObjects.Any(o => o is Object);
         }
 
+        public sealed override void OnSelectedObjectsChanged(IList<object> selectedObjects)
+        {
+            base.OnSelectedObjectsChanged(selectedObjects);
+            
+            OnSelectedObjectsChanged(selectedObjects.Where(o => o is Object).Cast<Object>().ToList());
+        }
+
+        protected virtual void OnSelectedObjectsChanged(IList<Object> selectedObjects)
+        {
+            
+        }
+
         protected sealed override IEnumerable<object> OnProcess(IReadOnlyList<object> selectedObjects)
         {
             foreach (var o in selectedObjects)

@@ -16,6 +16,11 @@ namespace VMFramework.Editor
         }
 
         public abstract bool IsValid(IList<object> selectedObjects);
+
+        public virtual void OnSelectedObjectsChanged(IList<object> selectedObjects)
+        {
+            
+        }
     }
 }
 

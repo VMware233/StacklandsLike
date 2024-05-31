@@ -19,10 +19,10 @@ namespace StackLandsLike.Cards
         public CardGroup cardGroup { get; private set; }
         
         [ShowInInspector]
-        private readonly List<Vector2> _colliderPivots = new();
+        private readonly List<RectangleFloat> _colliderRectangles = new();
         private readonly List<BoxCollider2D> colliders = new();
         
-        public IReadOnlyList<Vector2> colliderPivots => _colliderPivots;
+        public IReadOnlyList<RectangleFloat> colliderRectangles => _colliderRectangles;
 
         public void Init()
         {
@@ -47,65 +47,55 @@ namespace StackLandsLike.Cards
 
         private void GenerateColliders()
         {
-            GenerateColliderPivots();
+            GenerateColliderInfos();
             GenerateBoxColliders();
         }
 
-        private void GenerateColliderPivots()
+        private void GenerateColliderInfos()
         {
-            _colliderPivots.Clear();
+            _colliderRectangles.Clear();
             
             if (cardGroup.count == 0) return;
             
-            var width = cardGroup.count.Sqrt().Ceiling();
-            var height = (cardGroup.count.F() / width).Ceiling();
-            
             var cards = cardGroup.cards.ToArray();
-            
-            Vector2 cardSize = GameSetting.cardGeneralSetting.cardViewSize;
-            int index = 0;
-            for (int x = 0; x < width; x++)
+
+            float width = 0;
+
+            if (cards.Length >= 1)
             {
-                for (int y = 0; y < height; y++, index++)
-                {
-                    if (index >= cards.Length)
-                    {
-                        break;
-                    }
-                    
-                    var card = cards[index];
-            
-                    var cardView = CardViewManager.GetCardView(card);
-            
-                    if (cardGroup == null)
-                    {
-                        continue;
-                    }
-            
-                    var position = cardSize.Multiply(new Vector2(x, y));
-                    
-                    _colliderPivots.Add(position);
-                }
+                width -= cards[0].cardSize.x / 2;
+            }
+
+            foreach (var card in cards)
+            {
+                Vector2 size = card.cardSize;
+                
+                var startPoint = new Vector2(width, -size.y / 2);
+                var endPoint = startPoint + size;
+                
+                _colliderRectangles.Add(new RectangleFloat(startPoint, endPoint));
+                
+                width += size.x;
             }
         }
 
         private void GenerateBoxColliders()
         {
-            if (_colliderPivots.Count > colliders.Count)
+            if (_colliderRectangles.Count > colliders.Count)
             {
-                (_colliderPivots.Count - colliders.Count).Repeat(AddNewCollider);
+                (_colliderRectangles.Count - colliders.Count).Repeat(AddNewCollider);
             }
 
-            for (int i = 0; i < _colliderPivots.Count; i++)
+            for (int i = 0; i < _colliderRectangles.Count; i++)
             {
                 colliders[i].enabled = true;
-                var pivot = _colliderPivots[i];
+                var rect = _colliderRectangles[i];
                 var collider = colliders[i];
-                collider.offset = pivot;
-                collider.size = GameSetting.cardGeneralSetting.cardViewSize;
+                collider.offset = rect.pivot;
+                collider.size = rect.size;
             }
 
-            for (int i = _colliderPivots.Count; i < colliders.Count; i++)
+            for (int i = _colliderRectangles.Count; i < colliders.Count; i++)
             {
                 colliders[i].enabled = false;
             }

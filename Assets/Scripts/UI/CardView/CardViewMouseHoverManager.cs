@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using StackLandsLike.GameCore;
 using UnityEngine;
+using VMFramework.GameEvents;
 using VMFramework.Procedure;
 
 namespace StackLandsLike.UI
@@ -61,9 +62,12 @@ namespace StackLandsLike.UI
                     continue;
                 }
 
-                if (hitInfo.collider.TryGetComponent(out CardView cardView))
+                if (hitInfo.collider.TryGetComponent(out ColliderMouseEventTrigger trigger))
                 {
-                    cardViews.Add(cardView);
+                    if (trigger.owner.TryGetComponent(out CardView cardView))
+                    {
+                        cardViews.Add(cardView);
+                    }
                 }
             }
             

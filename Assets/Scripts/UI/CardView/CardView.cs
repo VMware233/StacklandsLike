@@ -7,12 +7,22 @@ using TMPro;
 using UnityEngine;
 using VMFramework.Containers;
 using VMFramework.Core;
+using VMFramework.GameEvents;
 
 namespace StackLandsLike.UI
 {
     [DisallowMultipleComponent]
     public sealed class CardView : MonoBehaviour
     {
+        [ShowInInspector]
+        private MeshFilter meshFilter;
+
+        [ShowInInspector]
+        private ColliderMouseEventTrigger trigger;
+        
+        [SerializeField]
+        private GameObject defaultView;
+        
         [Required]
         [SerializeField]
         private TextMeshProUGUI title;
@@ -46,7 +56,70 @@ namespace StackLandsLike.UI
                 title.text = $"{card.name}x{card.count}";
 
                 name = $"{card.name} Card View";
+                
+                SetModel(card.model);
+                
+                SetCollider();
             }
+        }
+
+        private void SetModel(GameObject modelPrefab)
+        {
+            if (modelPrefab == null)
+            {
+                return;
+            }
+            
+            if (meshFilter != null)
+            {
+                return;
+            }
+            
+            defaultView.SetActive(false);
+            
+            var model = Instantiate(modelPrefab, transform);
+
+            model.transform.eulerAngles = new Vector3(-90, 0, 0);
+
+            meshFilter = model.transform.QueryFirstComponentInChildren<MeshFilter>(true);
+
+            var bounds = meshFilter.sharedMesh.bounds;
+
+            model.transform.localPosition -= new Vector3(0, 0, bounds.center.ToSt + 2 * bounds.extents.y);
+            
+            SetCollider();
+        }
+
+        private void SetCollider()
+        {
+            if (this.trigger != null)
+            {
+                return;
+            }
+            
+            ColliderMouseEventTrigger trigger = null;
+            
+            if (meshFilter != null && meshFilter.TryGetComponent(out MeshCollider meshCollider))
+            {
+                trigger = meshCollider.AddComponent<ColliderMouseEventTrigger>();
+            }
+            else
+            {
+                var boxCollider = gameObject.AddComponent<BoxCollider>();
+                boxCollider.size = card.cardSize.InsertAsZ(0.3f);
+                trigger = gameObject.AddComponent<ColliderMouseEventTrigger>();
+            }
+            
+            trigger.SetOwner(transform);
+            trigger.draggable = true;
+            trigger.dragButton = MouseButtonType.LeftButton;
+
+            foreach (var t in transform.QueryComponentsInChildren<Transform>(true))
+            {
+                t.gameObject.layer = GameSetting.cardViewGeneralSetting.cardViewLayer;
+            }
+            
+            this.trigger = trigger;
         }
 
         private void OnCountChanged(IContainerItem item, int oldCount, int newCount)

@@ -159,7 +159,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: icon
+    - Name: model
       Entry: 6
       Data: 
     - Name: defaultMaxHealth

@@ -10,8 +10,6 @@ namespace VMFramework.Editor.GameEditor
         public string folderPath => "";
 
         public Icon icon => Icon.None;
-        
-        public SdfIconType sdfIcon => SdfIconType.None;
 
         public string nodePath
         {

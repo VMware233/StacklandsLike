@@ -80,6 +80,8 @@ namespace VMFramework.Editor
                 if (unit.IsValid(selectedObjects))
                 {
                     validUnits.Add(unit);
+                    
+                    unit.OnSelectedObjectsChanged(selectedObjects);
                 }
             }
         }
