@@ -85,7 +85,7 @@ namespace StackLandsLike.UI
 
             var bounds = meshFilter.sharedMesh.bounds;
 
-            model.transform.localPosition -= new Vector3(0, 0, bounds.center.ToSt + 2 * bounds.extents.y);
+            model.transform.localPosition -= new Vector3(0, 0, bounds.center.y + 2 * bounds.extents.y);
             
             SetCollider();
         }
