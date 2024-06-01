@@ -6,7 +6,7 @@ using VMFramework.OdinExtensions;
 
 namespace StackLandsLike.Cards
 {
-    public partial class ProducerCardConfig : CardConfig
+    public partial class ProducerCardConfig : CardConfig, IProducerCardConfig
     {
         public override Type gameItemType => typeof(ProducerCard);
 
@@ -30,5 +30,8 @@ namespace StackLandsLike.Cards
         [ShowIf(nameof(hasLastGenerationConfig))]
         [GamePrefabID(typeof(ICardRecipe))]
         public string lastProductionRecipeID;
+
+        string IProducerCardConfig.lastProductionRecipeID =>
+            hasLastGenerationConfig ? lastProductionRecipeID : productionRecipeID;
     }
 }
