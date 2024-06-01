@@ -122,6 +122,7 @@ namespace StackLandsLike.Cards
             foreach (var (cardGroup, info) in craftingRecipes)
             {
                 info.tick++;
+                EventManager.TriggerProgressBarTick(cardGroup, info);//这里换成info传递当前的tick,之后可以使用GetCraftingTicks函数，这样可以加速
 
                 if (info.tick >= info.recipe.totalTicks)
                 {
@@ -209,12 +210,15 @@ namespace StackLandsLike.Cards
             
             var newCraftInfo = new CardCraftInfo(recipe);
             craftingRecipes.Add(cardGroup, newCraftInfo);
+            EventManager.TriggerCardCompositionStarted(cardGroup, recipe.totalTicks);
+
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StopCraft(CardGroup cardGroup)
         {
             craftingRecipes.Remove(cardGroup);
+            EventManager.TriggerStopComposition(cardGroup);//摧毁进度条
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
