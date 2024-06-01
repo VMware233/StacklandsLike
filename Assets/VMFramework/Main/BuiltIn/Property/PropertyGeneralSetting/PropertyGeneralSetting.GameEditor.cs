@@ -9,11 +9,7 @@ namespace VMFramework.Property
 {
     public partial class PropertyGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => new LocalizedTempString()
-        {
-            { "zh-CN", "属性" },
-            { "en-US", "Property" }
-        };
+        string INameOwner.name => "Property";
 
         Icon IGameEditorMenuTreeNode.icon => SdfIconType.JournalText;
 

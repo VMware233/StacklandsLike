@@ -18,12 +18,12 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 70387871744
+  - m_Id: 1580198750433280
     m_Localized: Nutrition
     m_Metadata:
       m_Items: []
-  - m_Id: 1580198750433280
-    m_Localized: Card Nutrition
+  - m_Id: 1581064169566208
+    m_Localized: Count
     m_Metadata:
       m_Items: []
   references:

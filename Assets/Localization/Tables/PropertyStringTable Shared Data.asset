@@ -15,12 +15,12 @@ MonoBehaviour:
   m_TableCollectionName: PropertyStringTable
   m_TableCollectionNameGuidString: 9b07f132ff97d7643afe0edf89f5e2c7
   m_Entries:
-  - m_Id: 70387871744
-    m_Key: NutritionPropertyName
-    m_Metadata:
-      m_Items: []
   - m_Id: 1580198750433280
     m_Key: CardNutritionPropertyName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1581064169566208
+    m_Key: CardCountPropertyName
     m_Metadata:
       m_Items: []
   m_Metadata:

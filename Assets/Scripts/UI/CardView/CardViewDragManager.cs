@@ -1,9 +1,8 @@
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using StackLandsLike.Cards;
 using StackLandsLike.GameCore;
 using UnityEngine;
-using VMFramework.Containers;
 using VMFramework.Core;
 using VMFramework.GameEvents;
 using VMFramework.Procedure;
@@ -61,11 +60,12 @@ namespace StackLandsLike.UI
                 return;
             }
                 
+            var oldDraggingCardView = draggingCardView;
             draggingCardView = null;
 
             if (CardViewMouseHoverManager.TryGetMouseCardView(out var selectedCardViews) == false)
             {
-                return;
+                selectedCardViews = new List<CardView>() { oldDraggingCardView };
             }
 
             if (cardView.card == null)

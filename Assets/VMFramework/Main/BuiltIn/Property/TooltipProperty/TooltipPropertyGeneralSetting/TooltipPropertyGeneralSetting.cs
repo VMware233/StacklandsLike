@@ -11,11 +11,11 @@ namespace VMFramework.Property
     {
         #region Categories
 
-        public const string PROPERTY_TOOLTIP_CATEGORY = "提示框属性设置";
+        public const string PROPERTY_TOOLTIP_CATEGORY = "Tooltip Property";
 
         #endregion
 
-        [LabelText("提示框显示的属性"), TabGroup(TAB_GROUP_NAME, PROPERTY_TOOLTIP_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, PROPERTY_TOOLTIP_CATEGORY)]
         [SerializeField, JsonProperty]
         public DictionaryConfigs<Type, TooltipPropertyConfig> tooltipPropertyConfigs = new();
 

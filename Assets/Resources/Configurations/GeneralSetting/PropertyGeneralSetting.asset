@@ -26,5 +26,6 @@ MonoBehaviour:
   <defaultLocalizationTableName>k__BackingField: PropertyStringTable
   initialGamePrefabWrappers:
   - {fileID: 11400000, guid: 819e78e141100c94d9f6e90b93b925a9, type: 2}
+  - {fileID: 11400000, guid: 69b50d1c5bee2404c8ba80f84890ad6e, type: 2}
   <defaultGameType>k__BackingField: 
   tooltipID: 

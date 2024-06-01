@@ -14,9 +14,9 @@ namespace VMFramework.Property
     {
         #region Categories
 
-        public const string TOOLTIP_SETTING_CATEGORY = "提示框设置";
+        public const string TOOLTIP_SETTING_CATEGORY = "Tooltip";
 
-        public const string PROPERTY_SETTING_CATEGORY = "属性设置";
+        public const string PROPERTY_SETTING_CATEGORY = "Property";
 
         #endregion
 
@@ -26,12 +26,12 @@ namespace VMFramework.Property
 
         #endregion
 
-        [LabelText("属性字典"), TabGroup(TAB_GROUP_NAME, PROPERTY_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, PROPERTY_SETTING_CATEGORY)]
         [ShowInInspector]
         [ReadOnly]
         private static Dictionary<Type, List<PropertyConfig>> propertyConfigs = new();
 
-        [LabelText("提示框"), TabGroup(TAB_GROUP_NAME, TOOLTIP_SETTING_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, TOOLTIP_SETTING_CATEGORY)]
         [GamePrefabID(typeof(UIToolkitTracingTooltipPreset))]
         [IsNotNullOrEmpty]
         [JsonProperty]
@@ -65,7 +65,7 @@ namespace VMFramework.Property
 
             if (propertyConfigs.Count == 0)
             {
-                Debug.LogWarning("还没加载属性字典");
+                Debug.LogWarning($"{nameof(propertyConfigs)} is not loaded");
                 return result;
             }
 
