@@ -22,8 +22,6 @@ namespace VMFramework.Property
 
         #region Metadata
 
-        public override string gameItemName => "Property";
-
         public override Type baseGamePrefabType => typeof(PropertyConfig);
 
         #endregion

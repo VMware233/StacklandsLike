@@ -13,7 +13,7 @@ namespace VMFramework.GameEvents
         PointerEnter = 1 << 0,
 
         [LabelText("指针离开")]
-        PointerLeave = 1 << 1,
+        PointerExit = 1 << 1,
 
         [LabelText("指针悬停")]
         PointerHover = 1 << 2,

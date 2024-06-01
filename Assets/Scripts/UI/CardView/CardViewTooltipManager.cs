@@ -14,7 +14,7 @@ namespace StackLandsLike.UI
         public void OnInitComplete(Action onDone)
         {
             ColliderMouseEventManager.AddCallback(MouseEventType.PointerEnter, OnPointerEnter);
-            ColliderMouseEventManager.AddCallback(MouseEventType.PointerLeave, OnPointerLeave);
+            ColliderMouseEventManager.AddCallback(MouseEventType.PointerExit, OnPointerLeave);
             IGameItem.OnGameItemDestroyed += OnGameItemDestroyed;
             
             onDone();

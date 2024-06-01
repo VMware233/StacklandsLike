@@ -46,30 +46,50 @@ namespace VMFramework.Procedure
 
         private void Start()
         {
-            foreach (var derivedClass in typeof(IProcedure).GetDerivedClasses(false, false))
+            string startProcedureID = null;
+            int startProcedurePriority = 0;
+            
+            foreach (var procedureType in typeof(IProcedure).GetDerivedClasses(false, false))
             {
-                if (derivedClass.IsAbstract || derivedClass.IsInterface)
+                if (procedureType.IsAbstract || procedureType.IsInterface)
                 {
                     continue;
                 }
 
-                var procedure = (IProcedure)derivedClass.CreateInstance();
+                var procedure = (IProcedure)procedureType.CreateInstance();
 
                 _procedures.Add(procedure.id, procedure);
 
                 fsm.AddState(procedure);
+
+                if (procedureType.TryGetAttribute<StartProcedureAttribute>(false,
+                        out var startProcedureAttribute))
+                {
+                    if (startProcedureID == null)
+                    {
+                        startProcedureID = procedure.id;
+                        startProcedurePriority = startProcedureAttribute.Priority;
+                    }
+                    else if (startProcedureAttribute.Priority > startProcedurePriority)
+                    {
+                        startProcedureID = procedure.id;
+                        startProcedurePriority = startProcedureAttribute.Priority;
+                    }
+                }
+            }
+
+            if (startProcedureID == null)
+            {
+                throw new InvalidOperationException("No start procedure found.");
             }
 
             fsm.Init(this);
 
-            OnEnterProcedureEvent += procedureID => Debug.Log($"进入流程:{procedureID}");
+            OnEnterProcedureEvent += procedureID => Debug.Log($"Enter Procedure:{procedureID}");
 
-            OnExitProcedureEvent += procedureID => Debug.Log($"离开流程:{procedureID}");
+            OnExitProcedureEvent += procedureID => Debug.Log($"Exit Procedure:{procedureID}");
 
-            ProcedureAutoSwitchBinder.RegisterBinding(VMFrameworkInitializationDoneProcedure.ID,
-                GameInitializationDoneProcedure.ID);
-            ProcedureAutoSwitchBinder.RegisterBinding(GameInitializationDoneProcedure.ID,
-                MainMenuProcedure.ID);
+            ProcedureAutoSwitchBinder.Init(_procedures.Values);
 
             OnEnterProcedureEvent += procedureID =>
             {
@@ -81,7 +101,7 @@ namespace VMFramework.Procedure
 
             CollectGameInitializers();
 
-            EnterProcedure(VMFrameworkInitializationDoneProcedure.ID);
+            EnterProcedure(startProcedureID);
         }
 
         private void Update()

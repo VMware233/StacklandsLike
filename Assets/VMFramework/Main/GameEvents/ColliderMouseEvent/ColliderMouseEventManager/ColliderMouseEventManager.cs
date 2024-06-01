@@ -76,7 +76,7 @@ namespace VMFramework.GameEvents
                 // Pointer Leave
                 if (lastHoverTriggerIsNull == false)
                 {
-                    Invoke(MouseEventType.PointerLeave, lastHoverTrigger);
+                    Invoke(MouseEventType.PointerExit, lastHoverTrigger);
                 }
             }
             else
@@ -86,7 +86,7 @@ namespace VMFramework.GameEvents
                 {
                     if (lastHoverTriggerIsNull == false)
                     {
-                        Invoke(MouseEventType.PointerLeave, lastHoverTrigger);
+                        Invoke(MouseEventType.PointerExit, lastHoverTrigger);
                     }
 
                     Invoke(MouseEventType.PointerEnter, currentHoverTrigger);

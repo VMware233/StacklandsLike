@@ -49,13 +49,20 @@ namespace StackLandsLike.UI
             OnDeselectedCardGroup += OnDeselectedCardGroupEvent;
             
             ColliderMouseEventManager.AddCallback(MouseEventType.PointerEnter, OnPointerEnter);
-            ColliderMouseEventManager.AddCallback(MouseEventType.PointerLeave, OnPointerLeave);
+            ColliderMouseEventManager.AddCallback(MouseEventType.PointerExit, OnPointerExit);
             
             onDone();
         }
 
         private static void OnPointerEnter(ColliderMouseEvent e)
         {
+            if (selectedCardGroup != null)
+            {
+                var cardGroup = selectedCardGroup;
+                selectedCardGroup = null;
+                OnDeselectedCardGroup?.Invoke(cardGroup);
+            }
+            
             var owner = e.trigger.owner;
 
             if (owner.TryGetComponent(out CardView cardView))
@@ -65,7 +72,7 @@ namespace StackLandsLike.UI
             }
         }
 
-        private static void OnPointerLeave(ColliderMouseEvent e)
+        private static void OnPointerExit(ColliderMouseEvent e)
         {
             var owner = e.trigger.owner;
 

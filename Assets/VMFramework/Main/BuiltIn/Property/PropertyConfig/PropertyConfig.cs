@@ -9,8 +9,6 @@ namespace VMFramework.Property
     {
         protected override string idSuffix => "property";
 
-        public override Type gameItemType => typeof(PropertyOfGameItem);
-
         [LabelText("目标类型"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [ShowInInspector]
         public virtual Type targetType => typeof(object);
