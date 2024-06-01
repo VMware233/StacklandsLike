@@ -95,7 +95,7 @@ namespace VMFramework.Procedure
             {
                 if (ProcedureAutoSwitchBinder.TryGetNextProcedureID(procedureID, out var nextProcedureID))
                 {
-                    EnterProcedure(nextProcedureID);
+                    EnterProcedure(procedureID, nextProcedureID);
                 }
             };
 
@@ -119,14 +119,17 @@ namespace VMFramework.Procedure
                 {
                     Debug.LogError($"Failed to switch procedure from {fromProcedureID} to {toProcedureID}. " +
                                    $"{fromProcedureID} is not current state.");
+                    EnterProcedureImmediately(toProcedureID);
                 }
                 else
                 {
-                    ExitProcedureImmediately(fromProcedureID);
+                    ExitProcedureImmediately(fromProcedureID, () => EnterProcedureImmediately(toProcedureID));
                 }
             }
-            
-            EnterProcedureImmediately(toProcedureID);
+            else
+            {
+                EnterProcedureImmediately(toProcedureID);
+            }
         }
 
         #endregion
@@ -164,6 +167,12 @@ namespace VMFramework.Procedure
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ExitProcedureImmediately(string procedureID)
         {
+            ExitProcedureImmediately(procedureID, () => { });
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void ExitProcedureImmediately(string procedureID, Action onExit)
+        {
             if (fsm.HasCurrentState(procedureID) == false)
             {
                 Debug.LogWarning($"Procedure with ID:{procedureID} is not current state.");
@@ -186,6 +195,8 @@ namespace VMFramework.Procedure
                 fsm.ExitState(procedureID);
                 
                 OnExitProcedureEvent?.Invoke(procedureID);
+                
+                onExit();
             }).Forget();
         }
 

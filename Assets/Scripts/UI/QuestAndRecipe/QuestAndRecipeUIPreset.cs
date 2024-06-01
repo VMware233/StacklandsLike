@@ -1,5 +1,6 @@
 using System;
-using VMFramework.Configuration;
+using Sirenix.OdinInspector;
+using UnityEngine.UIElements;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.OdinExtensions;
 using VMFramework.UI;
@@ -23,5 +24,14 @@ namespace StackLandsLike.UI
 
         [GameTypeID]
         public string recipeGameTypeID;
+
+        [VisualElementName]
+        public string wrapperName;
+        
+        [VisualElementName(typeof(Button))]
+        public string collapseButtonName;
+        
+        [MinValue(0)]
+        public float collapseTime = 0.5f;
     }
 }

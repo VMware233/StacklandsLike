@@ -15,5 +15,6 @@ namespace StackLandsLike.GameCore
         public QuestGeneralSetting questGeneralSetting;
         public GameStateGeneralSetting gameStateGeneralSetting;
         public QuestAndRecipeUIGeneralSetting questAndRecipeUIGeneralSetting;
+        public ScoreboardGeneralSetting scoreboardGeneralSetting;
     }
 }

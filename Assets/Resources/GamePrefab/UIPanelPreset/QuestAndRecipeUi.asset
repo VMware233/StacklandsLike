@@ -109,6 +109,15 @@ MonoBehaviour:
     - Name: recipeGameTypeID
       Entry: 1
       Data: recipe_display_type
+    - Name: wrapperName
+      Entry: 1
+      Data: Wrapper
+    - Name: collapseButtonName
+      Entry: 1
+      Data: CollapseButton
+    - Name: collapseTime
+      Entry: 4
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 
