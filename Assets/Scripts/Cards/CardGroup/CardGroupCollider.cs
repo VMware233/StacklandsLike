@@ -20,9 +20,13 @@ namespace StackLandsLike.Cards
         
         [ShowInInspector]
         private readonly List<RectangleFloat> _colliderRectangles = new();
+        [ShowInInspector]
+        private readonly List<Vector2> _polygonVertices = new();
         private readonly List<BoxCollider2D> colliders = new();
         
         public IReadOnlyList<RectangleFloat> colliderRectangles => _colliderRectangles;
+        
+        public IReadOnlyList<Vector2> polygonVertices => _polygonVertices;
 
         public void Init()
         {
@@ -76,6 +80,20 @@ namespace StackLandsLike.Cards
                 _colliderRectangles.Add(new RectangleFloat(startPoint, endPoint));
                 
                 width += size.x;
+            }
+
+            _polygonVertices.Clear();
+            foreach (var rectangle in _colliderRectangles)
+            {
+                _polygonVertices.Add(rectangle.min);
+                _polygonVertices.Add(rectangle.rightBottom);
+            }
+
+            for (int i = _colliderRectangles.Count - 1; i >= 0; i--)
+            {
+                var rectangle = colliderRectangles[i];
+                _polygonVertices.Add(rectangle.max);
+                _polygonVertices.Add(rectangle.leftTop);
             }
         }
 

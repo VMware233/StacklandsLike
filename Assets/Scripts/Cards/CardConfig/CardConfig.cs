@@ -51,7 +51,7 @@ namespace StackLandsLike.Cards
                 }
                 else
                 {
-                    size = meshFilter.sharedMesh.bounds.size.XY();
+                    size = meshFilter.sharedMesh.bounds.size.XZ();
                 }
             }
         }
