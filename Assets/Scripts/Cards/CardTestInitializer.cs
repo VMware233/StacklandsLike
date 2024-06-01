@@ -8,7 +8,7 @@ namespace StackLandsLike.Cards
     /// <summary>
     /// 临时的加载器，卡牌测试用的
     /// </summary>
-    [GameInitializerRegister(typeof(ServerLoadingProcedure))]
+    [GameInitializerRegister(ServerRunningProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class CardTestInitializer : IGameInitializer
     {

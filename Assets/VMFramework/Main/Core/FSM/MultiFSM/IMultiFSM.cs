@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using UnityEngine;
 
 namespace VMFramework.Core.FSM
 {
@@ -71,12 +73,56 @@ namespace VMFramework.Core.FSM
                 throw new System.Exception("重复的状态ID：" + fsmState.id);
             }
         }
-        
-        public void EnterState(TID stateID)
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool CanEnterState(TID stateID)
         {
             if (_currentStates.ContainsKey(stateID))
             {
-                return;
+                return false;
+            }
+
+            if (this.TryGetState(stateID, out var state) == false)
+            {
+                Debug.LogWarning($"The State with ID: {stateID} does not exist");
+                return false;
+            }
+
+            if (state.CanEnter() == false)
+            {
+                return false;
+            }
+            
+            return true;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool CanExitState(TID stateID)
+        {
+            if (_currentStates.ContainsKey(stateID) == false)
+            {
+                return false;
+            }
+
+            if (this.TryGetState(stateID, out var state) == false)
+            {
+                Debug.LogWarning($"The State with ID: {stateID} does not exist");
+                return false;
+            }
+
+            if (state.CanExit() == false)
+            {
+                return false;
+            }
+            
+            return true;
+        }
+        
+        public bool EnterState(TID stateID)
+        {
+            if (_currentStates.ContainsKey(stateID))
+            {
+                return false;
             }
 
             if (this.TryGetState(stateID, out var state) == false)
@@ -86,18 +132,20 @@ namespace VMFramework.Core.FSM
 
             if (state.CanEnter() == false)
             {
-                return;
+                return false;
             }
             
             _currentStates.Add(stateID, state);
             state.OnEnter();
+            
+            return true;
         }
 
-        public void ExitState(TID stateID)
+        public bool ExitState(TID stateID)
         {
             if (_currentStates.ContainsKey(stateID) == false)
             {
-                return;
+                return false;
             }
 
             if (this.TryGetState(stateID, out var state) == false)
@@ -107,11 +155,13 @@ namespace VMFramework.Core.FSM
 
             if (state.CanExit() == false)
             {
-                return;
+                return false;
             }
             
             _currentStates.Remove(stateID);
             state.OnExit();
+            
+            return true;
         }
 
         public void Update()

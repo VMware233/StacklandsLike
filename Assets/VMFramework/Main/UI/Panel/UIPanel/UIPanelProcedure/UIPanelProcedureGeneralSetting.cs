@@ -16,8 +16,8 @@ namespace VMFramework.UI
         {
             base.OnInit();
             
-            ProcedureManager.AddOnEnterEvent(OnEnterProcedure);
-            ProcedureManager.AddOnExitEvent(OnExitProcedure);
+            ProcedureManager.OnEnterProcedureEvent += OnEnterProcedure;
+            ProcedureManager.OnExitProcedureEvent += OnExitProcedure;
         }
 
         private void OnEnterProcedure(string procedureID)

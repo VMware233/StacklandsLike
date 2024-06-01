@@ -4,7 +4,7 @@ using VMFramework.Procedure;
 
 namespace VMFramework.GameEvents
 {
-    [GameInitializerRegister(typeof(CoreInitializationProcedure))]
+    [GameInitializerRegister(VMFrameworkInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     public sealed class GameEventInitializer : IGameInitializer
     {
         void IInitializer.OnPostInit(Action onDone)

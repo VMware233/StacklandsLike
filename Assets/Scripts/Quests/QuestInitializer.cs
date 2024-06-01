@@ -5,7 +5,7 @@ using VMFramework.Procedure;
 
 namespace StackLandsLike.Quests
 {
-    [GameInitializerRegister(typeof(ServerLoadingProcedure))]
+    [GameInitializerRegister(ServerRunningProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class QuestInitializer : IGameInitializer
     {

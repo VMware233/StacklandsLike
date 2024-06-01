@@ -5,7 +5,7 @@ using VMFramework.Procedure;
 
 namespace VMFramework.Property
 {
-    [GameInitializerRegister(typeof(GameInitializationProcedure))]
+    [GameInitializerRegister(GameInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     public class TooltipPropertyInitializer : IGameInitializer
     {
         void IInitializer.OnInit(Action onDone)

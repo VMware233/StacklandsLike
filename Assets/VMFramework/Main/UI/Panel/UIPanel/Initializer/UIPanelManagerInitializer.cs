@@ -6,7 +6,7 @@ using VMFramework.Procedure;
 
 namespace VMFramework.UI
 {
-    [GameInitializerRegister(typeof(GameInitializationProcedure))]
+    [GameInitializerRegister(GameInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class UIPanelManagerInitializer : IGameInitializer
     {

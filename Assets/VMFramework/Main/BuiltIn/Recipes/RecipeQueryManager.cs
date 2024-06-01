@@ -54,7 +54,7 @@ namespace VMFramework.Recipe
         }
     }
 
-    [GameInitializerRegister(typeof(GameInitializationProcedure))]
+    [GameInitializerRegister(GameInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class RecipeQueryInitializer : IGameInitializer
     {

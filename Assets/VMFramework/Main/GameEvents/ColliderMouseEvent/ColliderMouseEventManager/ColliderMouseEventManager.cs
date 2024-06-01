@@ -59,6 +59,11 @@ namespace VMFramework.GameEvents
 
         private void Update()
         {
+            if (bindCamera == null)
+            {
+                return;
+            }
+            
             currentHoverTrigger = DetectTrigger();
 
             var currentHoverTriggerIsNull = currentHoverTrigger == null;

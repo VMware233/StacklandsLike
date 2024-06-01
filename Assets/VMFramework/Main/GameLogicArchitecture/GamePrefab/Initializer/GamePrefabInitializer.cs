@@ -6,7 +6,7 @@ using VMFramework.Procedure;
 
 namespace VMFramework.GameLogicArchitecture
 {
-    [GameInitializerRegister(typeof(CoreInitializationProcedure))]
+    [GameInitializerRegister(VMFrameworkInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public class GamePrefabInitializer : IGameInitializer
     {

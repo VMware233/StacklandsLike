@@ -8847,12 +8847,11 @@
             Gets or sets the icon getter.
             </summary>
         </member>
-        <member name="M:Sirenix.OdinInspector.Editor.OdinMenuItem.DrawMenuItems(System.Int32,System.Boolean)">
+        <member name="M:Sirenix.OdinInspector.Editor.OdinMenuItem.DrawMenuItems(System.Int32)">
             <summary>
             Draws this menu item followed by all of its child menu items
             </summary>
             <param name="indentLevel">The indent level.</param>
-            <param name="recursive">Specifies whether the item should draw only itself or continue drawing its children recursively when expanded.</param>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.OdinMenuItem.DrawMenuItem(System.Int32)">
             <summary>

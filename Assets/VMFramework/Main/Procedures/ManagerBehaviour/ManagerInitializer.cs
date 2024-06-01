@@ -8,7 +8,7 @@ using Object = UnityEngine.Object;
 
 namespace VMFramework.Procedure
 {
-    [GameInitializerRegister(typeof(CoreInitializationProcedure))]
+    [GameInitializerRegister(VMFrameworkInitializationDoneProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class ManagerInitializer : IGameInitializer
     {

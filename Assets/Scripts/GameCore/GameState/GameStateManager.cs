@@ -30,7 +30,7 @@ namespace StackLandsLike.GameCore
                 ticksPerDay = GameSetting.gameTimeGeneralSetting.totalTicksPerDay
             });
             
-            ProcedureManager.AddToSwitchQueue(MainMenuProcedure.ID, ServerLoadingProcedure.ID);
+            ProcedureManager.EnterProcedure(MainMenuProcedure.ID, ServerRunningProcedure.ID);
             
             isGameRunning = true;
         }
@@ -53,7 +53,7 @@ namespace StackLandsLike.GameCore
             
             LogicTickManager.StopTick();
             
-            ProcedureManager.AddToSwitchQueue(ServerRunningProcedure.ID, MainMenuProcedure.ID);
+            ProcedureManager.EnterProcedure(ServerRunningProcedure.ID, MainMenuProcedure.ID);
 
             isGameRunning = false;
         }

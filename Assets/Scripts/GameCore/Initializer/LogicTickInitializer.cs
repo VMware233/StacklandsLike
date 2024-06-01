@@ -5,7 +5,7 @@ using VMFramework.Timers;
 
 namespace StackLandsLike.GameCore
 {
-    [GameInitializerRegister(typeof(ServerLoadingProcedure))]
+    [GameInitializerRegister(ServerRunningProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
     public sealed class LogicTickInitializer : IGameInitializer
     {
