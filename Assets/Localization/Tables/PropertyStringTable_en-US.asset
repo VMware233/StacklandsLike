@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Nutrition
     m_Metadata:
       m_Items: []
+  - m_Id: 1580198750433280
+    m_Localized: Card Nutrition
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

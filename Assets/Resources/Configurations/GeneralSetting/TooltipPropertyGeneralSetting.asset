@@ -59,7 +59,7 @@ MonoBehaviour:
       Data: 3
     - Name: propertyID
       Entry: 1
-      Data: nutrition_property
+      Data: card_nutrition_property
     - Name: propertyConfig
       Entry: 6
       Data: 

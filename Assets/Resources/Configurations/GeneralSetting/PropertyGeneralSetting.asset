@@ -25,6 +25,6 @@ MonoBehaviour:
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: PropertyStringTable
   initialGamePrefabWrappers:
-  - {fileID: 11400000, guid: e5b6a719150430d46b1ec2da6be6717a, type: 2}
+  - {fileID: 11400000, guid: 819e78e141100c94d9f6e90b93b925a9, type: 2}
   <defaultGameType>k__BackingField: 
   tooltipID: 

@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: NutritionPropertyName
     m_Metadata:
       m_Items: []
+  - m_Id: 1580198750433280
+    m_Key: CardNutritionPropertyName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

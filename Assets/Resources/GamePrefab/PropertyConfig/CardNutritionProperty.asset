@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: NutritionProperty
+  m_Name: CardNutritionProperty
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.GameCore.NutritionProperty, Assembly-CSharp
+      Data: 0|StackLandsLike.GameCore.CardNutritionProperty, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: nutrition_property
+      Data: card_nutrition_property
     - Name: isActive
       Entry: 5
       Data: true
@@ -53,10 +53,10 @@ MonoBehaviour:
       Data: PropertyStringTable
     - Name: key
       Entry: 1
-      Data: NutritionPropertyName
+      Data: CardNutritionPropertyName
     - Name: defaultValue
       Entry: 1
-      Data: Nutrition
+      Data: Card Nutrition
     - Name: 
       Entry: 8
       Data: 
