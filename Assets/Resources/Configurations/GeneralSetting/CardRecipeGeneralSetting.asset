@@ -40,4 +40,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aaf32457a2e40d4448bb8ef2d019fed4, type: 2}
   - {fileID: 11400000, guid: f5dd813f1f469c4449d08744b4502c02, type: 2}
   - {fileID: 11400000, guid: 06beeec86dac7e14d87c99897dae1155, type: 2}
+  - {fileID: 11400000, guid: 1f47da9cd173c274c8355d664f7bf0e2, type: 2}
+  - {fileID: 11400000, guid: 3d607d9259adf0a4487babe81ca7e12e, type: 2}
+  - {fileID: 11400000, guid: e5d20ef0cc1054041b4199fba609e050, type: 2}
   <defaultGameType>k__BackingField: default_card_recipe_type

@@ -106,6 +106,34 @@ MonoBehaviour:
     m_Localized: Stick
     m_Metadata:
       m_Items: []
+  - m_Id: 2680702612123648
+    m_Localized: "\u91D1\u77FF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2680899551473664
+    m_Localized: "\u91D1\u952D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2682593974792192
+    m_Localized: "\u9AA8\u5934"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683130124283904
+    m_Localized: "\u751F\u732A\u8089"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683338702827520
+    m_Localized: "\u719F\u732A\u8089"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683983262494720
+    m_Localized: "\u751F\u4EBA\u8089"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2684171821625344
+    m_Localized: "\u719F\u4EBA\u8089"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

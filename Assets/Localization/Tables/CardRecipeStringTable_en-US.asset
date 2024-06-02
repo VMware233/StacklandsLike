@@ -78,6 +78,18 @@ MonoBehaviour:
     m_Localized: Iron Ingot Craft
     m_Metadata:
       m_Items: []
+  - m_Id: 2491234152198144
+    m_Localized: Gold Ingot Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494155493322752
+    m_Localized: Cooked Pork Craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494398582599680
+    m_Localized: Cooked Human Flesh Craft
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

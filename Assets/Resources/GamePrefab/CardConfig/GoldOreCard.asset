@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: StoneCard
+  m_Name: GoldOreCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 919132149155446097, guid: b30348fd695ab584c8bef2764b30bbab, type: 3}
+    - {fileID: 919132149155446097, guid: 445c21fe789d81b4196e6f26b14e136a, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +27,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: stone_card
+      Data: gold_ore_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -57,10 +57,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: StoneCardName
+      Data: GoldOreCardName
     - Name: defaultValue
       Entry: 1
-      Data: Stone
+      Data: Gold Ore
     - Name: 
       Entry: 8
       Data: 
@@ -114,7 +114,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: StoneCardDescription
+      Data: GoldOreCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 

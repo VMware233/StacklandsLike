@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: StoneCard
+  m_Name: CookedPorkCraftRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 919132149155446097, guid: b30348fd695ab584c8bef2764b30bbab, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -24,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.CardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: stone_card
+      Data: cooked_pork_craft_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -39,10 +38,13 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 1
-      Data: default_card_type
+      Data: cooked_crad_recipe_type
+    - Name: 
+      Entry: 1
+      Data: recipe_display_type
     - Name: 
       Entry: 13
       Data: 
@@ -54,13 +56,13 @@ MonoBehaviour:
       Data: 2|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardStringTable
+      Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: StoneCardName
+      Data: CookedPorkCraftRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Stone
+      Data: Cooked Pork Craft
     - Name: 
       Entry: 8
       Data: 
@@ -111,10 +113,10 @@ MonoBehaviour:
       Data: 4|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
     - Name: _tableName
       Entry: 1
-      Data: CardStringTable
+      Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: StoneCardDescription
+      Data: CookedPorkCraftRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -160,9 +162,97 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: model
-      Entry: 10
+    - Name: autoCheck
+      Entry: 5
+      Data: true
+    - Name: priority
+      Entry: 3
       Data: 0
+    - Name: totalTicks
+      Entry: 3
+      Data: 120
+    - Name: consumptionConfigs
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: campfire_card
+    - Name: count
+      Entry: 3
+      Data: 1
+    - Name: isConsumable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: raw_pork_card
+    - Name: count
+      Entry: 3
+      Data: 1
+    - Name: isConsumable
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: generationConfigs
+      Entry: 7
+      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: cooked_pork_card
+    - Name: count
+      Entry: 7
+      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 

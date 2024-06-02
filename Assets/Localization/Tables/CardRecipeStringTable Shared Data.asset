@@ -75,6 +75,18 @@ MonoBehaviour:
     m_Key: IronIngotCraftRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 2491234152198144
+    m_Key: GoldIngotCraftRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494155493322752
+    m_Key: CookedPorkCraftRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2494398582599680
+    m_Key: CookedHumanFleshCraftRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

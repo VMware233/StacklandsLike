@@ -103,6 +103,34 @@ MonoBehaviour:
     m_Key: StickCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 2680702612123648
+    m_Key: GoldOreCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2680899551473664
+    m_Key: GoldIngotCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2682593974792192
+    m_Key: BoneCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683130124283904
+    m_Key: RawPorkCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683338702827520
+    m_Key: CookedPorkCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2683983262494720
+    m_Key: RawHumanFleshCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2684171821625344
+    m_Key: CookedHumanFleshCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
