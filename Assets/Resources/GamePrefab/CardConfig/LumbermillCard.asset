@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
+  m_Name: LumbermillCard
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 919132149155446097, guid: 36a049224ca87534183c293859e800d2, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: gamePrefab
+      Entry: 7
+      Data: 0|StackLandsLike.Cards.ProducerCardConfig, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: lumbermill_card
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_card_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 2|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: CardStringTable
+    - Name: key
+      Entry: 1
+      Data: LumbermillCardName
+    - Name: defaultValue
+      Entry: 1
+      Data: Lumbermill
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: nameFormat
+      Entry: 7
+      Data: 3|VMFramework.Configuration.TextTagFormat, Assembly-CSharp
+    - Name: overrideFontColor
+      Entry: 5
+      Data: false
+    - Name: fontColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: overrideBoldStyle
+      Entry: 5
+      Data: false
+    - Name: isBold
+      Entry: 5
+      Data: false
+    - Name: overrideItalicStyle
+      Entry: 5
+      Data: false
+    - Name: isItalic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: hasDescription
+      Entry: 5
+      Data: false
+    - Name: description
+      Entry: 7
+      Data: 4|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: CardStringTable
+    - Name: key
+      Entry: 1
+      Data: LumbermillCardDescription
+    - Name: defaultValue
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: descriptionFormat
+      Entry: 7
+      Data: 5|VMFramework.Configuration.TextTagFormat, Assembly-CSharp
+    - Name: overrideFontColor
+      Entry: 5
+      Data: false
+    - Name: fontColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: overrideBoldStyle
+      Entry: 5
+      Data: false
+    - Name: isBold
+      Entry: 5
+      Data: false
+    - Name: overrideItalicStyle
+      Entry: 5
+      Data: false
+    - Name: isItalic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: model
+      Entry: 10
+      Data: 0
+    - Name: productionTimes
+      Entry: 3
+      Data: 2147483647
+    - Name: productionRecoveryTicks
+      Entry: 3
+      Data: 2147483647
+    - Name: productionRecoveryAmount
+      Entry: 3
+      Data: 0
+    - Name: productionRecipeID
+      Entry: 6
+      Data: 
+    - Name: hasLastGenerationConfig
+      Entry: 5
+      Data: false
+    - Name: lastProductionRecipeID
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

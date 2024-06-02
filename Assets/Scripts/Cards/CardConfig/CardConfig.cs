@@ -17,6 +17,11 @@ namespace StackLandsLike.Cards
         [PreviewField(50, ObjectFieldAlignment.Center)]
         [Required]
         public GameObject model;
+
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [PreviewField(50, ObjectFieldAlignment.Center)]
+        [Required]
+        public Sprite icon;
         
         [TabGroup(TAB_GROUP_NAME, RUNTIME_DATA_CATEGORY)]
         [ShowInInspector]
@@ -29,6 +34,11 @@ namespace StackLandsLike.Cards
             if (model == null)
             {
                 Debug.LogWarning($"{this} has no {nameof(model)} assigned.");
+            }
+
+            if (icon == null)
+            {
+                Debug.LogWarning($"{this} has no {nameof(icon)} assigned.");
             }
         }
 

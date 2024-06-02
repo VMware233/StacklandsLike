@@ -134,6 +134,14 @@ MonoBehaviour:
     m_Localized: Cooked Human Flesh
     m_Metadata:
       m_Items: []
+  - m_Id: 2685790583894016
+    m_Localized: Quarry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2691671178457088
+    m_Localized: Lumbermill
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

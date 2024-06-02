@@ -81,15 +81,24 @@ namespace StackLandsLike.UI
         {
             var owner = e.trigger.owner;
 
-            if (owner.TryGetComponent(out CardView cardView))
+            if (owner.TryGetComponent(out CardView cardView) == false)
             {
-                var cardGroup = cardView.card.group;
+                return;
+            }
+            
+            var card = cardView.card;
 
-                if (selectedCardGroup == cardGroup && cardGroup != null)
-                {
-                    selectedCardGroup = null;
-                    OnDeselectedCardGroup?.Invoke(cardGroup);
-                }
+            if (card == null)
+            {
+                return;
+            }
+                
+            var cardGroup = cardView.card.group;
+
+            if (selectedCardGroup == cardGroup && cardGroup != null)
+            {
+                selectedCardGroup = null;
+                OnDeselectedCardGroup?.Invoke(cardGroup);
             }
         }
 

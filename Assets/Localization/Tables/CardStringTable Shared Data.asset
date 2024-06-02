@@ -131,6 +131,14 @@ MonoBehaviour:
     m_Key: CookedHumanFleshCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 2685790583894016
+    m_Key: QuarryCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2691671178457088
+    m_Key: LumbermillCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
