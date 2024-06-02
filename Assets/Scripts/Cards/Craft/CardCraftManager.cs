@@ -211,7 +211,6 @@ namespace StackLandsLike.Cards
             var newCraftInfo = new CardCraftInfo(recipe);
             craftingRecipes.Add(cardGroup, newCraftInfo);
             EventManager.TriggerCardCompositionStarted(cardGroup, recipe.totalTicks);
-
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

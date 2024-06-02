@@ -15,6 +15,9 @@ namespace StackLandsLike.UI
     public sealed class CardView : MonoBehaviour
     {
         [ShowInInspector]
+        public Vector2 cardSize => card.cardSize;
+        
+        [ShowInInspector]
         private MeshFilter meshFilter;
 
         [ShowInInspector]

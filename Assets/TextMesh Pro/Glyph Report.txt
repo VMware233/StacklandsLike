@@ -1,0 +1,60 @@
+Font: zihunxiangsujimuti_trial  Style: Regular
+Point Size: 49   Padding: 12   SP/PD Ratio: 24.5%
+
+Characters included: 3640/3688
+Missing characters: 48
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 9	Hex: 9	Char [	]
+ID: 31260	Hex: 7A1C	Char [稜]
+ID: 32054	Hex: 7D36	Char [紶]
+ID: 31394	Hex: 7AA2	Char [窢]
+ID: 35555	Hex: 8AE3	Char [諣]
+ID: 34582	Hex: 8716	Char [蜖]
+ID: 33235	Hex: 81D3	Char [臓]
+ID: 34296	Hex: 85F8	Char [藸]
+ID: 30851	Hex: 7883	Char [碃]
+ID: 33346	Hex: 8242	Char [艂]
+ID: 33291	Hex: 820B	Char [舋]
+ID: 33345	Hex: 8241	Char [艁]
+ID: 25741	Hex: 648D	Char [撍]
+ID: 33366	Hex: 8256	Char [艖]
+ID: 33318	Hex: 8226	Char [舦]
+ID: 33358	Hex: 824E	Char [艎]
+ID: 25740	Hex: 648C	Char [撌]
+ID: 33362	Hex: 8252	Char [艒]
+ID: 33303	Hex: 8217	Char [舗]
+ID: 33302	Hex: 8216	Char [舖]
+ID: 33326	Hex: 822E	Char [舮]
+ID: 33301	Hex: 8215	Char [舕]
+ID: 25736	Hex: 6488	Char [撈]
+ID: 25743	Hex: 648F	Char [撏]
+ID: 36810	Hex: 8FCA	Char [迊]
+ID: 33299	Hex: 8213	Char [舓]
+ID: 33283	Hex: 8203	Char [舃]
+ID: 33839	Hex: 842F	Char [萯]
+ID: 33363	Hex: 8253	Char [艓]
+ID: 33294	Hex: 820E	Char [舎]
+ID: 36826	Hex: 8FDA	Char [迚]
+ID: 36788	Hex: 8FB4	Char [辴]
+ID: 36781	Hex: 8FAD	Char [辭]
+ID: 33354	Hex: 824A	Char [艊]
+ID: 33361	Hex: 8251	Char [艑]
+ID: 25748	Hex: 6494	Char [撔]
+ID: 33349	Hex: 8245	Char [艅]
+ID: 33319	Hex: 8227	Char [舧]
+ID: 33279	Hex: 81FF	Char [臿]
+ID: 25752	Hex: 6498	Char [撘]
+ID: 33350	Hex: 8246	Char [艆]
+ID: 33352	Hex: 8248	Char [艈]
+ID: 36782	Hex: 8FAE	Char [辮]
+ID: 36787	Hex: 8FB3	Char [辳]
+ID: 25754	Hex: 649A	Char [撚]
+ID: 30637	Hex: 77AD	Char [瞭]
+ID: 27448	Hex: 6B38	Char [欸]
+ID: 22050	Hex: 5622	Char [嘢]
+
+Characters excluded from packing:
+----------------------------------------

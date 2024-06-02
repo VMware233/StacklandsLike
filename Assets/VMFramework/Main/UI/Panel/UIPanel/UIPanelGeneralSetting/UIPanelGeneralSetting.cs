@@ -14,7 +14,7 @@ namespace VMFramework.UI
     {
         #region Category
 
-        private const string PANEL_SETTING_CATEGORY = "面板设置";
+        private const string PANEL_SETTING_CATEGORY = "Panel";
 
         #endregion
 

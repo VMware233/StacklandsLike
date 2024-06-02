@@ -14,7 +14,7 @@ namespace VMFramework.UI
 
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Transform target, string content, Color? textColor = null)
         {
@@ -26,11 +26,13 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
 
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Transform target, float value, int decimalPlaces = 0, Color? textColor = null)
         {
@@ -42,11 +44,13 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
 
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Transform target, int value, Color? textColor = null)
         {
@@ -58,15 +62,17 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
         
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Vector3 position, string content, Color? textColor = null)
         {
-            var popup = ITracingUIPanel.OpenOnTargetPosition<UGUIPopupTextController>(damagePopupID, position);
+            var popup = ITracingUIPanel.OpenOnTargetPosition<IPopupTextController>(damagePopupID, position);
 
             popup.text = content;
             
@@ -74,15 +80,17 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
 
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Vector3 position, float value, int decimalPlaces = 0, Color? textColor = null)
         {
-            var popup = ITracingUIPanel.OpenOnTargetPosition<UGUIPopupTextController>(damagePopupID, position);
+            var popup = ITracingUIPanel.OpenOnTargetPosition<IPopupTextController>(damagePopupID, position);
 
             popup.text = value.ToString(decimalPlaces);
             
@@ -90,15 +98,17 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
 
         [Button]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void PopupText(
+        public static IPopupTextController PopupText(
             [UIPresetID(typeof(IPopupTextPreset))]
             string damagePopupID, Vector3 position, int value, Color? textColor = null)
         {
-            var popup = ITracingUIPanel.OpenOnTargetPosition<UGUIPopupTextController>(damagePopupID, position);
+            var popup = ITracingUIPanel.OpenOnTargetPosition<IPopupTextController>(damagePopupID, position);
 
             popup.text = value.ToString();
             
@@ -106,6 +116,8 @@ namespace VMFramework.UI
             {
                 popup.textColor = textColor.Value;
             }
+            
+            return popup;
         }
 
         #endregion

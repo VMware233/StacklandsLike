@@ -1,0 +1,17 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UIDocuments/SettlementScreen/SettlementScreenStyle.uss?fileID=7433441132597879392&amp;guid=d485db79f543bcd4b9557aeedc9a6cb5&amp;type=3#SettlementScreenStyle" />
+    <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <engine:VisualElement picking-mode="Ignore" name="Wrapper" style="width: 90%; height: 90%; justify-content: space-around;">
+            <engine:VisualElement style="align-items: center;">
+                <engine:Label text="恭喜你活下来了" name="Title" />
+            </engine:VisualElement>
+            <engine:VisualElement style="height: 489px;">
+                <engine:Label text="在本次旅途中，你砍了x棵树" name="Settlement" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-direction: row; justify-content: space-around;">
+                <engine:Button text="再来一局" name="RestartGame" />
+                <engine:Button text="退出游戏" name="ExitGame" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

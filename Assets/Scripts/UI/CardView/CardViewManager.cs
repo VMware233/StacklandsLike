@@ -24,6 +24,10 @@ namespace StackLandsLike.UI
         [ShowInInspector]
         private static Dictionary<ICard, CardView> allCardViews = new();
 
+        public static event Action<CardView> OnCardViewCreated;
+        
+        public static event Action<CardView> OnCardViewDestroyed;
+
         protected override void OnBeforeInit()
         {
             base.OnBeforeInit();
@@ -84,6 +88,9 @@ namespace StackLandsLike.UI
             allCardViews.Add(card, cardView);
             
             card.OnGroupChangedEvent += OnCardGroupChanged;
+            
+            OnCardViewCreated?.Invoke(cardView);
+            
             return cardView;
         }
 
@@ -96,10 +103,12 @@ namespace StackLandsLike.UI
                 var cache = GetCache(card.id);
                 cache.Return(cardView);
                 card.OnGroupChangedEvent -= OnCardGroupChanged;
+                
+                OnCardViewDestroyed?.Invoke(cardView);
             }
         }
 
-        public static void OnCardGroupChanged(ICard card, CardGroup cardGroup)
+        private static void OnCardGroupChanged(ICard card, CardGroup cardGroup)
         {
             if (cardGroup == null)
             {
