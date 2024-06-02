@@ -37,13 +37,6 @@ namespace VMFramework.Procedure
 
         #region Awake & Start & Update
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            Debug.Log("启动游戏！");
-        }
-
         private void Start()
         {
             string startProcedureID = null;
@@ -85,9 +78,9 @@ namespace VMFramework.Procedure
 
             fsm.Init(this);
 
-            OnEnterProcedureEvent += procedureID => Debug.Log($"Enter Procedure:{procedureID}");
+            OnEnterProcedureEvent += procedureID => Debug.Log($"Enter Procedure:<color=orange>{procedureID}</color>");
 
-            OnExitProcedureEvent += procedureID => Debug.Log($"Exit Procedure:{procedureID}");
+            OnExitProcedureEvent += procedureID => Debug.Log($"Exit Procedure:<color=orange>{procedureID}</color>");
 
             ProcedureAutoSwitchBinder.Init(_procedures.Values);
 
@@ -139,6 +132,12 @@ namespace VMFramework.Procedure
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void EnterProcedureImmediately(string procedureID)
         {
+            if (isLoading)
+            {
+                Debug.LogWarning("ProcedureManager is still loading, cannot switch procedure.");
+                return;
+            }
+            
             if (fsm.HasCurrentState(procedureID))
             {
                 Debug.LogWarning($"Procedure with ID:{procedureID} is already current state.");
@@ -173,6 +172,12 @@ namespace VMFramework.Procedure
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ExitProcedureImmediately(string procedureID, Action onExit)
         {
+            if (isLoading)
+            {
+                Debug.LogWarning("ProcedureManager is still loading, cannot switch procedure.");
+                return;
+            }
+            
             if (fsm.HasCurrentState(procedureID) == false)
             {
                 Debug.LogWarning($"Procedure with ID:{procedureID} is not current state.");
@@ -203,6 +208,12 @@ namespace VMFramework.Procedure
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void EnterProcedure(string procedureID)
         {
+            if (isLoading)
+            {
+                Debug.LogWarning("ProcedureManager is still loading, cannot switch procedure.");
+                return;
+            }
+            
             if (_procedures.ContainsKey(procedureID) == false)
             {
                 throw new ArgumentException($"Procedure with ID:{procedureID} does not exist.");
@@ -214,6 +225,12 @@ namespace VMFramework.Procedure
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void EnterProcedure(string fromProcedureID, string toProcedureID)
         {
+            if (isLoading)
+            {
+                Debug.LogWarning("ProcedureManager is still loading, cannot switch procedure.");
+                return;
+            }
+            
             if (_procedures.ContainsKey(fromProcedureID) == false)
             {
                 throw new ArgumentException($"Procedure with ID:{fromProcedureID} does not exist.");

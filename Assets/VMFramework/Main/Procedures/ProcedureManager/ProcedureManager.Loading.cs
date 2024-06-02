@@ -96,7 +96,7 @@ namespace VMFramework.Procedure
             
             foreach (var initializer in initializers)
             {
-                Debug.Log($"初始化器 {initializer} 开始初始化");
+                Debug.Log($"Initializer: <color=green>{initializer}</color> started.");
             }
 
             foreach (InitializeType initializeType in Enum.GetValues(typeof(InitializeType)))

@@ -10,19 +10,28 @@ using VMFramework.Procedure;
 namespace StackLandsLike.UI
 {
     [ManagerCreationProvider(nameof(GameManagerType.UI))]
-    public sealed class CardViewDragManager : ManagerBehaviour<CardViewDragManager>, IManagerBehaviour
+    public sealed class CardViewDragManager : ManagerBehaviour<CardViewDragManager>
     {
         public static CardView draggingCardView { get; private set; }
 
-        void IInitializer.OnInitComplete(Action onDone)
+        public static void EnableDrag()
         {
             ColliderMouseEventManager.AddCallback(MouseEventType.DragBegin, OnDragBegin);
             
             ColliderMouseEventManager.AddCallback(MouseEventType.DragStay, OnDragStay);
             
             ColliderMouseEventManager.AddCallback(MouseEventType.DragEnd, OnDragEnd);
+        }
+
+        public static void DisableDrag()
+        {
+            draggingCardView = null;
             
-            onDone();
+            ColliderMouseEventManager.RemoveCallback(MouseEventType.DragBegin, OnDragBegin);
+            
+            ColliderMouseEventManager.RemoveCallback(MouseEventType.DragStay, OnDragStay);
+            
+            ColliderMouseEventManager.RemoveCallback(MouseEventType.DragEnd, OnDragEnd);
         }
 
         private static void OnDragBegin(ColliderMouseEvent e)

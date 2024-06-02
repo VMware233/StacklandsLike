@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: HudUi
+  m_Name: SettlementScreenUi
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 4584591609615169559, guid: f981fd706e025d74c9d5da9acb9dc759, type: 3}
+    - {fileID: 9197481963319205126, guid: 74177baff54e78344b8abb48f9541ba6, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -24,10 +24,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.UI.HUDPreset, Assembly-CSharp
+      Data: 0|StackLandsLike.UI.SettlementScreenUIPreset, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: hud_ui
+      Data: settlement_screen_ui
     - Name: isActive
       Entry: 5
       Data: true
@@ -42,16 +42,16 @@ MonoBehaviour:
       Data: 
     - Name: key
       Entry: 1
-      Data: HudUiName
+      Data: SettlementScreenUiName
     - Name: defaultValue
       Entry: 1
-      Data: Hud
+      Data: Settlement Screen
     - Name: 
       Entry: 8
       Data: 
     - Name: sortingOrder
       Entry: 3
-      Data: 10
+      Data: 30
     - Name: isUnique
       Entry: 5
       Data: true
@@ -85,12 +85,33 @@ MonoBehaviour:
     - Name: uiToggleGameEventID
       Entry: 6
       Data: 
-    - Name: prefab
+    - Name: visualTree
       Entry: 10
       Data: 0
-    - Name: tickInDayLabel
+    - Name: useDefaultPanelSettings
+      Entry: 5
+      Data: true
+    - Name: customPanelSettings
+      Entry: 6
+      Data: 
+    - Name: ignoreMouseEvents
+      Entry: 5
+      Data: false
+    - Name: closeUIButtonName
+      Entry: 6
+      Data: 
+    - Name: titleLabelName
       Entry: 1
-      Data: TickInDay
+      Data: Title
+    - Name: settlementLabelName
+      Entry: 1
+      Data: Settlement
+    - Name: restartGameButtonName
+      Entry: 1
+      Data: RestartGame
+    - Name: exitGameButtonName
+      Entry: 1
+      Data: ExitGame
     - Name: 
       Entry: 8
       Data: 

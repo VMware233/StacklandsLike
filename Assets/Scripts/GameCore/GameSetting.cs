@@ -22,8 +22,10 @@ namespace StackLandsLike.GameCore
         
         public static GameStateGeneralSetting gameStateGeneralSetting => gameSettingFile.gameStateGeneralSetting;
         
+        public static ScoreboardGeneralSetting scoreboardGeneralSetting => gameSettingFile.scoreboardGeneralSetting;
+        
         public static QuestAndRecipeUIGeneralSetting questAndRecipeUIGeneralSetting => gameSettingFile.questAndRecipeUIGeneralSetting;
         
-        public static ScoreboardGeneralSetting scoreboardGeneralSetting => gameSettingFile.scoreboardGeneralSetting;
+        public static SettlementScreenGeneralSetting settlementScreenGeneralSetting => gameSettingFile.settlementScreenGeneralSetting;
     }
 }

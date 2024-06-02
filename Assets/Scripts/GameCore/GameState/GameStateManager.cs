@@ -14,10 +14,12 @@ namespace StackLandsLike.GameCore
     {
         public static bool isGameRunning { get; private set; } = false;
         
+        public static bool isVictory { get; private set; } = false;
+        
         [Button]
         public static void StartGame()
         {
-            if (ProcedureManager.currentProcedureIDs.Contains(MainMenuProcedure.ID) == false)
+            if (ProcedureManager.HasCurrentProcedure(MainMenuProcedure.ID) == false)
             {
                 Debug.LogWarning("Cannot start game as main menu is not running.");
                 return;
@@ -36,24 +38,29 @@ namespace StackLandsLike.GameCore
         }
 
         [Button]
-        public static void EndGame()
+        public static void EnterSettlement(bool isVictory)
         {
-            if (ProcedureManager.currentProcedureIDs.Contains(ServerRunningProcedure.ID) == false)
+            if (ProcedureManager.HasCurrentProcedure(ServerRunningProcedure.ID) == false)
             {
-                Debug.LogWarning("Cannot end game as server is not running.");
+                Debug.LogWarning("Cannot enter settlement as server is not running.");
                 return;
             }
             
-            foreach (var cardGroup in CardGroupManager.GetActiveCardGroups().ToList())
+            ProcedureManager.EnterProcedure(ServerRunningProcedure.ID, SettlementProcedure.ID);
+            
+            GameStateManager.isVictory = isVictory;
+        }
+
+        [Button]
+        public static void EndGame()
+        {
+            if (ProcedureManager.HasCurrentProcedure(SettlementProcedure.ID) == false)
             {
-                CardGroupManager.DestroyCardGroup(cardGroup);
+                Debug.LogWarning("Cannot end game as settlement is not running.");
+                return;
             }
             
-            QuestManager.StopAllQuests();
-            
-            LogicTickManager.StopTick();
-            
-            ProcedureManager.EnterProcedure(ServerRunningProcedure.ID, MainMenuProcedure.ID);
+            ProcedureManager.EnterProcedure(SettlementProcedure.ID, MainMenuProcedure.ID);
 
             isGameRunning = false;
         }

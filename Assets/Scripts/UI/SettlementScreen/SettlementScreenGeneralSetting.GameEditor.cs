@@ -4,9 +4,9 @@ using VMFramework.GameLogicArchitecture;
 
 namespace StackLandsLike.UI
 {
-    public partial class QuestAndRecipeUIGeneralSetting : IGameEditorMenuTreeNode
+    public partial class SettlementScreenGeneralSetting : IGameEditorMenuTreeNode
     {
-        string INameOwner.name => "任务和主意UI";
+        string INameOwner.name => "结算界面设置";
 
         string IGameEditorMenuTreeNode.folderPath =>
             (GameCoreSetting.uiPanelGeneralSetting as IGameEditorMenuTreeNode)?.nodePath;

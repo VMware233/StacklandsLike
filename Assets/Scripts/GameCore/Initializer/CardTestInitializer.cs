@@ -1,9 +1,9 @@
 using System;
-using StackLandsLike.GameCore;
+using StackLandsLike.Cards;
 using UnityEngine.Scripting;
 using VMFramework.Procedure;
 
-namespace StackLandsLike.Cards
+namespace StackLandsLike.GameCore
 {
     /// <summary>
     /// 临时的加载器，卡牌测试用的

@@ -7,7 +7,7 @@ namespace StackLandsLike.GameCore
 {
     [GameInitializerRegister(ServerRunningProcedure.ID, ProcedureLoadingType.OnEnter)]
     [Preserve]
-    public sealed class LogicTickInitializer : IGameInitializer
+    public sealed class LogicTickEnterInitializer : IGameInitializer
     {
         void IInitializer.OnInitComplete(Action onDone)
         {

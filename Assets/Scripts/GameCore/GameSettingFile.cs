@@ -14,7 +14,8 @@ namespace StackLandsLike.GameCore
         public GameTimeGeneralSetting gameTimeGeneralSetting;
         public QuestGeneralSetting questGeneralSetting;
         public GameStateGeneralSetting gameStateGeneralSetting;
-        public QuestAndRecipeUIGeneralSetting questAndRecipeUIGeneralSetting;
         public ScoreboardGeneralSetting scoreboardGeneralSetting;
+        public QuestAndRecipeUIGeneralSetting questAndRecipeUIGeneralSetting;
+        public SettlementScreenGeneralSetting settlementScreenGeneralSetting;
     }
 }

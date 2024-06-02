@@ -31,7 +31,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 2|VMFramework.UI.UIPanelProcedureConfig, Assembly-CSharp
@@ -158,6 +158,69 @@ MonoBehaviour:
     - Name: 
       Entry: 1
       Data: quest_and_recipe_ui
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|VMFramework.UI.UIPanelProcedureConfig, Assembly-CSharp
+    - Name: procedureID
+      Entry: 1
+      Data: settlement_procedure
+    - Name: uniqueUIPanelAutoOpenListOnEnter
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: settlement_screen_ui
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uiPanelAutoCloseListOnEnter
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueUIPanelAutoOpenListOnExit
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uiPanelAutoCloseListOnExit
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: settlement_screen_ui
     - Name: 
       Entry: 13
       Data: 

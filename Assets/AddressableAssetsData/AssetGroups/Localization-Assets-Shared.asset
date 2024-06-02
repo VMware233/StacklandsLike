@@ -58,6 +58,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d37ad6149c889ab40a016f2a39497af2
+    m_Address: Assets/Localization/Tables/SettlementScreenStringTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6fe6687e942a13b48b06a4c87273807f, type: 2}
   m_SchemaSet:

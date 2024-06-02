@@ -67,8 +67,13 @@ namespace StackLandsLike.UI
 
             if (owner.TryGetComponent(out CardView cardView))
             {
-                selectedCardGroup = cardView.card.group;
-                OnSelectedCardGroup?.Invoke(selectedCardGroup);
+                var group = cardView.card.group;
+
+                if (group != null)
+                {
+                    selectedCardGroup = cardView.card.group;
+                    OnSelectedCardGroup?.Invoke(selectedCardGroup);
+                }
             }
         }
 
@@ -80,7 +85,7 @@ namespace StackLandsLike.UI
             {
                 var cardGroup = cardView.card.group;
 
-                if (selectedCardGroup == cardGroup)
+                if (selectedCardGroup == cardGroup && cardGroup != null)
                 {
                     selectedCardGroup = null;
                     OnDeselectedCardGroup?.Invoke(cardGroup);
@@ -118,6 +123,12 @@ namespace StackLandsLike.UI
 
         private static void RefreshSelection(CardGroup cardGroup)
         {
+            if (cardGroup == null)
+            {
+                Debug.LogWarning("CardGroupSelection: RefreshSelection called with null cardGroup");
+                return;
+            }
+            
             EnableSelection();
 
             var cardGroupCollider = cardGroup.GetComponent<CardGroupCollider>();
