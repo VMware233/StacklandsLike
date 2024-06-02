@@ -7,7 +7,18 @@ namespace StackLandsLike.Cards
 {
     public partial class CardConfig : IGameEditorMenuTreeNode
     {
-        Icon IGameEditorMenuTreeNode.icon => model.GetAssetPreview();
+        Icon IGameEditorMenuTreeNode.icon
+        {
+            get
+            {
+                if (icon != null)
+                {
+                    return icon;
+                }
+
+                return model.GetAssetPreview();
+            }
+        }
     }
 }
 #endif

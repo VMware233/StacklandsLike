@@ -135,11 +135,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2685790583894016
-    m_Localized: Quarry
+    m_Localized: "\u91C7\u77F3\u573A"
     m_Metadata:
       m_Items: []
   - m_Id: 2691671178457088
-    m_Localized: Lumbermill
+    m_Localized: "\u4F10\u6728\u573A"
     m_Metadata:
       m_Items: []
   references:

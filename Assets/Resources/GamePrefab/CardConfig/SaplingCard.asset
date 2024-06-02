@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 919132149155446097, guid: b68c2c62257369a4aa20dac97cc455fd, type: 3}
+    - {fileID: 21300000, guid: 9548fd6ade5e48f49828bf7eed29cb83, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -163,6 +164,9 @@ MonoBehaviour:
     - Name: model
       Entry: 10
       Data: 0
+    - Name: icon
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

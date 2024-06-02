@@ -163,6 +163,9 @@ MonoBehaviour:
     - Name: model
       Entry: 10
       Data: 0
+    - Name: icon
+      Entry: 6
+      Data: 
     - Name: productionTimes
       Entry: 3
       Data: 2

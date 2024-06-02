@@ -162,6 +162,9 @@ MonoBehaviour:
     - Name: model
       Entry: 6
       Data: 
+    - Name: icon
+      Entry: 6
+      Data: 
     - Name: defaultMaxHealth
       Entry: 7
       Data: 6|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
