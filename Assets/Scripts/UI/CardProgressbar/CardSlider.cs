@@ -18,6 +18,10 @@ namespace StackLandsLike.Cards
 
         public GameObject SliderPrefab;
         public float offset=0.1f;
+
+        [ShowInInspector]
+        private readonly Dictionary<CardGroup, Transform> activeSliders = new();
+        
         private void OnEnable()
         {
             EventManager.CardCompositionStarted += ProduceCardSlider;
@@ -36,6 +40,13 @@ namespace StackLandsLike.Cards
         public void ProduceCardSlider(object sender, CardCompositionEvent e)
         {       
             CardGroup cardGroup = (CardGroup)sender;
+
+            if (activeSliders.ContainsKey(cardGroup))
+            {
+                Debug.LogWarning("进度条已经存在！");
+                return;
+            }
+            
             Vector3 sliderPosition = new Vector3(cardGroup.transform.position.x, cardGroup.transform.position.y , 0);
             GameObject progressBar = Instantiate(SliderPrefab);
             Slider cardBar = progressBar.GetComponent<Slider>();
@@ -46,7 +57,9 @@ namespace StackLandsLike.Cards
             cardBar.GetComponent<RectTransform>().position=Camera.main.WorldToScreenPoint(sliderPosition);
             cardBar.minValue = 0;
             cardBar.maxValue = e.progress;
-            Debug.Log("生成成功！");
+            Debug.Log($"{cardGroup.name}下的进度条生成成功！");
+            
+            activeSliders.Add(cardGroup, progressBar.transform);
         }
       
      
@@ -68,10 +81,19 @@ namespace StackLandsLike.Cards
         }
         public void StopCompositionHandle(StopCompositionEvent e)
         {
-            Transform canvas = e.cardGroup.transform.Find("Canvas");
-            Transform cardBarTransform = canvas.Find("slider1");
-            Destroy(cardBarTransform.gameObject);   
-            Debug.Log("进度条被摧毁！");
+            // Transform canvas = e.cardGroup.transform.Find("Canvas");
+            // Transform cardBarTransform = canvas.Find("slider1");
+            // Destroy(cardBarTransform.gameObject);
+
+            if (activeSliders.Remove(e.cardGroup, out Transform transform))
+            {
+                Destroy(transform.gameObject);
+                Debug.Log($"{e.cardGroup.name}下的进度条被摧毁！");
+            }
+            else
+            {
+                Debug.LogWarning($"{e.cardGroup.name}下的进度条不存在！");
+            }
         }
 
     }

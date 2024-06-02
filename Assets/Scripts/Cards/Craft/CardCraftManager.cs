@@ -122,7 +122,7 @@ namespace StackLandsLike.Cards
             foreach (var (cardGroup, info) in craftingRecipes)
             {
                 info.tick++;
-                EventManager.TriggerProgressBarTick(cardGroup, info);//ÕâÀï»»³Éinfo´«µİµ±Ç°µÄtick,Ö®ºó¿ÉÒÔÊ¹ÓÃGetCraftingTicksº¯Êı£¬ÕâÑù¿ÉÒÔ¼ÓËÙ
+                EventManager.TriggerProgressBarTick(cardGroup, info);//è¿™é‡Œæ¢æˆinfoä¼ é€’å½“å‰çš„tick,ä¹‹åå¯ä»¥ä½¿ç”¨GetCraftingTickså‡½æ•°ï¼Œè¿™æ ·å¯ä»¥åŠ é€Ÿ
 
                 if (info.tick >= info.recipe.totalTicks)
                 {
@@ -217,8 +217,10 @@ namespace StackLandsLike.Cards
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StopCraft(CardGroup cardGroup)
         {
-            craftingRecipes.Remove(cardGroup);
-            EventManager.TriggerStopComposition(cardGroup);//´İ»Ù½ø¶ÈÌõ
+            if (craftingRecipes.Remove(cardGroup))
+            {
+                EventManager.TriggerStopComposition(cardGroup);//æ‘§æ¯è¿›åº¦æ¡
+            }
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
