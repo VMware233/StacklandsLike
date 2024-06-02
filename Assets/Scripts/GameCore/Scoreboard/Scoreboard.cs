@@ -17,11 +17,25 @@ namespace StackLandsLike.GameCore
         [ShowInInspector]
         public static int treeChoppingCount { get; private set; }
         
+        [ShowInInspector]
+        public static int personCount { get; private set; }
+        
+        [ShowInInspector]
+        public static int nutritionCount { get; private set; }
+        
+        [ShowInInspector]
+        public static int nutritionRequiredCount { get; private set; }
+        
+        public static event Action OnScoreboardUpdated;
+        
         protected override void OnBeforeInit()
         {
             base.OnBeforeInit();
             
             CardCraftManager.OnRecipeCompleted += OnRecipeCompleted;
+            CardGroupManager.OnCardGroupCreated += OnCardGroupCreated;
+            CardGroupManager.OnCardGroupDestroyed += OnCardGroupDestroyed;
+            GameTimeManager.OnDayChanged += OnDayChanged;
         }
 
         void IInitializer.OnInitComplete(Action onDone)
@@ -40,6 +54,51 @@ namespace StackLandsLike.GameCore
             
             onDone();
         }
+        
+        private static void OnDayChanged(int newDay)
+        {
+            RefreshScoreboard();
+        }
+        
+        private static void OnCardGroupCreated(CardGroup group)
+        {
+            RefreshScoreboard();
+        }
+
+        private static void OnCardGroupDestroyed(CardGroup group)
+        {
+            RefreshScoreboard();
+        }
+
+        private static void RefreshScoreboard()
+        {
+            personCount = 0;
+            nutritionCount = 0;
+            nutritionRequiredCount = 0;
+            
+            foreach (var cardGroup in CardGroupManager.GetActiveCardGroups())
+            {
+                foreach (var card in cardGroup.cards)
+                {
+                    if (card is IPersonCard personCard)
+                    {
+                        personCount += personCard.count;
+                    }
+
+                    if (card is IFoodCard foodCard)
+                    {
+                        nutritionCount += foodCard.nutrition;
+                    }
+
+                    if (card is INutritionRequiredCard nutritionRequiredCard)
+                    {
+                        nutritionRequiredCount += nutritionRequiredCard.nutritionRequired;
+                    }
+                }
+            }
+            
+            OnScoreboardUpdated?.Invoke();
+        }
 
         private static void OnRecipeCompleted(CardGroup group, ICardRecipe recipe)
         {
@@ -52,6 +111,11 @@ namespace StackLandsLike.GameCore
         public static void ResetScoreboard()
         {
             treeChoppingCount = 0;
+            personCount = 0;
+            nutritionCount = 0;
+            nutritionRequiredCount = 0;
+            
+            OnScoreboardUpdated?.Invoke();
         }
     }
 }

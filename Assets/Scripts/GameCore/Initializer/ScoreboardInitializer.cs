@@ -8,7 +8,7 @@ namespace StackLandsLike.GameCore
     [Preserve]
     public sealed class ScoreboardInitializer : IGameInitializer
     {
-        void IInitializer.OnInit(Action onDone)
+        void IInitializer.OnBeforeInit(Action onDone)
         {
             Scoreboard.ResetScoreboard();
             onDone();

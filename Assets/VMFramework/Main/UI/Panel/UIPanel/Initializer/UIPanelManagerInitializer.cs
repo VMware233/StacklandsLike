@@ -14,7 +14,7 @@ namespace VMFramework.UI
         {
             Debug.Log("正在创建初始的UI面板");
 
-            foreach (var uiPanelPreset in GamePrefabManager.GetAllGamePrefabs<IUIPanelPreset>())
+            foreach (var uiPanelPreset in GamePrefabManager.GetAllActiveGamePrefabs<IUIPanelPreset>())
             {
                 if (uiPanelPreset.isUnique)
                 {

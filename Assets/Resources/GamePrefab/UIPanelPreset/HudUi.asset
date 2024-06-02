@@ -16,7 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 4584591609615169559, guid: f981fd706e025d74c9d5da9acb9dc759, type: 3}
+    - {fileID: 9197481963319205126, guid: 6d8d5654e6f55944990c20d16b7865e4, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -85,12 +85,60 @@ MonoBehaviour:
     - Name: uiToggleGameEventID
       Entry: 6
       Data: 
-    - Name: prefab
+    - Name: visualTree
       Entry: 10
       Data: 0
-    - Name: tickInDayLabel
+    - Name: useDefaultPanelSettings
+      Entry: 5
+      Data: true
+    - Name: customPanelSettings
+      Entry: 6
+      Data: 
+    - Name: ignoreMouseEvents
+      Entry: 5
+      Data: false
+    - Name: closeUIButtonName
+      Entry: 6
+      Data: 
+    - Name: foodInfoLabelName
       Entry: 1
-      Data: TickInDay
+      Data: FoodInfo
+    - Name: personCountLabelName
+      Entry: 1
+      Data: PersonCount
+    - Name: clockwiseName
+      Entry: 1
+      Data: Clockwise
+    - Name: clockwiseAngleRange
+      Entry: 7
+      Data: 3|VMFramework.Configuration.RangeFloatConfig, Assembly-CSharp
+    - Name: min
+      Entry: 4
+      Data: -70
+    - Name: max
+      Entry: 4
+      Data: 70
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: pauseButtonName
+      Entry: 1
+      Data: PauseButton
+    - Name: continueIconName
+      Entry: 1
+      Data: ContinueIcon
+    - Name: pauseIconName
+      Entry: 1
+      Data: PauseIcon
+    - Name: speedButtonName
+      Entry: 1
+      Data: SpeedButton
+    - Name: speed2xIconName
+      Entry: 1
+      Data: Speed2xIcon
+    - Name: speed1xIconName
+      Entry: 1
+      Data: Speed1xIcon
     - Name: 
       Entry: 8
       Data: 

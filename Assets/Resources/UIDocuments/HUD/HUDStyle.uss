@@ -1,0 +1,24 @@
+.toolbar {
+}
+
+.toolbar > Label {
+    -unity-text-align: middle-right;
+}
+
+.unity-button {
+    background-color: rgba(255, 255, 255, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.unity-button:hover {
+    -unity-background-image-tint-color: rgb(189, 189, 189);
+}
+
+.unity-button > VisualElement:hover {
+    scale: 1.3 1.3;
+}

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
@@ -15,6 +16,14 @@ namespace StackLandsLike.GameCore
         public static bool isGameRunning { get; private set; } = false;
         
         public static bool isVictory { get; private set; } = false;
+        
+        public static bool isPaused { get; private set; } = false;
+        
+        public static bool isSpeed2x { get; private set; } = false;
+        
+        public static event Action<bool> OnPauseStateChange;
+        
+        public static event Action<bool> OnSpeedStateChange;
         
         [Button]
         public static void StartGame()
@@ -75,6 +84,10 @@ namespace StackLandsLike.GameCore
             }
             
             LogicTickManager.StopTick();
+            
+            isPaused = true;
+            
+            OnPauseStateChange?.Invoke(true);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -87,6 +100,10 @@ namespace StackLandsLike.GameCore
             }
             
             LogicTickManager.StartTick();
+            
+            isPaused = false;
+            
+            OnPauseStateChange?.Invoke(false);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -105,6 +122,60 @@ namespace StackLandsLike.GameCore
             else
             {
                 ResumeGame();
+            }
+        }
+
+        [Button]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Speed1x()
+        {
+            if (isGameRunning == false)
+            {
+                Debug.LogWarning("Cannot set speed as game is not running.");
+                return;
+            }
+            
+            LogicTickManager.SetTickGap(1/60f);
+            
+            isSpeed2x = false;
+            
+            OnSpeedStateChange?.Invoke(false);
+        }
+
+        [Button]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Speed2x()
+        {
+            if (isGameRunning == false)
+            {
+                Debug.LogWarning("Cannot set speed as game is not running.");
+                return;
+            }
+            
+            LogicTickManager.SetTickGap(1/120f);
+            
+            isSpeed2x = true;
+            
+            OnSpeedStateChange?.Invoke(true);
+        }
+        
+        [Button]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ToggleSpeed()
+        {
+            if (isGameRunning == false)
+            {
+                Debug.LogWarning("Cannot toggle speed as game is not running.");
+                return;
+            }
+            
+            if (isSpeed2x)
+            {
+                Speed1x();
+            }
+            else
+            {
+                Speed2x();
             }
         }
     }

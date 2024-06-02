@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using UnityEngine;
 using VMFramework.Core;
@@ -72,3 +73,4 @@ namespace VMFramework.Editor
         }
     }
 }
+#endif

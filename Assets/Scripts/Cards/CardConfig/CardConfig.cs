@@ -36,10 +36,10 @@ namespace StackLandsLike.Cards
                 Debug.LogWarning($"{this} has no {nameof(model)} assigned.");
             }
 
-            if (icon == null)
-            {
-                Debug.LogWarning($"{this} has no {nameof(icon)} assigned.");
-            }
+            // if (icon == null)
+            // {
+            //     Debug.LogWarning($"{this} has no {nameof(icon)} assigned.");
+            // }
         }
 
         protected override void OnInit()

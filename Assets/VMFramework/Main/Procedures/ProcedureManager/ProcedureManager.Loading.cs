@@ -19,6 +19,9 @@ namespace VMFramework.Procedure
 
         [ShowInInspector]
         private static HashSet<IGameInitializer> leftInitializers = new();
+        
+        [ShowInInspector]
+        private static InitializeType currentLoadingType = InitializeType.BeforeInit;
 
         public static void CollectGameInitializers()
         {
@@ -101,6 +104,8 @@ namespace VMFramework.Procedure
 
             foreach (InitializeType initializeType in Enum.GetValues(typeof(InitializeType)))
             {
+                currentLoadingType = initializeType;
+                
                 leftInitializers.UnionWith(initializers);
 
                 foreach (var initializer in initializers)

@@ -8,6 +8,6 @@ namespace StackLandsLike.GameCore
     public sealed partial class ScoreboardGeneralSetting : GeneralSetting
     {
         [GamePrefabID(typeof(ICardConfig))]
-        public List<string> treesID;
+        public HashSet<string> treesID;
     }
 }

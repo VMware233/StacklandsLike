@@ -30,7 +30,7 @@ MonoBehaviour:
       Data: debug_screen_ui
     - Name: isActive
       Entry: 5
-      Data: true
+      Data: false
     - Name: isDebugging
       Entry: 5
       Data: false
