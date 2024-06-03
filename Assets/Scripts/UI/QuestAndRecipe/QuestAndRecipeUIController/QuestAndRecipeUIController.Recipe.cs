@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 using VMFramework.Configuration;
 using VMFramework.Core;
 using VMFramework.GameLogicArchitecture;
+using VMFramework.UI;
 
 namespace StackLandsLike.UI
 {
@@ -106,26 +107,38 @@ namespace StackLandsLike.UI
             
             categoryInfo.foldout.Add(foldout);
             
-            var consumptionLabels = new List<Label>();
+            var consumptionLabels = new List<IconLabelVisualElement>();
 
             foreach (var config in recipe.consumptionConfigs)
             {
-                var itemName = GamePrefabManager.GetGamePrefabNameWithWarning(config.itemID);
-                
-                var label = new Label
+                if (GamePrefabManager.TryGetGamePrefabWithWarning(config.itemID, out ICardConfig cardConfig) == false)
                 {
-                    text = config.count + "x " + itemName
-                };
+                    continue;
+                }
                 
-                consumptionLabels.Add(label);
+                var itemName = cardConfig.name;
+                var itemIcon = cardConfig.icon;
+
+                var labelIcon = new IconLabelVisualElement();
+                labelIcon.label.text = config.count + "x " + itemName;
+                labelIcon.icon.style.backgroundImage = new StyleBackground(itemIcon);
                 
-                foldout.Add(label);
+                consumptionLabels.Add(labelIcon);
+                
+                foldout.Add(labelIcon);
             }
+            
+            var description = recipe.description;
             
             var descriptionLabel = new Label
             {
-                text = recipe.description
+                text = description
             };
+
+            if (description.IsNullOrEmpty())
+            {
+                descriptionLabel.style.display = DisplayStyle.None;
+            }
             
             foldout.Add(descriptionLabel);
             

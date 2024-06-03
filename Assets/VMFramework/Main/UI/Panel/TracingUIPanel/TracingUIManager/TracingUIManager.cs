@@ -10,15 +10,6 @@ namespace VMFramework.UI
     [ManagerCreationProvider(ManagerType.UICore)]
     public sealed partial class TracingUIManager : ManagerBehaviour<TracingUIManager>, IManagerBehaviour
     {
-        private class TracingInfo
-        {
-            public TracingType tracingType;
-            public Vector3 tracingPosition = Vector3.zero;
-            public Transform tracingTransform;
-            public int tracingCount = 1;
-            public int maxTracingCount = int.MaxValue;
-        }
-
         [ShowInInspector]
         private static readonly Dictionary<Transform, List<ITracingUIPanel>> tracingTransforms = new();
 

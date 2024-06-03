@@ -15,6 +15,18 @@ namespace StackLandsLike.UI
         public override Type controllerType => typeof(QuestAndRecipeUIController);
 
         [VisualElementName]
+        public string questTabName;
+
+        [VisualElementName]
+        public string questTabUnselectedIconName;
+        
+        [VisualElementName]
+        public string recipeTabName;
+        
+        [VisualElementName]
+        public string recipeTabUnselectedIconName;
+        
+        [VisualElementName]
         [IsNotNullOrEmpty]
         public string questContainerName;
         
@@ -23,12 +35,14 @@ namespace StackLandsLike.UI
         public string recipeContainerName;
 
         [GameTypeID]
+        [IsNotNullOrEmpty]
         public string recipeGameTypeID;
 
         [VisualElementName]
         public string wrapperName;
         
         [VisualElementName(typeof(Button))]
+        [IsNotNullOrEmpty]
         public string collapseButtonName;
         
         [MinValue(0)]

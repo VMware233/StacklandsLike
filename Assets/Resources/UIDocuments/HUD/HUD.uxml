@@ -1,6 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UIDocuments/HUD/HUDStyle.uss?fileID=7433441132597879392&amp;guid=c3c887710a86a5e4a8b118ed32348b8d&amp;type=3#HUDStyle" />
-    <engine:VisualElement style="flex-grow: 1;">
+    <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
         <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1; top: 43px; right: 397px; position: absolute; flex-direction: row-reverse; align-items: flex-end; width: 493px; justify-content: space-around;">
             <engine:VisualElement class="toolbar" style="background-image: resource(&apos;Images/UI/HUD/FoodInfo&apos;); width: 223px; height: 82px; justify-content: flex-start;">
                 <engine:Label name="FoodInfo" text="233" />

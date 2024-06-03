@@ -1,26 +1,34 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UIDocuments/QuestAndRecipe/QuestAndRecipeStyle.uss?fileID=7433441132597879392&amp;guid=3fcdcc4c2e6e50b4a98e77fd8094a262&amp;type=3#QuestAndRecipeStyle" />
     <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
-        <engine:VisualElement name="Wrapper" style="flex-grow: 1; left: 44px; top: 55px; position: absolute; height: 686px; width: 444px;">
-            <engine:Button text="折叠" name="CollapseButton" />
-            <engine:TabView>
-                <engine:Tab label="任务">
-                    <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000">
-                        <engine:Toggle focusable="false" value="true" text="2332333333333333" style="display: none;" />
-                    </engine:ScrollView>
-                </engine:Tab>
-                <engine:Tab label="主意">
-                    <engine:ScrollView name="RecipeContainer" mouse-wheel-scroll-size="1000">
-                        <engine:Foldout text="Foldout" style="display: none;">
-                            <engine:Foldout text="Foldout">
-                                <engine:Label text="Label" />
-                                <engine:Label text="Label" />
-                                <engine:Label text="Label" />
+        <engine:VisualElement name="Wrapper" style="flex-grow: 1; left: 44px; top: 55px; position: absolute; height: 686px; width: 444px; background-image: resource(&apos;Images/UI/QuestAndRecipe/QuestAndRecipeBackground&apos;); padding-top: 28px; padding-right: 23px; padding-bottom: 29px; padding-left: 28px;">
+            <engine:Button name="CollapseButton" style="background-image: resource(&apos;Images/UI/QuestAndRecipe/CollapseButton&apos;); width: 57px; height: 78px; position: absolute; right: -36px; top: 57px;" />
+            <engine:VisualElement style="flex-grow: 1;">
+                <engine:VisualElement style="flex-direction: row;">
+                    <engine:VisualElement name="QuestTab" class="tab" style="flex-grow: 1;">
+                        <engine:VisualElement name="QuestTabUnselected" class="tab-icon" style="flex-grow: 1; background-image: resource(&apos;Images/UI/QuestAndRecipe/QuestTabUnselected&apos;);" />
+                        <engine:Label text="任务" class="tab-title" />
+                    </engine:VisualElement>
+                    <engine:VisualElement name="RecipeTab" class="tab" style="flex-grow: 1; background-image: resource(&apos;Images/UI/QuestAndRecipe/RecipeTab&apos;);">
+                        <engine:VisualElement name="RecipeTabUnselected" class="tab-icon" style="flex-grow: 1; background-image: resource(&apos;Images/UI/QuestAndRecipe/RecipeTabUnselected&apos;);" />
+                        <engine:Label text="主意" class="tab-title" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement style="flex-grow: 1;">
+                    <engine:VisualElement class="tab-container" style="flex-grow: 1;">
+                        <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" />
+                    </engine:VisualElement>
+                    <engine:VisualElement class="tab-container" style="flex-grow: 1;">
+                        <engine:ScrollView name="RecipeContainer" mouse-wheel-scroll-size="1000" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden">
+                            <engine:Foldout text="Foldout" style="display: none;">
+                                <engine:Foldout text="Foldout">
+                                    <VMFramework.UI.IconLabelVisualElement />
+                                </engine:Foldout>
                             </engine:Foldout>
-                        </engine:Foldout>
-                    </engine:ScrollView>
-                </engine:Tab>
-            </engine:TabView>
+                        </engine:ScrollView>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

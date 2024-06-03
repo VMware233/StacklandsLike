@@ -29,6 +29,7 @@ namespace StackLandsLike.UI
             
             OpenRecipePanel();
             OpenQuestPanel();
+            OpenTab();
 
             wrapper = rootVisualElement.Q(questAndRecipeUIPreset.wrapperName);
             collapseButton = rootVisualElement.Q<Button>(questAndRecipeUIPreset.collapseButtonName);
@@ -49,6 +50,7 @@ namespace StackLandsLike.UI
             
             CloseRecipePanel();
             CloseQuestPanel();
+            CloseTab();
 
             if (collapseButton != null)
             {

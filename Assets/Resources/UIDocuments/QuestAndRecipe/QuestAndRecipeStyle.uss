@@ -2,6 +2,108 @@
     white-space: normal;
 }
 
+.unity-button {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 Tab {
     height: 611px;
+}
+
+.tab {
+    height: 112px;
+}
+
+.tab-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.tab-title {
+    -unity-text-align: middle-center;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.tab-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.unity-foldout__checkmark {
+}
+
+.toggle {
+    flex-direction: row;
+}
+
+.toggle-checkmark-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.toggle-input-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.toggle-enabled-checkmark-icon {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutUnfolded');
+}
+
+.toggle-disabled-checkmark-icon {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutCheckmark');
+}
+
+.unity-foldout__toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutUnfolded');
+}
+
+.unity-foldout__toggle .unity-toggle__checkmark {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutCheckmark');
+    width: 48px;
+    height: 48px;
+}
+
+.unity-foldout__toggle {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutTitleBackground');
+}
+
+.unity-foldout__content {
+    background-image: resource('Images/UI/QuestAndRecipe/FoldoutContentBackground');
+    padding-right: 4px;
+}
+
+.iconLabel {
+    flex-direction: row;
+    align-items: center;
+}
+
+.iconLabel > .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.iconLabel > .content {
 }

@@ -48,7 +48,7 @@ namespace VMFramework.UI
             label = new Label
             {
                 name = "Content",
-                text = "Label:Content"
+                text = "Content"
             };
             label.AddToClassList("content");
             Add(label);

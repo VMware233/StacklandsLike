@@ -65,5 +65,7 @@ namespace StackLandsLike.Cards
                 }
             }
         }
+
+        Sprite ICardConfig.icon => icon;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using StackLandsLike.Cards;
 using UnityEngine.UIElements;
+using VMFramework.UI;
 
 namespace StackLandsLike.UI
 {
@@ -10,7 +11,7 @@ namespace StackLandsLike.UI
         
         public Foldout foldout;
         
-        public List<Label> consumptionLabels;
+        public List<IconLabelVisualElement> consumptionLabels;
         
         public Label descriptionLabel;
     }
