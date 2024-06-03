@@ -59,6 +59,7 @@ namespace StackLandsLike.UI
 
             var foldout = new Foldout()
             {
+                name = "CategoryFoldout",
                 text = foldoutText,
                 value = true
             };
@@ -101,6 +102,7 @@ namespace StackLandsLike.UI
 
             var foldout = new Foldout()
             {
+                name = "RecipeFoldout",
                 text = recipe.name,
                 value = false
             };

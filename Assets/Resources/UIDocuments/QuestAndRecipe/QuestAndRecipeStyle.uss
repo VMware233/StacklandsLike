@@ -52,47 +52,64 @@ Tab {
 }
 
 .unity-foldout__checkmark {
-}
-
-.toggle {
-    flex-direction: row;
-}
-
-.toggle-checkmark-icon {
-    width: 48px;
-    height: 48px;
-}
-
-.toggle-input-container {
-    flex-direction: row;
-    align-items: center;
-}
-
-.toggle-enabled-checkmark-icon {
-    background-image: resource('Images/UI/QuestAndRecipe/FoldoutUnfolded');
-}
-
-.toggle-disabled-checkmark-icon {
-    background-image: resource('Images/UI/QuestAndRecipe/FoldoutCheckmark');
+    margin-right: 10px;
 }
 
 .unity-foldout__toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
-    background-image: resource('Images/UI/QuestAndRecipe/FoldoutUnfolded');
+    background-image: resource('Images/UI/QuestAndRecipe/UnfoldedIcon');
 }
 
 .unity-foldout__toggle .unity-toggle__checkmark {
-    background-image: resource('Images/UI/QuestAndRecipe/FoldoutCheckmark');
-    width: 48px;
-    height: 48px;
+    background-image: resource('Images/UI/QuestAndRecipe/FoldedIcon');
+    width: 30px;
+    height: 30px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
 }
 
 .unity-foldout__toggle {
     background-image: resource('Images/UI/QuestAndRecipe/FoldoutTitleBackground');
+    padding-top: 17px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-bottom: 5px;
 }
 
 .unity-foldout__content {
     background-image: resource('Images/UI/QuestAndRecipe/FoldoutContentBackground');
     padding-right: 4px;
+    margin-right: 20px;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+#RecipeContainer Label {
+    font-size: 30px;
+}
+
+#RecipeFoldout .unity-foldout__toggle {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+#RecipeFoldout .unity-foldout__content {
+    background-image: none;
+}
+
+#RecipeFoldout .unity-foldout__toggle {
+    padding-top: 0;
+}
+
+#RecipeFoldout Label {
+    font-size: 25px;
+}
+
+.unity-foldout {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .iconLabel {
@@ -106,4 +123,34 @@ Tab {
 }
 
 .iconLabel > .content {
+}
+
+VisualElement {
+    color: rgb(122, 98, 69);
+}
+
+#QuestContainer .unity-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: resource('Images/UI/QuestAndRecipe/CheckmarkChecked');
+}
+
+#QuestContainer .unity-toggle__checkmark {
+    background-image: resource('Images/UI/QuestAndRecipe/CheckmarkUnchecked');
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 50px;
+    height: 50px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#QuestContainer Label {
+    font-size: 28px;
+}
+
+#QuestContainer Toggle {
+    margin-top: 5px;
 }

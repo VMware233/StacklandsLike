@@ -2,6 +2,7 @@
     <Style src="project://database/Assets/Resources/UIDocuments/SettlementScreen/SettlementScreenStyle.uss?fileID=7433441132597879392&amp;guid=d485db79f543bcd4b9557aeedc9a6cb5&amp;type=3#SettlementScreenStyle" />
     <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
         <engine:VisualElement picking-mode="Ignore" name="Wrapper" style="width: 90%; height: 90%; justify-content: space-around;">
+            <engine:VisualElement name="VictoryBackground" style="flex-grow: 1; background-image: resource(&apos;2d_chouxifan/21&apos;); left: 0; bottom: 0; position: absolute; width: 699px; height: 514px;" />
             <engine:VisualElement style="align-items: center;">
                 <engine:Label text="恭喜你活下来了" name="Title" />
             </engine:VisualElement>
