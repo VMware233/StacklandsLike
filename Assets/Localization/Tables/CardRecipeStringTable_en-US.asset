@@ -114,6 +114,30 @@ MonoBehaviour:
     m_Localized: Quarry Card
     m_Metadata:
       m_Items: []
+  - m_Id: 3290366840274944
+    m_Localized: Wooden Armor Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3291016168865792
+    m_Localized: Iron Armor Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3291671994433536
+    m_Localized: Heavy Iron Armor Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292084177076224
+    m_Localized: Golden Armor Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292364394332160
+    m_Localized: Bone Armor Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292844969295872
+    m_Localized: Plank Card
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

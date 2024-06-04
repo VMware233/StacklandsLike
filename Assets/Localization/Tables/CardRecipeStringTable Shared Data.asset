@@ -111,6 +111,30 @@ MonoBehaviour:
     m_Key: QuarryCardRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 3290366840274944
+    m_Key: WoodenArmorCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3291016168865792
+    m_Key: IronArmorCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3291671994433536
+    m_Key: HeavyIronArmorCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292084177076224
+    m_Key: GoldenArmorCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292364394332160
+    m_Key: BoneArmorCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292844969295872
+    m_Key: PlankCardRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
