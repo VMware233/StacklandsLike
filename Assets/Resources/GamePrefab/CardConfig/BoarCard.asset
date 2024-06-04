@@ -24,7 +24,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.CreatureCardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.MonsterCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
       Data: boar_card
