@@ -16,12 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-<<<<<<< Updated upstream
     - {fileID: 919132149155446097, guid: 3a2aa186e0c688d48b15d0a2d9c94b4d, type: 3}
     - {fileID: 21300000, guid: fa509db276461514da5dd7ee7b9ca74c, type: 3}
-=======
-    - {fileID: 919132149155446097, guid: 839d2b5f233232b4cb7dbda5d7b9df32, type: 3}
->>>>>>> Stashed changes
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []

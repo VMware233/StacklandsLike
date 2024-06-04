@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 13
+      Data: 11
     - Name: 
       Entry: 7
       Data: 1|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
@@ -238,44 +238,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 23|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: pig_card
-    - Name: count
-      Entry: 7
-      Data: 24|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 25|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: house_card
-    - Name: count
-      Entry: 7
-      Data: 26|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -312,7 +274,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bcd0264a08e6bdf41aa82f4d658c59a9, type: 2}
   - {fileID: 11400000, guid: 43e4e80c2e2cbaf4fbf885dad210f8d3, type: 2}
   - {fileID: 11400000, guid: d503916919a0cda418b31fd48f3f26a7, type: 2}
-<<<<<<< Updated upstream
   - {fileID: 11400000, guid: 2cf89272909b83241a177cc80c7bea09, type: 2}
   - {fileID: 11400000, guid: d36618f649203184d86532391b4d5b45, type: 2}
   - {fileID: 11400000, guid: 19fc20e761228484eb57157e3db653a9, type: 2}
@@ -330,13 +291,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c63a5a8b790224c46bf220feb40124f7, type: 2}
   - {fileID: 11400000, guid: 606fea7ea56eaca4397762b88d6e640b, type: 2}
   - {fileID: 11400000, guid: 9475f681dfed31648ae9fc7d3887622e, type: 2}
-=======
-  - {fileID: 11400000, guid: 17c2dcf0c992fbe4bbca5bb18a4f9849, type: 2}
-  - {fileID: 11400000, guid: 182f5aa328b520a45bdc6da6b96538b9, type: 2}
-  - {fileID: 11400000, guid: 37c4ffc7a56e9b045963b09b6ee4f906, type: 2}
-  - {fileID: 11400000, guid: 57393fc2e8510654bb9cf5b1b6848d5c, type: 2}
-  - {fileID: 11400000, guid: 91af33bfc9abac342868aab626f1f18d, type: 2}
-  - {fileID: 11400000, guid: f06066d571c0be74fab67320c09c0125, type: 2}
->>>>>>> Stashed changes
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}
