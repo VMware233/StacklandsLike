@@ -171,8 +171,32 @@ MonoBehaviour:
     m_Key: IronSpearCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 3302634332205056
+    m_Key: FullIronSpearCardName
+    m_Metadata:
+      m_Items: []
   - m_Id: 3287062240407552
-    m_Key: GoldSpearCardName
+    m_Key: GoldenSpearCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3298864961531904
+    m_Key: WoodenArmorCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300781292892160
+    m_Key: IronArmorCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300881276710912
+    m_Key: HeavyIronArmorCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301036356907008
+    m_Key: GoldenArmorCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301172868919296
+    m_Key: BoneArmorCardName
     m_Metadata:
       m_Items: []
   m_Metadata:

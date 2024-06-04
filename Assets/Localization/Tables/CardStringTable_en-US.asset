@@ -175,7 +175,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3287062240407552
-    m_Localized: Gold Spear
+    m_Localized: Golden Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3298864961531904
+    m_Localized: Wooden Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300781292892160
+    m_Localized: Iron Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300881276710912
+    m_Localized: Heavy Iron Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301036356907008
+    m_Localized: Golden Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301172868919296
+    m_Localized: Bone Armor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3302634332205056
+    m_Localized: Full Iron Spear
     m_Metadata:
       m_Items: []
   references:

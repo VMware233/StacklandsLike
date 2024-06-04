@@ -167,15 +167,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3286623964999680
-    m_Localized: Stone Spear
+    m_Localized: "\u77F3\u77DB"
     m_Metadata:
       m_Items: []
   - m_Id: 3287020045709312
-    m_Localized: Iron Spear
+    m_Localized: "\u94C1\u77DB"
     m_Metadata:
       m_Items: []
   - m_Id: 3287062240407552
-    m_Localized: Gold Spear
+    m_Localized: "\u91D1\u77DB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3298864961531904
+    m_Localized: "\u6728\u7532"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300781292892160
+    m_Localized: "\u94C1\u7532"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3300881276710912
+    m_Localized: "\u91CD\u94C1\u7532"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301036356907008
+    m_Localized: "\u91D1\u7532"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301172868919296
+    m_Localized: "\u9AA8\u7532"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3302634332205056
+    m_Localized: "\u5168\u94C1\u77DB"
     m_Metadata:
       m_Items: []
   references:

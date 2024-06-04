@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: GoldSpearCard
+  m_Name: GoldenArmorCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 919132149155446097, guid: 2305a2745fecb83408b1666383aeee46, type: 3}
-    - {fileID: 21300000, guid: 4af3314f0a15c334eb58ca51f815cfde, type: 3}
+    - {fileID: 919132149155446097, guid: 482f54c46672d994a81d07e6e3602cb9, type: 3}
+    - {fileID: 21300000, guid: 530fd4c782a0f4e46852302d9f796b25, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -28,7 +28,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.EquipmentCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: gold_spear_card
+      Data: golden_armor_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -58,10 +58,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: GoldSpearCardName
+      Data: GoldenArmorCardName
     - Name: defaultValue
       Entry: 1
-      Data: Gold Spear
+      Data: Golden Armor
     - Name: 
       Entry: 8
       Data: 
@@ -115,7 +115,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: GoldSpearCardDescription
+      Data: GoldenArmorCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -169,10 +169,10 @@ MonoBehaviour:
       Data: 1
     - Name: attackBonus
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: defenseBonus
       Entry: 3
-      Data: 0
+      Data: 4
     - Name: 
       Entry: 8
       Data: 

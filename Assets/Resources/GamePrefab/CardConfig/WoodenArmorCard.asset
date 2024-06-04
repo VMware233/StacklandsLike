@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: StoneSpearCard
+  m_Name: WoodenArmorCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 919132149155446097, guid: 6552672ce4d472c4ca84c11dc9e176b7, type: 3}
-    - {fileID: 21300000, guid: 2181126881ea84c4cb76c9b99df7089f, type: 3}
+    - {fileID: 919132149155446097, guid: 0049f441090886741b38203278e2bc16, type: 3}
+    - {fileID: 21300000, guid: 46e95febb98793f40ae1e60f96e43b31, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -28,7 +28,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.EquipmentCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: stone_spear_card
+      Data: wooden_armor_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 1
-      Data: weapon_card_type
+      Data: default_card_type
     - Name: 
       Entry: 13
       Data: 
@@ -58,10 +58,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: StoneSpearCardName
+      Data: WoodenArmorCardName
     - Name: defaultValue
       Entry: 1
-      Data: Stone Spear
+      Data: Wooden Armor
     - Name: 
       Entry: 8
       Data: 
@@ -115,7 +115,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: StoneSpearCardDescription
+      Data: WoodArmorCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -169,10 +169,10 @@ MonoBehaviour:
       Data: 1
     - Name: attackBonus
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: defenseBonus
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

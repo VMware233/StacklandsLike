@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,6 +15,8 @@ namespace StackLandsLike.Cards
 
         [ShowInInspector]
         private Dictionary<string, IEquipmentCard> equippedCards = new();
+
+        public event Action<IEquippableCard> OnEquipmentChanged;
 
         public void Equip(IEquipmentCard card)
         {
@@ -47,6 +50,13 @@ namespace StackLandsLike.Cards
             }
             
             clone.OnEquipTo(this);
+            
+            OnEquipmentChanged?.Invoke(this);
+        }
+
+        public IEnumerable<IEquipmentCard> GetEquipments()
+        {
+            return equippedCards.Values;
         }
     }
 }
