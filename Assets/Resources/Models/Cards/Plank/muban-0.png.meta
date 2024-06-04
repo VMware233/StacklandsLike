@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      muban-0_0: 7208902437148820510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

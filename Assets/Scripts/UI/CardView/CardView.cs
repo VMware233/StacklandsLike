@@ -84,6 +84,11 @@ namespace StackLandsLike.UI
 
             model.transform.eulerAngles = new Vector3(-90, 0, 0);
 
+            if (card.id == "person_card")
+            {
+                model.transform.eulerAngles = new Vector3(90, 90, -90);
+            }
+
             meshFilter = model.transform.QueryFirstComponentInChildren<MeshFilter>(true);
 
             var bounds = meshFilter.sharedMesh.bounds;
