@@ -142,6 +142,7 @@ MonoBehaviour:
     m_Localized: Lumbermill
     m_Metadata:
       m_Items: []
+<<<<<<< Updated upstream
   - m_Id: 3264589734195200
     m_Localized: Stone Golem
     m_Metadata:
@@ -208,6 +209,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3306488931135488
     m_Localized: Pickaxe
+=======
+  - m_Id: 2930504126255104
+    m_Localized: Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3072447460233216
+    m_Localized: Spider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3073767143460864
+    m_Localized: Stone Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3073806607667200
+    m_Localized: Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3074947596767232
+    m_Localized: Tree Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3086954840543232
+    m_Localized: Dragon
+>>>>>>> Stashed changes
     m_Metadata:
       m_Items: []
   references:

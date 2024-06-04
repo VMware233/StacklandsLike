@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: PersonCard
+  m_Name: PigCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-<<<<<<< Updated upstream
-    - {fileID: 919132149155446097, guid: 3a2aa186e0c688d48b15d0a2d9c94b4d, type: 3}
-    - {fileID: 21300000, guid: fa509db276461514da5dd7ee7b9ca74c, type: 3}
-=======
-    - {fileID: 919132149155446097, guid: 839d2b5f233232b4cb7dbda5d7b9df32, type: 3}
->>>>>>> Stashed changes
+    - {fileID: 919132149155446097, guid: f744cc4a81b90574fbe8b37e516d7b98, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -29,10 +24,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.PersonCardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.CreatureCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: person_card
+      Data: pig_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -62,10 +57,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: PersonCardName
+      Data: PigCardName
     - Name: defaultValue
       Entry: 1
-      Data: Person
+      Data: Pig
     - Name: 
       Entry: 8
       Data: 
@@ -119,7 +114,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: PersonCardDescription
+      Data: PigCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -169,8 +164,8 @@ MonoBehaviour:
       Entry: 10
       Data: 0
     - Name: icon
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: defaultMaxHealth
       Entry: 7
       Data: 6|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
@@ -198,74 +193,6 @@ MonoBehaviour:
     - Name: value
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dropCardConfigs
-      Entry: 7
-      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: raw_human_flesh_card
-    - Name: count
-      Entry: 7
-      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 13|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: bone_card
-    - Name: count
-      Entry: 7
-      Data: 14|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: nutritionRequired
-      Entry: 7
-      Data: 15|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 2
     - Name: 
       Entry: 8
       Data: 

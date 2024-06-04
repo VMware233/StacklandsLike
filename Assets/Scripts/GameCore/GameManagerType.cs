@@ -6,6 +6,8 @@
         Card,
         UI,
         Time,
-        Quest
+        Quest,
+        BattleUIManager,
+        BattleManager
     }
 }
