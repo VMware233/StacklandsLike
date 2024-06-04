@@ -9,6 +9,7 @@ using VMFramework.Core;
 using VMFramework.GameEvents;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
+using VMFramework.ResourcesManagement;
 using VMFramework.Timers;
 
 namespace StackLandsLike.Cards
@@ -30,6 +31,16 @@ namespace StackLandsLike.Cards
             LogicTickManager.OnTick += OnTick;
             CardGroupManager.OnCardGroupCreated += OnCardGroupCreated;
             CardGroupManager.OnCardGroupDestroyed += OnCardGroupDestroyed;
+
+            OnRecipeCompleted += (cardGroup, recipe) =>
+            {
+                if (recipe.craftCompleteAudioID.IsNullOrEmpty())
+                {
+                    return;
+                }
+
+                AudioSpawner.Spawn(recipe.craftCompleteAudioID, Vector3.zero);
+            };
         }
 
         private void OnCardGroupCreated(CardGroup cardGroup)

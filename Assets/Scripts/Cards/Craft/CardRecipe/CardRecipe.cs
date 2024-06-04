@@ -5,6 +5,8 @@ using VMFramework.Configuration;
 using VMFramework.Containers;
 using VMFramework.Core;
 using VMFramework.GameLogicArchitecture;
+using VMFramework.OdinExtensions;
+using VMFramework.ResourcesManagement;
 
 namespace StackLandsLike.Cards
 {
@@ -27,6 +29,10 @@ namespace StackLandsLike.Cards
 
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public IChooserConfig<List<CardGenerationConfig>> generationConfigs;
+
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [GamePrefabID(typeof(AudioPreset))]
+        public string craftCompleteAudioID;
 
         public override void CheckSettings()
         {
@@ -67,7 +73,9 @@ namespace StackLandsLike.Cards
         int ICardRecipe.priority => priority;
 
         int ICardRecipe.totalTicks => totalTicks;
-        
+
+        string ICardRecipe.craftCompleteAudioID => craftCompleteAudioID;
+
         IEnumerable<CardConsumptionConfig> ICardRecipe.consumptionConfigs => consumptionConfigs;
         
         IEnumerable<CardGenerationConfig> ICardRecipe.generationConfigs => generationConfigs.GetValue();
