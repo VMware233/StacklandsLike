@@ -41,12 +41,22 @@ namespace StackLandsLike.UI
             {
                 return;
             }
+
+            if (cardView.card is IMonsterCard)
+            {
+                return;
+            }
                 
             draggingCardView = cardView;
         }
 
         private static void OnDragStay(ColliderMouseEvent e)
         {
+            if (draggingCardView == null)
+            {
+                return;
+            }
+            
             if (CardViewMouseHoverManager.TryGetMousePositionInCardTable(out var position) == false)
             {
                 return;
@@ -63,6 +73,11 @@ namespace StackLandsLike.UI
 
         private static void OnDragEnd(ColliderMouseEvent e)
         {
+            if (draggingCardView == null)
+            {
+                return;
+            }
+            
             var owner = e.trigger.owner;
             if (owner.TryGetComponent(out CardView cardView) == false)
             {
