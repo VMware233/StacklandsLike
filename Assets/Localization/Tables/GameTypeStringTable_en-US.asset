@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: Cooked Crad Recipe Type
     m_Metadata:
       m_Items: []
+  - m_Id: 3475850866569216
+    m_Localized: Equipment Card Recipe Type
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

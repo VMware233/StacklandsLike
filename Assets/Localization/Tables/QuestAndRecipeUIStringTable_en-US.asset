@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: Cooking
     m_Metadata:
       m_Items: []
+  - m_Id: 1998759687991296
+    m_Localized: Equipment
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

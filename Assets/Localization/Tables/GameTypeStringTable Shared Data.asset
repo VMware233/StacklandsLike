@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: CookedCradRecipeTypeName
     m_Metadata:
       m_Items: []
+  - m_Id: 3475850866569216
+    m_Key: EquipmentCardRecipeTypeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

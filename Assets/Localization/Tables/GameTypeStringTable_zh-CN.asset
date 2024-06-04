@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: "\u70F9\u996A\u5361\u724C\u914D\u65B9"
     m_Metadata:
       m_Items: []
+  - m_Id: 3475850866569216
+    m_Localized: Equipment Card Recipe Type
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

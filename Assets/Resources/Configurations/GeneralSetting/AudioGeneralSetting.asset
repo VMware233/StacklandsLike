@@ -24,8 +24,11 @@ MonoBehaviour:
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: 
-  initialGamePrefabWrappers: []
+  initialGamePrefabWrappers:
+  - {fileID: 11400000, guid: 02b42fe55040c584f8b1094963d03555, type: 2}
+  - {fileID: 11400000, guid: 322642a99445cd043b4f0cabf1398c64, type: 2}
+  - {fileID: 11400000, guid: fd023f3be4b16c145924211bc3662856, type: 2}
   <defaultGameType>k__BackingField: 
   container:
-    containerID: 
+    containerID: '#Audio Container'
     container: {fileID: 0}

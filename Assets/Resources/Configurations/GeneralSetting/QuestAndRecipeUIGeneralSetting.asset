@@ -31,7 +31,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: 2|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
@@ -161,6 +161,33 @@ MonoBehaviour:
     - Name: defaultValue
       Entry: 1
       Data: Cooked Crad Recipe Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|StackLandsLike.UI.RecipeCategoryConfig, Assembly-CSharp
+    - Name: gameTypeID
+      Entry: 1
+      Data: equipment_card_recipe_type
+    - Name: priority
+      Entry: 3
+      Data: 0
+    - Name: categoryName
+      Entry: 7
+      Data: 13|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: QuestAndRecipeUIStringTable
+    - Name: key
+      Entry: 1
+      Data: EquipmentCardRecipeTypeName
+    - Name: defaultValue
+      Entry: 1
+      Data: Equipment Card Recipe Type
     - Name: 
       Entry: 8
       Data: 
