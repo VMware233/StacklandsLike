@@ -43,7 +43,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 1
-      Data: default_card_type
+      Data: armor_card_type
     - Name: 
       Entry: 13
       Data: 

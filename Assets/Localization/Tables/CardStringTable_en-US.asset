@@ -202,6 +202,14 @@ MonoBehaviour:
     m_Localized: Full Iron Spear
     m_Metadata:
       m_Items: []
+  - m_Id: 3306182298152960
+    m_Localized: Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3306488931135488
+    m_Localized: Pickaxe
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
