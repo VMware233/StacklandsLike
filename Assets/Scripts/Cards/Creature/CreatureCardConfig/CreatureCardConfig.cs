@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using VMFramework.Configuration;
 
@@ -16,6 +17,9 @@ namespace StackLandsLike.Cards
         
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public IVectorChooserConfig<int> defaultDefense;
+        
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        public IChooserConfig<List<CardGenerationConfig>> dropCardConfigs;
 
         public override void CheckSettings()
         {
@@ -24,6 +28,8 @@ namespace StackLandsLike.Cards
             defaultMaxHealth.CheckSettings();
             defaultAttack.CheckSettings();
             defaultDefense.CheckSettings();
+            
+            dropCardConfigs.CheckSettings();
         }
 
         protected override void OnInit()
@@ -33,6 +39,8 @@ namespace StackLandsLike.Cards
             defaultMaxHealth.Init();
             defaultAttack.Init();
             defaultDefense.Init();
+            
+            dropCardConfigs.Init();
         }
     }
 }

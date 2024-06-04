@@ -47,11 +47,6 @@ namespace StackLandsLike.Cards
         {
             var card = (ICard)e.item;
 
-            if (card.group == this)
-            {
-                card.SetGroup(null);
-            }
-
             if (e.container.validItemsSize == 0)
             {
                 name = "Empty Card Group";
@@ -60,6 +55,11 @@ namespace StackLandsLike.Cards
             else
             {
                 name = e.container.GetAllValidItems().Select(item => item.name).Join(",");
+            }
+            
+            if (card.group == this)
+            {
+                card.SetGroup(null);
             }
         }
 

@@ -152,10 +152,10 @@ namespace VMFramework.Containers
 
             item.OnCountChangedEvent += ItemChangedAction;
 
+            item.OnAddToContainer(this);
+            
             itemAddedEvent.SetParameters(this, slotIndex, item);
             itemAddedEvent.Propagate();
-
-            item.OnAddToContainer(this);
 
             return;
 
@@ -186,10 +186,10 @@ namespace VMFramework.Containers
                 item.sourceContainer = null;
             }
             
+            item.OnRemoveFromContainer(this);
+            
             itemRemovedEvent.SetParameters(this, slotIndex, item);
             itemRemovedEvent.Propagate();
-
-            item.OnRemoveFromContainer(this);
         }
 
         protected void OnBeforeItemChanged(int slotIndex, IContainerItem item)

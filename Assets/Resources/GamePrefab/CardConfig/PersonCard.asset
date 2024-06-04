@@ -196,9 +196,67 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: dropCardConfigs
+      Entry: 7
+      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: raw_human_flesh_card
+    - Name: count
+      Entry: 7
+      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: bone_card
+    - Name: count
+      Entry: 7
+      Data: 14|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: nutritionRequired
       Entry: 7
-      Data: 9|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+      Data: 15|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
