@@ -142,6 +142,30 @@ MonoBehaviour:
     m_Localized: Lumbermill
     m_Metadata:
       m_Items: []
+  - m_Id: 3264589734195200
+    m_Localized: Stone Golem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3264783758503936
+    m_Localized: Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3265052902797312
+    m_Localized: Boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3265211321659392
+    m_Localized: Dragon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3265670597947392
+    m_Localized: Treeent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3265986542284800
+    m_Localized: Spider
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

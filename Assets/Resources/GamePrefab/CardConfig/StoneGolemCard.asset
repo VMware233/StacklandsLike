@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: PersonCard
+  m_Name: StoneGolemCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 919132149155446097, guid: 3a2aa186e0c688d48b15d0a2d9c94b4d, type: 3}
+    - {fileID: 919132149155446097, guid: d030ce0d309a701409e40f847d24ed47, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -24,10 +24,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Cards.PersonCardConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Cards.CreatureCardConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: person_card
+      Data: stone_golem_card
     - Name: isActive
       Entry: 5
       Data: true
@@ -57,10 +57,10 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: PersonCardName
+      Data: StoneGolemCardName
     - Name: defaultValue
       Entry: 1
-      Data: Person
+      Data: Stone Golem
     - Name: 
       Entry: 8
       Data: 
@@ -114,7 +114,7 @@ MonoBehaviour:
       Data: CardStringTable
     - Name: key
       Entry: 1
-      Data: PersonCardDescription
+      Data: StoneGolemCardDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -193,16 +193,6 @@ MonoBehaviour:
     - Name: value
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: nutritionRequired
-      Entry: 7
-      Data: 9|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
-        mscorlib]], Assembly-CSharp
-    - Name: value
-      Entry: 3
-      Data: 2
     - Name: 
       Entry: 8
       Data: 

@@ -274,5 +274,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bcd0264a08e6bdf41aa82f4d658c59a9, type: 2}
   - {fileID: 11400000, guid: 43e4e80c2e2cbaf4fbf885dad210f8d3, type: 2}
   - {fileID: 11400000, guid: d503916919a0cda418b31fd48f3f26a7, type: 2}
+  - {fileID: 11400000, guid: 2cf89272909b83241a177cc80c7bea09, type: 2}
+  - {fileID: 11400000, guid: d36618f649203184d86532391b4d5b45, type: 2}
+  - {fileID: 11400000, guid: 19fc20e761228484eb57157e3db653a9, type: 2}
+  - {fileID: 11400000, guid: 8eac2e259a793604f953a4c36c4fd1aa, type: 2}
+  - {fileID: 11400000, guid: c22ca3ea82655c2498388328c0187cb1, type: 2}
+  - {fileID: 11400000, guid: 71ba08c5d91594e4798e5c26dcddc8e7, type: 2}
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}
