@@ -31,6 +31,26 @@ MonoBehaviour:
     m_Key: GrilledFishCraftQuestName
     m_Metadata:
       m_Items: []
+  - m_Id: 2181741992345600
+    m_Key: HomeBuildQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2184042215768064
+    m_Key: BurryPlantingQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2184543493816320
+    m_Key: MakeloveQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2185805161431040
+    m_Key: FishingQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2186816424902656
+    m_Key: LiveQuestName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

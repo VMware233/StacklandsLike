@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 5d90d66e889a27d4ba7dae7de782c495
-  m_SerializeEntries:
-  - m_GUID: c1c3ad50580061d48bb30be700da7d30
-    m_Address: VMFrameworkEditor_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6fe6687e942a13b48b06a4c87273807f, type: 2}
   m_SchemaSet:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: TreeDestructionRecipe
+  m_Name: FullIronSpearCardRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: tree_destruction_recipe
+      Data: full_iron_spear_card_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -56,10 +56,10 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: TreeDestructionRecipeName
+      Data: FullIronSpearCardRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Tree Destruction
+      Data: Full Iron Spear Card
     - Name: 
       Entry: 8
       Data: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: TreeDestructionRecipeDescription
+      Data: FullIronSpearCardRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -161,47 +161,32 @@ MonoBehaviour:
       Data: 
     - Name: autoCheck
       Entry: 5
-      Data: false
+      Data: true
     - Name: priority
       Entry: 3
       Data: 0
     - Name: totalTicks
       Entry: 3
-      Data: 120
+      Data: 180
     - Name: consumptionConfigs
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: tree_card
+      Data: iron_ingot_card
     - Name: count
       Entry: 3
-      Data: 1
+      Data: 4
     - Name: isConsumable
       Entry: 5
       Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
-    - Name: itemID
-      Entry: 1
-      Data: person_card
-    - Name: count
-      Entry: 3
-      Data: 1
-    - Name: isConsumable
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -213,28 +198,28 @@ MonoBehaviour:
       Data: 
     - Name: generationConfigs
       Entry: 7
-      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 8|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 9|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 10|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: sapling_card
+      Data: full_iron_spear_card
     - Name: count
       Entry: 7
-      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+      Data: 11|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

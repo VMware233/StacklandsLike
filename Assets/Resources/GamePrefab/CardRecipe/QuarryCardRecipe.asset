@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: TreeDestructionRecipe
+  m_Name: QuarryCardRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: tree_destruction_recipe
+      Data: quarry_card_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -56,10 +56,10 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: TreeDestructionRecipeName
+      Data: QuarryCardRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Tree Destruction
+      Data: Quarry Card
     - Name: 
       Entry: 8
       Data: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: TreeDestructionRecipeDescription
+      Data: QuarryCardRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -161,13 +161,13 @@ MonoBehaviour:
       Data: 
     - Name: autoCheck
       Entry: 5
-      Data: false
+      Data: true
     - Name: priority
       Entry: 3
       Data: 0
     - Name: totalTicks
       Entry: 3
-      Data: 120
+      Data: 300
     - Name: consumptionConfigs
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
@@ -180,10 +180,10 @@ MonoBehaviour:
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: tree_card
+      Data: rock_card
     - Name: count
       Entry: 3
-      Data: 1
+      Data: 8
     - Name: isConsumable
       Entry: 5
       Data: true
@@ -195,13 +195,13 @@ MonoBehaviour:
       Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: person_card
+      Data: log_card
     - Name: count
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: isConsumable
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -227,14 +227,14 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: sapling_card
+      Data: quarry_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
