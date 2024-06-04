@@ -87,6 +87,30 @@ MonoBehaviour:
     m_Key: CookedHumanFleshCraftRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 3191471841869824
+    m_Key: StoneSpearCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3194711442587648
+    m_Key: IronSpearCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196354091417600
+    m_Key: FullIronSpearCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196775660912640
+    m_Key: GoldenSpearCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3234058745282560
+    m_Key: LumbermillCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3234894510686208
+    m_Key: QuarryCardRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

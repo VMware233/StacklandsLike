@@ -34,6 +34,26 @@ MonoBehaviour:
     m_Localized: Grill a Fish
     m_Metadata:
       m_Items: []
+  - m_Id: 2181741992345600
+    m_Localized: Home Build
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2184042215768064
+    m_Localized: Burry Planting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2184543493816320
+    m_Localized: Makelove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2185805161431040
+    m_Localized: Fishing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2186816424902656
+    m_Localized: Live
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

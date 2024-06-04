@@ -90,6 +90,30 @@ MonoBehaviour:
     m_Localized: Cooked Human Flesh Craft
     m_Metadata:
       m_Items: []
+  - m_Id: 3191471841869824
+    m_Localized: Stone Spear Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3194711442587648
+    m_Localized: Iron Spear Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196354091417600
+    m_Localized: Full Iron Spear Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3196775660912640
+    m_Localized: Golden Spear Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3234058745282560
+    m_Localized: Lumbermill Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3234894510686208
+    m_Localized: Quarry Card
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

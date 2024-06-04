@@ -221,7 +221,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 11|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
@@ -284,6 +284,48 @@ MonoBehaviour:
     - Name: count
       Entry: 7
       Data: 18|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ratio
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 21|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: gold_ore_card
+    - Name: count
+      Entry: 7
+      Data: 22|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
