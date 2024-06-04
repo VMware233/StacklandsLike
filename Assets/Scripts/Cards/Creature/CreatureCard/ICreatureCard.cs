@@ -6,8 +6,8 @@ namespace StackLandsLike.Cards
         
         public int maxHealth { get; }
         
-        public int attack { get; }
+        public int attack { get; set; }
         
-        public int defense { get; }
+        public int defense { get; set; }
     }
 }

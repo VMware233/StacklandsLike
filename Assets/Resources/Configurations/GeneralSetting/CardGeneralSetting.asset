@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 11
+      Data: 13
     - Name: 
       Entry: 7
       Data: 1|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
@@ -238,6 +238,44 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 23|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: gold_spear_card
+    - Name: count
+      Entry: 7
+      Data: 24|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: iron_spear_card
+    - Name: count
+      Entry: 7
+      Data: 26|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -280,5 +318,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8eac2e259a793604f953a4c36c4fd1aa, type: 2}
   - {fileID: 11400000, guid: c22ca3ea82655c2498388328c0187cb1, type: 2}
   - {fileID: 11400000, guid: 71ba08c5d91594e4798e5c26dcddc8e7, type: 2}
+  - {fileID: 11400000, guid: fcc3d5488f40ea44987c089bf2918b06, type: 2}
+  - {fileID: 11400000, guid: f163116a316bfd647bf6aa1535834063, type: 2}
+  - {fileID: 11400000, guid: fbadf6263e3e43c429477f94702d1947, type: 2}
   <defaultGameType>k__BackingField: default_card_type
   cardGroupPrefab: {fileID: 5874285788674166637, guid: 2dc9c09f9a242ba429768b7f11d0e27b, type: 3}

@@ -1,6 +1,6 @@
 namespace StackLandsLike.Cards
 {
-    public interface IPersonCard : ICreatureCard
+    public interface IPersonCard : ICreatureCard, INutritionRequiredCard, IEquippableCard
     {
         
     }

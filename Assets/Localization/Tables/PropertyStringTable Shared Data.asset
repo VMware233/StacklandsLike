@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: CardCountPropertyName
     m_Metadata:
       m_Items: []
+  - m_Id: 2513399429836800
+    m_Key: CreatureCardAttackPropertyName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2513409634578432
+    m_Key: CreatureCardDefensePropertyName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

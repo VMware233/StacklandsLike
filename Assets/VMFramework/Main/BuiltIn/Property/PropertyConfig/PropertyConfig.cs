@@ -9,14 +9,14 @@ namespace VMFramework.Property
     {
         protected override string idSuffix => "property";
 
-        [LabelText("目标类型"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [ShowInInspector]
-        public virtual Type targetType => typeof(object);
+        public abstract Type targetType { get; }
 
-        [LabelText("是否显示提示框"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         public bool displayTooltip = true;
 
-        [LabelText("图标"), TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [PreviewField(50, ObjectFieldAlignment.Center)]
         [Required]
         public Sprite icon;
@@ -29,7 +29,7 @@ namespace VMFramework.Property
 
             if (icon == null)
             {
-                Debug.LogWarning("缺失图标");
+                Debug.LogWarning($"{this} icon is not set.");
             }
         }
     }

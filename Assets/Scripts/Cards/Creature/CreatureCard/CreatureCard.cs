@@ -8,6 +8,8 @@ namespace StackLandsLike.Cards
     {
         protected CreatureCardConfig creatureCardConfig => (CreatureCardConfig)gamePrefab;
 
+        public override int maxStackCount => 1;
+
         [ShowInInspector]
         public BaseIntProperty health;
         
@@ -15,7 +17,7 @@ namespace StackLandsLike.Cards
         public BaseBoostIntProperty maxHealth;
         
         [ShowInInspector]
-        public BaseBoostIntProperty attack;
+        public BaseIntProperty attack;
         
         [ShowInInspector]
         public BaseIntProperty defense;
@@ -36,9 +38,17 @@ namespace StackLandsLike.Cards
 
         int ICreatureCard.maxHealth => maxHealth;
 
-        int ICreatureCard.attack => attack;
+        int ICreatureCard.attack
+        {
+            get => attack;
+            set => attack.value = value;
+        }
 
-        int ICreatureCard.defense => defense;
+        int ICreatureCard.defense
+        {
+            get => defense;
+            set => defense.value = value;
+        }
 
         #endregion
     }

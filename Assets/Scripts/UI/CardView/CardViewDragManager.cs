@@ -114,6 +114,13 @@ namespace StackLandsLike.UI
                     continue;
                 }
 
+                if (cardView.card is IEquipmentCard equipmentCard &&
+                    selectedCardView.card is IEquippableCard equippableCard)
+                {
+                    equippableCard.Equip(equipmentCard);
+                    break;
+                }
+
                 if (cardView.card.group != selectedCardView.card.group)
                 {
                     cardView.card.MoveToGroup(selectedCardView.card.group);

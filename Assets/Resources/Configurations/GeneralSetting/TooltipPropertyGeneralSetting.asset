@@ -31,7 +31,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 2|VMFramework.Property.TooltipPropertyConfig, Assembly-CSharp
@@ -61,7 +61,52 @@ MonoBehaviour:
       Entry: 1
       Data: card_count_property
     - Name: propertyConfig
+      Entry: 7
+      Data: 6|StackLandsLike.GameCore.CardCountProperty, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: card_count_property
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 8|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: PropertyStringTable
+    - Name: key
+      Entry: 1
+      Data: CardCountPropertyName
+    - Name: defaultValue
+      Entry: 1
+      Data: Card Count
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: displayTooltip
+      Entry: 5
+      Data: true
+    - Name: icon
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: isStatic
       Entry: 5
@@ -80,10 +125,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|VMFramework.Property.TooltipPropertyConfig, Assembly-CSharp
+      Data: 9|VMFramework.Property.TooltipPropertyConfig, Assembly-CSharp
     - Name: _instanceType
       Entry: 7
-      Data: 7|System.RuntimeType, mscorlib
+      Data: 10|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: StackLandsLike.Cards.FoodCard, Assembly-CSharp
@@ -92,20 +137,129 @@ MonoBehaviour:
       Data: 
     - Name: tooltipPropertyConfigs
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[VMFramework.Property.InstanceTooltipPropertyConfig,
+      Data: 11|System.Collections.Generic.List`1[[VMFramework.Property.InstanceTooltipPropertyConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 9|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
+      Data: 12|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
     - Name: filterType
       Entry: 9
-      Data: 7
+      Data: 10
     - Name: propertyID
       Entry: 1
       Data: card_nutrition_property
+    - Name: propertyConfig
+      Entry: 7
+      Data: 13|StackLandsLike.GameCore.CardNutritionProperty, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: card_nutrition_property
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 15|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: PropertyStringTable
+    - Name: key
+      Entry: 1
+      Data: CardNutritionPropertyName
+    - Name: defaultValue
+      Entry: 1
+      Data: Card Nutrition
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: displayTooltip
+      Entry: 5
+      Data: true
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: isStatic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|VMFramework.Property.TooltipPropertyConfig, Assembly-CSharp
+    - Name: _instanceType
+      Entry: 7
+      Data: 17|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: StackLandsLike.Cards.CreatureCard, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: tooltipPropertyConfigs
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[VMFramework.Property.InstanceTooltipPropertyConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 19|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
+    - Name: filterType
+      Entry: 9
+      Data: 17
+    - Name: propertyID
+      Entry: 1
+      Data: creature_card_defense_property
+    - Name: propertyConfig
+      Entry: 6
+      Data: 
+    - Name: isStatic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
+    - Name: filterType
+      Entry: 9
+      Data: 17
+    - Name: propertyID
+      Entry: 1
+      Data: creature_card_attack_property
     - Name: propertyConfig
       Entry: 6
       Data: 

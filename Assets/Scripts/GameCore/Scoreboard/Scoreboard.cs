@@ -13,7 +13,9 @@ namespace StackLandsLike.GameCore
     {
         [ShowInInspector]
         private static readonly HashSet<string> treeChoppingRecipesID = new();
-        
+
+        #region Properties
+
         [ShowInInspector]
         public static int treeChoppingCount { get; private set; }
         
@@ -25,6 +27,8 @@ namespace StackLandsLike.GameCore
         
         [ShowInInspector]
         public static int nutritionRequiredCount { get; private set; }
+
+        #endregion
         
         public static event Action OnScoreboardUpdated;
         

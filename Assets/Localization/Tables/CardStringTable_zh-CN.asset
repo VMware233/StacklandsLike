@@ -166,6 +166,18 @@ MonoBehaviour:
     m_Localized: "\u8718\u86DB"
     m_Metadata:
       m_Items: []
+  - m_Id: 3286623964999680
+    m_Localized: Stone Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287020045709312
+    m_Localized: Iron Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287062240407552
+    m_Localized: Gold Spear
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

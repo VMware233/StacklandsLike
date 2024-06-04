@@ -27,5 +27,7 @@ MonoBehaviour:
   initialGamePrefabWrappers:
   - {fileID: 11400000, guid: 819e78e141100c94d9f6e90b93b925a9, type: 2}
   - {fileID: 11400000, guid: 69b50d1c5bee2404c8ba80f84890ad6e, type: 2}
+  - {fileID: 11400000, guid: f2b32c9d66d44b34c8f6b81f7208e6fa, type: 2}
+  - {fileID: 11400000, guid: d907a592302645146b528b0437910136, type: 2}
   <defaultGameType>k__BackingField: 
   tooltipID: 

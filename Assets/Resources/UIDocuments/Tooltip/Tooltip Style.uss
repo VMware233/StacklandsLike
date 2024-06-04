@@ -14,3 +14,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+#PropertyContainer Label {
+    font-size: 35px;
+}

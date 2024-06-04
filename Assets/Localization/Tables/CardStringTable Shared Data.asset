@@ -163,6 +163,18 @@ MonoBehaviour:
     m_Key: SpiderCardName
     m_Metadata:
       m_Items: []
+  - m_Id: 3286623964999680
+    m_Key: StoneSpearCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287020045709312
+    m_Key: IronSpearCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287062240407552
+    m_Key: GoldSpearCardName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -8,6 +8,7 @@ using StackLandsLike.GameCore;
 using UnityEngine;
 using VMFramework.Core;
 using VMFramework.Core.Pool;
+using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
 
 namespace StackLandsLike.UI
@@ -43,6 +44,14 @@ namespace StackLandsLike.UI
             CardGroupManager.OnCardGroupDestroyed += cardGroup =>
             {
                 foreach (var card in cardGroup.cards)
+                {
+                    ReturnCardView(card);
+                }
+            };
+
+            IGameItem.OnGameItemDestroyed += gameItem =>
+            {
+                if (gameItem is ICard card)
                 {
                     ReturnCardView(card);
                 }
@@ -97,6 +106,11 @@ namespace StackLandsLike.UI
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ReturnCardView(ICard card)
         {
+            if (card == null)
+            {
+                return;
+            }
+            
             if (allCardViews.Remove(card, out var cardView))
             {
                 cardView.SetCard(null);
