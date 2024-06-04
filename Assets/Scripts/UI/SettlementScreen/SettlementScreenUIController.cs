@@ -17,6 +17,12 @@ namespace StackLandsLike.UI
         private Label settlementLabel;
         
         [ShowInInspector]
+        private VisualElement victoryBackground;
+        
+        [ShowInInspector]
+        private VisualElement defeatBackground;
+        
+        [ShowInInspector]
         private Button restartGameButton;
         
         [ShowInInspector]
@@ -28,6 +34,10 @@ namespace StackLandsLike.UI
 
             titleLabel = rootVisualElement.Q<Label>(settlementScreenUIPreset.titleLabelName);
             settlementLabel = rootVisualElement.Q<Label>(settlementScreenUIPreset.settlementLabelName);
+
+            victoryBackground = rootVisualElement.Q(settlementScreenUIPreset.victoryBackgroundName);
+            defeatBackground = rootVisualElement.Q(settlementScreenUIPreset.defeatBackgroundName);
+            
             restartGameButton = rootVisualElement.Q<Button>(settlementScreenUIPreset.restartGameButtonName);
             exitGameButton = rootVisualElement.Q<Button>(settlementScreenUIPreset.exitGameButtonName);
             
@@ -37,10 +47,14 @@ namespace StackLandsLike.UI
             if (GameStateManager.isVictory)
             {
                 titleLabel.text = GameSetting.settlementScreenGeneralSetting.victoryTitle;
+                victoryBackground.style.display = DisplayStyle.Flex;
+                defeatBackground.style.display = DisplayStyle.None;
             }
             else
             {
                 titleLabel.text = GameSetting.settlementScreenGeneralSetting.defeatTitle;
+                defeatBackground.style.display = DisplayStyle.Flex;
+                victoryBackground.style.display = DisplayStyle.None;
             }
         }
 

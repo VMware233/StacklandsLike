@@ -68,7 +68,9 @@ namespace StackLandsLike.Cards
                 }
             }
 
-            Debug.LogError($"You are out of nutrition!");
+            Debug.LogWarning($"You are out of nutrition!");
+            
+            GameStateManager.EnterSettlement(false);
         }
     }
 }

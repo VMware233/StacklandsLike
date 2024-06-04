@@ -1,0 +1,13 @@
+Button {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: resource('Images/UI/Settlement/ButtonBackground');
+    width: 175px;
+    height: 74px;
+    font-size: 30px;
+    -unity-text-align: middle-center;
+    color: rgb(90, 54, 7);
+}

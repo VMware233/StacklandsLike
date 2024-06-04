@@ -103,6 +103,12 @@ MonoBehaviour:
     - Name: titleLabelName
       Entry: 1
       Data: Title
+    - Name: victoryBackgroundName
+      Entry: 1
+      Data: VictoryBackground
+    - Name: defeatBackgroundName
+      Entry: 1
+      Data: DefeatBackground
     - Name: settlementLabelName
       Entry: 1
       Data: Settlement

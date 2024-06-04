@@ -15,6 +15,12 @@ namespace StackLandsLike.UI
 
         [VisualElementName(typeof(Label))]
         public string titleLabelName;
+
+        [VisualElementName]
+        public string victoryBackgroundName;
+        
+        [VisualElementName]
+        public string defeatBackgroundName;
         
         [VisualElementName(typeof(Label))]
         public string settlementLabelName;
