@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: CreatureCardDefensePropertyName
     m_Metadata:
       m_Items: []
+  - m_Id: 2558957385265152
+    m_Key: CreatureCardHealthPropertyName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

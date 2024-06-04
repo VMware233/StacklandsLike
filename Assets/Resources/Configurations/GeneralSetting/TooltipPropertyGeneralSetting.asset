@@ -232,7 +232,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 19|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
@@ -241,7 +241,7 @@ MonoBehaviour:
       Data: 17
     - Name: propertyID
       Entry: 1
-      Data: creature_card_defense_property
+      Data: creature_card_health_property
     - Name: propertyConfig
       Entry: 6
       Data: 
@@ -259,9 +259,117 @@ MonoBehaviour:
       Data: 17
     - Name: propertyID
       Entry: 1
+      Data: creature_card_defense_property
+    - Name: propertyConfig
+      Entry: 7
+      Data: 21|StackLandsLike.GameCore.CreatureCardDefenseProperty, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: creature_card_defense_property
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 22|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 23|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: PropertyStringTable
+    - Name: key
+      Entry: 1
+      Data: CreatureCardDefensePropertyName
+    - Name: defaultValue
+      Entry: 1
+      Data: Creature Card Defense
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: displayTooltip
+      Entry: 5
+      Data: true
+    - Name: icon
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: isStatic
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 24|VMFramework.Property.InstanceTooltipPropertyConfig, Assembly-CSharp
+    - Name: filterType
+      Entry: 9
+      Data: 17
+    - Name: propertyID
+      Entry: 1
       Data: creature_card_attack_property
     - Name: propertyConfig
+      Entry: 7
+      Data: 25|StackLandsLike.GameCore.CreatureCardAttackProperty, Assembly-CSharp
+    - Name: _id
+      Entry: 1
+      Data: creature_card_attack_property
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: _initialGameTypesID
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 27|VMFramework.Localization.LocalizedStringReference, Assembly-CSharp
+    - Name: _tableName
+      Entry: 1
+      Data: PropertyStringTable
+    - Name: key
+      Entry: 1
+      Data: CreatureCardAttackPropertyName
+    - Name: defaultValue
+      Entry: 1
+      Data: Creature Card Attack
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: displayTooltip
+      Entry: 5
+      Data: true
+    - Name: icon
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: isStatic
       Entry: 5
