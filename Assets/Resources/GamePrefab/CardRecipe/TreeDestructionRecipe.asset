@@ -250,6 +250,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: craftCompleteAudioID
+      Entry: 6
+      Data: 
+    - Name: craftLoopAudioID
+      Entry: 1
+      Data: logging_audio
     - Name: 
       Entry: 8
       Data: 

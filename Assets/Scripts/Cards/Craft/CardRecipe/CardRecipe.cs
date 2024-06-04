@@ -33,6 +33,10 @@ namespace StackLandsLike.Cards
         [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
         [GamePrefabID(typeof(AudioPreset))]
         public string craftCompleteAudioID;
+        
+        [TabGroup(TAB_GROUP_NAME, BASIC_CATEGORY)]
+        [GamePrefabID(typeof(AudioPreset))]
+        public string craftLoopAudioID;
 
         public override void CheckSettings()
         {
@@ -75,6 +79,8 @@ namespace StackLandsLike.Cards
         int ICardRecipe.totalTicks => totalTicks;
 
         string ICardRecipe.craftCompleteAudioID => craftCompleteAudioID;
+
+        string ICardRecipe.craftLoopAudioID => craftLoopAudioID;
 
         IEnumerable<CardConsumptionConfig> ICardRecipe.consumptionConfigs => consumptionConfigs;
         
