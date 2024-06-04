@@ -17,5 +17,17 @@ namespace StackLandsLike.UI
         [TabGroup(TAB_GROUP_NAME, UI_TOOLKIT_PANEL_CATEGORY)]
         [VisualElementName(typeof(Button))]
         public string startGameButtonName;
+        
+        [TabGroup(TAB_GROUP_NAME, UI_TOOLKIT_PANEL_CATEGORY)]
+        [VisualElementName(typeof(Button))]
+        public string quitGameButtonName;
+
+        [TabGroup(TAB_GROUP_NAME, UI_TOOLKIT_PANEL_CATEGORY)]
+        [VisualElementName(typeof(Button))]
+        public string producersButtonName;
+        
+        [TabGroup(TAB_GROUP_NAME, UI_TOOLKIT_PANEL_CATEGORY)]
+        [VisualElementName]
+        public string producersContainerName;
     }
 }

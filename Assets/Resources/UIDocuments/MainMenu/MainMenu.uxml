@@ -1,6 +1,21 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UIDocuments/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=1bade85184325f24693f43395cb3de90&amp;type=3#MainMenuStyle" />
-    <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
-        <engine:Button text="开始游戏" name="StartGameButton" style="height: 111px; width: 287px; right: 109px; bottom: 73px; position: absolute;" />
+    <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-image: resource(&apos;Images/UI/MainMenu/Background&apos;);">
+        <engine:VisualElement style="flex-grow: 1; left: 14px; bottom: 52px; position: absolute; width: 640px; height: 591px; background-image: resource(&apos;Images/UI/MainMenu/BoxBackground&apos;); align-items: center; justify-content: space-around; padding-top: 80px; padding-bottom: 50px;">
+            <engine:Button text="     开始游戏" name="StartGameButton" style="width: 428px; height: 120px; background-image: resource(&apos;Images/UI/MainMenu/StartButton&apos;);" />
+            <engine:Button text="     退出游戏" name="QuitGameButton" style="width: 428px; height: 125px; background-image: resource(&apos;Images/UI/MainMenu/ExitButton&apos;);" />
+            <engine:Button text="     制作人" name="ProducersButton" style="width: 428px; height: 119px; background-image: resource(&apos;Images/UI/MainMenu/Producers&apos;);" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Producers" style="flex-grow: 1; position: absolute; top: 146px; left: 656px; right: 68px; bottom: 29px; background-image: resource(&apos;Images/UI/MainMenu/BoxBackground&apos;);">
+            <engine:Label text="制作人员:" style="left: 165px; top: 103px; position: absolute; font-size: 60px;" />
+            <engine:VisualElement style="flex-grow: 1; position: absolute; left: 212px; top: 234px; height: 524px; justify-content: space-between;">
+                <engine:Label text="索子哥 ---------------- 队长/主美" />
+                <engine:Label text="稠稀饭 ---------------- 2d美术" />
+                <engine:Label text="魏桑 ------------------ 3d模型" />
+                <engine:Label text="VM ------------------- 程序" />
+                <engine:Label text="东东 ------------------ 程序" />
+                <engine:Label text="落英 ------------------ 策划" />
+            </engine:VisualElement>
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

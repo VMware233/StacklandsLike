@@ -103,6 +103,15 @@ MonoBehaviour:
     - Name: startGameButtonName
       Entry: 1
       Data: StartGameButton
+    - Name: quitGameButtonName
+      Entry: 1
+      Data: QuitGameButton
+    - Name: producersButtonName
+      Entry: 1
+      Data: ProducersButton
+    - Name: producersContainerName
+      Entry: 1
+      Data: Producers
     - Name: 
       Entry: 8
       Data: 
