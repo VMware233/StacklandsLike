@@ -139,6 +139,7 @@ MonoBehaviour:
     m_Key: LumbermillCardName
     m_Metadata:
       m_Items: []
+<<<<<<< Updated upstream
   - m_Id: 3264589734195200
     m_Key: StoneGolemCardName
     m_Metadata:
@@ -207,6 +208,32 @@ MonoBehaviour:
     m_Key: PickaxeCardName
     m_Metadata:
       m_Items: []
+=======
+  - m_Id: 2930504126255104
+    m_Key: PigCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3072447460233216
+    m_Key: SpiderName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3073767143460864
+    m_Key: StoneManCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3073806607667200
+    m_Key: BearCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3074947596767232
+    m_Key: TreeManCardName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3086954840543232
+    m_Key: DragonCardName
+    m_Metadata:
+      m_Items: []
+>>>>>>> Stashed changes
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

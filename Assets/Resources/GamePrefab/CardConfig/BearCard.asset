@@ -24,7 +24,11 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
+<<<<<<< Updated upstream
       Data: 0|StackLandsLike.Cards.MonsterCardConfig, Assembly-CSharp
+=======
+      Data: 0|StackLandsLike.Cards.CreatureCardConfig, Assembly-CSharp
+>>>>>>> Stashed changes
     - Name: _id
       Entry: 1
       Data: bear_card
@@ -196,6 +200,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+<<<<<<< Updated upstream
     - Name: dropCardConfigs
       Entry: 7
       Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
@@ -216,6 +221,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+=======
+>>>>>>> Stashed changes
     - Name: 
       Entry: 8
       Data: 
