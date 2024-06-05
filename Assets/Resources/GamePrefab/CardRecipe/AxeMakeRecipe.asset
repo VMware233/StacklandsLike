@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 1
-      Data: default_card_recipe_type
+      Data: equipment_card_recipe_type
     - Name: 
       Entry: 1
       Data: recipe_display_type
@@ -230,7 +230,7 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: pickaxe_card
+      Data: axe_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
