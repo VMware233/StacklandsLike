@@ -30,7 +30,7 @@ namespace VMFramework.ResourcesManagement
         }
 
         [Button("生成音效")]
-        public static AudioSource Spawn([GamePrefabID(typeof(AudioPreset))] string id, Vector3 pos,
+        public static AudioSource Spawn([GamePrefabID(typeof(AudioPreset))] string id, Vector3 pos = default,
             Transform parent = null)
         {
             var preset = GamePrefabManager.GetGamePrefabStrictly<AudioPreset>(id);
