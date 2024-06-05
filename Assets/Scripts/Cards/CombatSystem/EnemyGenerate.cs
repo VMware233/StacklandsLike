@@ -26,32 +26,26 @@ namespace StackLandsLike.GameCore
            // ulong day = LogicTickManager.tick;
             switch (day)
             {         
-                case 2://2蜘蛛
-                    CreateMonster(1,"spider_card");
-                    break;
-                case 3:
+                case 6:
                     CreateMonster(1, "boar_card");
                     CreateMonster(1, "spider_card");
                     break;
                 case 12:
                     CreateMonster(1, "boar_card");
-                    CreateMonster(4, "spider_card");
+                    CreateMonster(1, "spider_card");
                     break;
                 case 20:
-                    CreateMonster(3, "boar_card");
+                    CreateMonster(1, "stone_golem_card");
                     break;
                 case 24:
                     CreateMonster(2, "boar_card");
                     CreateMonster(1, "bear_card");
                     break;
-                case 26:
-                    CreateMonster(2, "bear_card");
-                    break;
                 case 28:
-                    CreateMonster(3, "bear_card");
+                    CreateMonster(1, "treeent_card");
                     break;
                 case 30:
-                    CreateMonster(4, "bear_card");
+                    CreateMonster(1, "dragon_card");
                     break;
                 case 31:
                     GameStateManager.EnterSettlement(true);
