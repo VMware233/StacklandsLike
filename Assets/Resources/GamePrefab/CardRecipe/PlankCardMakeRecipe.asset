@@ -158,7 +158,7 @@ MonoBehaviour:
       Data: 
     - Name: autoCheck
       Entry: 5
-      Data: true
+      Data: false
     - Name: priority
       Entry: 3
       Data: 0
