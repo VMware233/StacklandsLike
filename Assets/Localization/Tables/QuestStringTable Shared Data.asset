@@ -51,6 +51,10 @@ MonoBehaviour:
     m_Key: LiveQuestName
     m_Metadata:
       m_Items: []
+  - m_Id: 2426384420044800
+    m_Key: RockTakeQuestName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

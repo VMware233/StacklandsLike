@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 11
+      Data: 13
     - Name: 
       Entry: 7
       Data: 1|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
@@ -78,7 +78,7 @@ MonoBehaviour:
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
-      Data: 15
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -231,6 +231,44 @@ MonoBehaviour:
     - Name: value
       Entry: 3
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: rock_card
+    - Name: count
+      Entry: 7
+      Data: 24|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: rock_card
+    - Name: count
+      Entry: 7
+      Data: 26|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
