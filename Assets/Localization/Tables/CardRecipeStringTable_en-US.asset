@@ -58,10 +58,6 @@ MonoBehaviour:
     m_Localized: Grilled Fish Craft
     m_Metadata:
       m_Items: []
-  - m_Id: 1266790683488256
-    m_Localized: Plank Craft
-    m_Metadata:
-      m_Items: []
   - m_Id: 1267329823518720
     m_Localized: House Craft
     m_Metadata:

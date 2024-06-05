@@ -55,10 +55,6 @@ MonoBehaviour:
     m_Key: GrilledFishCraftRecipeName
     m_Metadata:
       m_Items: []
-  - m_Id: 1266790683488256
-    m_Key: PlankCraftRecipeName
-    m_Metadata:
-      m_Items: []
   - m_Id: 1267329823518720
     m_Key: HouseCraftRecipeName
     m_Metadata:
