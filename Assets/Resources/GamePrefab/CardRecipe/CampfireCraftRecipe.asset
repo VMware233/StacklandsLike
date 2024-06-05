@@ -186,7 +186,7 @@ MonoBehaviour:
       Data: log_card
     - Name: count
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: isConsumable
       Entry: 5
       Data: true
@@ -201,7 +201,7 @@ MonoBehaviour:
       Data: stone_card
     - Name: count
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: isConsumable
       Entry: 5
       Data: true

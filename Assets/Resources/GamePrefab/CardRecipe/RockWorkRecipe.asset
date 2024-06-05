@@ -263,7 +263,7 @@ MonoBehaviour:
       Data: 
     - Name: ratio
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -325,7 +325,7 @@ MonoBehaviour:
       Data: 21|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: rock_card
+      Data: iron_ore_card
     - Name: count
       Entry: 7
       Data: 22|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,

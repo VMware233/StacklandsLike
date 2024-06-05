@@ -167,7 +167,7 @@ MonoBehaviour:
       Data: true
     - Name: priority
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: totalTicks
       Entry: 3
       Data: 240
