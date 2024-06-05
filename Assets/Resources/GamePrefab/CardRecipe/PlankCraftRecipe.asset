@@ -186,7 +186,7 @@ MonoBehaviour:
       Data: log_card
     - Name: count
       Entry: 3
-      Data: 2
+      Data: 999
     - Name: isConsumable
       Entry: 5
       Data: true
