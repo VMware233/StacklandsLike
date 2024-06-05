@@ -230,7 +230,7 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: pickaxe_card
+      Data: axe_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
