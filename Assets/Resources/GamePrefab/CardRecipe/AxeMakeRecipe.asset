@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 1
-      Data: default_card_recipe_type
+      Data: equipment_card_recipe_type
     - Name: 
       Entry: 1
       Data: recipe_display_type
