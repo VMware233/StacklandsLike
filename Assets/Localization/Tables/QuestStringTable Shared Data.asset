@@ -55,6 +55,22 @@ MonoBehaviour:
     m_Key: RockTakeQuestName
     m_Metadata:
       m_Items: []
+  - m_Id: 2460099254812672
+    m_Key: MakeWeaponQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2460624062906368
+    m_Key: MakeArmourName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2464757310423040
+    m_Key: QuarryCardQuestName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2465154800418816
+    m_Key: AQuestName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

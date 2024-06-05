@@ -58,6 +58,22 @@ MonoBehaviour:
     m_Localized: Rock Take
     m_Metadata:
       m_Items: []
+  - m_Id: 2460099254812672
+    m_Localized: Make Weapon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2460624062906368
+    m_Localized: Make Armour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2464757310423040
+    m_Localized: Quarry Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2465154800418816
+    m_Localized: A
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
