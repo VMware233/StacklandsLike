@@ -21,7 +21,7 @@ namespace StackLandsLike.Cards
         private static readonly Dictionary<CardGroup, CardCraftInfo> craftingRecipes = new();
 
         [ShowInInspector]
-        private static readonly Dictionary<ICardRecipe, AudioSource> audioSources = new();
+        private static readonly Dictionary<CardGroup, AudioSource> audioSources = new();
         
         private static readonly List<(CardGroup cardGroup, CardCraftInfo info)> craftDone = new();
 
@@ -45,7 +45,7 @@ namespace StackLandsLike.Cards
                 {
                     var audioSource = AudioSpawner.Spawn(recipe.craftLoopAudioID, Vector3.zero);
                     audioSource.loop = true;
-                    audioSources.Add(recipe, audioSource);
+                    audioSources.Add(cardGroup, audioSource);
                 }
             };
 
@@ -53,7 +53,7 @@ namespace StackLandsLike.Cards
             {
                 if (recipe.craftLoopAudioID.IsNullOrEmpty() == false)
                 {
-                    if (audioSources.Remove(recipe, out var audioSource))
+                    if (audioSources.Remove(cardGroup, out var audioSource))
                     {
                         AudioSpawner.Return(audioSource);
                     }
@@ -62,7 +62,7 @@ namespace StackLandsLike.Cards
 
             OnRecipeCompleted += (cardGroup, recipe) =>
             {
-                if (audioSources.TryGetValue(recipe, out var audioSource))
+                if (audioSources.TryGetValue(cardGroup, out var audioSource))
                 {
                     AudioSpawner.Return(audioSource);
                 }
