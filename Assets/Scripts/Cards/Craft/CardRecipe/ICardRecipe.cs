@@ -12,6 +12,10 @@ namespace StackLandsLike.Cards
         
         int totalTicks { get; }
         
+        public string craftCompleteAudioID { get; }
+        
+        public string craftLoopAudioID { get; }
+        
         IEnumerable<CardConsumptionConfig> consumptionConfigs { get; }
         
         IEnumerable<CardGenerationConfig> generationConfigs { get; }

@@ -9,6 +9,7 @@ using VMFramework.Core;
 using VMFramework.GameEvents;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.Procedure;
+using VMFramework.ResourcesManagement;
 using VMFramework.Timers;
 
 namespace StackLandsLike.Cards
@@ -18,9 +19,16 @@ namespace StackLandsLike.Cards
     {
         [ShowInInspector]
         private static readonly Dictionary<CardGroup, CardCraftInfo> craftingRecipes = new();
+
+        [ShowInInspector]
+        private static readonly Dictionary<ICardRecipe, AudioSource> audioSources = new();
         
         private static readonly List<(CardGroup cardGroup, CardCraftInfo info)> craftDone = new();
 
+        public static event Action<CardGroup, ICardRecipe> OnRecipeStarted; 
+        
+        public static event Action<CardGroup, ICardRecipe> OnRecipeStopped;
+        
         public static event Action<CardGroup, ICardRecipe> OnRecipeCompleted; 
 
         protected override void OnBeforeInit()
@@ -30,6 +38,42 @@ namespace StackLandsLike.Cards
             LogicTickManager.OnTick += OnTick;
             CardGroupManager.OnCardGroupCreated += OnCardGroupCreated;
             CardGroupManager.OnCardGroupDestroyed += OnCardGroupDestroyed;
+
+            OnRecipeStarted += (cardGroup, recipe) =>
+            {
+                if (recipe.craftLoopAudioID.IsNullOrEmpty() == false)
+                {
+                    var audioSource = AudioSpawner.Spawn(recipe.craftLoopAudioID, Vector3.zero);
+                    audioSource.loop = true;
+                    audioSources.Add(recipe, audioSource);
+                }
+            };
+
+            OnRecipeStopped += (cardGroup, recipe) =>
+            {
+                if (recipe.craftLoopAudioID.IsNullOrEmpty() == false)
+                {
+                    if (audioSources.Remove(recipe, out var audioSource))
+                    {
+                        AudioSpawner.Return(audioSource);
+                    }
+                }
+            };
+
+            OnRecipeCompleted += (cardGroup, recipe) =>
+            {
+                if (audioSources.TryGetValue(recipe, out var audioSource))
+                {
+                    AudioSpawner.Return(audioSource);
+                }
+                
+                if (recipe.craftCompleteAudioID.IsNullOrEmpty())
+                {
+                    return;
+                }
+
+                AudioSpawner.Spawn(recipe.craftCompleteAudioID, Vector3.zero);
+            };
         }
 
         private void OnCardGroupCreated(CardGroup cardGroup)
@@ -210,15 +254,20 @@ namespace StackLandsLike.Cards
             
             var newCraftInfo = new CardCraftInfo(recipe);
             craftingRecipes.Add(cardGroup, newCraftInfo);
+
             EventManager.TriggerCardCompositionStarted(cardGroup, recipe.totalTicks);
+            
+            OnRecipeStarted?.Invoke(cardGroup, recipe);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StopCraft(CardGroup cardGroup)
         {
-            if (craftingRecipes.Remove(cardGroup))
+            if (craftingRecipes.Remove(cardGroup, out var recipeInfo))
             {
                 EventManager.TriggerStopComposition(cardGroup);//摧毁进度条
+                
+                OnRecipeStopped?.Invoke(cardGroup, recipeInfo.recipe);
             }
         }
 

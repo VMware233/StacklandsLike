@@ -1,4 +1,7 @@
 using Sirenix.OdinInspector;
+using UnityEngine;
+using VMFramework.Core;
+using VMFramework.ResourcesManagement;
 
 namespace StackLandsLike.Cards
 {
