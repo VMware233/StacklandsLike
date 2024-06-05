@@ -35,4 +35,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ef5b0c8ceb6eea42be4215e724aa6a1, type: 2}
   - {fileID: 11400000, guid: 1f076141496ac3e47ab732b3ad76bb2d, type: 2}
   - {fileID: 11400000, guid: 340d96b15ac6ad34aaa9dbfbf73f672a, type: 2}
+  - {fileID: 11400000, guid: 805801243426487499d13385b75b09c3, type: 2}
+  - {fileID: 11400000, guid: 63c5e74d4f67ccf42908c6a4356723c2, type: 2}
+  - {fileID: 11400000, guid: a56e57daffa4b2f46b110273f00392f5, type: 2}
+  - {fileID: 11400000, guid: 85a7d1e0d6ce7b947a75450845f5aa0d, type: 2}
   <defaultGameType>k__BackingField: 

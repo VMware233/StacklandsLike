@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: RockTakeQuest
+  m_Name: QuarryCardQuest
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes:
     - Name: gamePrefab
       Entry: 7
-      Data: 0|StackLandsLike.Quests.CardCraftQuestConfig, Assembly-CSharp
+      Data: 0|StackLandsLike.Quests.CardCollectionQuestConfig, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: rock_take_quest
+      Data: quarry_card_quest
     - Name: isActive
       Entry: 5
       Data: true
@@ -53,10 +53,10 @@ MonoBehaviour:
       Data: QuestStringTable
     - Name: key
       Entry: 1
-      Data: RockTakeQuestName
+      Data: QuarryCardQuestName
     - Name: defaultValue
       Entry: 1
-      Data: Rock Take
+      Data: Quarry Card
     - Name: 
       Entry: 8
       Data: 
@@ -110,7 +110,7 @@ MonoBehaviour:
       Data: QuestStringTable
     - Name: key
       Entry: 1
-      Data: RockTakeQuestDescription
+      Data: QuarryCardQuestDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -156,9 +156,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: recipeID
+    - Name: cardID
       Entry: 1
-      Data: rock_quarrying_recipe
+      Data: quarry_card
     - Name: 
       Entry: 8
       Data: 
