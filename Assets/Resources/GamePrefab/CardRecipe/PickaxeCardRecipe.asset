@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: GrilledFishCraftRecipe
+  m_Name: PickaxeCardRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: grilled_fish_craft_recipe
+      Data: pickaxe_card_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 1
-      Data: cooked_crad_recipe_type
+      Data: equipment_card_recipe_type
     - Name: 
       Entry: 1
       Data: recipe_display_type
@@ -59,10 +59,10 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeName
+      Data: PickaxeCardRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Grilled Fish Craft
+      Data: Pickaxe Card
     - Name: 
       Entry: 8
       Data: 
@@ -116,7 +116,7 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeDescription
+      Data: PickaxeCardRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -183,10 +183,10 @@ MonoBehaviour:
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: fish_card
+      Data: log_card
     - Name: count
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: isConsumable
       Entry: 5
       Data: true
@@ -198,13 +198,13 @@ MonoBehaviour:
       Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: campfire_card
+      Data: stone_card
     - Name: count
       Entry: 3
       Data: 1
     - Name: isConsumable
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -230,7 +230,7 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: grilled_fish_card
+      Data: pickaxe_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
