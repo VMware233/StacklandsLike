@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: MiningAudio
+  m_Name: PlantingAudio
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8300000, guid: 6de4b1e987c04074792cea27fc9c535b, type: 3}
+    - {fileID: 8300000, guid: aaf09c869b849c441976aca0aef980c2, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +27,7 @@ MonoBehaviour:
       Data: 0|VMFramework.ResourcesManagement.AudioPreset, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: mining_audio
+      Data: planting_audio
     - Name: isActive
       Entry: 5
       Data: true

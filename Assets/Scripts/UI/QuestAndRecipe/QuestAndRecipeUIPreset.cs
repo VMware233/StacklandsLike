@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.UIElements;
 using VMFramework.GameLogicArchitecture;
 using VMFramework.OdinExtensions;
+using VMFramework.ResourcesManagement;
 using VMFramework.UI;
 
 namespace StackLandsLike.UI
@@ -47,5 +48,11 @@ namespace StackLandsLike.UI
         
         [MinValue(0)]
         public float collapseTime = 0.5f;
+
+        [GamePrefabID(typeof(AudioPreset))]
+        public string foldAudioID;
+        
+        [GamePrefabID(typeof(AudioPreset))]
+        public string unfoldAudioID;
     }
 }

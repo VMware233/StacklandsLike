@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: MiningAudio
+  m_Name: UiFoldSmall
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8300000, guid: 6de4b1e987c04074792cea27fc9c535b, type: 3}
+    - {fileID: 8300000, guid: 02692ba5afbf226479dc61f659ee5f71, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +27,7 @@ MonoBehaviour:
       Data: 0|VMFramework.ResourcesManagement.AudioPreset, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: mining_audio
+      Data: ui_fold_small
     - Name: isActive
       Entry: 5
       Data: true
@@ -54,13 +54,13 @@ MonoBehaviour:
       Data: 1
     - Name: autoCheckStop
       Entry: 5
-      Data: false
+      Data: true
     - Name: enablePlayFromTime
       Entry: 5
-      Data: false
+      Data: true
     - Name: timeToPlay
       Entry: 4
-      Data: 0
+      Data: 0.1
     - Name: 
       Entry: 8
       Data: 
