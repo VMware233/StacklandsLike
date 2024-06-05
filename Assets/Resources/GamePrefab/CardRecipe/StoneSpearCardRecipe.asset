@@ -177,7 +177,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
@@ -186,7 +186,7 @@ MonoBehaviour:
       Data: log_card
     - Name: count
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: isConsumable
       Entry: 5
       Data: true
@@ -201,10 +201,25 @@ MonoBehaviour:
       Data: stone_card
     - Name: count
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: isConsumable
       Entry: 5
       Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: person_card
+    - Name: count
+      Entry: 3
+      Data: 1
+    - Name: isConsumable
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -216,24 +231,24 @@ MonoBehaviour:
       Data: 
     - Name: generationConfigs
       Entry: 7
-      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 10|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 11|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 12|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
       Data: stone_spear_card
     - Name: count
       Entry: 7
-      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+      Data: 13|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
