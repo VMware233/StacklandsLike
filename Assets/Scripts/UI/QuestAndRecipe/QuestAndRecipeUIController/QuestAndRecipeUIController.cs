@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 using VMFramework.DOTweenExtension;
+using VMFramework.ResourcesManagement;
 using VMFramework.UI;
 
 namespace StackLandsLike.UI
@@ -66,12 +67,16 @@ namespace StackLandsLike.UI
             {
                 wrapper.DOKill();
                 wrapper.DOLeft(initialLeftPosition, questAndRecipeUIPreset.collapseTime);
+
+                AudioSpawner.Spawn(questAndRecipeUIPreset.unfoldAudioID, Vector3.zero);
             }
             else
             {
                 var targetLeft = initialLeftPosition - wrapper.resolvedStyle.width;
                 wrapper.DOKill();
                 wrapper.DOLeft(targetLeft, questAndRecipeUIPreset.collapseTime).SetEase(Ease.OutBounce);
+                
+                AudioSpawner.Spawn(questAndRecipeUIPreset.foldAudioID, Vector3.zero);
             }
             
             isCollapsed = !isCollapsed;

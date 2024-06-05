@@ -254,8 +254,8 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: craftLoopAudioID
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: collecting_berry_audio
     - Name: 
       Entry: 8
       Data: 

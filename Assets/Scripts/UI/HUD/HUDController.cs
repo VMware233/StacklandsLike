@@ -17,6 +17,8 @@ namespace StackLandsLike.UI
 
         private VisualElement clockwise;
 
+        private Label dayCountLabel;
+
         private Button pauseButton;
         private VisualElement continueIcon;
         private VisualElement pauseIcon;
@@ -33,6 +35,8 @@ namespace StackLandsLike.UI
             foodInfoLabel = rootVisualElement.Q<Label>(hudPreset.foodInfoLabelName);
 
             clockwise = rootVisualElement.Q(hudPreset.clockwiseName);
+            
+            dayCountLabel = rootVisualElement.Q<Label>(hudPreset.dayCountLabelName);
             
             pauseButton = rootVisualElement.Q<Button>(hudPreset.pauseButtonName);
             continueIcon = rootVisualElement.Q(hudPreset.continueIconName);
@@ -112,6 +116,8 @@ namespace StackLandsLike.UI
                 hudPreset.clockwiseAngleRange.max);
 
             clockwise.style.rotate = new Rotate(angle);
+            
+            dayCountLabel.text = $"{GameTimeManager.day + 1:D2}";
         }
     }
 }

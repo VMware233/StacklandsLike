@@ -25,9 +25,13 @@ MonoBehaviour:
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: 
   initialGamePrefabWrappers:
-  - {fileID: 11400000, guid: 02b42fe55040c584f8b1094963d03555, type: 2}
-  - {fileID: 11400000, guid: 322642a99445cd043b4f0cabf1398c64, type: 2}
-  - {fileID: 11400000, guid: fd023f3be4b16c145924211bc3662856, type: 2}
+  - {fileID: 11400000, guid: 1b638c252867fd44a9b820cb0d4d6af2, type: 2}
+  - {fileID: 11400000, guid: 344c78a8e895e114c90acb0a0205f910, type: 2}
+  - {fileID: 11400000, guid: ae158334e13ccd04aa05e5eaf0707b1b, type: 2}
+  - {fileID: 11400000, guid: 9a636f92e5291b04fa717e9f01780ae4, type: 2}
+  - {fileID: 11400000, guid: 41219aa00e685374fa3b65247f741bde, type: 2}
+  - {fileID: 11400000, guid: 573086c3ae3980d488a9e48cdf51d519, type: 2}
+  - {fileID: 11400000, guid: 6335dae4cc5f87743b0138dca299e929, type: 2}
   <defaultGameType>k__BackingField: 
   container:
     containerID: '#Audio Container'

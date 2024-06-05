@@ -130,6 +130,12 @@ MonoBehaviour:
     - Name: collapseTime
       Entry: 4
       Data: 0.5
+    - Name: foldAudioID
+      Entry: 1
+      Data: ui_fold_small
+    - Name: unfoldAudioID
+      Entry: 1
+      Data: ui_unfold_small
     - Name: 
       Entry: 8
       Data: 

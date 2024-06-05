@@ -19,6 +19,7 @@
                 <engine:VisualElement name="Speed2xIcon" style="width: 33px; height: 25px; background-image: resource(&apos;Images/UI/HUD/Speed2x&apos;); position: absolute;" />
                 <engine:VisualElement name="Speed1xIcon" style="width: 33px; height: 25px; background-image: resource(&apos;Images/UI/HUD/Speed1x&apos;); position: absolute;" />
             </engine:Button>
+            <engine:Label text="03" name="DayCount" style="position: absolute; top: 166px; left: 0; right: 0; -unity-text-align: middle-center;" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
