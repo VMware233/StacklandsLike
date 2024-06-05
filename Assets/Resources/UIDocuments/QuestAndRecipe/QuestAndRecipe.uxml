@@ -15,13 +15,13 @@
                     </engine:VisualElement>
                 </engine:VisualElement>
                 <engine:VisualElement style="flex-grow: 1;">
-                    <engine:VisualElement class="tab-container" style="flex-grow: 1;">
-                        <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden">
+                    <engine:VisualElement picking-mode="Ignore" class="tab-container" style="flex-grow: 1;">
+                        <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000">
                             <engine:Toggle text="任务标题" value="true" style="display: none;" />
                             <engine:Toggle text="任务标题" value="false" style="display: none;" />
                         </engine:ScrollView>
                     </engine:VisualElement>
-                    <engine:VisualElement class="tab-container" style="flex-grow: 1;">
+                    <engine:VisualElement picking-mode="Ignore" class="tab-container" style="flex-grow: 1;">
                         <engine:ScrollView name="RecipeContainer" mouse-wheel-scroll-size="1000" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" style="padding-top: 10px;">
                             <engine:Foldout text="我是帅哥" name="CategoryFoldout" style="display: none;">
                                 <engine:Foldout text="我是帅哥" name="RecipeFoldout">
