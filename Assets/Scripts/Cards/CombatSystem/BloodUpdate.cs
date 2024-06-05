@@ -29,7 +29,6 @@ public class BloodUpdate : MonoBehaviour
 
     public static void OnInitComplete()
     {
-        Debug.LogError("aaaaaaaaa!");
         //获取UI控制脚本的引用
         Transform parentTransform = GameObject.Find("^Core").transform;
         uiManager = parentTransform.Find("BattleUIManager").GetComponent<BattleUIManage>();
@@ -47,7 +46,7 @@ public class BloodUpdate : MonoBehaviour
             //更新血条长度
             ownerBloodFill = gameObject.transform.Find("BloodFill").GetComponent<Image>();
             ownerBloodFill.fillAmount = owner.GetComponent<UnitStats>().bloodPercent;           //bloodPercent在每个单位的UnitStats脚本中存储
-            
+           
             //更新血条位置
             //获取当前主人的空间位置，然后转换为2D屏幕位置
             try

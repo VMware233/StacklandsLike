@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using VMFramework.Procedure;
+using VMFramework.Property;
 
 public class UnitStats : MonoBehaviour
 {
@@ -25,11 +26,11 @@ public class UnitStats : MonoBehaviour
         defense = creature.defense;
         intialBlood = health;
         bloodPercent = (float)health / intialBlood;
-    }
-   
-    
 
-    public void ReceiveDamage(int damage)
+    }
+      
+
+    public void ReceiveDamage(int damage, CreatureCard creature)
     {
         health -= damage;
         bloodPercent = (float)health / intialBlood;
@@ -41,6 +42,7 @@ public class UnitStats : MonoBehaviour
             Debug.Log(gameObject.name + "  is dead!");
         }
         Debug.Log(gameObject.name + "掉血" + damage + "点，剩余生命值" + health);
+        creature.health.value = health;
 
     }
 

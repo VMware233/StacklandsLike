@@ -40,10 +40,7 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
     public GameObject bloodText;           //保存血条预制体
     public bool BattleIsOver = false;      //战斗是否结束
 
-   // public GameObject meat;          //死了掉落的肉
-    //public GameObject bone;
-
-    //public float battleAreaRadius;   //战斗半径
+   
     /// <summary>
     /// 创建初始参战列表，存储参战单位
     /// </summary>
@@ -83,22 +80,51 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
     {
         for(int i=0;i<lists.Count;i++)
         {
-            if(lists[i].TryGetComponent(out CardGroup cardgroup)==false)
+            if(lists[i].tag=="EnemyUnit")  //如果是敌人死了
             {
-                Debug.LogError("lists !!!");
-                continue;
-            }
-            UnitStats currentActUnitStats = lists[i].GetComponent<UnitStats>();
-            if (currentActUnitStats.IsDead())
-            {
-                CardGroupManager.DestroyCardGroup(cardgroup);
-                BattleUIManage.blood.Remove(cardgroup.gameObject);
-                if(BattleUIManage.blood.TryGetValue(cardgroup.gameObject,out var bloodbar))
+                if (lists[i].TryGetComponent(out CardGroup cardgroup) == false)
                 {
-                    Destroy(bloodbar);
+
+                    Debug.LogError("lists cardgroup!!!");
+                    continue;
                 }
-               
+                UnitStats currentActUnitStats = lists[i].GetComponent<UnitStats>();
+                if (currentActUnitStats.IsDead())
+                {
+                    
+                    if (BattleUIManage.blood.TryGetValue(cardgroup.gameObject, out var bloodbar))
+                    {
+                        BattleUIManage.blood.Remove(cardgroup.gameObject);
+                        Destroy(bloodbar);
+                    }
+                    CardGroupManager.DestroyCardGroup(cardgroup);
+
+                }
             }
+            else  //玩家死了
+            {         
+             if (lists[i].TryGetComponent(out CardView cardview) == false)
+                {
+                    Debug.LogError("lists !!!");
+                    continue;
+                }
+                UnitStats currentActUnitStats = cardview.GetComponent<UnitStats>();
+                if (currentActUnitStats.IsDead())
+                {
+
+                    SetTag.personHash.Remove(cardview.gameObject);
+                    if (BattleUIManage.blood.TryGetValue(cardview.gameObject, out var bloodbar))
+                    {
+                        BattleUIManage.blood.Remove(cardview.gameObject);
+                        Destroy(bloodbar);
+                    }
+                    if(cardview.card!=null)
+                        cardview.card.count = 0;
+                   
+                }
+            }
+            
+            
         }
     }
 
@@ -111,28 +137,26 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
         remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         remainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
 
-        for (int i=0;i<playerUnits.Count;i++)
+        for (int i=0;i< remainingPlayerUnits.Length;i++)  //开始战斗就展示玩家的血条
         {
-            if (BattleUIManage.blood.TryGetValue(playerUnits[i] ,out var blood))
+            if (BattleUIManage.blood.TryGetValue(remainingPlayerUnits[i] ,out var blood))
             {
-                blood.SetActive(true);
+                blood.SetActive(false);
             }
         }
 
-        //检查存活敌人单位
+        //检查存活敌人单位,胜利就隐藏玩家的血条
         if (remainingEnemyUnits.Length == 0)
         {
             Debug.Log("敌人全灭，战斗胜利");
-            for (int i = 0; i < playerUnits.Count; i++)
+            for (int i = 0; i < remainingPlayerUnits.Length; i++)
             {
-                if (BattleUIManage.blood.TryGetValue(playerUnits[i], out var blood))
+                if (BattleUIManage.blood.TryGetValue(remainingPlayerUnits[i], out var blood))
                 {
                     blood.SetActive(false);
                 }
             }
             checkDead(battleUnits);
-
-
         }
         //检查存活玩家单位
         else if (remainingPlayerUnits.Length == 0)
@@ -161,13 +185,15 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
             else
             {
                 GameObject blood = BattleUIManage.blood[currentActUnit];
-                Destroy(blood);               
-                //currentActUnit.SetActive(false);
+                Destroy(blood);
+               // Destroy(currentActUnit);
                 //  Drops(currentActUnit);//死了就掉落东西
+                currentActUnit.gameObject.SetActive(false);
                 Debug.Log("目标死亡，跳过回合");
                 ToBattle();
             }
         }
+        
     }  
 
 
@@ -211,8 +237,7 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
     /// 用户控制玩家选择目标状态的开启
     /// </summary>
     void Update()
-    {
-       
+    {     
             if (isUnitRunningToTarget)
             {
                // currentActUnit.transform.LookAt(currentActUnitTargetPosition);           //单位移动的朝向
@@ -252,7 +277,7 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
                     //攻击单位回原位后行动结束，到下一个单位
                     ToBattle();
                 }
-            }
+            }      
         
     }
 
@@ -266,6 +291,7 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
         UnitStats attackReceiver = currentActUnitTarget.GetComponent<UnitStats>();
         //根据攻防计算伤害
         attackData = attackOwner.attack - attackReceiver.defense  ;
+
 
         float damageAnimationTime = 1f;
         float attackAnimationTime = 1f;
@@ -282,10 +308,37 @@ public class BattleTurnSystem : ManagerBehaviour<BattleTurnSystem>, IManagerBeha
     IEnumerator WaitForTakeDamage(float time)
     {
         yield return new WaitForSeconds(time);
+        CardGroup cardscript=null;
 
-        //被攻击者承受伤害
-        currentActUnitTarget.GetComponent<UnitStats>().ReceiveDamage(attackData);
+        if (currentActUnitTarget.tag == "PlayerUnit")
+        {           
+            cardscript = currentActUnitTarget.transform.parent.GetComponent<CardGroup>();
+            if (cardscript == null)
+            {
+                Debug.LogError("hhhhhhh");
+            }
+        }
+        else if(currentActUnitTarget.tag == "EnemyUnit")
+        {
+            cardscript = currentActUnitTarget.GetComponent<CardGroup>();
+            if (cardscript == null)
+            {
+                Debug.LogError("aaaaaaaaaaa");
+            }
 
+        }
+        if(cardscript==null)
+        {
+           yield break;
+        }
+        
+        IEnumerable<ICard> cards = cardscript.cards;
+     
+        foreach(var card in cards)
+        {
+            currentActUnitTarget.GetComponent<UnitStats>().ReceiveDamage(attackData, (CreatureCard)card);
+            
+        }
         //实例化伤害字体并设置到画布上（字体位置和内容的控制放在它自身的脚本中）
         GameObject thisText = Instantiate(bloodText) as GameObject;
         thisText.transform.SetParent(GameObject.Find("BloodTextGroup").transform, false);

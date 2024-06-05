@@ -1,4 +1,5 @@
 ﻿using StackLandsLike.Cards;
+using StackLandsLike.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,18 +30,18 @@ namespace StackLandsLike.GameCore
                     CreateMonster(1,"spider_card");
                     break;
                 case 3:
-                    CreateMonster(1, "pig_card");
+                    CreateMonster(1, "boar_card");
                     CreateMonster(1, "spider_card");
                     break;
                 case 12:
-                    CreateMonster(1, "pig_card");
+                    CreateMonster(1, "boar_card");
                     CreateMonster(4, "spider_card");
                     break;
                 case 20:
-                    CreateMonster(3, "pig_card");
+                    CreateMonster(3, "boar_card");
                     break;
                 case 24:
-                    CreateMonster(2, "pig_card");
+                    CreateMonster(2, "boar_card");
                     CreateMonster(1, "bear_card");
                     break;
                 case 26:
@@ -52,23 +53,27 @@ namespace StackLandsLike.GameCore
                 case 30:
                     CreateMonster(4, "bear_card");
                     break;
+                case 31:
+                    GameStateManager.EnterSettlement(true);
+                    break;
                 default:
                     break;
             }
         }
         void CreateMonster(int count,string monsterName)
         {
-            for(int i=0;i<count;i++)
-            { 
+            for (int i = 0; i < count; i++)
+            {
                 var card = IGameItem.Create<ICard>(monsterName);
-                CardGroup cardgroup=CardGroupManager.CreateCardGroup(card);
+                CardGroup cardgroup = CardGroupManager.CreateCardGroup(card);
+
                 cardgroup.gameObject.tag = "EnemyUnit";
                 cardgroup.AddComponent<UnitStats>().SetStates((ICreatureCard)card);
                 GameObject enemyBloodBar = Instantiate(bloodBar) as GameObject;
                 enemyBloodBar.transform.SetParent(GameObject.Find("BloodBarGroup").transform, false);
                 enemyBloodBar.GetComponent<BloodUpdate>().owner = cardgroup.gameObject;
                 BattleUIManage.blood.Add(cardgroup.gameObject, enemyBloodBar);
-                enemyBloodBar.SetActive(true);
+                enemyBloodBar.SetActive(false);
                 BattleEnemy(cardgroup.gameObject);
             }
 
