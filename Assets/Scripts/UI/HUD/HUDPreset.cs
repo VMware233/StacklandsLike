@@ -44,5 +44,8 @@ namespace StackLandsLike.UI
         
         [VisualElementName]
         public string speed1xIconName;
+
+        [VisualElementName(typeof(Label))]
+        public string dayCountLabelName;
     }
 }

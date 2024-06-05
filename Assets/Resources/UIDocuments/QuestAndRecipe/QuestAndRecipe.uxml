@@ -16,7 +16,7 @@
                 </engine:VisualElement>
                 <engine:VisualElement style="flex-grow: 1;">
                     <engine:VisualElement picking-mode="Ignore" class="tab-container" style="flex-grow: 1;">
-                        <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000">
+                        <engine:ScrollView name="QuestContainer" mouse-wheel-scroll-size="1000" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden">
                             <engine:Toggle text="任务标题" value="true" style="display: none;" />
                             <engine:Toggle text="任务标题" value="false" style="display: none;" />
                         </engine:ScrollView>

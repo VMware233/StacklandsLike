@@ -88,6 +88,10 @@ namespace StackLandsLike.UI
             {
                 model.transform.eulerAngles = new Vector3(90, 90, -90);
             }
+            else if (card.id == "quarry_card")
+            {
+                model.transform.eulerAngles = new Vector3(90, 90, -90);
+            }
 
             meshFilter = model.transform.QueryFirstComponentInChildren<MeshFilter>(true);
 

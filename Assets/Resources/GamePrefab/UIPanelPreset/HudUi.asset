@@ -139,6 +139,9 @@ MonoBehaviour:
     - Name: speed1xIconName
       Entry: 1
       Data: Speed1xIcon
+    - Name: dayCountLabelName
+      Entry: 1
+      Data: DayCount
     - Name: 
       Entry: 8
       Data: 
