@@ -16,7 +16,7 @@ public class BattleUIManage : ManagerBehaviour<BattleUIManage>, IManagerBehaviou
     public  GameObject bloodBar;
 
     //玩家和怪物的数组
-    private static  GameObject[] playerUnits;
+    private static GameObject[] playerUnits;
     private static GameObject[] enemyUnits;
 
     //统一调整血条的偏移量
@@ -26,8 +26,7 @@ public class BattleUIManage : ManagerBehaviour<BattleUIManage>, IManagerBehaviou
     public static Dictionary<GameObject, GameObject> blood=new();
 
      public static void OnInitComplete()
-    {
-        
+    {        
             //搜索所有参战的玩家对象，逐个创建血条
             playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
             foreach (GameObject playerUnit in playerUnits)
@@ -39,6 +38,8 @@ public class BattleUIManage : ManagerBehaviour<BattleUIManage>, IManagerBehaviou
                 //设置血条的主人，BloodUpdate将根据这个主人的状态来更新血条
                 playerBloodBar.GetComponent<BloodUpdate>().owner = playerUnit;
                 blood.Add(playerUnit, playerBloodBar);
+                SetTag.personHash.Add(playerUnit);
+                playerBloodBar.SetActive(false);
             }
         try
         {
@@ -52,6 +53,7 @@ public class BattleUIManage : ManagerBehaviour<BattleUIManage>, IManagerBehaviou
                 //设置血条的主人，BloodUpdate将根据这个主人的状态来更新血条
                 enemyBloodBar.GetComponent<BloodUpdate>().owner = enemyUnit;
                 blood.Add(enemyUnit, enemyBloodBar);
+                enemyBloodBar.SetActive(false);
             }
         }
         catch (Exception ex)

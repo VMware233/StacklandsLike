@@ -1,4 +1,4 @@
-using StackLandsLike.Cards;
+锘縰sing StackLandsLike.Cards;
 using StackLandsLike.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,29 +15,46 @@ public class SetTag : MonoBehaviour
         CardCraftManager.OnRecipeCompleted += SetPersonTag;
     }
     void SetPersonTag(CardGroup cardgroup1, ICardRecipe info)
-    {  
-        foreach(var cardgroup in CardGroupManager.GetActiveCardGroups())
+    {      
+        if (info.id == "person_craft_recipe")
         {
-            foreach (var item in cardgroup.cards)
+            Debug.LogError(info.id);
+            foreach (var cardgroup in CardGroupManager.GetActiveCardGroups())
             {
-                if (item is IPersonCard)
+                foreach (var item in cardgroup.cards)
                 {
-                    //这里将给item对应的gameobject tag赋值为PlayerUnit
-                    var cardview = CardViewManager.GetCardView(item);
-                    cardview.gameObject.tag = "PlayerUnit";
-                    cardview.AddComponent<UnitStats>().SetStates((ICreatureCard)cardview.card); ;
-                    if(!personHash.Contains(cardview.gameObject))
+                    if (item is IPersonCard)
                     {
-                        personHash.Add(cardview.gameObject);
-                        GameObject enemyBloodBar = Instantiate(bloodBar) as GameObject;
-                        enemyBloodBar.transform.SetParent(GameObject.Find("BloodBarGroup").transform, false);
-                        enemyBloodBar.GetComponent<BloodUpdate>().owner = cardgroup.gameObject;
-                        BattleUIManage.blood.Add(cardgroup.gameObject, enemyBloodBar);
-                        enemyBloodBar.SetActive(false);
+                        var cardview = CardViewManager.GetCardView(item);
+
+                        if (!personHash.Contains(cardview.gameObject))
+                        {
+                            /*GameObject personCardGroup = cardview.transform.parent.gameObject;
+                            personCardGroup.AddComponent<UnitStats>().SetStates((IPersonCard)cardview.card);  //杩欓噷鎶奍creature鏀逛负Iperson
+                            personHash.Add(personCardGroup);
+                            personCardGroup.tag= "PlayerUnit";*/
+
+                            cardview.gameObject.tag = "PlayerUnit";
+                            cardview.AddComponent<UnitStats>().SetStates((IPersonCard)cardview.card);
+                            personHash.Add(cardview.gameObject);
+
+                            if (BattleUIManage.blood.ContainsKey(cardview.gameObject) == false)
+                            {
+                                GameObject enemyBloodBar = Instantiate(bloodBar) as GameObject;
+                                enemyBloodBar.transform.SetParent(GameObject.Find("BloodBarGroup").transform, false);
+                                enemyBloodBar.GetComponent<BloodUpdate>().owner = cardview.gameObject;
+                                BattleUIManage.blood.Add(cardview.gameObject, enemyBloodBar);
+                                enemyBloodBar.SetActive(false);
+                            }
+
+                        }
                     }
                 }
+
             }
         }
+            
+       
         
        
     }
