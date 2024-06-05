@@ -177,8 +177,8 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: productionRecipeID
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: rock_work_recipe
     - Name: hasLastGenerationConfig
       Entry: 5
       Data: false

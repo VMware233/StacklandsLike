@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: GrilledFishCraftRecipe
+  m_Name: PlankCardMakeRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: grilled_fish_craft_recipe
+      Data: plank_card_make_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -38,13 +38,7 @@ MonoBehaviour:
       Data: 1|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 1
-      Data: cooked_crad_recipe_type
-    - Name: 
-      Entry: 1
-      Data: recipe_display_type
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -59,10 +53,10 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeName
+      Data: PlankCardMakeRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Grilled Fish Craft
+      Data: Plank Card Make
     - Name: 
       Entry: 8
       Data: 
@@ -116,7 +110,7 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeDescription
+      Data: PlankCardMakeRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -170,7 +164,7 @@ MonoBehaviour:
       Data: 0
     - Name: totalTicks
       Entry: 3
-      Data: 240
+      Data: 360
     - Name: consumptionConfigs
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
@@ -183,13 +177,13 @@ MonoBehaviour:
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: fish_card
+      Data: person_card
     - Name: count
       Entry: 3
       Data: 1
     - Name: isConsumable
       Entry: 5
-      Data: true
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -198,13 +192,13 @@ MonoBehaviour:
       Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: campfire_card
+      Data: log_card
     - Name: count
       Entry: 3
       Data: 1
     - Name: isConsumable
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -230,7 +224,7 @@ MonoBehaviour:
       Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: grilled_fish_card
+      Data: plank_card
     - Name: count
       Entry: 7
       Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,

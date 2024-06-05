@@ -138,6 +138,22 @@ MonoBehaviour:
     m_Localized: Plank Card
     m_Metadata:
       m_Items: []
+  - m_Id: 3492734672437248
+    m_Localized: Rock Work
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3494275332571136
+    m_Localized: Plank Card Make
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3495155633094656
+    m_Localized: Pickaxe Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3495690213916672
+    m_Localized: Axe Make
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

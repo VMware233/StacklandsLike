@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78139273e9e448e197222669525fbb69, type: 3}
-  m_Name: GrilledFishCraftRecipe
+  m_Name: RockWorkRecipe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 0|StackLandsLike.Cards.CardRecipe, Assembly-CSharp
     - Name: _id
       Entry: 1
-      Data: grilled_fish_craft_recipe
+      Data: rock_work_recipe
     - Name: isActive
       Entry: 5
       Data: true
@@ -41,7 +41,7 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 1
-      Data: cooked_crad_recipe_type
+      Data: resources_card_recipe_type
     - Name: 
       Entry: 1
       Data: recipe_display_type
@@ -59,10 +59,10 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeName
+      Data: RockWorkRecipeName
     - Name: defaultValue
       Entry: 1
-      Data: Grilled Fish Craft
+      Data: Rock Work
     - Name: 
       Entry: 8
       Data: 
@@ -116,7 +116,7 @@ MonoBehaviour:
       Data: CardRecipeStringTable
     - Name: key
       Entry: 1
-      Data: GrilledFishCraftRecipeDescription
+      Data: RockWorkRecipeDescription
     - Name: defaultValue
       Entry: 1
       Data: 
@@ -170,7 +170,7 @@ MonoBehaviour:
       Data: 0
     - Name: totalTicks
       Entry: 3
-      Data: 240
+      Data: 360
     - Name: consumptionConfigs
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
@@ -183,13 +183,13 @@ MonoBehaviour:
       Data: 7|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: fish_card
+      Data: person_card
     - Name: count
       Entry: 3
       Data: 1
     - Name: isConsumable
       Entry: 5
-      Data: true
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -198,7 +198,7 @@ MonoBehaviour:
       Data: 8|StackLandsLike.Cards.CardConsumptionConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: campfire_card
+      Data: quarry_card
     - Name: count
       Entry: 3
       Data: 1
@@ -216,24 +216,35 @@ MonoBehaviour:
       Data: 
     - Name: generationConfigs
       Entry: 7
-      Data: 9|VMFramework.Configuration.SingleValueChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 9|VMFramework.Configuration.WeightedSelectChooserConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: items
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 11|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+      Data: 12|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+      Data: 13|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
     - Name: itemID
       Entry: 1
-      Data: grilled_fish_card
+      Data: gold_ore_card
     - Name: count
       Entry: 7
-      Data: 12|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+      Data: 14|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
         mscorlib]], Assembly-CSharp
     - Name: value
       Entry: 3
@@ -241,6 +252,102 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ratio
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 17|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: stone_card
+    - Name: count
+      Entry: 7
+      Data: 18|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ratio
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|VMFramework.Configuration.WeightedSelectItemConfig`1[[System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardGenerationConfig,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 21|StackLandsLike.Cards.CardGenerationConfig, Assembly-CSharp
+    - Name: itemID
+      Entry: 1
+      Data: rock_card
+    - Name: count
+      Entry: 7
+      Data: 22|VMFramework.Configuration.SingleVectorChooserConfig`1[[System.Int32,
+        mscorlib]], Assembly-CSharp
+    - Name: value
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ratio
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 8
       Data: 

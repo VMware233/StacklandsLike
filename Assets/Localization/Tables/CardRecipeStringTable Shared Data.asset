@@ -135,6 +135,22 @@ MonoBehaviour:
     m_Key: PlankCardRecipeName
     m_Metadata:
       m_Items: []
+  - m_Id: 3492734672437248
+    m_Key: RockWorkRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3494275332571136
+    m_Key: PlankCardMakeRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3495155633094656
+    m_Key: PickaxeCardRecipeName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3495690213916672
+    m_Key: AxeMakeRecipeName
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -24,4 +24,4 @@ MonoBehaviour:
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
   <defaultLocalizationTableName>k__BackingField: 
-  totalTicksPerDay: 1500
+  totalTicksPerDay: 4800

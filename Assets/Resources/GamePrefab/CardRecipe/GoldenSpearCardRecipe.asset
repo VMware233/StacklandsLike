@@ -170,7 +170,7 @@ MonoBehaviour:
       Data: 0
     - Name: totalTicks
       Entry: 3
-      Data: 210
+      Data: 300
     - Name: consumptionConfigs
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[StackLandsLike.Cards.CardConsumptionConfig,
